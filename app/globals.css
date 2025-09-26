@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* ---- Design tokens (yours, kept) ---- */
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -19,8 +20,16 @@
   }
 }
 
+/* ---- App tweaks (added) ---- */
+:root { color-scheme: light dark; }
+html, body { height: 100%; }
+
+/* Base body styles (yours, with a small font-family improvement) */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Prefer configured Tailwind var font if present; fall back to system */
+  font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+  Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
