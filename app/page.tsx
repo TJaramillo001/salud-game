@@ -14,10 +14,8 @@ export default function Home() {
                     desliza cartas. Perfecto para pre, rumba, parejas, after y más.
                 </p>
                 <div className="mx-auto flex flex-wrap items-center justify-center gap-4">
-                    <Link href="/players">
-                        <Button size="lg" variant="primary">
-                            Empezar ahora
-                        </Button>
+                    <Link href="/game/setup/players">
+                        <Button size="lg" variant="primary">Empezar ahora</Button>
                     </Link>
                     <a href="#features">
                         <Button size="lg" variant="secondary">
@@ -58,12 +56,8 @@ export default function Home() {
 
             {/* CTA */}
             <div className="mx-auto mt-16 flex max-w-5xl justify-center">
-                <Link href="/players">
-                    <Button
-                        size="lg"
-                        variant="ghost"
-                        className="border border-neutral-800"
-                    >
+                <Link href="/game/setup/players">
+                    <Button size="lg" variant="ghost" className="border border-neutral-800">
                         Crear partida
                     </Button>
                 </Link>
