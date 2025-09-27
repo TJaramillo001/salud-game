@@ -30,7 +30,7 @@ function Header() {
     return (
         <header className="sticky top-0 z-40 w-full border-b border-neutral-800/60 bg-neutral-950/80 backdrop-blur">
             <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-                <Link href="/" className="font-bold tracking-tight text-xl">
+                <Link href="/public" className="font-bold tracking-tight text-xl">
                     Salud
                 </Link>
                 <nav className="flex items-center gap-4 text-sm text-neutral-300">
