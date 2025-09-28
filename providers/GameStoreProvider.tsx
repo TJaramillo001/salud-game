@@ -3,6 +3,7 @@
 import { createContext, useContext, useMemo, useState, ReactNode } from 'react';
 import type { Pack } from '@/features/questions/types';
 import { getPackById } from '@/features/questions/repository';
+import { resetPackSeen } from '@/features/deck/antiRepeat';
 
 type GameStore = {
     players: string[];
@@ -13,7 +14,10 @@ type GameStore = {
     mode: Pack['id'] | null;
     setMode: (m: Pack['id']) => Promise<void>;
 
-    pack: Pack | null; // loaded pack data
+    pack: Pack | null;
+
+    /** Clears the anti-repeat store for the currently selected pack */
+    resetSeen: () => void;
 };
 
 const Ctx = createContext<GameStore | null>(null);
@@ -41,8 +45,23 @@ export function GameStoreProvider({ children }: { children: ReactNode }) {
         setPack(p ?? null);
     }
 
+    function resetSeen() {
+        if (mode) {
+            resetPackSeen(mode);
+        }
+    }
+
     const value = useMemo(
-        () => ({ players, addPlayer, removePlayer, clearPlayers, mode, setMode, pack }),
+        () => ({
+            players,
+            addPlayer,
+            removePlayer,
+            clearPlayers,
+            mode,
+            setMode,
+            pack,
+            resetSeen,
+        }),
         [players, mode, pack]
     );
 
