@@ -12,27 +12,55 @@ import { useSwipe } from '@/hooks/useSwipe';
 import { vibrate } from '@/lib/haptics';
 import { nextTurnIndex, resolveTargetName } from '@/features/gameplay/turn';
 
+// tiny hash for seed; avoids Date.now() jitter each render
+function cyrb53(str: string, seed = 0) {
+    let h1 = 0xdeadbeef ^ seed,
+        h2 = 0x41c6ce57 ^ seed;
+    for (let i = 0, ch; i < str.length; i++) {
+        ch = str.charCodeAt(i);
+        h1 = Math.imul(h1 ^ ch, 2654435761);
+        h2 = Math.imul(h2 ^ ch, 1597334677);
+    }
+    h1 =
+        Math.imul(h1 ^ (h1 >>> 16), 2246822507) ^
+        Math.imul(h2 ^ (h2 >>> 13), 3266489909);
+    h2 =
+        Math.imul(h2 ^ (h2 >>> 16), 2246822507) ^
+        Math.imul(h1 ^ (h1 >>> 13), 3266489909);
+    return 4294967296 * (2097151 & h2) + (h1 >>> 0);
+}
+
 export default function PlayPage() {
     const { pack, players } = useGameStore();
     const router = useRouter();
     const { addRule } = useActiveRules();
 
-    // Guard: need a pack selected
+    // 1) Require a pack
     useEffect(() => {
         if (!pack) router.replace('/game/setup/mode');
     }, [pack, router]);
 
-    // Seed deck deterministically-ish
-    const seed = useMemo(() => players.join(',').length || 1, [players]);
-    const { current, remaining, next } = useDeck(pack, seed);
+    // 2) Stable per-run seed that depends on pack + players and freezes on mount
+    // We also allow re-seeding by bumping runId
+    const [runId, setRunId] = useState(0);
+    const seed = useMemo(() => {
+        const key = `${pack?.id ?? 'unknown'}|${players.join('|')}|run:${runId}`;
+        return cyrb53(key);
+    }, [pack?.id, players, runId]);
 
-    // Track turns (who is "current")
+    // 3) Build deck for the selected pack
+    const { current, remaining, next, deck } = useDeck(pack, seed);
+
+    // 4) Sanity check: deck built empty → show recovery UI (no import fallbacks)
+    const isEmptyDeck = !deck || deck.length === 0;
+
+    // 5) Track whose turn it is
     const [turnIndex, setTurnIndex] = useState(0);
     useEffect(() => {
         if (players.length === 0) setTurnIndex(0);
     }, [players.length]);
 
-    // Auto-apply rules exactly once when a rule card shows
+    // 6) Auto-apply rules exactly once
     const appliedRules = useRef<Set<string>>(new Set());
     useEffect(() => {
         if (current?.type === 'rule' && !appliedRules.current.has(current.id)) {
@@ -41,21 +69,22 @@ export default function PlayPage() {
         }
     }, [current, addRule]);
 
-    // When deck ends → summary
+    // 7) End of deck → summary (but not for the empty-deck sanity state)
     useEffect(() => {
-        if (pack && remaining <= 0 && !current) {
+        if (pack && !isEmptyDeck && remaining <= 0 && !current) {
             router.replace('/game/summary');
         }
-    }, [remaining, current, pack, router]);
+    }, [remaining, current, pack, router, isEmptyDeck]);
 
-    // Swipe behavior
+    // 8) Advancing
     const onAdvance = () => {
         if (!current) return;
         vibrate(10);
         next();
-        setTurnIndex(i => nextTurnIndex(i, players.length));
+        setTurnIndex((i) => nextTurnIndex(i, players.length));
     };
 
+    // 9) Swipe
     const { dx, bind } = useSwipe({
         onSwipeLeft: onAdvance,
         onSwipeRight: onAdvance,
@@ -64,28 +93,89 @@ export default function PlayPage() {
 
     if (!pack) return null;
 
-    const currentPlayer = players.length ? players[turnIndex % players.length] : null;
+    // 10) Subtitle resolution
     const subtitle =
         current && current.type !== 'rule'
-            ? (resolveTargetName(current, players, turnIndex) === 'Todos'
-                ? 'Todos'
-                : resolveTargetName(current, players, turnIndex))
+            ? resolveTargetName?.(current as any, players, turnIndex) ?? null
             : null;
 
+    // 11) Empty deck recovery UI
+    if (isEmptyDeck) {
+        return (
+            <main className="min-h-dvh p-6 pb-28 flex flex-col items-center gap-6">
+                <DeckHUD remaining={0} />
+                <div className="max-w-md text-center space-y-3">
+                    <h2 className="text-xl font-semibold">No se pudo armar el mazo</h2>
+                    <p className="text-sm text-neutral-500">
+                        El paquete <b>{pack?.name ?? pack?.id ?? 'desconocido'}</b> generó
+                        0 cartas con los jugadores/condiciones actuales.
+                    </p>
+                    <ul className="text-sm text-neutral-500 list-disc text-left pl-5 space-y-1">
+                        <li>Prueba con más jugadores o cambia el modo.</li>
+                        <li>O rearmemos el mazo con una nueva semilla.</li>
+                    </ul>
+                    <p className="text-xs text-neutral-400 pt-1">
+                        Tip: si ves esto seguido, revisa constraints del pack.
+                    </p>
+                </div>
+
+                {/* Fixed footer with actions */}
+                <footer className="fixed bottom-4 inset-x-0 px-6">
+                    <div className="mx-auto max-w-md flex gap-3">
+                        <Button className="flex-1" onClick={() => setRunId((x) => x + 1)}>
+                            Rearmar mazo
+                        </Button>
+                        <Button
+                            className="flex-1"
+                            variant="ghost"
+                            onClick={() => router.replace('/game/setup/mode')}
+                        >
+                            Cambiar modo
+                        </Button>
+                    </div>
+                </footer>
+            </main>
+        );
+    }
+
+    // 12) Normal play UI
     return (
-        <main className="min-h-dvh p-6 flex flex-col items-center gap-6">
-            <DeckHUD remaining={remaining} currentPlayer={currentPlayer} />
+        <main className="min-h-dvh p-6 pb-28 flex flex-col items-center gap-6">
+            {/* HUD without "Turno" */}
+            <DeckHUD remaining={remaining} />
 
+            {/* Card area */}
             <div className="w-full flex justify-center" {...bind}>
-                {current ? <QuestionCard card={current} subtitle={subtitle} dx={dx} /> : <div>No more cards.</div>}
+                {current ? (
+                    <QuestionCard
+                        card={current as any}
+                        subtitle={subtitle ?? undefined}
+                        dx={dx}
+                    />
+                ) : (
+                    <div>No more cards.</div>
+                )}
             </div>
 
-            <div className="flex gap-3">
-                <Button onClick={onAdvance} disabled={!current}>Siguiente</Button>
-                <Button variant="ghost" onClick={() => router.replace('/game/summary')}>Terminar</Button>
-            </div>
+            {/* Fixed footer with persistent actions */}
+            <footer className="fixed bottom-4 inset-x-0 px-6">
+                <div className="mx-auto max-w-md flex gap-3">
+                    <Button className="flex-1" onClick={onAdvance} disabled={!current}>
+                        Siguiente
+                    </Button>
+                    <Button
+                        className="flex-1"
+                        variant="ghost"
+                        onClick={() => router.replace('/game/summary')}
+                    >
+                        Terminar
+                    </Button>
+                </div>
+            </footer>
 
-            <p className="text-xs text-neutral-400">Tip: desliza izquierda o derecha para avanzar</p>
+            <p className="text-xs text-neutral-400">
+                Tip: desliza izquierda o derecha para avanzar
+            </p>
         </main>
     );
 }
