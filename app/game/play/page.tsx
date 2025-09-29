@@ -11,6 +11,8 @@ import { DeckHUD } from './components/DeckHUD';
 import { useSwipe } from '@/hooks/useSwipe';
 import { vibrate } from '@/lib/haptics';
 import { nextTurnIndex, resolveTargetName } from '@/features/gameplay/turn';
+import type { Card } from '@/features/questions/types';
+
 
 // tiny hash for seed; avoids Date.now() jitter each render
 function cyrb53(str: string, seed = 0) {
@@ -63,11 +65,16 @@ export default function PlayPage() {
     // 6) Auto-apply rules exactly once
     const appliedRules = useRef<Set<string>>(new Set());
     useEffect(() => {
-        if (current?.type === 'rule' && !appliedRules.current.has(current.id)) {
-            addRule({ ruleId: current.ruleId, params: current.params });
+        if (
+            current?.type === 'rule' &&
+            !!current.ruleId &&                               // <- guard for TS
+            !appliedRules.current.has(current.id)
+        ) {
+            addRule({ ruleId: current.ruleId, params: current.params ?? {} });
             appliedRules.current.add(current.id);
         }
     }, [current, addRule]);
+
 
     // 7) End of deck → summary (but not for the empty-deck sanity state)
     useEffect(() => {
@@ -96,8 +103,9 @@ export default function PlayPage() {
     // 10) Subtitle resolution
     const subtitle =
         current && current.type !== 'rule'
-            ? resolveTargetName?.(current as any, players, turnIndex) ?? null
+            ? resolveTargetName?.(current as unknown as Card, players, turnIndex) ?? null
             : null;
+
 
     // 11) Empty deck recovery UI
     if (isEmptyDeck) {
@@ -147,11 +155,8 @@ export default function PlayPage() {
             {/* Card area */}
             <div className="w-full flex justify-center" {...bind}>
                 {current ? (
-                    <QuestionCard
-                        card={current as any}
-                        subtitle={subtitle ?? undefined}
-                        dx={dx}
-                    />
+                    <QuestionCard card={current as unknown as Card} subtitle={subtitle ?? undefined} dx={dx} />
+
                 ) : (
                     <div>No more cards.</div>
                 )}

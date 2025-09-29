@@ -72,7 +72,6 @@ export function useDeck(pack: { id: string; name?: string } | null, seed: number
                 params: isRule ? { phase: c.kind === 'rule_on' ? 'on' : 'off' } : undefined,
                 __actors: c.actors,  // used by resolveTargetName (new path)
                 __kind: c.kind,      // used to detect group
-                // @ts-expect-error allow target passthrough for legacy helpers
                 target,
             };
         });
