@@ -13,7 +13,6 @@ import { vibrate } from '@/lib/haptics';
 import { nextTurnIndex, resolveTargetName } from '@/features/gameplay/turn';
 import type { Card } from '@/features/questions/types';
 
-
 // tiny hash for seed; avoids Date.now() jitter each render
 function cyrb53(str: string, seed = 0) {
     let h1 = 0xdeadbeef ^ seed,
@@ -33,25 +32,33 @@ function cyrb53(str: string, seed = 0) {
 }
 
 export default function PlayPage() {
-    const { pack, players } = useGameStore();
+    const {
+        state: { selectedMode, players },
+    } = useGameStore();
+
     const router = useRouter();
     const { addRule } = useActiveRules();
 
-    // 1) Require a pack
+    // 1) Require mode and players
     useEffect(() => {
-        if (!pack) router.replace('/game/setup/mode');
-    }, [pack, router]);
+        if (!selectedMode) router.replace('/game/setup/mode');
+    }, [selectedMode, router]);
 
-    // 2) Stable per-run seed that depends on pack + players and freezes on mount
-    // We also allow re-seeding by bumping runId
+    useEffect(() => {
+        if (!players || players.length === 0) {
+            router.replace('/game/setup/players');
+        }
+    }, [players, router]);
+
+    // 2) Stable per-run seed that depends on mode + players and freezes on mount
     const [runId, setRunId] = useState(0);
     const seed = useMemo(() => {
-        const key = `${pack?.id ?? 'unknown'}|${players.join('|')}|run:${runId}`;
+        const key = `${selectedMode ?? 'unknown'}|${players.join('|')}|run:${runId}`;
         return cyrb53(key);
-    }, [pack?.id, players, runId]);
+    }, [selectedMode, players, runId]);
 
-    // 3) Build deck for the selected pack
-    const { current, remaining, next, deck } = useDeck(pack, seed);
+    // 3) Build deck for the selected mode (hook reads mode from store)
+    const { current, remaining, next, deck } = useDeck(seed);
 
     // 4) Sanity check: deck built empty → show recovery UI (no import fallbacks)
     const isEmptyDeck = !deck || deck.length === 0;
@@ -62,26 +69,24 @@ export default function PlayPage() {
         if (players.length === 0) setTurnIndex(0);
     }, [players.length]);
 
-    // 6) Auto-apply rules exactly once
+    // 6) Auto-apply rules exactly once (use `kind`, not `type`)
     const appliedRules = useRef<Set<string>>(new Set());
     useEffect(() => {
-        if (
-            current?.type === 'rule' &&
-            !!current.ruleId &&                               // <- guard for TS
-            !appliedRules.current.has(current.id)
-        ) {
-            addRule({ ruleId: current.ruleId, params: current.params ?? {} });
+        const isRule = current?.kind === 'rule_on' || current?.kind === 'rule_off';
+        if (current && isRule && current.ruleId && !appliedRules.current.has(current.id)) {
+            // Optionally pass phase info if your rules engine uses it
+            const params = { phase: current.kind === 'rule_on' ? 'on' : 'off' } as Record<string, unknown>;
+            addRule({ ruleId: current.ruleId, params });
             appliedRules.current.add(current.id);
         }
     }, [current, addRule]);
 
-
     // 7) End of deck → summary (but not for the empty-deck sanity state)
     useEffect(() => {
-        if (pack && !isEmptyDeck && remaining <= 0 && !current) {
+        if (selectedMode && !isEmptyDeck && remaining <= 0 && !current) {
             router.replace('/game/summary');
         }
-    }, [remaining, current, pack, router, isEmptyDeck]);
+    }, [remaining, current, selectedMode, router, isEmptyDeck]);
 
     // 8) Advancing
     const onAdvance = () => {
@@ -98,14 +103,14 @@ export default function PlayPage() {
         threshold: 80,
     });
 
-    if (!pack) return null;
+    if (!selectedMode) return null;
 
-    // 10) Subtitle resolution
+    // 10) Subtitle resolution — hide for rule cards
+    const isRuleCard = current?.kind === 'rule_on' || current?.kind === 'rule_off';
     const subtitle =
-        current && current.type !== 'rule'
-            ? resolveTargetName?.(current as unknown as Card, players, turnIndex) ?? null
+        current && !isRuleCard
+            ? resolveTargetName?.(current as Card, players, turnIndex) ?? null
             : null;
-
 
     // 11) Empty deck recovery UI
     if (isEmptyDeck) {
@@ -115,15 +120,14 @@ export default function PlayPage() {
                 <div className="max-w-md text-center space-y-3">
                     <h2 className="text-xl font-semibold">No se pudo armar el mazo</h2>
                     <p className="text-sm text-neutral-500">
-                        El paquete <b>{pack?.name ?? pack?.id ?? 'desconocido'}</b> generó
-                        0 cartas con los jugadores/condiciones actuales.
+                        El modo <b>{selectedMode}</b> generó 0 cartas con los jugadores/condiciones actuales.
                     </p>
                     <ul className="text-sm text-neutral-500 list-disc text-left pl-5 space-y-1">
                         <li>Prueba con más jugadores o cambia el modo.</li>
                         <li>O rearmemos el mazo con una nueva semilla.</li>
                     </ul>
                     <p className="text-xs text-neutral-400 pt-1">
-                        Tip: si ves esto seguido, revisa constraints del pack.
+                        Tip: si ves esto seguido, revisa las constraints del pack.
                     </p>
                 </div>
 
@@ -155,8 +159,7 @@ export default function PlayPage() {
             {/* Card area */}
             <div className="w-full flex justify-center" {...bind}>
                 {current ? (
-                    <QuestionCard card={current as unknown as Card} subtitle={subtitle ?? undefined} dx={dx} />
-
+                    <QuestionCard card={current as Card} subtitle={subtitle ?? undefined} dx={dx} />
                 ) : (
                     <div>No more cards.</div>
                 )}
@@ -178,9 +181,7 @@ export default function PlayPage() {
                 </div>
             </footer>
 
-            <p className="text-xs text-neutral-400">
-                Tip: desliza izquierda o derecha para avanzar
-            </p>
+            <p className="text-xs text-neutral-400">Tip: desliza izquierda o derecha para avanzar</p>
         </main>
     );
 }

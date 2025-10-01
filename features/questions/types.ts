@@ -1,34 +1,40 @@
-export type QuestionType = 'question' | 'scenario' | 'rule';
+// features/questions/types.ts
 
-export type Target =
-    | { kind: 'all' }
-    | { kind: 'single'; strategy: 'current' | 'random' | 'next' };
+export type TargetRole = 'A' | 'B' | 'C' | 'STARTER';
+export type Target = {
+    roles: TargetRole[];
+    constraints?: {
+        distinct?: boolean;
+        genderOfA?: 'M' | 'F' | 'X';
+        // extend as needed…
+    };
+};
 
-export interface CardBase {
+export type CardKind =
+    | 'action'
+    | 'question'
+    | 'group'
+    | 'versus'
+    | 'wildcard'
+    | 'rule_on'
+    | 'rule_off';
+
+export type Card = {
     id: string;
-    type: QuestionType;
+    mode: 'pre' | 'night_out'; // add more modes as you introduce them
+    kind: CardKind;
+    target?: Target;
     text: string;
-    minPlayers?: number;
-    nsfw?: boolean;
-}
+    altText?: string;
+    spice: number;   // 1–3+, your scale
+    weight: number;  // deck weighting
+    ruleId?: string; // present for rule_on / rule_off
+};
 
-export interface RuleCard extends CardBase {
-    type: 'rule';
-    ruleId: string;
-    params?: Record<string, any>;
-}
-
-export interface PromptCard extends CardBase {
-    type: 'question' | 'scenario';
-    target: Target;
-    starter?: 'random' | 'current';
-}
-
-export type Card = RuleCard | PromptCard;
-
-export interface Pack {
-    id: 'pre' | 'night_out' | 'couple' | 'afterparty' | 'hot_sexy';
+export type Pack = {
+    id: string;
     name: string;
     version: number;
+    description?: string;  // ← add this
     cards: Card[];
-}
+};

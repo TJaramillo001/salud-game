@@ -6,21 +6,30 @@ import { useGameStore } from '@/providers/GameStoreProvider';
 
 export default function SummaryPage() {
     const router = useRouter();
-    const { resetSeen } = useGameStore();
+    const { startNewSession, state: { selectedMode } } = useGameStore();
 
     function playAgain() {
-        // Clear seen cards for the last-selected pack so the new run has a full deck
-        resetSeen();
-        router.replace('/game/setup/players');
+        // Fresh run: new seed + cleared runtime (seen, gameOver). Mode persists.
+        startNewSession();
+        router.replace('/game/play');
     }
 
     return (
         <main className="min-h-dvh p-6 flex flex-col items-center gap-4">
             <h1 className="text-2xl font-semibold">Game Over</h1>
-            <p className="text-gray-600">Thanks for playing Salud 🍹</p>
-            <div className="flex gap-3">
-                <Button onClick={playAgain}>Play Again</Button>
-                <Button variant="ghost" onClick={() => router.replace('/')}>Home</Button>
+            <p className="text-gray-600">
+                ¡Gracias por jugar Salud 🍹{selectedMode ? ` — Modo: ${selectedMode}` : ''}!
+            </p>
+
+            <div className="flex flex-wrap gap-3 mt-2">
+                <Button onClick={playAgain}>Jugar de nuevo</Button>
+                <Button variant="ghost" onClick={() => router.replace('/game/setup/mode')}>
+                    Cambiar modo
+                </Button>
+                <Button variant="ghost" onClick={() => router.replace('/game/setup/players')}>
+                    Cambiar jugadores
+                </Button>
+                <Button variant="ghost" onClick={() => router.replace('/')}>Inicio</Button>
             </div>
         </main>
     );
