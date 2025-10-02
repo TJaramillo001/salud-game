@@ -1,17 +1,34 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/Button';
 import { useGameStore } from '@/providers/GameStoreProvider';
+import { trackEvent } from '@/lib/analytics'; // <-- import your telemetry util
 
 export default function SummaryPage() {
     const router = useRouter();
     const { startNewSession, state: { selectedMode } } = useGameStore();
+    const sent = useRef(false);
+
+    // Fire telemetry once
+    useEffect(() => {
+        if (!sent.current) {
+            trackEvent('session_end', { mode: selectedMode });
+            sent.current = true;
+        }
+    }, [selectedMode]);
 
     function playAgain() {
-        // Fresh run: new seed + cleared runtime (seen, gameOver). Mode persists.
         startNewSession();
         router.replace('/game/play');
+    }
+
+    function rate() {
+        window.open(
+            'https://forms.gle/9GrR3mFqjQCTqoB89', 
+            '_blank'
+        );
     }
 
     return (
@@ -23,6 +40,7 @@ export default function SummaryPage() {
 
             <div className="flex flex-wrap gap-3 mt-2">
                 <Button onClick={playAgain}>Jugar de nuevo</Button>
+                <Button variant="secondary" onClick={rate}>Calificar Salud</Button>
                 <Button variant="ghost" onClick={() => router.replace('/game/setup/mode')}>
                     Cambiar modo
                 </Button>

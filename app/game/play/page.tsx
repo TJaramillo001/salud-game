@@ -1,3 +1,4 @@
+//app/game/play/page.tsx
 'use client';
 
 import { useEffect, useMemo, useRef, useState } from 'react';
@@ -74,7 +75,6 @@ export default function PlayPage() {
     useEffect(() => {
         const isRule = current?.kind === 'rule_on' || current?.kind === 'rule_off';
         if (current && isRule && current.ruleId && !appliedRules.current.has(current.id)) {
-            // Optionally pass phase info if your rules engine uses it
             const params = { phase: current.kind === 'rule_on' ? 'on' : 'off' } as Record<string, unknown>;
             addRule({ ruleId: current.ruleId, params });
             appliedRules.current.add(current.id);
@@ -116,7 +116,7 @@ export default function PlayPage() {
     if (isEmptyDeck) {
         return (
             <main className="min-h-dvh p-6 pb-28 flex flex-col items-center gap-6">
-                <DeckHUD remaining={0} />
+                <DeckHUD />
                 <div className="max-w-md text-center space-y-3">
                     <h2 className="text-xl font-semibold">No se pudo armar el mazo</h2>
                     <p className="text-sm text-neutral-500">
@@ -150,18 +150,17 @@ export default function PlayPage() {
         );
     }
 
-    // 12) Normal play UI
+    // 12) Normal play UI (no progress displayed)
     return (
         <main className="min-h-dvh p-6 pb-28 flex flex-col items-center gap-6">
-            {/* HUD without "Turno" */}
-            <DeckHUD remaining={remaining} />
+            <DeckHUD />
 
             {/* Card area */}
             <div className="w-full flex justify-center" {...bind}>
                 {current ? (
                     <QuestionCard card={current as Card} subtitle={subtitle ?? undefined} dx={dx} />
                 ) : (
-                    <div>No more cards.</div>
+                    <div />
                 )}
             </div>
 
