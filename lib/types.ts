@@ -1,11 +1,10 @@
 // lib/types.ts
 export type Gender = "M" | "F" | "X" | undefined;
 
-export type Player = {
-    id: string;
-    name: string;
-    gender?: Gender;
-};
+// lib/types.ts
+export type { Player, PlayerId } from '@/features/players/types';
+// keep other lib types as-is
+
 
 export type TargetSpec = {
     roles: string[]; // e.g., ["A","B"], ["STARTER"], etc.

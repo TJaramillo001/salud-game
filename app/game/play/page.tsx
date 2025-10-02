@@ -1,4 +1,4 @@
-//app/game/play/page.tsx
+// app/game/play/page.tsx
 'use client';
 
 import { useEffect, useMemo, useRef, useState } from 'react';
@@ -38,7 +38,7 @@ export default function PlayPage() {
     } = useGameStore();
 
     const router = useRouter();
-    const { addRule } = useActiveRules();
+    const { addRule, clearRule } = useActiveRules();
 
     // 1) Require mode and players
     useEffect(() => {
@@ -51,10 +51,11 @@ export default function PlayPage() {
         }
     }, [players, router]);
 
-    // 2) Stable per-run seed that depends on mode + players and freezes on mount
+    // 2) Stable per-run seed depending on mode + player names (not objects)
     const [runId, setRunId] = useState(0);
     const seed = useMemo(() => {
-        const key = `${selectedMode ?? 'unknown'}|${players.join('|')}|run:${runId}`;
+        const names = players.map((p) => p.name).join('|');
+        const key = `${selectedMode ?? 'unknown'}|${names}|run:${runId}`;
         return cyrb53(key);
     }, [selectedMode, players, runId]);
 
@@ -70,16 +71,24 @@ export default function PlayPage() {
         if (players.length === 0) setTurnIndex(0);
     }, [players.length]);
 
-    // 6) Auto-apply rules exactly once (use `kind`, not `type`)
-    const appliedRules = useRef<Set<string>>(new Set());
+    // 6) Apply rule lifecycle exactly once per card
+    const processed = useRef<Set<string>>(new Set());
     useEffect(() => {
-        const isRule = current?.kind === 'rule_on' || current?.kind === 'rule_off';
-        if (current && isRule && current.ruleId && !appliedRules.current.has(current.id)) {
-            const params = { phase: current.kind === 'rule_on' ? 'on' : 'off' } as Record<string, unknown>;
-            addRule({ ruleId: current.ruleId, params });
-            appliedRules.current.add(current.id);
+        if (!current || !current.ruleId) return;
+
+        const isOn = current.kind === 'rule_on';
+        const isOff = current.kind === 'rule_off';
+
+        if (!isOn && !isOff) return;
+        if (processed.current.has(current.id)) return; // idempotent per card id
+        processed.current.add(current.id);
+
+        if (isOn) {
+            addRule({ ruleId: current.ruleId, params: { phase: 'on' } });
+        } else {
+            clearRule(current.ruleId);
         }
-    }, [current, addRule]);
+    }, [current, addRule, clearRule]);
 
     // 7) End of deck → summary (but not for the empty-deck sanity state)
     useEffect(() => {
@@ -103,16 +112,32 @@ export default function PlayPage() {
         threshold: 80,
     });
 
-    if (!selectedMode) return null;
+    // 10) Build a default actors map so {A}/{B}/{STARTER} resolve
+    const actors = useMemo(() => {
+        if (players.length === 0) return {};
+        const A = turnIndex % players.length;
+        const B = (turnIndex + 1) % players.length;
+        const STARTER = A;
+        return { A, B, STARTER };
+    }, [turnIndex, players.length]);
 
-    // 10) Subtitle resolution — hide for rule cards
+    // 11) Subtitle resolution — must be a string, never an object
     const isRuleCard = current?.kind === 'rule_on' || current?.kind === 'rule_off';
-    const subtitle =
+    const rawSubtitle =
         current && !isRuleCard
-            ? resolveTargetName?.(current as Card, players, turnIndex) ?? null
+            ? resolveTargetName?.(current as Card, players.map((p) => p.name), turnIndex) ?? null
             : null;
 
-    // 11) Empty deck recovery UI
+    const subtitle =
+        typeof rawSubtitle === 'string'
+            ? rawSubtitle
+            : rawSubtitle !== null &&
+            typeof rawSubtitle === 'object' &&
+            'name' in rawSubtitle
+                ? (rawSubtitle as { name: string }).name
+                : null;
+
+    // 12) Empty deck recovery UI
     if (isEmptyDeck) {
         return (
             <main className="min-h-dvh p-6 pb-28 flex flex-col items-center gap-6">
@@ -150,7 +175,7 @@ export default function PlayPage() {
         );
     }
 
-    // 12) Normal play UI (no progress displayed)
+    // 13) Normal play UI (no progress displayed)
     return (
         <main className="min-h-dvh p-6 pb-28 flex flex-col items-center gap-6">
             <DeckHUD />
@@ -158,7 +183,13 @@ export default function PlayPage() {
             {/* Card area */}
             <div className="w-full flex justify-center" {...bind}>
                 {current ? (
-                    <QuestionCard card={current as Card} subtitle={subtitle ?? undefined} dx={dx} />
+                    <QuestionCard
+                        card={current as Card}
+                        subtitle={subtitle ?? undefined} // must be string
+                        dx={dx}
+                        players={players}              // pass Player[] so placeholders can resolve
+                        actors={actors}                // default mapping for {A},{B},{STARTER}
+                    />
                 ) : (
                     <div />
                 )}

@@ -13,29 +13,32 @@ import {
     MODE_STORAGE_KEY,
     isModeKey,
 } from '@/features/modes/types';
+import type { Player, PlayerId } from '@/features/players/types';
+import { newPlayerId } from '@/features/players/types';
 
-// ---------- Domain types (extend as needed) ----------
-export type PlayerId = string;
+// ---------- Storage keys ----------
+const PLAYERS_STORAGE_KEY = 'SALUD_PLAYERS_V1';
 
+// ---------- Domain state ----------
 export type GameState = {
     // Core session
     sessionId: string | null;
     seed: number | null;
     gameOver: boolean;
 
-    // Roster
-    players: PlayerId[];
+    // Roster (future-proof: full Player objects)
+    players: Player[];
 
     // Seen cards (by stable card id)
     seen: string[];
 
-    // New (Step 1): mode selection
+    // Mode selection
     selectedMode: ModeKey | null;
 };
 
 export type GameAction =
     | { type: 'SET_MODE'; mode: ModeKey }
-    | { type: 'SET_PLAYERS'; players: PlayerId[] }
+    | { type: 'SET_PLAYERS'; players: Player[] }
     | { type: 'START_NEW_SESSION'; sessionId: string; seed: number }
     | { type: 'END_GAME' }
     | { type: 'RESET_RUNTIME' }
@@ -44,18 +47,18 @@ export type GameAction =
 type GameDispatch = (action: GameAction) => void;
 
 type GameStore = {
-    // State and raw dispatcher
+    // State and dispatcher
     state: GameState;
     dispatch: GameDispatch;
 
     // Convenience mirrors so components can destructure directly
-    players: PlayerId[];
+    players: Player[];
 
-    // Convenience helpers (stable API for components)
+    // Helpers (stable API for components)
     setMode: (mode: ModeKey) => void;
-    setPlayers: (players: PlayerId[]) => void;
+    setPlayers: (players: Player[]) => void;
     addPlayer: (name: string) => void;
-    removePlayer: (name: string) => void;
+    removePlayer: (id: PlayerId) => void;
     clearPlayers: () => void;
 
     startNewSession: (opts?: { forceMode?: ModeKey }) => void;
@@ -121,7 +124,7 @@ const GameStoreContext = createContext<GameStore | null>(null);
 export function GameStoreProvider({ children }: { children: React.ReactNode }) {
     const [state, dispatch] = useReducer(reducer, initialState);
 
-    // Hydrate selectedMode from localStorage (client only)
+    // ---- Hydrate selectedMode from localStorage (client only)
     useEffect(() => {
         try {
             const raw =
@@ -137,7 +140,44 @@ export function GameStoreProvider({ children }: { children: React.ReactNode }) {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    // Persist selectedMode whenever it changes
+    // ---- Hydrate players from localStorage with migration (strings[] -> Player[])
+    useEffect(() => {
+        try {
+            if (typeof window === 'undefined') return;
+            const raw = window.localStorage.getItem(PLAYERS_STORAGE_KEY);
+
+            if (raw) {
+                const parsed = JSON.parse(raw);
+                if (Array.isArray(parsed)) {
+                    // Expect [{id, name}] but be tolerant
+                    const asPlayers: Player[] = parsed
+                        .map((p: any): Player | null => {
+                            if (p && typeof p.name === 'string') {
+                                return {
+                                    id: typeof p.id === 'string' ? p.id : newPlayerId(),
+                                    name: p.name,
+                                    gender: p.gender,
+                                };
+                            }
+                            return null;
+                        })
+                        .filter(Boolean) as Player[];
+
+                    if (asPlayers.length > 0) {
+                        dispatch({ type: 'SET_PLAYERS', players: asPlayers });
+                    }
+                }
+            } else {
+                // Legacy migration: if someone previously stored string[] elsewhere, migrate here.
+                // (No legacy key known; if you had one, check and transform to Player[])
+            }
+        } catch {
+            // ignore storage failures
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    // ---- Persist selectedMode
     useEffect(() => {
         try {
             if (state.selectedMode) {
@@ -150,35 +190,45 @@ export function GameStoreProvider({ children }: { children: React.ReactNode }) {
         }
     }, [state.selectedMode]);
 
-    // Convenience helpers (keep these stable for components)
+    // ---- Persist players whenever they change
+    useEffect(() => {
+        try {
+            window.localStorage.setItem(PLAYERS_STORAGE_KEY, JSON.stringify(state.players));
+        } catch {
+            // ignore storage failures
+        }
+    }, [state.players]);
+
+    // ---------- Convenience helpers ----------
     const value = useMemo<GameStore>(
         () => ({
             state,
             dispatch,
 
-            // expose for direct destructuring
+            // expose for destructuring
             players: state.players,
 
             setMode: (mode: ModeKey) => dispatch({ type: 'SET_MODE', mode }),
-            setPlayers: (players: PlayerId[]) =>
+
+            setPlayers: (players: Player[]) =>
                 dispatch({ type: 'SET_PLAYERS', players }),
 
             addPlayer: (name: string) => {
                 const trimmed = name.trim();
                 if (!trimmed) return;
-                // Avoid duplicates (case-insensitive)
+
+                // Avoid duplicates by name (case-insensitive)
                 const exists = state.players.some(
-                    (p) => p.toLocaleLowerCase() === trimmed.toLocaleLowerCase(),
+                    (p) => p.name.toLocaleLowerCase() === trimmed.toLocaleLowerCase()
                 );
                 if (exists) return;
-                dispatch({ type: 'SET_PLAYERS', players: [...state.players, trimmed] });
+
+                const next: Player = { id: newPlayerId(), name: trimmed };
+                dispatch({ type: 'SET_PLAYERS', players: [...state.players, next] });
             },
 
-            removePlayer: (name: string) => {
-                const needle = name.toLocaleLowerCase();
-                const next = state.players.filter(
-                    (p) => p.toLocaleLowerCase() !== needle,
-                );
+            removePlayer: (id: PlayerId) => {
+                const next = state.players.filter((p) => p.id !== id);
                 if (next.length !== state.players.length) {
                     dispatch({ type: 'SET_PLAYERS', players: next });
                 }

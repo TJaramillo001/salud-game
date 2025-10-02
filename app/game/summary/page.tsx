@@ -1,14 +1,20 @@
+// app/game/summary/page.tsx
 'use client';
 
 import { useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/Button';
 import { useGameStore } from '@/providers/GameStoreProvider';
-import { trackEvent } from '@/lib/analytics'; // <-- import your telemetry util
+import { useActiveRules } from '@/features/rules/useActiveRules';
+import { trackEvent } from '@/lib/analytics';
 
 export default function SummaryPage() {
     const router = useRouter();
-    const { startNewSession, state: { selectedMode } } = useGameStore();
+    const {
+        startNewSession,
+        state: { selectedMode },
+    } = useGameStore();
+    const { clearAll } = useActiveRules();
     const sent = useRef(false);
 
     // Fire telemetry once
@@ -19,16 +25,20 @@ export default function SummaryPage() {
         }
     }, [selectedMode]);
 
+    // Clear active rules exactly once on mount
+    useEffect(() => {
+        clearAll();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []); // <-- empty deps to avoid effect loops
+
     function playAgain() {
+        clearAll(); // safety
         startNewSession();
         router.replace('/game/play');
     }
 
     function rate() {
-        window.open(
-            'https://forms.gle/9GrR3mFqjQCTqoB89', 
-            '_blank'
-        );
+        window.open('https://forms.gle/9GrR3mFqjQCTqoB89', '_blank');
     }
 
     return (
