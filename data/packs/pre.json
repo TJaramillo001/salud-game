@@ -3,236 +3,146 @@
     "id": "pre-001",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
-    "text": "{A}, toma 1 y di tu apodo más vergonzoso.",
-    "spice": 1,
+    "target": { "roles": ["A"]},
+    "text": "{A}, tómate 3 tragos con las personas que estén vestidas con el mismo color que tú",
+    "spice": 2,
     "weight": 1
   },
   {
     "id": "pre-002",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A","B"], "constraints": { "distinct": true } },
-    "text": "{A} señala algo rojo. {B} toma 2 si no lo ve en 5s.",
+    "target": { "roles": ["A"] },
+    "text": "{A}, cuenta un chiste malo o bebe 3 tragos",
     "spice": 1,
     "weight": 1
   },
   {
     "id": "pre-003",
     "mode": "pre",
-    "kind": "versus",
-    "target": { "roles": ["A","B"], "constraints": { "distinct": true } },
-    "text": "{A} vs {B}: piedra, papel o tijera. Quien pierda toma 2.",
-    "spice": 1,
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si te ha gustado alguien de aquí, toma 2 tragos.",
+    "spice": 2,
     "weight": 1
   },
   {
     "id": "pre-004",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
-    "text": "{A}, brinda con alguien. Ambos toman 1.",
+    "target": { "roles": ["A"]},
+    "text": "{A}, tomate 1 y pasale 1 a la persona que más te haya hecho reír hoy.",
     "spice": 1,
     "weight": 1
   },
   {
     "id": "pre-005",
     "mode": "pre",
-    "kind": "group",
-    "target": { "roles": ["STARTER"] },
-    "text": "Tema: países en Europa. {STARTER} empieza. Repite/fallas: tomas 2.",
+    "kind": "versus",
+    "target": { "roles": ["A","B"], "constraints": { "distinct": true } },
+    "text": "{A}, juega piedra papel o tijera con {B}, el que pierda toma 3 tragos.",
     "spice": 1,
     "weight": 1
   },
   {
     "id": "pre-006",
     "mode": "pre",
-    "kind": "action",
-    "target": { "roles": ["A"] },
-    "text": "{A}, muestra tu foto más reciente. Si te da pena, toma 2.",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Voten: ¿Perros o gatos? Minoría bebe 3 tragos",
     "spice": 1,
     "weight": 1
   },
   {
     "id": "pre-007",
     "mode": "pre",
-    "kind": "question",
-    "target": { "roles": ["A"] },
-    "text": "{A}, ¿tienes una ics con este grupo? Si sí, repártelas (2 en total).",
-    "spice": 1,
+    "kind": "action",
+    "target": { "roles": ["ALL"] },
+    "text": "Si se han besado con algún hermano(a) de su amigo, tomen 4 tragos.",
+    "spice": 3,
     "weight": 1
   },
   {
     "id": "pre-008",
     "mode": "pre",
-    "kind": "action",
-    "target": { "roles": ["A","B"], "constraints": { "distinct": true } },
-    "text": "{A} elige un emoji para {B}. {B} debe usarlo al hablar. Si falla, toma 1.",
-    "spice": 1,
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "Tema: Artistas colombianos. El que no sepa o repita alguno ya dicho, toma 3 tragos. Empieza {STARTER}.",
+    "spice": 2,
     "weight": 1
   },
   {
     "id": "pre-009",
     "mode": "pre",
-    "kind": "action",
+    "kind": "exclusion",
     "target": { "roles": ["A"] },
-    "text": "{A}, cuenta una mini-anécdota de fiesta. Si dura >20s, toma 1.",
-    "spice": 1,
+    "text": "El último en tomarle una foto a {A} toma 2 tragos.",
+    "spice": 2,
     "weight": 1
   },
   {
     "id": "pre-010",
     "mode": "pre",
-    "kind": "versus",
-    "target": { "roles": ["A","B"], "constraints": { "distinct": true } },
-    "text": "{A} vs {B}: pulso chino (3,2,1). Pierde: toma 2.",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "¡Vamos a celebrar! Todos toman 1 trago.",
     "spice": 1,
     "weight": 1
   },
-
   {
     "id": "pre-011",
     "mode": "pre",
-    "kind": "action",
+    "kind": "question",
     "target": { "roles": ["A"] },
-    "text": "{A}, toma 1 si has enviado un ‘¿llegaste?’ esta semana.",
-    "spice": 1,
+    "text": "{A}, si te has tomado un shot con un desconocido, toma 1 trago.",
+    "spice": 2,
     "weight": 1
   },
   {
     "id": "pre-012",
     "mode": "pre",
-    "kind": "group",
-    "target": { "roles": ["STARTER"] },
-    "text": "Ronda rápida de nombres con ‘A’. {STARTER} comienza. Quien trabe la lengua toma 1.",
-    "spice": 1,
-    "weight": 1
+    "kind": "rule_on",
+    "target": { "roles": ["ALL"] },
+    "text": "Regla: Cada vez que alguien diga \"marica\", debe tomarse 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": "r-marica"
   },
   {
     "id": "pre-013",
     "mode": "pre",
-    "kind": "action",
-    "target": { "roles": ["A","B"], "constraints": { "distinct": true } },
-    "text": "{A} describe su outfit en 5s. {B} juzga: si dice ‘bien’, {B} toma 1; si no, {A} toma 1.",
-    "spice": 1,
-    "weight": 1
+    "kind": "rule_off",
+    "target": { "roles": ["ALL"] },
+    "text": "Fin regla: Ya pueden volver a decir \"marica\"",
+    "spice": 0,
+    "weight": 1,
+    "ruleId": "r-marica"
   },
-
   {
     "id": "pre-014",
     "mode": "pre",
-    "kind": "question",
-    "target": { "roles": ["A"], "constraints": { "genderOfA": "F" } },
-    "text": "{A}, ¿alguien te ha invitado un shot por DM? Si sí, reparte 3.",
-    "altText": "Si no hay mujeres, quien tenga más seguidores reparte 3.",
-    "spice": 2,
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, reparte 1 trago a quien quieras por cada 2 personas que te has besado",
+    "spice": 3,
     "weight": 1
   },
   {
     "id": "pre-015",
     "mode": "pre",
-    "kind": "question",
-    "target": { "roles": ["A"], "constraints": { "genderOfA": "M" } },
-    "text": "{A}, ¿has usado la misma pinta dos findes seguidos? Si sí, toma 2.",
-    "altText": "Si no hay hombres, quien repita tenis hoy toma 2.",
-    "spice": 2,
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, reparte 1 trago por cada relación que has tenido.",
+    "spice": 3,
     "weight": 1
   },
-
   {
     "id": "pre-016",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["A"] },
-    "text": "Todos menos {A}: tomen 1. {A} elige una canción para el grupo.",
+    "target": { "roles": ["ALL"] },
+    "text": "Voten: ¿Maluma o J Balvin? Minoría bebe 3 tragos",
     "spice": 1,
     "weight": 1
-  },
-
-  {
-    "id": "pre-017",
-    "mode": "pre",
-    "kind": "action",
-    "target": { "roles": ["A"] },
-    "text": "{A}, toma 1 y pásale 1 a quien te hizo reír más hoy.",
-    "spice": 1,
-    "weight": 1
-  },
-  {
-    "id": "pre-018",
-    "mode": "pre",
-    "kind": "versus",
-    "target": { "roles": ["A","B"], "constraints": { "distinct": true } },
-    "text": "{A} vs {B}: decir ‘tequila’ sin reír. Se ríe primero: toma 2.",
-    "spice": 1,
-    "weight": 1
-  },
-  {
-    "id": "pre-019",
-    "mode": "pre",
-    "kind": "group",
-    "target": { "roles": ["STARTER"] },
-    "text": "Tema: artistas colombianos. {STARTER} empieza. Repite/fallas: tomas 2.",
-    "spice": 1,
-    "weight": 1
-  },
-
-  {
-    "id": "pre-020",
-    "mode": "pre",
-    "kind": "wildcard",
-    "target": { "roles": ["A"] },
-    "text": "¡El Mago del Trago lanzó un hechizo! Todos toman 1. {A} elige a alguien que tome +1.",
-    "spice": 2,
-    "weight": 1
-  },
-
-  {
-    "id": "pre-021",
-    "mode": "pre",
-    "kind": "action",
-    "target": { "roles": ["A","B"], "constraints": { "distinct": true } },
-    "text": "{A} posa; {B} toma una foto. Último en tomar la foto: toma 3.",
-    "spice": 1,
-    "weight": 1
-  },
-
-  {
-    "id": "pre-022",
-    "mode": "pre",
-    "kind": "rule_on",
-    "target": { "roles": ["A"] },
-    "text": "Regla: hablar sin decir ‘eh’. Si {A} o cualquiera dice ‘eh’, toma 1 hasta que la regla acabe.",
-    "spice": 2,
-    "weight": 1,
-    "ruleId": "r-eh"
-  },
-  {
-    "id": "pre-023",
-    "mode": "pre",
-    "kind": "action",
-    "target": { "roles": ["A"] },
-    "text": "{A}, manda un saludo al grupo (nota de voz o brindis). Si te niegas, toma 2.",
-    "spice": 1,
-    "weight": 1
-  },
-  {
-    "id": "pre-024",
-    "mode": "pre",
-    "kind": "versus",
-    "target": { "roles": ["A","B"], "constraints": { "distinct": true } },
-    "text": "{A} vs {B}: deletrear ‘medellín’. Falla: toma 2.",
-    "spice": 1,
-    "weight": 1
-  },
-  {
-    "id": "pre-025",
-    "mode": "pre",
-    "kind": "rule_off",
-    "target": { "roles": ["A"] },
-    "text": "Fin de regla. {A} elige a alguien que tome 1 por descanso.",
-    "spice": 1,
-    "weight": 1,
-    "ruleId": "r-eh"
   }
 ]

@@ -1,6 +1,6 @@
 # 📘 Salud — Source of Truth (SOT)
 
-*Last updated: 2025‑09‑28*
+*Last updated: 2025‑10‑03*
 
 ## 0) TL;DR
 
@@ -31,22 +31,23 @@
 * **Progress:** simple counter `X / N`, end screen with replay & rating CTA.
 * **Replay:** reshuffle from full deck; session‑scoped “seen” set reset.
 
+---
+
 ## 3) Card System
 
 ### 3.1 Card Types (MVP)
 
-All cards are **targeted** to one or more players so every turn involves active participation. Cards can be directed at a single player, a pair, or a subgroup (e.g., by gender). Questions exist only when they’re directed to a specific player — no broad, drawn‑out prompts.
+All cards are **targeted** to one or more players so every turn involves active participation. Cards can be directed at a single player, a pair, or a subgroup (e.g., by gender). Questions exist only when they’re directed to a specific player — no broad, drawn-out prompts.
 
 1. **Targeted Prompt/Question:** directed at one player, fast response (e.g., reveal something, quick answer).
 2. **Action/Dare:** immediate physical or social action between one or more players.
-3. **Pair / Versus:** two specific players must compete or interact (e.g., rock‑paper‑scissors loser drinks).
-4. **Gender / Attribute‑based:** all of one gender or characteristic perform action (e.g., “all men drink once”).
-5. **Group Challenge (with starter):** everyone plays a quick round‑robin challenge; specify a starting player. Must be simple enough to go around quickly. Example: topic chain games.
+3. **Pair / Versus:** two specific players must compete or interact (e.g., rock-paper-scissors loser drinks).
+4. **Gender / Attribute-based:** all of one gender or characteristic perform action (e.g., “all men drink once”).
+5. **Group Challenge (with starter):** everyone plays a quick round-robin challenge; specify a starting player. Must be simple enough to go around quickly. Example: topic chain games.
 6. **Rule — Activate:** introduces a temporary rule (persists until its paired repeal card appears).
 7. **Rule — Repeal:** explicitly disables a previously introduced rule.
 8. **Wildcard:** rare, disruptive events (e.g., “The Drink Wizard casts a spell — everyone take a shot”).
 9. **Exclusion (“everyone but one”):** tasks that involve all except a chosen player (e.g., take a picture of Player 1, last one to do it drinks).
-10. **Nudge/CTA:** soft commercial or flow nudge (e.g., featured drink).
 
 ### 3.2 Rule Cards — Lifecycle & Mechanics
 
@@ -54,9 +55,8 @@ All cards are **targeted** to one or more players so every turn involves active 
 * **Persistence:** Remains **active** across subsequent cards within the **current session**.
 * **Repeal:** A later **Rule — Repeal** card (paired by `ruleId`) sets `rules[ruleId] = inactive` and removes the HUD badge.
 * **Reappearance strategy:**
-
-    * Place repeal cards on a schedule/cadence (e.g., appear within the next 8–15 cards) or via weighted random after a **cooldown** to avoid instant cancellation.
-    * If deck ends and a rule is still active → auto‑repeal at end screen.
+  * Place repeal cards on a schedule/cadence (e.g., appear within the next 8–15 cards) or via weighted random after a **cooldown** to avoid instant cancellation.
+  * If deck ends and a rule is still active → auto-repeal at end screen.
 * **UX surfacing:** small sticky HUD with active rule icons + tap for descriptions. Minimal friction.
 
 ### 3.3 Content Schema (JSON)
@@ -65,41 +65,140 @@ All cards are **targeted** to one or more players so every turn involves active 
 {
   "id": "pre-001",
   "mode": "pre", // or "night_out"
-  "kind": "targeted", // targeted | pair | group | gender | rule_on | rule_off | wildcard | exclusion | nudge
-  "text": "Jugador 2: imita a un influencer por 10s o bebe.",
-  "target": "playerId" | "random" | "pair" | "all_men" | "all_women" | etc.,
+  "kind": "action", // action | question | versus | group | exclusion | wildcard | rule_on | rule_off 
+  "target": {
+    "roles": ["A","B"], // tokens resolved to players at runtime
+    "constraints": { "distinct": true } // optional
+  },
+  "text": "{A}, cuenta un chiste malo o bebe 3 tragos.",
   "spice": 1,
   "weight": 1,
   "ruleId": null,
-  "meta": { "locale": "es-CO" }
+  "altText": null
 }
 ```
 
 ### 3.4 Samples
 
-* **Targeted Prompt:** *“Jugador 4: confiesa tu peor excusa para cancelar un plan.”*
-* **Action/Dare:** *“Jugador 2 y Jugador 5: hagan pulseo, el perdedor bebe 2.”*
-* **Pair / Versus:** *“Jugador 1 vs Jugador 3: piedra, papel o tijera. Pierde = trago.”*
-* **Gender:** *“Todas las mujeres beben 1.”*
-* **Group Challenge:** *“Tema: Países en Europa. Empieza Jugador 3. El que repita o no sepa, bebe 3.”*
-* **Exclusion:** *“Tomen una foto a Jugador 1. El último en hacerlo bebe 3.”*
-* **Rule — Activate:** *“Nueva regla: no puedes decir nombres propios. Quien falle bebe.”*
-* **Rule — Repeal:** *“Regla terminada: puedes decir nombres otra vez.”*
-* **Wildcard:** *“El Mago de los Tragos lanza un hechizo: ¡todos toman un shot!”*
-* **Nudge/CTA:** *“Perdedor pide una Paloma 🍹.”*
+#### Targeted Prompt
+```json
+{ 
+  "id": "pre-002", 
+  "mode": "pre", 
+  "kind": "question", 
+  "target": { "roles": ["A"] }, 
+  "text": "{A}, confiesa tu peor excusa para cancelar un plan.", 
+  "spice": 1, 
+  "weight": 1
+}
 
-### 3.5 Deck Assembly & Fairness
+```
 
-* Build deck server‑side (or client‑side for MVP) with:
+#### Action / Dare
+```json
+{ 
+  "id": "pre-003", 
+  "mode": "pre", 
+  "kind": "action", 
+  "target": { "roles": ["A","B"], "constraints": { "distinct": true } },
+  "text": "{A} y {B}: hagan pulseo, el perdedor bebe 2.",
+  "spice": 1,
+  "weight": 1
+}
+```
 
-    * Mode filter + venue theming.
-    * Deterministic PRNG seeded by `(sessionId || tableId || time bucket)`.
-    * **Seen set** per session to avoid repeats; cleared on Replay.
-    * Place CTA cards at fixed indices (e.g., 4 and 9) unless deck shorter.
-    * When a Rule — Activate is included, schedule its matching Repeal within the remaining window with weighted probability.
+#### Pair / Versus
+```json
+{ 
+  "id": "pre-004", 
+  "mode": "pre", 
+  "kind": "versus", 
+  "target": { "roles": ["A","B"], "constraints": { "distinct": true } }, 
+  "text": "{A} vs {B}: piedra, papel o tijera. Pierde toma 1.", 
+  "spice": 1, 
+  "weight": 1
+}
+```
+
+#### Group Challenge
+```json
+{ 
+  "id": "pre-006", 
+  "mode": "pre", 
+  "kind": "group", 
+  "target": { "roles": ["STARTER"] }, 
+  "text": "Tema: Países en Europa. {STARTER} empieza. El que repita o no sepa bebe 3.", 
+  "spice": 2, 
+  "weight": 1
+}
+```
+
+#### Exclusion
+```json
+{ 
+  "id": "pre-007", 
+  "mode": "pre", 
+  "kind": "exclusion", 
+  "target": { "roles": ["A"] }, 
+  "text": "Tomen una foto a {A}. El último en hacerlo bebe 3.", 
+  "spice": 2, 
+  "weight": 1
+}
+```
+
+#### Rule - Activate
+```json
+{ 
+  "id": "pre-008", 
+  "mode": "pre", 
+  "kind": "rule_on", 
+  "target": { "roles": ["ALL"] }, 
+  "text": "Nueva regla: no puedes decir nombres propios. Quien falle bebe.", 
+  "spice": 2, 
+  "weight": 1, 
+  "ruleId": "r-nombres"
+}
+
+```
+
+#### Rule - Repeal
+```json
+{ 
+  "id": "pre-009", 
+  "mode": "pre", 
+  "kind": "rule_off", 
+  "target": { "roles": ["ALL"] }, 
+  "text": "Regla terminada: puedes decir nombres otra vez.", 
+  "spice": 0, 
+  "weight": 1, 
+  "ruleId": "r-nombres"
+}
+
+```
+
+#### Wildcard
+```json
+
+{ 
+  "id": "pre-010", 
+  "mode": "pre", 
+  "kind": "wildcard", 
+  "target": { "roles": ["ALL"] }, 
+  "text": "El Mago de los Tragos lanza un hechizo: ¡todos toman un shot!", 
+  "spice": 2, 
+  "weight": 1
+}
+```
+
+###3.5 Deck Assembly and Fairness
+
+* Build deck server-side (or client-side for MVP) with:
+  * Mode filter + venue theming. 
+  * Deterministic PRNG seeded by (sessionId || tableId || time bucket). 
+  * Seen set per session to avoid repeats; cleared on Replay.  
+  * When a Rule — Activate is included, schedule its matching Repeal within the remaining window with weighted probability.
 
 ---
-
 
 ## 4) Reset & Persistence Rules
 
@@ -160,7 +259,7 @@ Done: Lighthouse shows installable PWA; offline last deck works.
 Tasks: Write **10 cards/mode** (→ **20 total**). Keep short; tag `spice`.
 Done: Real content replaces placeholders.
 
-**Day 9 – Nudges (30m)**
+**Day 9 – Nudges (30m)** /admin{ AVOID THIS, NUDGE NO LONGER INCLUDED IN MVP}
 Tasks: Insert CTA cards at positions 4 and 9 (“Perdedor pide Paloma 🍹”). Parameterize featured drink.
 Done: Nudges show deterministically.
 
@@ -378,19 +477,26 @@ salud/
 │  ├─ haptics.ts
 │  ├─ prng.ts
 │  ├─ render.ts
-│  └─ types.ts
+│  ├─ types.ts
+│  └─ offline.ts
 ├─ providers/
 │  ├─ GameStoreProvider.tsx
 │  └─ ThemeProvider.tsx
 ├─ public/
 │  ├─ favicon.ico
 │  ├─ images/
-│  └─ icons/demo/
-│     ├─ file.svg
-│     ├─ globe.svg
-│     ├─ next.svg
-│     ├─ vercel.svg
-│     └─ window.svg
+│  ├─ icons/
+│  │  ├─ demo/
+│  │  │  ├─ file.svg
+│  │  │  ├─ globe.svg
+│  │  │  ├─ next.svg
+│  │  │  ├─ vercel.svg
+│  │  │  └─ window.svg
+│  │  ├─ icon-192.png
+│  │  ├─ icon-512.png
+│  │  └─ icon-512-maskable.png
+│  ├─ manifest.json
+│  └─ sw.js
 ├─ scripts/
 │  └─ validate-content.ts
 ├─ styles/
@@ -424,7 +530,6 @@ salud/
 
 * **Rule scheduling strategy:** start with fixed window (e.g., repeal within next 8–15 cards), revisit based on playtest.
 * **Offline behavior:** if API down, fallback to local `data/*.json` decks and local rule pairing.
-* **Nudge ethics:** keep CTAs friendly; avoid paywalls or bait‑and‑switch.
 
 ---
 
