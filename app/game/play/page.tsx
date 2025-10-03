@@ -12,6 +12,7 @@ import { DeckHUD } from './components/DeckHUD';
 import { vibrate } from '@/lib/haptics';
 import { nextTurnIndex, resolveTargetName } from '@/features/gameplay/turn';
 import type { Card } from '@/features/questions/types';
+import { saveLastDeck, getLastDeck, isOnline } from '@/lib/offline';
 
 function cyrb53(str: string, seed = 0) {
     let h1 = 0xdeadbeef ^ seed, h2 = 0x41c6ce57 ^ seed;
@@ -37,37 +38,69 @@ export default function PlayPage() {
         return cyrb53(`${selectedMode ?? 'unknown'}|${names}|run:${runId}`);
     }, [selectedMode, players, runId]);
 
-    // Deck
+    // Primary deck (normal flow)
     const { current, remaining, next, deck } = useDeck(seed);
     const isEmptyDeck = !deck || deck.length === 0;
 
-    // Turn index
+    // --- Persist the latest playable deck for offline fallback ---
+    useEffect(() => {
+        try {
+            if (deck && deck.length > 0) {
+                saveLastDeck(deck as Card[]);
+            }
+        } catch { /* ignore */ }
+    }, [deck]);
+
+    // Offline fallback deck (when generation fails or offline)
+    const [offlineDeck, setOfflineDeck] = useState<Card[] | null>(null);
+    const [offlineIndex, setOfflineIndex] = useState(0);
+
+    useEffect(() => {
+        if (!isEmptyDeck) return; // only consider offline if we failed to build a deck
+        const cached = getLastDeck();
+        if (cached && cached.length > 0) {
+            setOfflineDeck(cached);
+            setOfflineIndex(0);
+        }
+    }, [isEmptyDeck]);
+
+    const usingOffline = isEmptyDeck && offlineDeck && offlineDeck.length > 0;
+    const offlineCurrent = usingOffline ? offlineDeck![offlineIndex] : null;
+
+    // Turn index (shared for subtitle actor rotation)
     const [turnIndex, setTurnIndex] = useState(0);
     useEffect(() => { if (players.length === 0) setTurnIndex(0); }, [players.length]);
 
-    // Rule lifecycle once per card
+    // Rule lifecycle once per card (applies to both online/offline flows)
     const processed = useRef<Set<string>>(new Set());
     useEffect(() => {
-        if (!current || !current.ruleId) return;
-        const isOn = current.kind === 'rule_on';
-        const isOff = current.kind === 'rule_off';
+        const active = (usingOffline ? offlineCurrent : current) as Card | undefined;
+        if (!active || !active.ruleId) return;
+        const isOn = active.kind === 'rule_on';
+        const isOff = active.kind === 'rule_off';
         if (!isOn && !isOff) return;
-        if (processed.current.has(current.id)) return;
-        processed.current.add(current.id);
-        if (isOn) addRule({ ruleId: current.ruleId, params: { phase: 'on' } });
-        else clearRule(current.ruleId);
-    }, [current, addRule, clearRule]);
+        if (processed.current.has(active.id)) return;
+        processed.current.add(active.id);
+        if (isOn) addRule({ ruleId: active.ruleId, params: { phase: 'on' } });
+        else clearRule(active.ruleId);
+    }, [current, offlineCurrent, usingOffline, addRule, clearRule]);
 
-    // End of deck
+    // End of deck (only for the normal deck)
     useEffect(() => {
         if (selectedMode && !isEmptyDeck && remaining <= 0 && !current) router.replace('/game/summary');
     }, [remaining, current, selectedMode, router, isEmptyDeck]);
 
-    // Advance
+    // Advance (handles either flow)
     const onAdvance = () => {
-        if (!current) return;
+        const hasCard = usingOffline ? !!offlineCurrent : !!current;
+        if (!hasCard) return;
         vibrate(10);
-        next();
+
+        if (usingOffline) {
+            setOfflineIndex((i) => (i + 1 < (offlineDeck?.length ?? 0) ? i + 1 : i));
+        } else {
+            next();
+        }
         setTurnIndex(i => nextTurnIndex(i, players.length));
     };
 
@@ -79,10 +112,11 @@ export default function PlayPage() {
     }, [turnIndex, players.length]);
 
     // Subtitle
-    const isRuleCard = current?.kind === 'rule_on' || current?.kind === 'rule_off';
+    const activeCard = (usingOffline ? offlineCurrent : current) as Card | undefined;
+    const isRuleCard = activeCard?.kind === 'rule_on' || activeCard?.kind === 'rule_off';
     const rawSubtitle =
-        current && !isRuleCard
-            ? resolveTargetName?.(current as Card, players.map(p => p.name), turnIndex) ?? null
+        activeCard && !isRuleCard
+            ? resolveTargetName?.(activeCard as Card, players.map(p => p.name), turnIndex) ?? null
             : null;
 
     const subtitle =
@@ -91,13 +125,25 @@ export default function PlayPage() {
                 ? (rawSubtitle as { name: string }).name
                 : null;
 
-    if (isEmptyDeck) {
+    // --- Offline banner ---
+    const offline = !isOnline();
+    const OfflineBanner = offline ? (
+        <div className="text-[11px] text-amber-700 bg-amber-100 border border-amber-200 px-2 py-1 rounded">
+            Modo sin conexión: usando contenido en caché cuando sea posible.
+        </div>
+    ) : null;
+
+    // --- Empty & no offline fallback ---
+    if (isEmptyDeck && !usingOffline) {
         return (
             <main className="min-h-dvh p-6 pb-28 flex flex-col items-center gap-6">
                 <DeckHUD />
+                {OfflineBanner}
                 <div className="max-w-md text-center space-y-3">
                     <h2 className="text-xl font-semibold">No se pudo armar el mazo</h2>
-                    <p className="text-sm text-neutral-500">El modo <b>{selectedMode}</b> generó 0 cartas con los jugadores/condiciones actuales.</p>
+                    <p className="text-sm text-neutral-500">
+                        El modo <b>{selectedMode}</b> generó 0 cartas con los jugadores/condiciones actuales.
+                    </p>
                     <ul className="text-sm text-neutral-500 list-disc text-left pl-5 space-y-1">
                         <li>Prueba con más jugadores o cambia el modo.</li>
                         <li>O rearmemos el mazo con una nueva semilla.</li>
@@ -114,9 +160,13 @@ export default function PlayPage() {
         );
     }
 
+    // --- Normal or offline deck rendering ---
+    const showCard = activeCard != null;
+
     return (
         <main className="min-h-dvh p-6 pb-28 flex flex-col items-center gap-6">
             <DeckHUD />
+            {OfflineBanner}
 
             {/* Tap anywhere on the card area to advance */}
             <div
@@ -127,9 +177,9 @@ export default function PlayPage() {
                 onClick={onAdvance}
                 onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && onAdvance()}
             >
-                {current ? (
+                {showCard ? (
                     <QuestionCard
-                        card={current as Card}
+                        card={activeCard as Card}
                         subtitle={subtitle ?? undefined}
                         dx={0}                 // no swipe: no tilt/translate
                         players={players}
@@ -148,7 +198,7 @@ export default function PlayPage() {
                     >
                         Terminar
                     </Button>
-                    <Button className="flex-1" onClick={onAdvance} disabled={!current}>
+                    <Button className="flex-1" onClick={onAdvance} disabled={!showCard}>
                         Siguiente
                     </Button>
                 </div>
