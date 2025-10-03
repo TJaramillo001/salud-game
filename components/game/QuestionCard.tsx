@@ -1,4 +1,3 @@
-// components/game/QuestionCard.tsx
 'use client';
 
 import * as React from 'react';
@@ -10,30 +9,40 @@ type Props = {
     card: Card;
     subtitle?: string;
     dx?: number; // swipe offset
-    players?: Player[]; // pass from store/flow
-    actors?: Partial<Record<string, number>>; // e.g. { A: 0, B: 2 }
+    players?: Player[];
+    actors?: Partial<Record<string, number>>;
 };
+
+function categoryOf(kind: Card['kind']): 'normal' | 'group' | 'rule' | 'wildcard' {
+    if (kind === 'group') return 'group';
+    if (kind === 'rule_on' || kind === 'rule_off') return 'rule';
+    if (kind === 'wildcard') return 'wildcard';
+    return 'normal';
+}
+
+const THEMES = {
+    normal:   { bg: '#7DD3FC', border: '#0284C7', label: '#075985' },
+    group:    { bg: '#A5B4FC', border: '#4F46E5', label: '#3730A3' },
+    rule:     { bg: '#FCD34D', border: '#D97706', label: '#92400E' },
+    wildcard: { bg: '#F0ABFC', border: '#C026D3', label: '#86198F' },
+} as const;
 
 function kindLabel(kind: Card['kind']): string {
     switch (kind) {
-        case 'rule_on':
-            return 'Nueva regla';
-        case 'rule_off':
-            return 'Fin de regla';
-        case 'group':
-            return 'Ronda';
-        case 'versus':
-            return 'Duelo';
-        case 'wildcard':
-            return 'Wildcard';
-        case 'action':
-            return 'Acción';
-        case 'question':
-            return 'Pregunta';
-        default:
-            return 'Carta';
+        case 'rule_on': return 'Nueva regla';
+        case 'rule_off': return 'Fin de regla';
+        case 'group': return 'Ronda';
+        case 'wildcard': return 'Wildcard';
+        case 'action': return 'Acción';
+        case 'question': return 'Pregunta';
+        case 'versus': return 'Duelo';
+        //case 'exclusion': return 'Exclusión';
+        //case 'nudge': return 'Nudge';
+        default: return 'Carta';
     }
 }
+
+// ...imports unchanged
 
 export function QuestionCard({ card, subtitle, dx = 0, players = [], actors = {} }: Props) {
     const rotation = Math.max(Math.min(dx / 20, 8), -8);
@@ -43,27 +52,49 @@ export function QuestionCard({ card, subtitle, dx = 0, players = [], actors = {}
         () => renderText(card.text, actors, players),
         [card.text, actors, players]
     );
-
     const renderedAlt =
         'altText' in card && card.altText ? renderText(card.altText, actors, players) : null;
 
+    const cat = categoryOf(card.kind);
+    const theme = THEMES[cat];
+
     return (
         <div
-            className="w-full max-w-md rounded-2xl border border-black/10 bg-white/80 shadow-md backdrop-blur p-4 md:p-5 transition-transform"
-            style={{ transform: `translateX(${translate}px) rotate(${rotation}deg)` }}
+            className="rounded-3xl border-2 shadow-md transition-transform overflow-hidden select-none"
+            style={{
+                transform: `translateX(${translate}px) rotate(${rotation}deg)`,
+                backgroundColor: theme.bg,
+                borderColor: theme.border,
+                width: 'min(92vw, 560px)',
+                aspectRatio: '3 / 4',
+            }}
         >
-            <div className="text-xs uppercase tracking-wide mb-2 text-neutral-500">
-                {kindLabel(card.kind)}
+            {/* rest identical */}
+            <div className="h-full flex flex-col p-6 md:p-8">
+                <div
+                    className="text-xs md:text-sm uppercase tracking-wide mb-3 font-semibold"
+                    style={{ color: theme.label }}
+                    title={cat}
+                >
+                    {kindLabel(card.kind)}
+                </div>
+
+                {subtitle ? (
+                    <div className="mb-3 text-base md:text-lg font-semibold text-neutral-900">
+                        {subtitle}
+                    </div>
+                ) : null}
+
+                <div className="text-2xl md:text-3xl font-bold leading-tight text-black break-words">
+                    {renderedText}
+                </div>
+
+                {renderedAlt ? (
+                    <div className="mt-auto pt-4 text-sm md:text-base text-neutral-800">
+                        Alt: {renderedAlt}
+                    </div>
+                ) : null}
             </div>
-
-            {subtitle ? <div className="mb-2 text-sm text-neutral-600">{subtitle}</div> : null}
-
-            {/* Force high-contrast main text */}
-            <div className="text-lg leading-snug text-black">{renderedText}</div>
-
-            {renderedAlt ? (
-                <div className="mt-3 text-xs text-neutral-500">Alt: {renderedAlt}</div>
-            ) : null}
         </div>
     );
 }
