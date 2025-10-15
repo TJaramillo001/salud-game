@@ -8,6 +8,15 @@ import { useGameStore } from '@/providers/GameStoreProvider';
 import { useActiveRules } from '@/features/rules/useActiveRules';
 import { trackEvent } from '@/lib/analytics';
 
+// Minimal ES labels so we don't leak raw IDs like "night_out"
+const MODE_LABEL_ES: Record<string, string> = {
+    pre: 'Pre',
+    night_out: 'Rumba',
+    couple: 'Pareja',
+    afterparty: 'After',
+    hot_and_sexy: 'Hot & Sexy',
+};
+
 export default function SummaryPage() {
     const router = useRouter();
     const {
@@ -17,7 +26,7 @@ export default function SummaryPage() {
     const { clearAll } = useActiveRules();
     const sent = useRef(false);
 
-    // Fire telemetry once
+    // Telemetry once
     useEffect(() => {
         if (!sent.current) {
             trackEvent('session_end', { mode: selectedMode });
@@ -25,11 +34,11 @@ export default function SummaryPage() {
         }
     }, [selectedMode]);
 
-    // Clear active rules exactly once on mount
+    // Clear any active rules once
     useEffect(() => {
         clearAll();
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []); // <-- empty deps to avoid effect loops
+    }, []);
 
     function playAgain() {
         clearAll(); // safety
@@ -41,23 +50,42 @@ export default function SummaryPage() {
         window.open('https://forms.gle/9GrR3mFqjQCTqoB89', '_blank');
     }
 
-    return (
-        <main className="min-h-dvh p-6 flex flex-col items-center gap-4">
-            <h1 className="text-2xl font-semibold">Game Over</h1>
-            <p className="text-gray-600">
-                ¡Gracias por jugar Salud 🍹{selectedMode ? ` — Modo: ${selectedMode}` : ''}!
-            </p>
+    function changeSetup() {
+        // Unify "Cambiar modo" + "Cambiar jugadores"
+        router.replace('/game/setup/players');
+    }
 
-            <div className="flex flex-wrap gap-3 mt-2">
-                <Button onClick={playAgain}>Jugar de nuevo</Button>
-                <Button variant="secondary" onClick={rate}>Calificar Salud</Button>
-                <Button variant="ghost" onClick={() => router.replace('/game/setup/mode')}>
-                    Cambiar modo
-                </Button>
-                <Button variant="ghost" onClick={() => router.replace('/game/setup/players')}>
-                    Cambiar jugadores
-                </Button>
-                <Button variant="ghost" onClick={() => router.replace('/')}>Inicio</Button>
+    const modeLabel = MODE_LABEL_ES[selectedMode ?? ''] ?? 'desconocido';
+
+    return (
+        <main className="min-h-dvh px-6 pb-10 pt-8 flex flex-col items-center">
+            <div className="w-full max-w-sm text-center space-y-5">
+                <h1 className="text-2xl font-semibold">Fin de la partida</h1>
+
+                <p className="text-sm text-neutral-400">
+                    ¡Gracias por jugar Salud 🍹 — Modo:{' '}
+                    <span className="font-medium">{modeLabel}</span>!
+                </p>
+
+                {/* Actions: single-column stack on mobile */}
+                <div className="pt-2 space-y-3">
+                    <Button size="lg" className="w-full" onClick={playAgain}>
+                        Jugar de nuevo
+                    </Button>
+
+                    <Button size="lg" variant="secondary" className="w-full" onClick={changeSetup}>
+                        Cambiar modo
+                    </Button>
+
+                    <div className="flex gap-3">
+                        <Button variant="ghost" className="flex-1" onClick={() => router.replace('/')}>
+                            Inicio
+                        </Button>
+                        <Button variant="ghost" className="flex-1" onClick={rate}>
+                            Calificar Salud
+                        </Button>
+                    </div>
+                </div>
             </div>
         </main>
     );
