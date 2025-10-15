@@ -39,7 +39,7 @@ export default function MarketingPage() {
                     },
                     {
                         title: "Modos de juego",
-                        desc: "Pre, Night Out, Couple, Afterparty, Hot & Sexy (más luego).",
+                        desc: "Pre, Rumba, Couple, Afterparty, Hot & Sexy (más adelante).",
                     },
                     {
                         title: "Cartas por swipe",
@@ -74,7 +74,7 @@ export default function MarketingPage() {
                             ¿Necesito cuenta?
                         </summary>
                         <p className="mt-2 text-sm">
-                            No por ahora — jugás directo en el navegador.
+                            No por ahora: juegas directo en el navegador.
                         </p>
                     </details>
                     <details className="rounded-2xl border border-neutral-800 p-4">

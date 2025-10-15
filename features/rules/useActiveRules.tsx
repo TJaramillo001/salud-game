@@ -47,3 +47,4 @@ export function useActiveRules() {
     if (!ctx) throw new Error('useActiveRules must be used within ActiveRulesProvider');
     return ctx;
 }
+

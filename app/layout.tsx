@@ -3,13 +3,13 @@ import "./globals.css";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: "Salud — Party Game",
-    description: "Scan → Add players → Pick a mode → Play by swiping cards.",
+    title: "Salud — Juego de fiesta",
+    description: "Escanea → Agrega jugadores → Elige un modo → Juega deslizando cartas.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="en">
+        <html lang="es">
         <body className="min-h-screen bg-neutral-950 text-neutral-100 antialiased">
         <Header />
         <main className="mx-auto max-w-5xl px-6 pb-24">{children}</main>
@@ -23,18 +23,18 @@ function Header() {
     return (
         <header className="sticky top-0 z-40 w-full border-b border-neutral-800/60 bg-neutral-950/80 backdrop-blur">
             <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-                {/* Brand → always go to homepage */}
-                <Link href="/" aria-label="Go to homepage" className="font-bold tracking-tight text-xl">
+                {/* Marca → siempre al inicio */}
+                <Link href="/" aria-label="Ir al inicio" className="font-bold tracking-tight text-xl">
                     Salud
                 </Link>
 
                 <nav className="flex items-center gap-4 text-sm text-neutral-300">
-                    {/* Use absolute anchors so they work from /game/* too */}
+                    {/* Anclas absolutas para funcionar también desde /game/* */}
                     <Link href="/#features" className="hover:text-white">
-                        Features
+                        Características
                     </Link>
                     <Link href="/#faq" className="hover:text-white">
-                        FAQ
+                        Preguntas frecuentes
                     </Link>
                     <a
                         href="https://github.com/your-user/salud-game"
@@ -53,7 +53,7 @@ function Header() {
 function Footer() {
     return (
         <footer className="border-t border-neutral-800/60 py-8 text-center text-sm text-neutral-400">
-            <p>© {new Date().getFullYear()} Salud. Built for fun nights with friends.</p>
+            <p>© {new Date().getFullYear()} Salud. Hecho para noches divertidas con amigos.</p>
         </footer>
     );
 }

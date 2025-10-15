@@ -19,14 +19,14 @@ export default function ModePage() {
         startNewSession,
     } = useGameStore();
 
-    // Guard: must have players before selecting a mode
+    // Guard: deben existir jugadores antes de elegir modo
     useEffect(() => {
         if (!players || players.length === 0) {
             router.replace('/game/setup/players');
         }
     }, [players, router]);
 
-    // Load available packs (e.g., 'pre', 'night_out')
+    // Cargar packs disponibles (p. ej., 'pre', 'night_out')
     useEffect(() => {
         let alive = true;
         (async () => {
@@ -43,29 +43,23 @@ export default function ModePage() {
     }, []);
 
     async function choose(id: Pack['id']) {
-        // Ensure the pack id maps to a valid ModeKey
         if (!isModeKey(id)) {
-            console.warn(`Pack id "${id}" is not a recognized mode key. Expected a ModeKey.`);
+            console.warn(`El pack "${id}" no es un ModeKey válido.`);
             return;
         }
         const mode = id as ModeKey;
 
-        // Persist selection for convenience
         setMode(mode);
-
-        // Start a fresh session (new sessionId/seed, clears runtime seen/gameOver)
         startNewSession();
-
-        // Proceed to play
         router.push('/game/play');
     }
 
     return (
         <main className="min-h-dvh p-6">
-            <h1 className="text-2xl font-semibold mb-4">Choose Game Mode</h1>
+            <h1 className="text-2xl font-semibold mb-4">Elige modo de juego</h1>
 
             {loading ? (
-                <div className="text-sm text-gray-500">Loading modes…</div>
+                <div className="text-sm text-gray-500">Cargando modos…</div>
             ) : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl">
                     {packs.map((p) => {
@@ -82,7 +76,7 @@ export default function ModePage() {
                                 <div className="flex items-start justify-between gap-3">
                                     <div>
                                         <div className="text-lg font-medium">{p.name}</div>
-                                        <div className="text-xs text-gray-500">Cards: {p.cards.length}</div>
+                                        <div className="text-xs text-gray-500">Cartas: {p.cards.length}</div>
                                     </div>
                                     {isSelected && (
                                         <span className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-black/20">
@@ -101,7 +95,7 @@ export default function ModePage() {
 
             <div className="mt-6">
                 <Button variant="ghost" onClick={() => router.back()}>
-                    Back
+                    Atrás
                 </Button>
             </div>
         </main>

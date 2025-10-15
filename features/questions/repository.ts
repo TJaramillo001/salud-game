@@ -55,7 +55,7 @@ function asPack(raw: unknown, fallbackId: string, fallbackName: string): Pack {
 
 const PACKS: Pack[] = [
     asPack(preRaw, 'pre', 'Pre'),
-    asPack(nightOutRaw, 'night_out', 'Night Out'),
+    asPack(nightOutRaw, 'night_out', 'Rumba'),
 ];
 
 export async function listPacks(): Promise<Pack[]> {

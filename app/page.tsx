@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Button } from "@/components/ui/Button"; // or "./components/ui/Button" if you didn't add path aliases
+import { Button } from "@/components/ui/Button";
 
 export default function Home() {
     return (
@@ -37,7 +37,7 @@ export default function Home() {
                     },
                     {
                         title: "Modos de juego",
-                        desc: "Pre, Night Out, Couple, Afterparty, Hot & Sexy (más luego).",
+                        desc: "Pre, Rumba, Couple, Afterparty, Hot & Sexy (más adelante).",
                     },
                     {
                         title: "Cartas por swipe",
@@ -72,7 +72,7 @@ export default function Home() {
                             ¿Necesito cuenta?
                         </summary>
                         <p className="mt-2 text-sm">
-                            No por ahora — jugás directo en el navegador.
+                            No por ahora: juegas directo en el navegador.
                         </p>
                     </details>
                     <details className="rounded-2xl border border-neutral-800 p-4">

@@ -1,4 +1,3 @@
-// app/setup/players/page.tsx
 'use client';
 
 import { useState } from 'react';
@@ -19,17 +18,17 @@ export default function PlayersPage() {
 
     return (
         <main className="min-h-dvh flex flex-col items-center gap-6 p-6">
-            <h1 className="text-2xl font-semibold">Add Players</h1>
+            <h1 className="text-2xl font-semibold">Añadir jugadores</h1>
 
             <div className="flex gap-2">
                 <input
                     className="border rounded px-3 py-2"
                     value={name}
-                    placeholder="Player name"
+                    placeholder="Nombre del jugador"
                     onChange={(e) => setName(e.target.value)}
                     onKeyDown={(e) => e.key === 'Enter' && add()}
                 />
-                <Button onClick={add}>Add</Button>
+                <Button onClick={add}>Agregar</Button>
             </div>
 
             <ul className="w-full max-w-md">
@@ -37,7 +36,7 @@ export default function PlayersPage() {
                     <li key={p.id} className="flex justify-between items-center border-b py-2">
                         <span>{p.name}</span>
                         <button className="text-sm underline" onClick={() => removePlayer(p.id)}>
-                            remove
+                            Quitar
                         </button>
                     </li>
                 ))}
@@ -45,10 +44,10 @@ export default function PlayersPage() {
 
             <div className="flex gap-3">
                 <Button variant="secondary" onClick={clearPlayers}>
-                    Clear
+                    Borrar todos
                 </Button>
                 <Button onClick={() => router.push('/game/setup/mode')} disabled={players.length === 0}>
-                    Continue
+                    Continuar
                 </Button>
             </div>
         </main>

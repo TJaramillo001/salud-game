@@ -11,8 +11,8 @@ export function AppHeader() {
                 </Link>
 
                 <nav className="flex items-center gap-6 text-sm text-neutral-300">
-                    <Link href="/#features">Features</Link>
-                    <Link href="/#faq">FAQ</Link>
+                    <Link href="/#features">Características</Link>
+                    <Link href="/#faq">Preguntas Frecuentes</Link>
                     <a href="https://github.com/..." target="_blank" rel="noreferrer">GitHub</a>
                 </nav>
             </div>

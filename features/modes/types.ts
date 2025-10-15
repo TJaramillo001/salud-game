@@ -14,14 +14,14 @@ export const MODES = {
     pre: {
         key: 'pre',
         label: 'Pre',
-        description: 'Warm-up vibes. Light, social, easy starters.',
+        description: 'Calentando los motores para una noche inolvidable.',
         emoji: '🥂',
         color: 'emerald',
     },
     night_out: {
         key: 'night_out',
-        label: 'Night-Out',
-        description: 'Higher energy, spicier prompts—keep it moving.',
+        label: 'Rumba',
+        description: 'Vibras altas, preguntas interesantes. Esta noche nos reímos',
         emoji: '🌃',
         color: 'violet',
     },
