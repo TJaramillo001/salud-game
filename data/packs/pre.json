@@ -144,5 +144,2526 @@
     "text": "Voten: ¿Maluma o J Balvin? Minoría bebe 3 tragos",
     "spice": 1,
     "weight": 1
-  }
-]
+  },
+    {
+      "id": "pre-017",
+      "mode": "pre",
+      "kind": "question",
+      "target": {"roles": ["A"]},
+      "text": "{A}, si has ido a Andrés Carne de Res, toma 2 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-018",
+      "mode": "pre",
+      "kind": "action",
+      "target": {"roles": ["A"]},
+      "text": "{A}, cuenta tu peor experiencia en transporte publico o bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-019",
+      "mode": "pre",
+      "kind": "question",
+      "target": {"roles": ["A"]},
+      "text": "{A}, si has comido hormiga culona, reparte 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-020",
+      "mode": "pre",
+      "kind": "action",
+      "target": {"roles": ["A"]},
+      "text": "{A}, imita el acento paisa o bebe 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-021",
+      "mode": "pre",
+      "kind": "question",
+      "target": {"roles": ["A"]},
+      "text": "{A}, si alguna vez le has dicho 'pirobo' a alguien con cariño, toma 1 trago",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-022",
+      "mode": "pre",
+      "kind": "action",
+      "target": {"roles": ["A"]},
+      "text": "{A}, di el nombre de 3 departamentos de Colombia en 5 segundos o bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-023",
+      "mode": "pre",
+      "kind": "question",
+      "target": {"roles": ["A"]},
+      "text": "{A}, si prefieres aguardiente sobre cualquier trago, reparte 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-024",
+      "mode": "pre",
+      "kind": "action",
+      "target": {"roles": ["A"]},
+      "text": "{A}, canta una frase de una canción vallenata o bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-025",
+      "mode": "pre",
+      "kind": "question",
+      "target": {"roles": ["A"]},
+      "text": "{A}, si has viajado a San Andrés, toma 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-026",
+      "mode": "pre",
+      "kind": "action",
+      "target": {"roles": ["A"]},
+      "text": "{A}, nombra 3 platos típicos colombianos en 5 segundos o bebe 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-027",
+      "mode": "pre",
+      "kind": "question",
+      "target": {"roles": ["A"]},
+      "text": "{A}, si has bailado salsa en público, reparte 2 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-028",
+      "mode": "pre",
+      "kind": "action",
+      "target": {"roles": ["A"]},
+      "text": "{A}, haz tu mejor paso de champeta o bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-029",
+      "mode": "pre",
+      "kind": "question",
+      "target": {"roles": ["A"]},
+      "text": "{A}, si te han atracado alguna vez, toma 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-030",
+      "mode": "pre",
+      "kind": "action",
+      "target": {"roles": ["A"]},
+      "text": "{A}, di tu palabra no-colombiana favorita y todos beben 1 trago",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-031",
+      "mode": "pre",
+      "kind": "question",
+      "target": {"roles": ["A"]},
+      "text": "{A}, si eres hincha de Millonarios o Santa Fe, toma 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-032",
+      "mode": "pre",
+      "kind": "versus",
+      "target": {"roles": ["A", "B"], "constraints": {"distinct": true}},
+      "text": "{A} y {B}: el primero en nombrar 5 músicos colombianos gana. El perdedor bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-033",
+      "mode": "pre",
+      "kind": "versus",
+      "target": {"roles": ["A", "B"], "constraints": {"distinct": true}},
+      "text": "{A} vs {B}: el que tenga más fotos en Instagram bebe 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-034",
+      "mode": "pre",
+      "kind": "versus",
+      "target": {"roles": ["A", "B"], "constraints": {"distinct": true}},
+      "text": "{A} y {B}: competencia de trabalenguas. El que se equivoque primero bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-035",
+      "mode": "pre",
+      "kind": "versus",
+      "target": {"roles": ["A", "B"], "constraints": {"distinct": true}},
+      "text": "{A} vs {B}: el primero en tocar algo de color azul gana. El perdedor bebe 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-036",
+      "mode": "pre",
+      "kind": "versus",
+      "target": {"roles": ["A", "B"], "constraints": {"distinct": true}},
+      "text": "{A} y {B}: mírense a los ojos sin reír. El primero en reírse bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-037",
+      "mode": "pre",
+      "kind": "versus",
+      "target": {"roles": ["A", "B"], "constraints": {"distinct": true}},
+      "text": "{A} vs {B}: el que haya tenido más parejas reparte 2 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-038",
+      "mode": "pre",
+      "kind": "group",
+      "target": {"roles": ["STARTER"]},
+      "text": "Tema: Barrios de Bogotá. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-039",
+      "mode": "pre",
+      "kind": "group",
+      "target": {"roles": ["STARTER"]},
+      "text": "Tema: Apodos colombianos. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-040",
+      "mode": "pre",
+      "kind": "group",
+      "target": {"roles": ["ALL"]},
+      "text": "Voten: ¿Frío o Calor? Minoría bebe 3 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-041",
+      "mode": "pre",
+      "kind": "group",
+      "target": {"roles": ["STARTER"]},
+      "text": "Tema: Comidas callejeras colombianas. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-042",
+      "mode": "pre",
+      "kind": "group",
+      "target": {"roles": ["ALL"]},
+      "text": "Voten: ¿Shakira o Karol G? Minoría bebe 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-043",
+      "mode": "pre",
+      "kind": "group",
+      "target": {"roles": ["STARTER"]},
+      "text": "Tema: Ciudades de Colombia. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-044",
+      "mode": "pre",
+      "kind": "group",
+      "target": {"roles": ["ALL"]},
+      "text": "Voten: ¿Empanada o arepa? Minoría bebe 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-045",
+      "mode": "pre",
+      "kind": "group",
+      "target": {"roles": ["STARTER"]},
+      "text": "Tema: Palabras que solo dicen en Colombia. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-046",
+      "mode": "pre",
+      "kind": "group",
+      "target": {"roles": ["ALL"]},
+      "text": "Voten: ¿Nacional o América? Minoría bebe 3 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-047",
+      "mode": "pre",
+      "kind": "group",
+      "target": {"roles": ["STARTER"]},
+      "text": "Tema: Cosas que hacen a Colombia único. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-048",
+      "mode": "pre",
+      "kind": "exclusion",
+      "target": {"roles": ["A"]},
+      "text": "Todos deben imitar a {A}. El peor imitador bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-049",
+      "mode": "pre",
+      "kind": "exclusion",
+      "target": {"roles": ["A"]},
+      "text": "Todos menos {A} deben decir algo que les guste de {A}. El último bebe 2 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-050",
+      "mode": "pre",
+      "kind": "exclusion",
+      "target": {"roles": ["A"]},
+      "text": "El último en hacerle un cumplido a {A} bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-051",
+      "mode": "pre",
+      "kind": "exclusion",
+      "target": {"roles": ["A"]},
+      "text": "Todos menos {A} hacen una pose ridícula. El último en hacerlo bebe 2 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-052",
+      "mode": "pre",
+      "kind": "exclusion",
+      "target": {"roles": ["A"]},
+      "text": "El último en chocar los cinco con {A} bebe 3 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-053",
+      "mode": "pre",
+      "kind": "wildcard",
+      "target": {"roles": ["ALL"]},
+      "text": "¡Ñapa! Todos toman 2 tragos para celebrar",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-054",
+      "mode": "pre",
+      "kind": "wildcard",
+      "target": {
+        "roles": ["ALL"]},
+      "text": "El espíritu de Diomedes Díaz aparece: todos beben 1 trago",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-055",
+      "mode": "pre",
+      "kind": "wildcard",
+      "target": {"roles": ["ALL"]},
+      "text": "¡Pico y placa para los tragos! Solo los que nacieron en mes par pueden beber. Los demás: 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-056",
+      "mode": "pre",
+      "kind": "wildcard",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "¡Peaje! Todos pagan 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-057",
+      "mode": "pre",
+      "kind": "wildcard",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "¡Ciclovía de tragos! Todos dan una vuelta y beben 2 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-058",
+      "mode": "pre",
+      "kind": "rule_on",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "Regla: No pueden decir 'parce'. Quien falle bebe 2 tragos",
+      "spice": 2,
+      "weight": 1,
+      "ruleId": "r-parcero"
+    },
+    {
+      "id": "pre-059",
+      "mode": "pre",
+      "kind": "rule_off",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "Fin regla: Ya pueden volver a decir 'parce'",
+      "spice": 0,
+      "weight": 1,
+      "ruleId": "r-parcero"
+    },
+    {
+      "id": "pre-060",
+      "mode": "pre",
+      "kind": "rule_on",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "Regla: Deben señalar con el dedo cada vez que hablen. Quien olvide bebe 2 tragos",
+      "spice": 2,
+      "weight": 1,
+      "ruleId": "r-señalar"
+    },
+    {
+      "id": "pre-061",
+      "mode": "pre",
+      "kind": "rule_off",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "Fin regla: Ya no tienen que señalar al hablar",
+      "spice": 0,
+      "weight": 1,
+      "ruleId": "r-señalar"
+    },
+    {
+      "id": "pre-062",
+      "mode": "pre",
+      "kind": "rule_on",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "Regla: Cada vez que tomen deben decir 'salud'. Quien olvide bebe 2 tragos extra",
+      "spice": 1,
+      "weight": 1,
+      "ruleId": "r-salud"
+    },
+    {
+      "id": "pre-063",
+      "mode": "pre",
+      "kind": "rule_off",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "Fin regla: Ya no tienen que decir 'salud' al tomar",
+      "spice": 0,
+      "weight": 1,
+      "ruleId": "r-salud"
+    },
+    {
+      "id": "pre-064",
+      "mode": "pre",
+      "kind": "question",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, si has besado a alguien del grupo, toma 4 tragos",
+      "spice": 3,
+      "weight": 1
+    },
+    {
+      "id": "pre-065",
+      "mode": "pre",
+      "kind": "action",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, confiesa tu crush secreto o bebe 4 tragos",
+      "spice": 3,
+      "weight": 1
+    },
+    {
+      "id": "pre-066",
+      "mode": "pre",
+      "kind": "question",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, si has tenido un lío amoroso con alguien conocido aquí, toma 5 tragos",
+      "spice": 3,
+      "weight": 1
+    },
+    {
+      "id": "pre-067",
+      "mode": "pre",
+      "kind": "action",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, envía un mensaje coqueto a quien te digan o bebe 5 tragos",
+      "spice": 3,
+      "weight": 1
+    },
+    {
+      "id": "pre-068",
+      "mode": "pre",
+      "kind": "action",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, perreale a la pared durante 10 segundos o bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-069",
+      "mode": "pre",
+      "kind": "question",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, si has mentido sobre tu edad alguna vez, toma 2 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-070",
+      "mode": "pre",
+      "kind": "action",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, di el chiste más malo que sepas o bebe 3 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-071",
+      "mode": "pre",
+      "kind": "question",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, si has estado en una finca, reparte 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-072",
+      "mode": "pre",
+      "kind": "action",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, nombra 3 ríos de Colombia o bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-073",
+      "mode": "pre",
+      "kind": "question",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, si sabes bailar vallenato o champeta, reparte 3 tragos. Si sabes ambos, reparte 5.",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-074",
+      "mode": "pre",
+      "kind": "action",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, di tu experiencia más vergonzosa en 10 segundos o bebe 4 tragos",
+      "spice": 3,
+      "weight": 1
+    },
+    {
+      "id": "pre-075",
+      "mode": "pre",
+      "kind": "question",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, si has llorado viendo una película este año, toma 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-076",
+      "mode": "pre",
+      "kind": "action",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, reparte 1 trago por cada tatuaje que tengas",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-077",
+      "mode": "pre",
+      "kind": "question",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, si le tienes miedo a las alturas, toma 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-078",
+      "mode": "pre",
+      "kind": "action",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, cuenta cuántas relaciones has tenido y bebe esa cantidad de tragos",
+      "spice": 3,
+      "weight": 1
+    },
+    {
+      "id": "pre-079",
+      "mode": "pre",
+      "kind": "question",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, si has usado una app de citas, toma 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-080",
+      "mode": "pre",
+      "kind": "action",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, muestra tu última foto en el celular o bebe 4 tragos",
+      "spice": 3,
+      "weight": 1
+    },
+    {
+      "id": "pre-081",
+      "mode": "pre",
+      "kind": "question",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, si has fingido estar enfermo para no ir a algo, toma 2 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-082",
+      "mode": "pre",
+      "kind": "action",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, di algo bonito a quien esté a tu derecha o bebe 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-083",
+      "mode": "pre",
+      "kind": "question",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, si te has quedado dormido en el trabajo o clase, toma 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-084",
+      "mode": "pre",
+      "kind": "action",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, imita a alguien del grupo. Si adivinan quién es, repartes 3 tragos; si no, los tomas",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-085",
+      "mode": "pre",
+      "kind": "question",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, si has tenido una pelea física de adulto, toma 4 tragos",
+      "spice": 3,
+      "weight": 1
+    },
+    {
+      "id": "pre-086",
+      "mode": "pre",
+      "kind": "action",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, di tu mayor miedo o bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-087",
+      "mode": "pre",
+      "kind": "question",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, si has robado algo de una tienda, toma 4 tragos",
+      "spice": 3,
+      "weight": 1
+    },
+    {
+      "id": "pre-088",
+      "mode": "pre",
+      "kind": "action",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, haz 5 lagartijas o bebe 4 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-089",
+      "mode": "pre",
+      "kind": "question",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, si tienes más de 1000 seguidores en Instagram, reparte 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-090",
+      "mode": "pre",
+      "kind": "action",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, intercambia de puesto con quien tú decidas y ambos beben 2 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-091",
+      "mode": "pre",
+      "kind": "question",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, si has tenido una relación a distancia, toma 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-092",
+      "mode": "pre",
+      "kind": "action",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, canta una canción de Shakira o bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-093",
+      "mode": "pre",
+      "kind": "question",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, si has visto todas las temporadas de Narcos, reparte 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-094",
+      "mode": "pre",
+      "kind": "action",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, si te has visto Betty la Fea, toma 3 tragos.",
+      "spice": 3,
+      "weight": 1
+    },
+    {
+      "id": "pre-095",
+      "mode": "pre",
+      "kind": "question",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, si has comido sancocho en las últimas 2 semanas, toma 1 trago",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-096",
+      "mode": "pre",
+      "kind": "action",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, toma un shot con la persona de tu derecha",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-097",
+      "mode": "pre",
+      "kind": "question",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, si prefieres Postobon a Coca-Cola, toma 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-098",
+      "mode": "pre",
+      "kind": "action",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, cuéntanos de la peor cita que has tenido o bebe 4 tragos",
+      "spice": 3,
+      "weight": 1
+    },
+    {
+      "id": "pre-099",
+      "mode": "pre",
+      "kind": "question",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, si has ido a una discoteca en el último mes, toma 2 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-100",
+      "mode": "pre",
+      "kind": "action",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, di quién es la persona más atractiva del grupo o bebe 4 tragos",
+      "spice": 3,
+      "weight": 1
+    },
+    {
+      "id": "pre-101",
+      "mode": "pre",
+      "kind": "versus",
+      "target": {
+        "roles": [
+          "A",
+          "B"
+        ],
+        "constraints": {
+          "distinct": true
+        }
+      },
+      "text": "{A} vs {B}: competencia de flexiones. El que haga menos bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-102",
+      "mode": "pre",
+      "kind": "versus",
+      "target": {
+        "roles": [
+          "A",
+          "B"
+        ],
+        "constraints": {
+          "distinct": true
+        }
+      },
+      "text": "{A} y {B}: el primero en decir una canción de Carlos Vives gana. El perdedor bebe 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-103",
+      "mode": "pre",
+      "kind": "versus",
+      "target": {
+        "roles": [
+          "A",
+          "B"
+        ],
+        "constraints": {
+          "distinct": true
+        }
+      },
+      "text": "{A} vs {B}: el que tenga el cumpleaños más cerca reparte 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-104",
+      "mode": "pre",
+      "kind": "versus",
+      "target": {
+        "roles": [
+          "A",
+          "B"
+        ],
+        "constraints": {
+          "distinct": true
+        }
+      },
+      "text": "{A} y {B}: jueguen a adivinar un número del 1 al 10. {A} adivina. El que pierda bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-105",
+      "mode": "pre",
+      "kind": "versus",
+      "target": {
+        "roles": [
+          "A",
+          "B"
+        ],
+        "constraints": {
+          "distinct": true
+        }
+      },
+      "text": "{A} vs {B}: el que tenga más contactos en el celular reparte 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-106",
+      "mode": "pre",
+      "kind": "versus",
+      "target": {
+        "roles": [
+          "A",
+          "B"
+        ],
+        "constraints": {
+          "distinct": true
+        }
+      },
+      "text": "{A} y {B}: el primero en hacer reír a alguien del grupo gana. El perdedor bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-107",
+      "mode": "pre",
+      "kind": "versus",
+      "target": {
+        "roles": [
+          "A",
+          "B"
+        ],
+        "constraints": {
+          "distinct": true
+        }
+      },
+      "text": "{A} vs {B}: competencia de quién aguanta más un hielo en la mano. El perdedor bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-108",
+      "mode": "pre",
+      "kind": "versus",
+      "target": {
+        "roles": [
+          "A",
+          "B"
+        ],
+        "constraints": {
+          "distinct": true
+        }
+      },
+      "text": "{A} y {B}: el que haya viajado a más países reparte 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-109",
+      "mode": "pre",
+      "kind": "versus",
+      "target": {
+        "roles": [
+          "A",
+          "B"
+        ],
+        "constraints": {
+          "distinct": true
+        }
+      },
+      "text": "{A} vs {B}: batalla de freestyle. El grupo decide quién gana. El perdedor bebe 4 tragos",
+      "spice": 3,
+      "weight": 1
+    },
+    {
+      "id": "pre-110",
+      "mode": "pre",
+      "kind": "versus",
+      "target": {
+        "roles": [
+          "A",
+          "B"
+        ],
+        "constraints": {
+          "distinct": true
+        }
+      },
+      "text": "{A} y {B}: el primero en nombrar 3 presidentes de Colombia gana. El perdedor bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-111",
+      "mode": "pre",
+      "kind": "versus",
+      "target": {
+        "roles": [
+          "A",
+          "B"
+        ],
+        "constraints": {
+          "distinct": true
+        }
+      },
+      "text": "{A} vs {B}: el que sepa más letras de 'El Pollito Pío' reparte 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-112",
+      "mode": "pre",
+      "kind": "versus",
+      "target": {
+        "roles": [
+          "A",
+          "B"
+        ],
+        "constraints": {
+          "distinct": true
+        }
+      },
+      "text": "{A} y {B}: el primero en tocar algo de madera gana. El perdedor bebe 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-113",
+      "mode": "pre",
+      "kind": "versus",
+      "target": {
+        "roles": [
+          "A",
+          "B"
+        ],
+        "constraints": {
+          "distinct": true
+        }
+      },
+      "text": "{A} vs {B}: el más alto reparte 2 tragos a personas mas bajas.",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-114",
+      "mode": "pre",
+      "kind": "versus",
+      "target": {
+        "roles": [
+          "A",
+          "B"
+        ],
+        "constraints": {
+          "distinct": true
+        }
+      },
+      "text": "{A} y {B}: competencia de piropos. El grupo decide. El perdedor bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-115",
+      "mode": "pre",
+      "kind": "versus",
+      "target": {
+        "roles": [
+          "A",
+          "B"
+        ],
+        "constraints": {
+          "distinct": true
+        }
+      },
+      "text": "{A} vs {B}: el primero en decir 5 insultos únicos gana. El perdedor bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-116",
+      "mode": "pre",
+      "kind": "group",
+      "target": {
+        "roles": [
+          "STARTER"
+        ]
+      },
+      "text": "Tema: Novelas colombianas. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-117",
+      "mode": "pre",
+      "kind": "group",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "Voten: ¿Arepa con queso o sin queso? Minoría bebe 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-118",
+      "mode": "pre",
+      "kind": "group",
+      "target": {
+        "roles": [
+          "STARTER"
+        ]
+      },
+      "text": "Tema: Marcas colombianas. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-119",
+      "mode": "pre",
+      "kind": "group",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "Voten: ¿Playa o piscina? Minoría bebe 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-120",
+      "mode": "pre",
+      "kind": "group",
+      "target": {
+        "roles": [
+          "STARTER"
+        ]
+      },
+      "text": "Tema: Equipos de fútbol colombiano. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-121",
+      "mode": "pre",
+      "kind": "group",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "Voten: ¿Café con azúcar o sin azúcar? Minoría bebe 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-122",
+      "mode": "pre",
+      "kind": "group",
+      "target": {
+        "roles": [
+          "STARTER"
+        ]
+      },
+      "text": "Tema: Frutas tropicales. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-123",
+      "mode": "pre",
+      "kind": "group",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "Voten: ¿Día o noche? Minoría bebe 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-124",
+      "mode": "pre",
+      "kind": "group",
+      "target": {
+        "roles": [
+          "STARTER"
+        ]
+      },
+      "text": "Tema: Apellidos colombianos comunes. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-125",
+      "mode": "pre",
+      "kind": "group",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "Voten: ¿Cerveza o aguardiente? Minoría bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-126",
+      "mode": "pre",
+      "kind": "group",
+      "target": {
+        "roles": [
+          "STARTER"
+        ]
+      },
+      "text": "Tema: Presentadores colombianos. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-127",
+      "mode": "pre",
+      "kind": "group",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "Voten: ¿WhatsApp o Instagram? Minoría bebe 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-128",
+      "mode": "pre",
+      "kind": "group",
+      "target": {
+        "roles": [
+          "STARTER"
+        ]
+      },
+      "text": "Tema: Postres colombianos. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-129",
+      "mode": "pre",
+      "kind": "group",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "Voten: ¿Perro o gato? Minoría bebe 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-130",
+      "mode": "pre",
+      "kind": "group",
+      "target": {
+        "roles": [
+          "STARTER"
+        ]
+      },
+      "text": "Tema: Cosas que pasan solo en Colombia. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-131",
+      "mode": "pre",
+      "kind": "group",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "Voten: ¿Salir temprano o llegar tarde? Minoría bebe 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-132",
+      "mode": "pre",
+      "kind": "group",
+      "target": {
+        "roles": [
+          "STARTER"
+        ]
+      },
+      "text": "Tema: Canciones de Carlos Vives. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-133",
+      "mode": "pre",
+      "kind": "group",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "Voten: ¿Arroz blanco o arroz con coco? Minoría bebe 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-134",
+      "mode": "pre",
+      "kind": "group",
+      "target": {
+        "roles": [
+          "STARTER"
+        ]
+      },
+      "text": "Tema: Lugares turísticos de Colombia. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-135",
+      "mode": "pre",
+      "kind": "group",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "Voten: ¿Quedarse en casa o salir de rumba? Minoría bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-136",
+      "mode": "pre",
+      "kind": "exclusion",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "Todos tocan la nariz. El último en hacerlo (además de {A}) bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-137",
+      "mode": "pre",
+      "kind": "exclusion",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "Todos menos {A} deben decir un número. El que repita bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-138",
+      "mode": "pre",
+      "kind": "exclusion",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "El último en darle un abrazo a {A} bebe 2 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-139",
+      "mode": "pre",
+      "kind": "exclusion",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "Todos menos {A} hacen una cara graciosa. El último bebe 2 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-140",
+      "mode": "pre",
+      "kind": "exclusion",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "El último en señalar a {A} bebe 3 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-141",
+      "mode": "pre",
+      "kind": "exclusion",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "Todos menos {A} deben imitar un animal. El último bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-142",
+      "mode": "pre",
+      "kind": "exclusion",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "El último en tocar el hombro de {A} bebe 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-143",
+      "mode": "pre",
+      "kind": "exclusion",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "Todos menos {A} gritan el nombre de {A}. El último bebe 2 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-144",
+      "mode": "pre",
+      "kind": "exclusion",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "El último en hacerle una reverencia a {A} bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-145",
+      "mode": "pre",
+      "kind": "exclusion",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "Todos menos {A} deben tocar algo rojo. El último bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-146",
+      "mode": "pre",
+      "kind": "wildcard",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "¡Toque de queda! Nadie puede hablar por 30 segundos. El que hable bebe 5 tragos",
+      "spice": 3,
+      "weight": 1
+    },
+    {
+      "id": "pre-147",
+      "mode": "pre",
+      "kind": "wildcard",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "¡Llegan los suegros! Todos fingen sobriedad. El menos convincente bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-148",
+      "mode": "pre",
+      "kind": "wildcard",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "¡Hora del tinto! Todos beben 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-149",
+      "mode": "pre",
+      "kind": "wildcard",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "¡Parranda vallenata! Todos cantan y beben 2 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-150",
+      "mode": "pre",
+      "kind": "wildcard",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "¡Se cayó el sistema! El más joven reparte 5 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-151",
+      "mode": "pre",
+      "kind": "wildcard",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "¡Ola invernal! Todos beben 3 tragos para calentarse",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-152",
+      "mode": "pre",
+      "kind": "wildcard",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "¡Llegó el domicilio! El primero en gritar 'Ya voy' reparte 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-153",
+      "mode": "pre",
+      "kind": "wildcard",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "¡Hora del aguardiente! Todos beben 2 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-154",
+      "mode": "pre",
+      "kind": "wildcard",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "¡Paro nacional! Nadie puede moverse por 20 segundos. El que se mueva bebe 4 tragos",
+      "spice": 3,
+      "weight": 1
+    },
+    {
+      "id": "pre-155",
+      "mode": "pre",
+      "kind": "wildcard",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "¡Festival de música! Todos bailan. El peor bailarín bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-156",
+      "mode": "pre",
+      "kind": "rule_on",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "Regla: Deben beber con la mano izquierda. Quien use la derecha bebe 3 tragos extra",
+      "spice": 2,
+      "weight": 1,
+      "ruleId": "r-mano-izq"
+    },
+    {
+      "id": "pre-157",
+      "mode": "pre",
+      "kind": "rule_off",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "Fin regla: Ya pueden usar cualquier mano para beber",
+      "spice": 0,
+      "weight": 1,
+      "ruleId": "r-mano-izq"
+    },
+    {
+      "id": "pre-158",
+      "mode": "pre",
+      "kind": "rule_on",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "Regla: No pueden decir 'yo'. Quien falle bebe 2 tragos",
+      "spice": 2,
+      "weight": 1,
+      "ruleId": "r-yo"
+    },
+    {
+      "id": "pre-159",
+      "mode": "pre",
+      "kind": "rule_off",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "Fin regla: Ya pueden decir 'yo' libremente",
+      "spice": 0,
+      "weight": 1,
+      "ruleId": "r-yo"
+    },
+    {
+      "id": "pre-160",
+      "mode": "pre",
+      "kind": "rule_on",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "Regla: Deben aplaudir cada vez que alguien beba. Quien olvide bebe 2 tragos",
+      "spice": 2,
+      "weight": 1,
+      "ruleId": "r-aplaudir"
+    },
+    {
+      "id": "pre-161",
+      "mode": "pre",
+      "kind": "rule_off",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "Fin regla: Ya no tienen que aplaudir cuando alguien bebe",
+      "spice": 0,
+      "weight": 1,
+      "ruleId": "r-aplaudir"
+    },
+    {
+      "id": "pre-162",
+      "mode": "pre",
+      "kind": "rule_on",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "Regla: Cada vez que hablen deben terminar con 'pues'. Quien olvide bebe 2 tragos",
+      "spice": 2,
+      "weight": 1,
+      "ruleId": "r-pues"
+    },
+    {
+      "id": "pre-163",
+      "mode": "pre",
+      "kind": "rule_off",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "Fin regla: Ya no tienen que decir 'pues'",
+      "spice": 0,
+      "weight": 1,
+      "ruleId": "r-pues"
+    },
+    {
+      "id": "pre-164",
+      "mode": "pre",
+      "kind": "rule_on",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "Regla: No pueden cruzar las piernas. Quien lo haga bebe 2 tragos",
+      "spice": 1,
+      "weight": 1,
+      "ruleId": "r-piernas"
+    },
+    {
+      "id": "pre-165",
+      "mode": "pre",
+      "kind": "rule_off",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "Fin regla: Ya pueden cruzar las piernas libremente",
+      "spice": 0,
+      "weight": 1,
+      "ruleId": "r-piernas"
+    },
+    {
+      "id": "pre-166",
+      "mode": "pre",
+      "kind": "action",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, reparte 2 tragos por cada herman@ que tengas",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-167",
+      "mode": "pre",
+      "kind": "question",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, si has bailado en la lluvia, reparte 2 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-168",
+      "mode": "pre",
+      "kind": "action",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, di tu canción favorita para rumbear o bebe 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-169",
+      "mode": "pre",
+      "kind": "question",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, si has comido chicharrón hoy, toma 1 trago",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-170",
+      "mode": "pre",
+      "kind": "action",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, haz un acento de otra región colombiana durante 1 minuto o bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-171",
+      "mode": "pre",
+      "kind": "question",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, si alguna vez te han dicho 'cacaco', toma 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-172",
+      "mode": "pre",
+      "kind": "action",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, di tu palabra grosera favorita o bebe 2 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-173",
+      "mode": "pre",
+      "kind": "question",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, si has ido a una finca en el último año, reparte 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-174",
+      "mode": "pre",
+      "kind": "action",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, nombra 3 comediantes colombianos o bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-175",
+      "mode": "pre",
+      "kind": "question",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, si sabes hacer arepa de huevo, reparte 2 tragos. Si no, tomate uno.",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-176",
+      "mode": "pre",
+      "kind": "action",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, cuenta una anécdota de una rumba loca o bebe 4 tragos",
+      "spice": 3,
+      "weight": 1
+    },
+    {
+      "id": "pre-177",
+      "mode": "pre",
+      "kind": "question",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, si prefieres tinto a café con leche, toma 1 trago",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-178",
+      "mode": "pre",
+      "kind": "action",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, muestra tu canción más escuchada del mes o bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-179",
+      "mode": "pre",
+      "kind": "question",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, si has usado 'pues' más de 5 veces hoy, toma 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-180",
+      "mode": "pre",
+      "kind": "action",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, di algo que nunca has hecho pero quieres hacer o bebe 2 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-181",
+      "mode": "pre",
+      "kind": "versus",
+      "target": {
+        "roles": [
+          "A",
+          "B"
+        ],
+        "constraints": {
+          "distinct": true
+        }
+      },
+      "text": "{A} vs {B}: el que tenga más aplicaciones en el celular reparte 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-182",
+      "mode": "pre",
+      "kind": "versus",
+      "target": {
+        "roles": [
+          "A",
+          "B"
+        ],
+        "constraints": {
+          "distinct": true
+        }
+      },
+      "text": "{A} y {B}: competencia de quién puede hacer mejor acento rolo. El grupo decide. El perdedor bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-183",
+      "mode": "pre",
+      "kind": "versus",
+      "target": {
+        "roles": [
+          "A",
+          "B"
+        ],
+        "constraints": {
+          "distinct": true
+        }
+      },
+      "text": "{A} vs {B}: el que haya dormido menos anoche bebe 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-184",
+      "mode": "pre",
+      "kind": "versus",
+      "target": {
+        "roles": [
+          "A",
+          "B"
+        ],
+        "constraints": {
+          "distinct": true
+        }
+      },
+      "text": "{A} y {B}: el primero en encontrar una foto de comida en su celular gana. El perdedor bebe 2 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-185",
+      "mode": "pre",
+      "kind": "versus",
+      "target": {
+        "roles": [
+          "A",
+          "B"
+        ],
+        "constraints": {
+          "distinct": true
+        }
+      },
+      "text": "{A} vs {B}: el que use más redes sociales bebe 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-186",
+      "mode": "pre",
+      "kind": "group",
+      "target": {
+        "roles": [
+          "STARTER"
+        ]
+      },
+      "text": "Tema: Cosas que solo entenderán los colombianos. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-187",
+      "mode": "pre",
+      "kind": "group",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "Voten: ¿Dulce o salado? Minoría bebe 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-188",
+      "mode": "pre",
+      "kind": "group",
+      "target": {
+        "roles": [
+          "STARTER"
+        ]
+      },
+      "text": "Tema: Ritmos musicales de Colombia. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-189",
+      "mode": "pre",
+      "kind": "group",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "Voten: ¿Madrugar o trasnochar? Minoría bebe 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-190",
+      "mode": "pre",
+      "kind": "group",
+      "target": {
+        "roles": [
+          "STARTER"
+        ]
+      },
+      "text": "Tema: Cosas que nunca faltan en una nevera colombiana. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-191",
+      "mode": "pre",
+      "kind": "exclusion",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "Todos menos {A} deben decir algo que admiran de {A}. El último bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-192",
+      "mode": "pre",
+      "kind": "exclusion",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "El último en aplaudirle a {A} bebe 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-193",
+      "mode": "pre",
+      "kind": "exclusion",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "Todos menos {A} hacen una pose de superhéroe. El último bebe 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-194",
+      "mode": "pre",
+      "kind": "exclusion",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "El último en chocar puños con {A} bebe 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-195",
+      "mode": "pre",
+      "kind": "exclusion",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "Todos menos {A} deben decir un color. El que repita bebe 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-196",
+      "mode": "pre",
+      "kind": "wildcard",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "¡Toque de queda! El último en sentarse bebe 4 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-197",
+      "mode": "pre",
+      "kind": "wildcard",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "¡Baño público! Todos hacen fila y beben 1 trago",
+      "spice": 1,
+      "weight": 1
+    },
+
+    {
+      "id": "pre-198",
+      "mode": "pre",
+      "kind": "wildcard",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "¡Carnaval de Barranquilla! Todos bailan y beben 2 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-199",
+      "mode": "pre",
+      "kind": "rule_on",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "Regla: Deben hablar en diminutivo. Quien olvide bebe 2 tragos",
+      "spice": 2,
+      "weight": 1,
+      "ruleId": "r-diminutivo"
+    },
+    {
+      "id": "pre-200",
+      "mode": "pre",
+      "kind": "rule_off",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "Fin regla: Ya no tienen que hablar en diminutivo",
+      "spice": 0,
+      "weight": 1,
+      "ruleId": "r-diminutivo"
+    },
+    {
+      "id": "pre-201",
+      "mode": "pre",
+      "kind": "rule_on",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "Regla: No pueden usar el celular. Quien lo use bebe 3 tragos",
+      "spice": 2,
+      "weight": 1,
+      "ruleId": "r-celular"
+    },
+    {
+      "id": "pre-202",
+      "mode": "pre",
+      "kind": "rule_off",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "Fin regla: Ya pueden usar el celular libremente",
+      "spice": 0,
+      "weight": 1,
+      "ruleId": "r-celular"
+    },
+    {
+      "id": "pre-203",
+      "mode": "pre",
+      "kind": "action",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, haz un brindis y todos beben 1 trago",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-204",
+      "mode": "pre",
+      "kind": "question",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, si has bailado con un desconocido, toma 2 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-205",
+      "mode": "pre",
+      "kind": "action",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, di tu meta para este año o bebe 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-206",
+      "mode": "pre",
+      "kind": "question",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, si has cantado karaoke borracho, toma 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-207",
+      "mode": "pre",
+      "kind": "action",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, reparte 3 tragos a quien tenga el mejor outfit",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-208",
+      "mode": "pre",
+      "kind": "question",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, si has tenido un guayabo de muerte, toma 3 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-209",
+      "mode": "pre",
+      "kind": "action",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, el grupo vota si eres buen bailarín. Si sí, repartes 3 tragos; si no, los tomas",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-210",
+      "mode": "pre",
+      "kind": "question",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, si has olvidado el nombre de alguien que te gustaba, toma 2 tragos",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-211",
+      "mode": "pre",
+      "kind": "action",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, intercambia ropa con alguien o bebe 5 tragos",
+      "spice": 3,
+      "weight": 1
+    },
+    {
+      "id": "pre-212",
+      "mode": "pre",
+      "kind": "question",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, si alguna vez has llorado de felicidad, reparte 2 tragos",
+      "spice": 1,
+      "weight": 1
+    },
+    {
+      "id": "pre-213",
+      "mode": "pre",
+      "kind": "action",
+      "target": {
+        "roles": [
+          "A"
+        ]
+      },
+      "text": "{A}, haz tu mejor imitación de un animal. El grupo vota. Si aciertan qué animal es, repartes 3 tragos; si no, los tomas",
+      "spice": 2,
+      "weight": 1
+    },
+    {
+      "id": "pre-214",
+      "mode": "pre",
+      "kind": "wildcard",
+      "target": {
+        "roles": [
+          "ALL"
+        ]
+      },
+      "text": "¡Rematemos esto! Todos acaben su bebida.",
+      "spice": 2,
+      "weight": 1
+    }
+  ]
+
