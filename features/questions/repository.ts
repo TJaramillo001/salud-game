@@ -1,9 +1,16 @@
 // features/questions/repository.ts
-import type { Pack, Card } from './types';
+import type { Pack } from './types';
+import { validateCard } from './schemas';
 
 // These may be either a Pack object OR an array<Card> depending on your JSON files.
 import preRaw from '@/data/packs/pre.json';
 import nightOutRaw from '@/data/packs/night_out.json';
+
+/** Add new packs here — one entry per game mode. */
+const PACK_REGISTRY = [
+    { raw: preRaw,      id: 'pre',       name: 'Pre' },
+    { raw: nightOutRaw, id: 'night_out', name: 'Rumba' },
+] as const;
 
 /**
  * Normalize arbitrary JSON into a Pack.
@@ -11,52 +18,41 @@ import nightOutRaw from '@/data/packs/night_out.json';
  * - If raw is an array of Card, wrap it into a Pack using inferred defaults.
  */
 function asPack(raw: unknown, fallbackId: string, fallbackName: string): Pack {
+    let id = fallbackId;
+    let name = fallbackName;
+    let version = 1;
+    let description: string | undefined;
+    let rawCards: unknown[];
+
     if (Array.isArray(raw)) {
-        const cards = raw as Card[];
-        const firstMode = cards[0]?.mode;
-        const id =
-            firstMode === 'pre' || firstMode === 'night_out'
-                ? firstMode
-                : fallbackId;
-
-        return {
-            id,
-            name: fallbackName,
-            version: 1,
-            cards,
-        };
+        rawCards = raw;
+        const firstMode = (raw[0] as Record<string, unknown>)?.mode;
+        if (firstMode === 'pre' || firstMode === 'night_out') id = firstMode;
+    } else {
+        const maybe = raw as Partial<Pack>;
+        if (
+            maybe &&
+            typeof maybe === 'object' &&
+            typeof maybe.id === 'string' &&
+            Array.isArray(maybe.cards)
+        ) {
+            id = maybe.id;
+            name = maybe.name ?? fallbackName;
+            version = maybe.version ?? 1;
+            description = maybe.description;
+            rawCards = maybe.cards;
+        } else {
+            // Last resort: return an empty pack so the app doesn't crash
+            return { id: fallbackId, name: fallbackName, version: 1, cards: [] };
+        }
     }
 
-    // Assume it's already a Pack; do a shallow runtime check to be safe
-    const maybe = raw as Partial<Pack>;
-    if (
-        maybe &&
-        typeof maybe === 'object' &&
-        typeof maybe.id === 'string' &&
-        Array.isArray(maybe.cards)
-    ) {
-        return {
-            id: maybe.id,
-            name: maybe.name ?? fallbackName,
-            version: maybe.version ?? 1,
-            cards: maybe.cards as Card[],
-            description: maybe.description,
-        };
-    }
+    const cards = rawCards!.filter(validateCard);
 
-    // Last resort: return an empty pack so the app doesn't crash
-    return {
-        id: fallbackId,
-        name: fallbackName,
-        version: 1,
-        cards: [],
-    };
+    return { id, name, version, description, cards };
 }
 
-const PACKS: Pack[] = [
-    asPack(preRaw, 'pre', 'Pre'),
-    asPack(nightOutRaw, 'night_out', 'Rumba'),
-];
+const PACKS: Pack[] = PACK_REGISTRY.map(({ raw, id, name }) => asPack(raw, id, name));
 
 export async function listPacks(): Promise<Pack[]> {
     // Shallow normalization to keep callers safe

@@ -5,27 +5,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { useGameStore } from '@/providers/GameStoreProvider';
 import { getPackById } from '@/features/questions/repository';
 import type { Card, Pack } from '@/features/questions/types';
-import { scheduleRulePairs } from './shuffler';
-
-// Deterministic PRNG (mulberry32) for stable shuffles by seed
-function mulberry32(a: number) {
-    return function () {
-        let t = (a += 0x6d2b79f5);
-        t = Math.imul(t ^ (t >>> 15), t | 1);
-        t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
-        return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
-    };
-}
-
-function shuffleDeterministic<T>(arr: T[], seed: number): T[] {
-    const rnd = mulberry32(seed);
-    const a = arr.slice();
-    for (let i = a.length - 1; i > 0; i--) {
-        const j = Math.floor(rnd() * (i + 1));
-        [a[i], a[j]] = [a[j], a[i]];
-    }
-    return a;
-}
+import { scheduleRulePairs, shuffleInPlace } from './shuffler';
 
 export function useDeck(seed: number) {
     const {
@@ -52,7 +32,7 @@ export function useDeck(seed: number) {
             const cards = pack?.cards ?? [];
 
             // You can inject future constraints/filters here (by players, gender, etc.)
-            const shuffled = shuffleDeterministic(cards, seed);
+            const shuffled = shuffleInPlace(cards.slice(), seed);
 
             // Enforce rule lifecycle & schedule offs deterministically
             const scheduled = scheduleRulePairs(shuffled, seed, { min: 8, max: 15 });

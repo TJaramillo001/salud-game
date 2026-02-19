@@ -3,6 +3,7 @@
 
 import React, {
     createContext,
+    useCallback,
     useContext,
     useMemo,
     useReducer,
@@ -39,6 +40,9 @@ export type GameState = {
 export type GameAction =
     | { type: 'SET_MODE'; mode: ModeKey }
     | { type: 'SET_PLAYERS'; players: Player[] }
+    | { type: 'ADD_PLAYER'; name: string }
+    | { type: 'REMOVE_PLAYER'; id: PlayerId }
+    | { type: 'CLEAR_PLAYERS' }
     | { type: 'START_NEW_SESSION'; sessionId: string; seed: number }
     | { type: 'END_GAME' }
     | { type: 'RESET_RUNTIME' }
@@ -85,6 +89,24 @@ function reducer(state: GameState, action: GameAction): GameState {
         }
         case 'SET_PLAYERS': {
             return { ...state, players: action.players };
+        }
+        case 'ADD_PLAYER': {
+            const trimmed = action.name.trim();
+            if (!trimmed) return state;
+            const exists = state.players.some(
+                (p) => p.name.toLocaleLowerCase() === trimmed.toLocaleLowerCase()
+            );
+            if (exists) return state;
+            return { ...state, players: [...state.players, { id: newPlayerId(), name: trimmed }] };
+        }
+        case 'REMOVE_PLAYER': {
+            const next = state.players.filter((p) => p.id !== action.id);
+            if (next.length === state.players.length) return state;
+            return { ...state, players: next };
+        }
+        case 'CLEAR_PLAYERS': {
+            if (state.players.length === 0) return state;
+            return { ...state, players: [] };
         }
         case 'START_NEW_SESSION': {
             // Fresh run: clear runtime state
@@ -199,62 +221,58 @@ export function GameStoreProvider({ children }: { children: React.ReactNode }) {
         }
     }, [state.players]);
 
-    // ---------- Convenience helpers ----------
+    // ---------- Stable helpers (dispatch is stable from useReducer) ----------
+    const setMode = useCallback(
+        (mode: ModeKey) => dispatch({ type: 'SET_MODE', mode }),
+        [dispatch],
+    );
+    const setPlayers = useCallback(
+        (players: Player[]) => dispatch({ type: 'SET_PLAYERS', players }),
+        [dispatch],
+    );
+    const addPlayer = useCallback(
+        (name: string) => dispatch({ type: 'ADD_PLAYER', name }),
+        [dispatch],
+    );
+    const removePlayer = useCallback(
+        (id: PlayerId) => dispatch({ type: 'REMOVE_PLAYER', id }),
+        [dispatch],
+    );
+    const clearPlayers = useCallback(
+        () => dispatch({ type: 'CLEAR_PLAYERS' }),
+        [dispatch],
+    );
+    const startNewSession = useCallback(
+        (opts?: { forceMode?: ModeKey }) => {
+            if (opts?.forceMode) dispatch({ type: 'SET_MODE', mode: opts.forceMode });
+            dispatch({ type: 'START_NEW_SESSION', sessionId: cryptoRandomId(), seed: cryptoRandomSeed() });
+        },
+        [dispatch],
+    );
+    const endGame = useCallback(() => dispatch({ type: 'END_GAME' }), [dispatch]);
+    const resetRuntime = useCallback(() => dispatch({ type: 'RESET_RUNTIME' }), [dispatch]);
+    const markSeen = useCallback(
+        (cardId: string) => dispatch({ type: 'MARK_SEEN', cardId }),
+        [dispatch],
+    );
+
+    // ---------- Context value ----------
     const value = useMemo<GameStore>(
         () => ({
             state,
             dispatch,
-
-            // expose for destructuring
             players: state.players,
-
-            setMode: (mode: ModeKey) => dispatch({ type: 'SET_MODE', mode }),
-
-            setPlayers: (players: Player[]) =>
-                dispatch({ type: 'SET_PLAYERS', players }),
-
-            addPlayer: (name: string) => {
-                const trimmed = name.trim();
-                if (!trimmed) return;
-
-                // Avoid duplicates by name (case-insensitive)
-                const exists = state.players.some(
-                    (p) => p.name.toLocaleLowerCase() === trimmed.toLocaleLowerCase()
-                );
-                if (exists) return;
-
-                const next: Player = { id: newPlayerId(), name: trimmed };
-                dispatch({ type: 'SET_PLAYERS', players: [...state.players, next] });
-            },
-
-            removePlayer: (id: PlayerId) => {
-                const next = state.players.filter((p) => p.id !== id);
-                if (next.length !== state.players.length) {
-                    dispatch({ type: 'SET_PLAYERS', players: next });
-                }
-            },
-
-            clearPlayers: () => {
-                if (state.players.length > 0) {
-                    dispatch({ type: 'SET_PLAYERS', players: [] });
-                }
-            },
-
-            startNewSession: (opts?: { forceMode?: ModeKey }) => {
-                if (opts?.forceMode) {
-                    dispatch({ type: 'SET_MODE', mode: opts.forceMode });
-                }
-                const sessionId = cryptoRandomId();
-                const seed = cryptoRandomSeed();
-                dispatch({ type: 'START_NEW_SESSION', sessionId, seed });
-            },
-
-            endGame: () => dispatch({ type: 'END_GAME' }),
-            resetRuntime: () => dispatch({ type: 'RESET_RUNTIME' }),
-
-            markSeen: (cardId: string) => dispatch({ type: 'MARK_SEEN', cardId }),
+            setMode,
+            setPlayers,
+            addPlayer,
+            removePlayer,
+            clearPlayers,
+            startNewSession,
+            endGame,
+            resetRuntime,
+            markSeen,
         }),
-        [state],
+        [state, setMode, setPlayers, addPlayer, removePlayer, clearPlayers, startNewSession, endGame, resetRuntime, markSeen],
     );
 
     return (

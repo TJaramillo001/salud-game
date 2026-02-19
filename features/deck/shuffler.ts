@@ -1,28 +1,15 @@
 // features/deck/shuffler.ts
 import type { Card } from '@/features/questions/types';
+import { mulberry32 } from '@/lib/prng';
 
 export function shuffleInPlace<T>(arr: T[], seed?: number): T[] {
-    // Fisher–Yates; if seed provided, use a simple LCG for determinism
-    let random = Math.random;
-    if (typeof seed === 'number') {
-        let s = seed >>> 0;
-        random = () => ((s = (1664525 * s + 1013904223) >>> 0) / 0xffffffff);
-    }
+    // Fisher–Yates with mulberry32 PRNG for determinism, or Math.random if no seed
+    const random = typeof seed === 'number' ? mulberry32(seed) : Math.random;
     for (let i = arr.length - 1; i > 0; i--) {
         const j = Math.floor(random() * (i + 1));
         [arr[i], arr[j]] = [arr[j], arr[i]];
     }
     return arr;
-}
-
-// Deterministic PRNG (mulberry32) – compact and fast
-function mulberry32(a: number) {
-    return function () {
-        let t = (a += 0x6d2b79f5);
-        t = Math.imul(t ^ (t >>> 15), t | 1);
-        t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
-        return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
-    };
 }
 
 export type RuleWindow = { min: number; max: number };

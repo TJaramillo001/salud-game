@@ -25,7 +25,7 @@ function cyrb53(str: string, seed = 0) {
 export default function PlayPage() {
     const { state: { selectedMode, players } } = useGameStore();
     const router = useRouter();
-    const { addRule, clearRule } = useActiveRules();
+    const { addRule, clearRule, clearAll } = useActiveRules();
 
     // Require mode and players
     useEffect(() => { if (!selectedMode) router.replace('/game/setup/mode'); }, [selectedMode, router]);
@@ -56,13 +56,18 @@ export default function PlayPage() {
     const [offlineIndex, setOfflineIndex] = useState(0);
 
     useEffect(() => {
-        if (!isEmptyDeck) return; // only consider offline if we failed to build a deck
+        if (!isEmptyDeck) {
+            // Online deck loaded — discard any stale offline fallback
+            setOfflineDeck(null);
+            setOfflineIndex(0);
+            return;
+        }
         const cached = getLastDeck();
         if (cached && cached.length > 0) {
             setOfflineDeck(cached);
             setOfflineIndex(0);
         }
-    }, [isEmptyDeck]);
+    }, [isEmptyDeck, runId]);
 
     const usingOffline = isEmptyDeck && offlineDeck && offlineDeck.length > 0;
     const offlineCurrent = usingOffline ? offlineDeck![offlineIndex] : null;
@@ -73,6 +78,10 @@ export default function PlayPage() {
 
     // Rule lifecycle once per card (applies to both online/offline flows)
     const processed = useRef<Set<string>>(new Set());
+    useEffect(() => {
+        processed.current.clear();
+        clearAll();
+    }, [runId, clearAll]);
     useEffect(() => {
         const active = (usingOffline ? offlineCurrent : current) as Card | undefined;
         if (!active || !active.ruleId) return;
@@ -119,11 +128,7 @@ export default function PlayPage() {
             ? resolveTargetName?.(activeCard as Card, players.map(p => p.name), turnIndex) ?? null
             : null;
 
-    const subtitle =
-        typeof rawSubtitle === 'string' ? rawSubtitle
-            : rawSubtitle !== null && typeof rawSubtitle === 'object' && 'name' in rawSubtitle
-                ? (rawSubtitle as { name: string }).name
-                : null;
+    const subtitle = typeof rawSubtitle === 'string' ? rawSubtitle : null;
 
     // --- Offline banner ---
     const offline = !isOnline();
