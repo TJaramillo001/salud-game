@@ -103,7 +103,7 @@ export default function PlayPage() {
     const onAdvance = () => {
         const hasCard = usingOffline ? !!offlineCurrent : !!current;
         if (!hasCard) return;
-        vibrate(10);
+        vibrate(10); // 10ms pulse — just enough tactile feedback without being intrusive
 
         if (usingOffline) {
             setOfflineIndex((i) => (i + 1 < (offlineDeck?.length ?? 0) ? i + 1 : i));

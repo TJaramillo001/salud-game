@@ -24,6 +24,8 @@ export type RuleWindow = { min: number; max: number };
 export function scheduleRulePairs(
     deck: Card[],
     seed: number,
+    // Place rule_off 8–15 cards after its rule_on: long enough for the rule to matter,
+    // short enough that it never dominates an entire game session.
     window: RuleWindow = { min: 8, max: 15 }
 ): Card[] {
     const rnd = mulberry32(seed);
@@ -69,7 +71,7 @@ export function scheduleRulePairs(
             const span = Math.max(0, window.max - window.min + 1);
             const offset = window.min + Math.floor(rnd() * (span || 1));
             // Insert position is relative to current out length (right after we pushed ON)
-            const targetPos = Math.min(out.length - 1 + offset, out.length + 9999); // placeholder big number; will clamp on insert
+            const targetPos = out.length - 1 + offset; // clamped to actual deck bounds at insert time
 
             scheduledInserts.push({ pos: targetPos, card: offCard });
         }

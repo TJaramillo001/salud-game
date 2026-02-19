@@ -9,7 +9,11 @@ export function saveLastDeck(deck: Card[]) {
     try {
         const payload = { cards: deck, savedAt: Date.now() };
         localStorage.setItem(LAST_DECK_KEY, JSON.stringify(payload));
-    } catch { /* ignore quota errors */ }
+    } catch (err) {
+        if (process.env.NODE_ENV !== 'production') {
+            console.warn('[salud:offline] Failed to cache deck — localStorage quota may be full.', err);
+        }
+    }
 }
 
 export function getLastDeck(): Card[] | null {

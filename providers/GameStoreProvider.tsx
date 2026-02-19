@@ -92,7 +92,7 @@ function reducer(state: GameState, action: GameAction): GameState {
         }
         case 'ADD_PLAYER': {
             const trimmed = action.name.trim();
-            if (!trimmed) return state;
+            if (!trimmed || trimmed.length > 50) return state;
             const exists = state.players.some(
                 (p) => p.name.toLocaleLowerCase() === trimmed.toLocaleLowerCase()
             );

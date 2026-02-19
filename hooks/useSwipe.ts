@@ -8,6 +8,8 @@ type UseSwipeOpts = {
     threshold?: number; // px
 };
 
+// 80px is roughly a comfortable one-thumb flick on a mobile screen without
+// triggering on accidental taps or minor jitter.
 export function useSwipe({ onSwipeLeft, onSwipeRight, threshold = 80 }: UseSwipeOpts) {
     const startX = useRef<number | null>(null);
     const [dx, setDx] = useState(0);

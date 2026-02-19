@@ -44,7 +44,7 @@ function kindLabel(kind: Card['kind']): string {
 
 // ...imports unchanged
 
-export function QuestionCard({ card, subtitle, dx = 0, players = [], actors = {} }: Props) {
+export const QuestionCard = React.memo(function QuestionCard({ card, subtitle, dx = 0, players = [], actors = {} }: Props) {
     const rotation = Math.max(Math.min(dx / 20, 8), -8);
     const translate = Math.max(Math.min(dx, 120), -120);
 
@@ -52,8 +52,10 @@ export function QuestionCard({ card, subtitle, dx = 0, players = [], actors = {}
         () => renderText(card.text, actors, players),
         [card.text, actors, players]
     );
-    const renderedAlt =
-        'altText' in card && card.altText ? renderText(card.altText, actors, players) : null;
+    const renderedAlt = React.useMemo(
+        () => 'altText' in card && card.altText ? renderText(card.altText, actors, players) : null,
+        [card, actors, players]
+    );
 
     const cat = categoryOf(card.kind);
     const theme = THEMES[cat];
@@ -97,6 +99,6 @@ export function QuestionCard({ card, subtitle, dx = 0, players = [], actors = {}
             </div>
         </div>
     );
-}
+});
 
 export default QuestionCard;
