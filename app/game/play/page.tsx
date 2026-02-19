@@ -10,7 +10,7 @@ import { QuestionCard } from '@/components/game/QuestionCard';
 import { Button } from '@/components/ui/Button';
 import { DeckHUD } from './components/DeckHUD';
 import { vibrate } from '@/lib/haptics';
-import { nextTurnIndex, resolveTargetName } from '@/features/gameplay/turn';
+import { weightedPickIndex, applyDecay, resolveTargetName } from '@/features/gameplay/turn';
 import type { Card } from '@/features/questions/types';
 import { saveLastDeck, getLastDeck, isOnline } from '@/lib/offline';
 
@@ -72,9 +72,13 @@ export default function PlayPage() {
     const usingOffline = isEmptyDeck && offlineDeck && offlineDeck.length > 0;
     const offlineCurrent = usingOffline ? offlineDeck![offlineIndex] : null;
 
-    // Turn index (shared for subtitle actor rotation)
-    const [turnIndex, setTurnIndex] = useState(0);
-    useEffect(() => { if (players.length === 0) setTurnIndex(0); }, [players.length]);
+    // Weighted-decay player distribution
+    const [weights, setWeights] = useState<number[]>(() => players.map(() => 1));
+    const [currentPlayerIdx, setCurrentPlayerIdx] = useState(0);
+    useEffect(() => {
+        setWeights(Array(players.length).fill(1));
+        setCurrentPlayerIdx(0);
+    }, [runId, players.length]);
 
     // Rule lifecycle once per card (applies to both online/offline flows)
     const processed = useRef<Set<string>>(new Set());
@@ -110,22 +114,25 @@ export default function PlayPage() {
         } else {
             next();
         }
-        setTurnIndex(i => nextTurnIndex(i, players.length));
+        const nextWeights = applyDecay(weights, currentPlayerIdx);
+        const nextIdx = weightedPickIndex(nextWeights);
+        setWeights(nextWeights);
+        setCurrentPlayerIdx(nextIdx);
     };
 
     // Actors (for {A}/{B}/{STARTER})
     const actors = useMemo(() => {
         if (players.length === 0) return {};
-        const A = turnIndex % players.length, B = (turnIndex + 1) % players.length, STARTER = A;
+        const A = currentPlayerIdx, B = (currentPlayerIdx + 1) % players.length, STARTER = A;
         return { A, B, STARTER };
-    }, [turnIndex, players.length]);
+    }, [currentPlayerIdx, players.length]);
 
     // Subtitle
     const activeCard = (usingOffline ? offlineCurrent : current) as Card | undefined;
     const isRuleCard = activeCard?.kind === 'rule_on' || activeCard?.kind === 'rule_off';
     const rawSubtitle =
         activeCard && !isRuleCard
-            ? resolveTargetName?.(activeCard as Card, players.map(p => p.name), turnIndex) ?? null
+            ? resolveTargetName?.(activeCard as Card, players.map(p => p.name), currentPlayerIdx) ?? null
             : null;
 
     const subtitle = typeof rawSubtitle === 'string' ? rawSubtitle : null;

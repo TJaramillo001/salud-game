@@ -1,9 +1,30 @@
 // features/gameplay/turn.ts
 import type { Card } from '@/features/questions/types';
 
-export function nextTurnIndex(current: number, total: number) {
-    if (total <= 0) return 0;
-    return (current + 1) % total;
+/**
+ * Weighted random pick. Higher weight = higher probability.
+ */
+export function weightedPickIndex(weights: number[]): number {
+    if (weights.length === 0) return 0;
+    const total = weights.reduce((a, b) => a + b, 0);
+    let r = Math.random() * total;
+    for (let i = 0; i < weights.length; i++) {
+        r -= weights[i];
+        if (r <= 0) return i;
+    }
+    return weights.length - 1;
+}
+
+/**
+ * Decays the picked player's weight and redistributes the surplus to others.
+ * Keeps total weight sum constant (= weights.length).
+ * minWeight prevents a player from ever reaching 0 probability.
+ */
+export function applyDecay(weights: number[], picked: number, minWeight = 0.1): number[] {
+    const excess = weights[picked] - minWeight;
+    if (excess <= 0) return weights;
+    const boost = excess / (weights.length - 1);
+    return weights.map((w, i) => (i === picked ? minWeight : w + boost));
 }
 
 /**
