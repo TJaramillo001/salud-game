@@ -65,7 +65,7 @@ There is no test runner script in `package.json`. Test files exist under `tests/
 │   │   ├── filters.ts          # Player-count / spice / gender filters
 │   │   └── schemas.ts          # Validation schemas
 │   ├── gameplay/
-│   │   ├── turn.ts             # Turn index + resolveTargetName
+│   │   ├── turn.ts             # Weighted-decay player pick + resolveTargetName
 │   │   ├── useGameFlow.ts      # Game flow hook
 │   │   └── timers.ts           # Timing utilities
 │   ├── modes/
@@ -160,7 +160,7 @@ The **seed** is derived in `app/game/play/page.tsx` from: `mode | player names |
 
 **Card types (`CardKind`):** `action`, `question`, `group`, `versus`, `wildcard`, `rule_on`, `rule_off`
 
-**Target roles:** `A`, `B`, `C`, `STARTER` — placeholders resolved at render time by `lib/render.ts` to actual player names from the current `turnIndex`.
+**Target roles:** `A`, `B`, `C`, `STARTER` — placeholders resolved at render time by `lib/render.ts` to actual player names from the current `currentPlayerIdx`.
 
 **Card JSON schema:**
 ```json
@@ -187,6 +187,20 @@ The **seed** is derived in `app/game/play/page.tsx` from: `mode | player names |
 - Drawing `rule_off` calls `clearRule(ruleId)`.
 - If the deck ends with active rules, they are auto-cleared.
 - Processed rule card IDs are tracked in a `useRef<Set>` in the play page to prevent double-firing.
+
+### Player Distribution
+
+Player assignment uses a **weighted-decay random** system (not round-robin).
+
+- State in `app/game/play/page.tsx`: `weights: number[]` (one per player, all start at `1`) and `currentPlayerIdx: number`.
+- On every card advance, `applyDecay(weights, currentPlayerIdx)` drops the current player's weight to `minWeight=0.1` and redistributes the surplus equally to all others, keeping the total weight sum constant.
+- `weightedPickIndex(nextWeights)` then picks the next player probabilistically.
+- Both card text placeholders (`{A}`, `{B}`) and the subtitle use `currentPlayerIdx` — they always refer to the same player.
+- Weights reset to `1` on reshuffle (`runId` change) or player list change.
+
+Key functions in `features/gameplay/turn.ts`:
+- `weightedPickIndex(weights: number[]): number`
+- `applyDecay(weights: number[], picked: number, minWeight?: number): number[]`
 
 ### Offline / PWA
 
