@@ -1,16 +1,44 @@
 // features/questions/repository.ts
 import type { Pack } from './types';
+import type { ModeKey } from '@/features/modes/types';
+import type { LanguageKey } from '@/features/languages/types';
 import { validateCard } from './schemas';
 
-// These may be either a Pack object OR an array<Card> depending on your JSON files.
-import preRaw from '@/data/packs/pre.json';
-import nightOutRaw from '@/data/packs/night_out.json';
+// Latin American Spanish
+import preEsLaRaw from '@/data/packs/pre_es_la.json';
+import nightOutEsLaRaw from '@/data/packs/night_out_es_la.json';
 
-/** Add new packs here — one entry per game mode. */
-const PACK_REGISTRY = [
-    { raw: preRaw,      id: 'pre',       name: 'Pre' },
-    { raw: nightOutRaw, id: 'night_out', name: 'Rumba' },
-] as const;
+// Spain Spanish (Erasmus)
+import preEsEuRaw from '@/data/packs/pre_es_eu.json';
+import nightOutEsEuRaw from '@/data/packs/night_out_es_eu.json';
+
+// Italian
+import preItRaw from '@/data/packs/pre_it.json';
+import nightOutItRaw from '@/data/packs/night_out_it.json';
+
+// English
+import preEnRaw from '@/data/packs/pre_en.json';
+import nightOutEnRaw from '@/data/packs/night_out_en.json';
+
+type PackRegistryEntry = {
+    raw: unknown;
+    id: string;
+    name: string;
+    mode: ModeKey;
+    language: LanguageKey;
+};
+
+/** All packs indexed by mode + language. */
+const PACK_REGISTRY: PackRegistryEntry[] = [
+    { raw: preEsLaRaw,      id: 'pre_es_la',      name: 'Pre (Latino)',          mode: 'pre',      language: 'es_la' },
+    { raw: preEsEuRaw,      id: 'pre_es_eu',      name: 'Pre (España)',           mode: 'pre',      language: 'es_eu' },
+    { raw: preItRaw,        id: 'pre_it',         name: 'Pre (Italiano)',         mode: 'pre',      language: 'it'    },
+    { raw: preEnRaw,        id: 'pre_en',         name: 'Pre (English)',          mode: 'pre',      language: 'en'    },
+    { raw: nightOutEsLaRaw, id: 'night_out_es_la', name: 'Rumba (Latino)',        mode: 'night_out', language: 'es_la' },
+    { raw: nightOutEsEuRaw, id: 'night_out_es_eu', name: 'Rumba (España)',         mode: 'night_out', language: 'es_eu' },
+    { raw: nightOutItRaw,   id: 'night_out_it',   name: 'Notte Fuori (Italiano)', mode: 'night_out', language: 'it'    },
+    { raw: nightOutEnRaw,   id: 'night_out_en',   name: 'Night Out (English)',    mode: 'night_out', language: 'en'    },
+];
 
 /**
  * Normalize arbitrary JSON into a Pack.
@@ -52,10 +80,16 @@ function asPack(raw: unknown, fallbackId: string, fallbackName: string): Pack {
     return { id, name, version, description, cards };
 }
 
-const PACKS: Pack[] = PACK_REGISTRY.map(({ raw, id, name }) => asPack(raw, id, name));
+const PACKS: (Pack & { mode: ModeKey; language: LanguageKey })[] = PACK_REGISTRY.map(
+    ({ raw, id, name, mode, language }) => ({
+        ...asPack(raw, id, name),
+        id,   // always use the registry id (e.g. 'pre_es_la'), not the inferred mode
+        mode,
+        language,
+    })
+);
 
 export async function listPacks(): Promise<Pack[]> {
-    // Shallow normalization to keep callers safe
     return PACKS.map((p) => ({
         ...p,
         id: String(p.id),
@@ -70,6 +104,22 @@ export async function getPackById(id: Pack['id']): Promise<Pack | undefined> {
     const packs = await listPacks();
     const needle = String(id).toLowerCase();
     return packs.find((p) => String(p.id).toLowerCase() === needle);
+}
+
+/** Primary lookup for gameplay: resolves the correct pack for a mode + language pair. */
+export async function getPackByModeAndLanguage(
+    mode: ModeKey,
+    language: LanguageKey
+): Promise<Pack | undefined> {
+    const entry = PACKS.find((p) => p.mode === mode && p.language === language);
+    if (!entry) return undefined;
+    return {
+        id: entry.id,
+        name: entry.name,
+        version: entry.version,
+        description: entry.description,
+        cards: Array.isArray(entry.cards) ? entry.cards : [],
+    };
 }
 
 export async function listPackIds(): Promise<string[]> {

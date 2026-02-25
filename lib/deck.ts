@@ -2,7 +2,7 @@
 import type { Player, CardSource, BuiltCard } from "./types";
 import { mulberry32, randInt } from "./prng";
 import { renderText } from "./render";
-import pre from "../data/packs/pre.json";
+import pre from "../data/packs/pre_es_la.json";
 
 export function buildDeck({
                               players,

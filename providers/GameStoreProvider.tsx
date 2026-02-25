@@ -14,6 +14,11 @@ import {
     MODE_STORAGE_KEY,
     isModeKey,
 } from '@/features/modes/types';
+import {
+    LanguageKey,
+    LANGUAGE_STORAGE_KEY,
+    isLanguageKey,
+} from '@/features/languages/types';
 import type { Player, PlayerId } from '@/features/players/types';
 import { newPlayerId } from '@/features/players/types';
 
@@ -35,10 +40,14 @@ export type GameState = {
 
     // Mode selection
     selectedMode: ModeKey | null;
+
+    // Language selection
+    selectedLanguage: LanguageKey | null;
 };
 
 export type GameAction =
     | { type: 'SET_MODE'; mode: ModeKey }
+    | { type: 'SET_LANGUAGE'; language: LanguageKey }
     | { type: 'SET_PLAYERS'; players: Player[] }
     | { type: 'ADD_PLAYER'; name: string }
     | { type: 'REMOVE_PLAYER'; id: PlayerId }
@@ -59,6 +68,7 @@ type GameStore = {
     players: Player[];
 
     // Helpers (stable API for components)
+    setLanguage: (language: LanguageKey) => void;
     setMode: (mode: ModeKey) => void;
     setPlayers: (players: Player[]) => void;
     addPlayer: (name: string) => void;
@@ -79,6 +89,7 @@ const initialState: GameState = {
     players: [],
     seen: [],
     selectedMode: null,
+    selectedLanguage: null,
 };
 
 // ---------- Reducer ----------
@@ -86,6 +97,9 @@ function reducer(state: GameState, action: GameAction): GameState {
     switch (action.type) {
         case 'SET_MODE': {
             return { ...state, selectedMode: action.mode };
+        }
+        case 'SET_LANGUAGE': {
+            return { ...state, selectedLanguage: action.language };
         }
         case 'SET_PLAYERS': {
             return { ...state, players: action.players };
@@ -146,6 +160,22 @@ const GameStoreContext = createContext<GameStore | null>(null);
 export function GameStoreProvider({ children }: { children: React.ReactNode }) {
     const [state, dispatch] = useReducer(reducer, initialState);
 
+    // ---- Hydrate selectedLanguage from localStorage (client only)
+    useEffect(() => {
+        try {
+            const raw =
+                typeof window !== 'undefined'
+                    ? window.localStorage.getItem(LANGUAGE_STORAGE_KEY)
+                    : null;
+            if (raw && isLanguageKey(raw) && state.selectedLanguage == null) {
+                dispatch({ type: 'SET_LANGUAGE', language: raw });
+            }
+        } catch {
+            // ignore storage failures
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
     // ---- Hydrate selectedMode from localStorage (client only)
     useEffect(() => {
         try {
@@ -199,6 +229,19 @@ export function GameStoreProvider({ children }: { children: React.ReactNode }) {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
+    // ---- Persist selectedLanguage
+    useEffect(() => {
+        try {
+            if (state.selectedLanguage) {
+                window.localStorage.setItem(LANGUAGE_STORAGE_KEY, state.selectedLanguage);
+            } else {
+                window.localStorage.removeItem(LANGUAGE_STORAGE_KEY);
+            }
+        } catch {
+            // ignore storage failures
+        }
+    }, [state.selectedLanguage]);
+
     // ---- Persist selectedMode
     useEffect(() => {
         try {
@@ -222,6 +265,10 @@ export function GameStoreProvider({ children }: { children: React.ReactNode }) {
     }, [state.players]);
 
     // ---------- Stable helpers (dispatch is stable from useReducer) ----------
+    const setLanguage = useCallback(
+        (language: LanguageKey) => dispatch({ type: 'SET_LANGUAGE', language }),
+        [dispatch],
+    );
     const setMode = useCallback(
         (mode: ModeKey) => dispatch({ type: 'SET_MODE', mode }),
         [dispatch],
@@ -262,6 +309,7 @@ export function GameStoreProvider({ children }: { children: React.ReactNode }) {
             state,
             dispatch,
             players: state.players,
+            setLanguage,
             setMode,
             setPlayers,
             addPlayer,
@@ -272,7 +320,7 @@ export function GameStoreProvider({ children }: { children: React.ReactNode }) {
             resetRuntime,
             markSeen,
         }),
-        [state, setMode, setPlayers, addPlayer, removePlayer, clearPlayers, startNewSession, endGame, resetRuntime, markSeen],
+        [state, setLanguage, setMode, setPlayers, addPlayer, removePlayer, clearPlayers, startNewSession, endGame, resetRuntime, markSeen],
     );
 
     return (

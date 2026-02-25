@@ -13,6 +13,7 @@ import { vibrate } from '@/lib/haptics';
 import { weightedPickIndex, applyDecay, resolveTargetName } from '@/features/gameplay/turn';
 import type { Card } from '@/features/questions/types';
 import { saveLastDeck, getLastDeck, isOnline } from '@/lib/offline';
+import { useTranslation } from '@/lib/i18n';
 
 function cyrb53(str: string, seed = 0) {
     let h1 = 0xdeadbeef ^ seed, h2 = 0x41c6ce57 ^ seed;
@@ -24,6 +25,7 @@ function cyrb53(str: string, seed = 0) {
 
 export default function PlayPage() {
     const { state: { selectedMode, players } } = useGameStore();
+    const { t } = useTranslation();
     const router = useRouter();
     const { addRule, clearRule, clearAll } = useActiveRules();
 
@@ -141,7 +143,7 @@ export default function PlayPage() {
     const offline = !isOnline();
     const OfflineBanner = offline ? (
         <div className="text-[11px] text-amber-700 bg-amber-100 border border-amber-200 px-2 py-1 rounded">
-            Modo sin conexión: usando contenido en caché cuando sea posible.
+            {t.play.offline.banner}
         </div>
     ) : null;
 
@@ -152,20 +154,20 @@ export default function PlayPage() {
                 <DeckHUD />
                 {OfflineBanner}
                 <div className="max-w-md text-center space-y-3">
-                    <h2 className="text-xl font-semibold">No se pudo armar el mazo</h2>
+                    <h2 className="text-xl font-semibold">{t.play.empty.title}</h2>
                     <p className="text-sm text-neutral-500">
-                        El modo <b>{selectedMode}</b> generó 0 cartas con los jugadores/condiciones actuales.
+                        {t.play.empty.description.replace('{mode}', selectedMode ?? '')}
                     </p>
                     <ul className="text-sm text-neutral-500 list-disc text-left pl-5 space-y-1">
-                        <li>Prueba con más jugadores o cambia el modo.</li>
-                        <li>O rearmemos el mazo con una nueva semilla.</li>
+                        <li>{t.play.empty.tipPlayers}</li>
+                        <li>{t.play.empty.tipReshuffle}</li>
                     </ul>
-                    <p className="text-xs text-neutral-400 pt-1">Tip: si ves esto seguido, revisa las constraints del pack.</p>
+                    <p className="text-xs text-neutral-400 pt-1">{t.play.empty.devTip}</p>
                 </div>
                 <footer className="fixed bottom-4 inset-x-0 px-6">
                     <div className="mx-auto max-w-md flex gap-3">
-                        <Button className="flex-1" onClick={() => setRunId(x => x + 1)}>Rearmar mazo</Button>
-                        <Button className="flex-1" variant="ghost" onClick={() => router.replace('/game/setup/mode')}>Cambiar modo</Button>
+                        <Button className="flex-1" onClick={() => setRunId(x => x + 1)}>{t.play.btn.reshuffle}</Button>
+                        <Button className="flex-1" variant="ghost" onClick={() => router.replace('/game/setup/mode')}>{t.play.btn.changeMode}</Button>
                     </div>
                 </footer>
             </main>
@@ -184,7 +186,7 @@ export default function PlayPage() {
             <div
                 className="w-full flex justify-center py-2 sm:py-4 cursor-pointer"
                 role="button"
-                aria-label="Avanzar"
+                aria-label={t.play.aria.advance}
                 tabIndex={0}
                 onClick={onAdvance}
                 onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && onAdvance()}
@@ -196,6 +198,9 @@ export default function PlayPage() {
                         dx={0}                 // no swipe: no tilt/translate
                         players={players}
                         actors={actors}
+                        kindLabels={t.card.kind}
+                        altPrefix={t.card.alt}
+                        renderFallbacks={t.render}
                     />
                 ) : <div />}
             </div>
@@ -208,15 +213,15 @@ export default function PlayPage() {
                         variant="ghost"
                         onClick={() => router.replace('/game/summary')}
                     >
-                        Terminar
+                        {t.play.btn.end}
                     </Button>
                     <Button className="flex-1" onClick={onAdvance} disabled={!showCard}>
-                        Siguiente
+                        {t.play.btn.next}
                     </Button>
                 </div>
             </footer>
 
-            <p className="text-xs text-neutral-400">Tip: toca la carta para avanzar</p>
+            <p className="text-xs text-neutral-400">{t.play.hint.tap}</p>
         </main>
     );
 }

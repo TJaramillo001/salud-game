@@ -1,0 +1,2002 @@
+[
+  {
+    "id": "pre-en-001",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, do your best impression of a Disney character. Group votes thumbs up or down. Majority down: drink 3.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-002",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, text someone you haven't spoken to in over a year. Everyone else picks who you text. Do it: hand out 3 sips. Refuse: drink 3.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-003",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, let the person to your left post anything they want to your Instagram story. Do it: give out 4 sips. Refuse: drink 4.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-004",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, speak only in questions for the next 2 minutes. Every time you slip up, drink 1.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-005",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, read out the last voice message you received. If you refuse, drink 3.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-006",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, show the group your most recent photo in your camera roll without previewing it. Drink 2 if it's embarrassing.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-007",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, name 5 countries in 10 seconds. Miss one: drink 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-008",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, tell the group a rumour about yourself that's actually true. Group decides how many sips it's worth (1–4).",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-009",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, take a sip for every country you've visited. Cap at 5.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-010",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, do 10 seconds of your best TikTok dance. Group gives a score out of 10 — that's how many sips you hand out.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-011",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, change your phone wallpaper to a photo the group chooses — keep it until the next card draw. Refuse: drink 3.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-012",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, for the next round you must refer to yourself in the third person. Every slip costs you 1 sip.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-013",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, read the last thing you searched on Google out loud. Drink 2 if it's something you'd rather not share.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-014",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, give a one-minute stand-up comedy bit about university life. If the group laughs at least once, you hand out 3 sips.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-015",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, send a voice note to someone in your contacts saying \"I miss you.\" Do it: give 3 sips. Refuse: drink 3.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-016",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, let the group scroll through your Spotify recently played. Drink 1 for every guilty pleasure they find.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-017",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, say a word. Go around clockwise naming songs with that word in the title. First person to fail drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-018",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, reveal how many people in this room you've told a secret to. Drink that many sips.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-019",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, hold a straight face while the rest of the group tries to make you laugh for 30 seconds. Fail: drink 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-020",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, you have 20 seconds to name the capitals of 5 different countries. Miss any: drink 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-021",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, add a stranger on Instagram right now. Do it: hand out 3 sips. Refuse: drink 3.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-022",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, dramatically re-enact the last argument you had. Keep going until the group claps. Drink 1 per 10 seconds of silence.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-023",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, say something nice about the person to your right — but make it sound like an insult. Drink 2 if they look confused.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-024",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, show the group the last meme you saved. If nobody laughs: drink 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-025",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, name your three most-used apps. For every one the group guessed correctly before you revealed it, drink 1.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-026",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, pick a person in the group and describe their vibe using only movie or TV show titles. If they agree, hand out 3. If not, drink 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-027",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, do your best accent from a country you've never visited. Group rates it out of 5 — that's how many sips you give out.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-028",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, everyone in the group gives you a one-word description of your personality. Drink 1 for each word you disagree with.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-029",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, you have 15 seconds to freestyle rap about what happened today. Fail to start: drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-030",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, take the group on a 60-second tour of your camera roll starting from one year ago today. Drink 1 for every photo you skip.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-031",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, tell the group the most embarrassing thing in your search history right now. Drink 3 if you refuse.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-032",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, walk around the room like you're on a fashion runway for 15 seconds. Group scores you — give out that many sips (max 5).",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-033",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, confess a food opinion you know will be controversial. Anyone who loudly disagrees drinks 1.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-034",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, you can ask anyone in the group a question they must answer honestly — or drink 3.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-035",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, describe your love life using only a weather forecast. Drink 2 if people laugh at the forecast.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-036",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, open your most recent chat and read the last message you sent out loud. Drink 2 if it's cringe.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-037",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, pick the person you think is most likely to become famous. Tell them why — they give out 2 sips if they like it, drink 2 if they don't.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-038",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, without using your hands, mime the plot of any movie until someone guesses it. Give out 3 sips to the one who gets it.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-039",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, assign a Hogwarts house to everyone in the group and explain your reasoning. Anyone who disagrees with their assignment drinks 1.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-040",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, scroll to a random contact and do an impression of how they talk. If nobody guesses who it is: drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-041",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, turn your phone screen brightness to maximum and show the group your lock screen wallpaper. Drink 1 if someone comments on it.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-042",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, choose someone to be your lawyer. Reveal a minor crime you've committed (parking, speeding, etc.). If your lawyer can argue you innocent in 30 seconds, give out 3 sips. If not, drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-043",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, talk for 30 seconds about a topic the person to your left picks — without pausing, repeating yourself, or going off topic. Fail: drink 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-044",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, type and send a message to your mum or dad saying \"I need to talk to you about something important.\" Do it: give 4 sips. Refuse: drink 4.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-045",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, guess everyone's screen time average for last week. For each correct guess (within 30 min): give out 1 sip.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-046",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, write a two-sentence bio for yourself as though you were on a dating app. Read it aloud. Drink 1 if anyone cringes.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-047",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, do your best impression of one person in this room — without saying their name. First person to guess correctly gets 2 sips to give out.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-048",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, tell a joke. If nobody laughs: drink 2. If everyone laughs: give out 4 sips.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-049",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, share a screenshot from your camera roll taken in the last 48 hours. If the group finds it boring, drink 1.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-050",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, convince the group you have a totally made-up skill in 30 seconds. If the majority believes you: give out 3 sips. If not: drink 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-051",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "Anyone who has matched with someone on a dating app and never sent the first message — drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-052",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "If you've ever ghosted someone who did nothing wrong — drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-053",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "Drink 1 for every language you can introduce yourself in.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-054",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "If you've ever lied about having seen a movie everyone else has watched — drink 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-055",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "If you've ever binged an entire Netflix season in one day — drink 1.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-056",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "Anyone who has cried at a Disney movie as an adult — drink 1.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-057",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "If you've ever sent a risky text and immediately regretted it — drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-058",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "If your screen time last week was over 6 hours per day — drink 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-059",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "If you've ever eavesdropped on a stranger's conversation and genuinely got invested — drink 1.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-060",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "Anyone who has stayed in a relationship longer than they should have — drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-061",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "If you've ever pretended to be busy to avoid a social event — drink 1.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-062",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "If you've paid for a subscription you haven't used in the past month — drink 1.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-063",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "Anyone who has googled themselves — drink 1. Drink an extra if you liked what you found.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-064",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "If you've ever skipped class and then felt guilty about it the whole day anyway — drink 1.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-065",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "If you've ever liked someone's photo from years ago while stalking their profile — drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-066",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "If you've ever used \"I'm five minutes away\" when you were still at home — drink 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-067",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "Anyone who has bought something online while drunk — drink 2. Drink an extra if you don't regret it.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-068",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "If you've ever muted someone on social media without unfollowing them — drink 1.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-069",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "If you still know all the words to a song from when you were 12 — drink 1.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-070",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "If you've ever gone on a date just to have something to do — drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-071",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "Anyone who has cried on public transport — drink 1.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-072",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "If you've ever ordered pizza at 2am completely sober — drink 1.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-073",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "Drink 1 for every city you've lived in.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-074",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "If you've ever rehearsed a phone call before making it — drink 1.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-075",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "Anyone who has changed their outfit more than twice before going out tonight — drink 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-076",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "If you've ever read a whole thread of drama about strangers online and felt emotionally involved — drink 1.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-077",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "If you've ever had a crush on someone you met while travelling — drink 1.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-078",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "If you've ever written a very detailed complaint you never sent — drink 1.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-079",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "Anyone who has pretended not to see someone in public to avoid talking to them — drink 1.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-080",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "If you've ever slept past noon on a weekday — drink 1.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-081",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "If you've told someone \"I'll explain later\" and never actually explained — drink 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-082",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "Anyone who has left a text on read on purpose to seem busy — drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-083",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "If you've ever made up an elaborate excuse to leave a party early — drink 1.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-084",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "If you've argued about a film or show you haven't actually finished watching — drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-085",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "Anyone who has laughed at someone else's joke so they'd stop telling it — drink 1.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-086",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "If you've looked up the menu of a restaurant before going, just to know what you're getting — drink 1.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-087",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "If you've ever had a full conversation with your pet, fully expecting answers — drink 1.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-088",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "If you've ever rewritten a text message more than three times before sending — drink 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-089",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "Anyone who is in a group chat they've muted for over 6 months — drink 1.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-090",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "If you've ever stayed awake just because you didn't want to stop watching something — drink 1.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-091",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "If you've ever immediately checked your phone after putting it down because it felt empty — drink 1.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-092",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "Anyone who has ever sent the wrong text to the wrong person — drink 2. Drink an extra if it was about that person.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-093",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "If you've ever laughed at your own joke before finishing it — drink 1.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-094",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "If you've borrowed money and taken longer than planned to pay it back — drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-095",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "If you've ever been the only person in a group chat who didn't see the message — drink 1.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-096",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "{STARTER} starts: name a country. Go clockwise naming countries. No repeats, no pausing. First person to fail drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-097",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Vote: Would you rather have unlimited free flights or free accommodation anywhere in the world? Minority votes drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-098",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Everyone points at the person they think is most likely to become a reality TV star. The most-pointed-at person drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-099",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "{STARTER} begins a story with one sentence. Go clockwise, each person adds one sentence. Anyone who ruins the narrative drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-100",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Everyone raises their glass and says one genuine compliment to the group. Last person to speak drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-101",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Vote: Would you rather have perfect memory or never need sleep? Minority drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-102",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "{STARTER} names a celebrity. Everyone must name someone that celebrity could plausibly be dating. Most creative answer (group vote) gives out 3 sips.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-103",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Everyone simultaneously points at the person in the group most likely to still be awake at 5am. Most pointed-at person drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-104",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Speed round: everyone names a TV show they've watched in the last week. Anyone who can't think of one drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-105",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "{STARTER} hums the intro to a song. First person to guess it gives out 2 sips. {STARTER} drinks 2 if nobody guesses within 30 seconds.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-106",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Point at who you think is the best dancer in the group. Most votes: you must prove it with a 15-second solo. Skip: drink 3.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-107",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Everyone votes for the person most likely to move abroad permanently. Most votes: give out 3 sips.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-108",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "{STARTER} picks a category (e.g. \"Marvel movies\"). Go clockwise naming things in that category. Repeat or hesitate: drink 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-109",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Everyone on 3 holds up a number of fingers between 1 and 5. Anyone whose number nobody else chose drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-110",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Vote: would you rather lose all your photos or all your contacts? Minority drinks 2. Ties: everyone drinks 1.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-111",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "{STARTER} gives a 30-second TED talk on a random topic they make up on the spot. Group rates 1–5 — that's how many sips they give out.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-112",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Everyone texts their best friend the same message: \"Can I tell you something weird?\" The most interesting reply wins — that person gives out 3 sips.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-113",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Everyone points at who they'd call first in a crisis. Most pointed-at: give out 3 sips. Nobody points at you: drink 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-114",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Group vote: who in this room has the best fashion sense? Runner-up drinks 1. Last place drinks 3.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-115",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "{STARTER} whispers a word to the person on their left. That person adds a word and whispers the two-word phrase to the next person, and so on. Read out the final phrase — funniest result: {STARTER} gives out 3 sips.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-116",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Everyone stands up. Name a movie genre. Sit down if you've watched that genre this month. Last person standing drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-117",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Group decides: most likely to accidentally start a rumour. That person drinks 2 and must confirm or deny with a story.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-118",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "{STARTER} picks two people in the group and makes a case for why they'd be a great couple. Those two people rate the pitch out of 5 — {STARTER} gives out that many sips combined.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-119",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Everyone simultaneously shouts out their ranking of the best city they've visited. Anyone alone in their top pick gives out 2 sips.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-120",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Vote: Is a hot dog a sandwich? Yes or No. Minority drinks 2. Anyone who refuses to vote drinks 3.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-121",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Everyone simultaneously names their biggest red flag in a relationship. Most relatable answer (group vote): give out 3 sips.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-122",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Everyone secretly writes a country they want to live in and reveals at the same time. Anyone who wrote the same country as someone else: give each other 1 sip.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-123",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Group vote: who is the best liar? That person must prove it by bluffing convincingly about what they had for lunch. Group decides if they believe them.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-124",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "{STARTER} names a number (1–10). Everyone who rates tonight higher than that number gives out 1 sip. Everyone who rates it lower drinks 1.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-125",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Name the last song you had stuck in your head. Go clockwise — anyone who names a song already said must drink 1. Last person with a unique song gives out 3 sips.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-126",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Everyone secretly rates themselves 1–10 on their cooking ability. Reveal simultaneously. Biggest overestimator (group opinion) drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-127",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Everyone points at who they think will be last to go to sleep tonight. Most votes: defend your night owl reputation or drink 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-128",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Vote: Would you rather always know when people are lying or always know what people are thinking? Minority drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-129",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Everyone names their comfort food. First duplicate found: both people drink 1. No duplicates: {STARTER} gives out 2 sips.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-130",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Everyone holds up fingers showing how many apps they currently have notifications on. Highest number: drink that many sips (max 5).",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-131",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: first to name 10 capital cities wins. Winner gives out 3 sips.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-132",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: rock-paper-scissors, best of 3. Loser drinks 3.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-133",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: staring contest. First to blink or laugh drinks 3.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-134",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: who can hold a plank longer? Loser drinks 3. If neither lasts 15 seconds, both drink.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-135",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: both guess how many push-ups the other can do right now. Actual number decides who was closer — the further-off guess drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-136",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: both guess the current time without checking your phone. Closest guess gives out 2 sips.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-137",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: thumb war. Loser drinks 2. If the match lasts more than 30 seconds, both drink 1.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-138",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: both write down a number between 1 and 100 without showing each other. Reveal simultaneously — closest to 50 wins and gives out 3 sips.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-139",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: each gives the other a compliment in exactly 10 words. Group votes whose was better — loser drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-140",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: improvised rap battle — one verse each on the topic of \"Monday mornings.\" Group votes. Loser drinks 3.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-141",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: who can say the most countries in 20 seconds? Loser drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-142",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: 60-second debate — argue opposite sides of \"pineapple on pizza.\" Group decides the winner. Loser drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-143",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: both simultaneously say a number between 1 and 10. If you say the same number, both give out 3 sips. Higher number drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-144",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: both describe their personality using only 3 emojis (show each other's phone screens). Group votes who described themselves most accurately. Loser drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-145",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: mirror each other's movements for 20 seconds. Whoever breaks character first drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-146",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: both claim a skill they think the other person doesn't have. Group votes who's more believable. Loser drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-147",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: both write down how many hours of sleep they got last night. Person with the most gives out 2 sips. Person with the fewest gets sympathy — they hand out 1 sip.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-148",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: who has the most unread emails right now? Loser drinks 2 and must share the subject of their oldest unread.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-149",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: both say a word at the same time on 3. If they rhyme, everyone else drinks 1. If they're antonyms, give out 3 each. Otherwise, loser in a word association chain drinks 1.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-150",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: first to correctly name the year a song came out (group picks the song) wins and gives out 3 sips.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-151",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: both secretly write down what they think the other person's most-used emoji is. Reveal together — closest guess wins and gives out 2 sips.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-152",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: tongue-twister race — \"She sells seashells by the seashore.\" Fastest clean run gives out 3 sips.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-153",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: who has more apps installed on their phone? Loser drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-154",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: both freestyle-describe each other to a stranger in 20 seconds. Group votes the most accurate description. Loser drinks 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-155",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: who can name more Taylor Swift albums in 20 seconds? Loser drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-156",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "Waterfall! Starting from {STARTER}, everyone starts drinking and can't stop until the person to their left stops. {STARTER} stops first.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-157",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "Social round! Everyone drinks for the group.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-158",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "Speed round! Go clockwise naming things in the category \"things you do at 2am\" — any hesitation or repeat drinks 1.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-159",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "Group choice! Everyone votes for a group dare right now: (a) everyone sends a voice note to a contact, or (b) everyone takes a sip. Majority rules.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-160",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "Gratitude round. Everyone says something they're grateful for tonight. Anyone who can't think of something drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-161",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "Everyone checks how many steps they've done today. Lowest step count drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-162",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "Chaos! Everyone passes their phone to the left. The person holding it has 5 seconds to type something in the search bar before giving it back. The weirder the better — funniest entry gives out 2 sips.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-163",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "Everyone stands up and says one honest thing about themselves that the group probably doesn't know. Sit down when you've said it. Last person standing drinks 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-164",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "High-low! Everyone shares their high and low of the week in one sentence each. Most relatable high: give out 2. Most relatable low: receive 2 from the group.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-165",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "Drink if you've checked your phone in the last 2 minutes. Be honest.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-166",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "Everyone simultaneously shouts out their current mood in one word. Anyone who says the same word as someone else — both give out 1 sip each.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-167",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "Free sip! {STARTER} picks one person to drink for no reason at all.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-168",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "Everyone does a dramatic cheers, says something inspirational (fake or real), and drinks.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-169",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "Everyone opens their most recent Instagram story viewer list and drinks 1 for every person they recognise but haven't spoken to this month.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-170",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "Everyone silently points at who they think had the most interesting week. Most pointed-at person must share a two-sentence summary. They give out 2 sips.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-171",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "Everyone drinks 1 for every continent they have NOT visited.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-172",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "Everyone simultaneously reveals the last emoji they sent to someone. Person who sent the most chaotic one gives out 2 sips (group vote).",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-173",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "Everyone name one thing you wish was different about tonight's plan — without saying anything negative about a person. Anyone who can't: drink 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-174",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "Group hype moment! Everyone screams their own name loudly on the count of 3. Anyone who hesitates drinks 1.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-175",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "Everyone pick someone they'd go backpacking with for a month. No repeats — first come first served. Anyone left unpicked drinks 2, the group drinks 1 in their honour.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-176",
+    "mode": "pre",
+    "kind": "exclusion",
+    "target": { "roles": ["ALL"] },
+    "text": "Last person to like a post on Instagram right now drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-177",
+    "mode": "pre",
+    "kind": "exclusion",
+    "target": { "roles": ["ALL"] },
+    "text": "Last person to stand up drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-178",
+    "mode": "pre",
+    "kind": "exclusion",
+    "target": { "roles": ["ALL"] },
+    "text": "Last person to put their hand on their head drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-179",
+    "mode": "pre",
+    "kind": "exclusion",
+    "target": { "roles": ["ALL"] },
+    "text": "Last person to name a country beginning with the letter M drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-180",
+    "mode": "pre",
+    "kind": "exclusion",
+    "target": { "roles": ["ALL"] },
+    "text": "Last person to open their camera app and take a photo drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-181",
+    "mode": "pre",
+    "kind": "exclusion",
+    "target": { "roles": ["ALL"] },
+    "text": "Last person to say the name of the city you're in right now drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-182",
+    "mode": "pre",
+    "kind": "exclusion",
+    "target": { "roles": ["ALL"] },
+    "text": "Last person to touch the floor with both palms drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-183",
+    "mode": "pre",
+    "kind": "exclusion",
+    "target": { "roles": ["ALL"] },
+    "text": "Last person to switch their phone to silent mode drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-184",
+    "mode": "pre",
+    "kind": "exclusion",
+    "target": { "roles": ["ALL"] },
+    "text": "Last person to point at someone wearing black drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-185",
+    "mode": "pre",
+    "kind": "exclusion",
+    "target": { "roles": ["ALL"] },
+    "text": "Last person to say \"cheers\" in a language other than English drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-186",
+    "mode": "pre",
+    "kind": "exclusion",
+    "target": { "roles": ["ALL"] },
+    "text": "Last person to make eye contact with someone else in the group and wink drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-187",
+    "mode": "pre",
+    "kind": "exclusion",
+    "target": { "roles": ["ALL"] },
+    "text": "Last person to show their home screen on their phone drinks 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-188",
+    "mode": "pre",
+    "kind": "exclusion",
+    "target": { "roles": ["ALL"] },
+    "text": "Last person to correctly name tomorrow's day of the week drinks 2. (No excuses.)",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-189",
+    "mode": "pre",
+    "kind": "exclusion",
+    "target": { "roles": ["ALL"] },
+    "text": "Last person to sit back down after standing up drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-190",
+    "mode": "pre",
+    "kind": "exclusion",
+    "target": { "roles": ["ALL"] },
+    "text": "Last person to clap their hands twice drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-en-191",
+    "mode": "pre",
+    "kind": "rule_on",
+    "target": { "roles": ["ALL"] },
+    "text": "New rule: no one can say anyone's real name. Make up a nickname for everyone right now. Use the wrong name: drink 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": "r-no-names"
+  },
+  {
+    "id": "pre-en-192",
+    "mode": "pre",
+    "kind": "rule_on",
+    "target": { "roles": ["ALL"] },
+    "text": "New rule: everyone must speak in a fake accent of their choice — decide now and commit. Break character: drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": "r-accent"
+  },
+  {
+    "id": "pre-en-193",
+    "mode": "pre",
+    "kind": "rule_on",
+    "target": { "roles": ["ALL"] },
+    "text": "New rule: nobody can say \"yes\" or \"no.\" Use \"affirmative,\" \"negative,\" \"indeed,\" \"absolutely not\" — or get creative. Say the banned words: drink 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": "r-no-yes-no"
+  },
+  {
+    "id": "pre-en-194",
+    "mode": "pre",
+    "kind": "rule_on",
+    "target": { "roles": ["ALL"] },
+    "text": "New rule: {STARTER} is the Thumb Master. When they put their thumb on the table, everyone must follow — last to put theirs down drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": "r-thumb"
+  },
+  {
+    "id": "pre-en-195",
+    "mode": "pre",
+    "kind": "rule_on",
+    "target": { "roles": ["ALL"] },
+    "text": "New rule: everyone must address each other formally — \"Mr.\" or \"Ms.\" followed by their last name. Use first names or nicknames: drink 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": "r-formal"
+  },
+  {
+    "id": "pre-en-196",
+    "mode": "pre",
+    "kind": "rule_off",
+    "target": { "roles": ["A"] },
+    "text": "The no-names rule is over. {A} picks the person who came up with the best nickname tonight — they hand out 3 sips.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": "r-no-names"
+  },
+  {
+    "id": "pre-en-197",
+    "mode": "pre",
+    "kind": "rule_off",
+    "target": { "roles": ["A"] },
+    "text": "The accent rule is done. {A} votes for the most committed performer — they give out 3 sips. Worst accent: drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": "r-accent"
+  },
+  {
+    "id": "pre-en-198",
+    "mode": "pre",
+    "kind": "rule_off",
+    "target": { "roles": ["A"] },
+    "text": "The yes/no ban is lifted. {A} picks whoever slipped up the most — they drink 3. If nobody slipped up: {A} gives out 3 sips.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": "r-no-yes-no"
+  },
+  {
+    "id": "pre-en-199",
+    "mode": "pre",
+    "kind": "rule_off",
+    "target": { "roles": ["A"] },
+    "text": "The Thumb Master rule ends. {A} names the person who reacted fastest overall — they get to hand out 4 sips.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": "r-thumb"
+  },
+  {
+    "id": "pre-en-200",
+    "mode": "pre",
+    "kind": "rule_off",
+    "target": { "roles": ["A"] },
+    "text": "Formalities are dropped. {A} picks who played the role most convincingly — they give out 3 sips. Most out-of-character: drink 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": "r-formal"
+  }
+]

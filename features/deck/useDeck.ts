@@ -3,13 +3,13 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { useGameStore } from '@/providers/GameStoreProvider';
-import { getPackById } from '@/features/questions/repository';
+import { getPackByModeAndLanguage } from '@/features/questions/repository';
 import type { Card, Pack } from '@/features/questions/types';
 import { scheduleRulePairs, shuffleInPlace } from './shuffler';
 
 export function useDeck(seed: number) {
     const {
-        state: { selectedMode, players },
+        state: { selectedMode, selectedLanguage, players },
     } = useGameStore();
 
     const [deck, setDeck] = useState<Card[]>([]);
@@ -20,7 +20,7 @@ export function useDeck(seed: number) {
         let alive = true;
 
         async function load() {
-            if (!selectedMode) {
+            if (!selectedMode || !selectedLanguage) {
                 if (alive) {
                     setDeck([]);
                     setIndex(0);
@@ -28,7 +28,7 @@ export function useDeck(seed: number) {
                 return;
             }
 
-            const pack: Pack | undefined = await getPackById(selectedMode);
+            const pack: Pack | undefined = await getPackByModeAndLanguage(selectedMode, selectedLanguage);
             const cards = pack?.cards ?? [];
 
             // You can inject future constraints/filters here (by players, gender, etc.)
@@ -48,7 +48,7 @@ export function useDeck(seed: number) {
         return () => {
             alive = false;
         };
-    }, [selectedMode, seed, players]);
+    }, [selectedMode, selectedLanguage, seed, players]);
 
     const current = deck[index] ?? null;
     const remaining = Math.max(deck.length - (index + (current ? 1 : 0)), 0);

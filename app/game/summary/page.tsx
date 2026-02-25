@@ -6,16 +6,8 @@ import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/Button';
 import { useGameStore } from '@/providers/GameStoreProvider';
 import { useActiveRules } from '@/features/rules/useActiveRules';
+import { useTranslation } from '@/lib/i18n';
 import { trackEvent } from '@/lib/analytics';
-
-// Minimal ES labels so we don't leak raw IDs like "night_out"
-const MODE_LABEL_ES: Record<string, string> = {
-    pre: 'Pre',
-    night_out: 'Rumba',
-    couple: 'Pareja',
-    afterparty: 'After',
-    hot_and_sexy: 'Hot & Sexy',
-};
 
 export default function SummaryPage() {
     const router = useRouter();
@@ -23,6 +15,7 @@ export default function SummaryPage() {
         startNewSession,
         state: { selectedMode },
     } = useGameStore();
+    const { t } = useTranslation();
     const { clearAll } = useActiveRules();
     const sent = useRef(false);
 
@@ -51,38 +44,40 @@ export default function SummaryPage() {
     }
 
     function changeSetup() {
-        // Unify "Cambiar modo" + "Cambiar jugadores"
         router.replace('/game/setup/players');
     }
 
-    const modeLabel = MODE_LABEL_ES[selectedMode ?? ''] ?? 'desconocido';
+    // Resolve mode label from i18n (falls back to 'unknown' translation)
+    const modeLabel =
+        selectedMode && selectedMode in t.summary.mode
+            ? t.summary.mode[selectedMode as keyof typeof t.summary.mode]
+            : t.summary.mode.unknown;
 
     return (
         <main className="min-h-dvh px-6 pb-10 pt-8 flex flex-col items-center">
             <div className="w-full max-w-sm text-center space-y-5">
-                <h1 className="text-2xl font-semibold">Fin de la partida</h1>
+                <h1 className="text-2xl font-semibold">{t.summary.title}</h1>
 
                 <p className="text-sm text-neutral-400">
-                    ¡Gracias por jugar Salud 🍹 — Modo:{' '}
-                    <span className="font-medium">{modeLabel}</span>!
+                    {t.summary.thanks.replace('{mode}', modeLabel)}
                 </p>
 
                 {/* Actions: single-column stack on mobile */}
                 <div className="pt-2 space-y-3">
                     <Button size="lg" className="w-full" onClick={playAgain}>
-                        Jugar de nuevo
+                        {t.summary.btn.playAgain}
                     </Button>
 
                     <Button size="lg" variant="secondary" className="w-full" onClick={changeSetup}>
-                        Cambiar modo
+                        {t.summary.btn.changeSetup}
                     </Button>
 
                     <div className="flex gap-3">
                         <Button variant="ghost" className="flex-1" onClick={() => router.replace('/')}>
-                            Inicio
+                            {t.summary.btn.home}
                         </Button>
                         <Button variant="ghost" className="flex-1" onClick={rate}>
-                            Calificar Salud
+                            {t.summary.btn.rate}
                         </Button>
                     </div>
                 </div>

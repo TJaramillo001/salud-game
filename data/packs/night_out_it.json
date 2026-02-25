@@ -1,0 +1,1049 @@
+[
+  {
+    "id": "night-it-001",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, ordina il prossimo shot per il gruppo o bevi 3 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-002",
+    "mode": "night_out",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, se hai già flirtato con qualcuno stanotte, bevi 2 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-003",
+    "mode": "night_out",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} e {B}: chi ha speso di più stanotte? Chi ha speso meno beve 3 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-004",
+    "mode": "night_out",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Tutti in piedi. Chi è seduto beve 2 sorsi. Chi rimane in piedi più a lungo vince — gli altri bevono.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-005",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, vai a chiedere il nome di uno sconosciuto al bar o bevi 4 sorsi.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-006",
+    "mode": "night_out",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, se hai già baciato qualcuno questa settimana, distribuisci 3 sorsi.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-007",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, imita l'accento di una regione italiana diversa dalla tua o bevi 2 sorsi.",
+    "spice": 1,
+    "weight": 1
+  },
+  {
+    "id": "night-it-008",
+    "mode": "night_out",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "Giro di confessioni notturne: ognuno dice una cosa imbarazzante che ha fatto stanotte. Chi si rifiuta beve 3 sorsi. Inizia {STARTER}.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-009",
+    "mode": "night_out",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "Salute! Tutti alzano il bicchiere e bevono 1 sorso.",
+    "spice": 1,
+    "weight": 1
+  },
+  {
+    "id": "night-it-010",
+    "mode": "night_out",
+    "kind": "rule_on",
+    "target": { "roles": ["ALL"] },
+    "text": "REGOLA: da adesso chiunque parli in dialetto deve bere 1 sorso ogni volta.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": "r-dialetto"
+  },
+  {
+    "id": "night-it-011",
+    "mode": "night_out",
+    "kind": "rule_off",
+    "target": { "roles": ["ALL"] },
+    "text": "Fine regola: i dialetti sono di nuovo liberi. Chi ha perso di più con questa regola distribuisce 2 sorsi.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": "r-dialetto"
+  },
+  {
+    "id": "night-it-012",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, manda un messaggio vocale a qualcuno fuori dal gruppo dicendo 'ti voglio bene' o bevi 3 sorsi.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-013",
+    "mode": "night_out",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, se hai mai fatto il karaoke ubriaco, distribuisci 2 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-014",
+    "mode": "night_out",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} e {B}: chi conosce più canzoni di Vasco Rossi? Il gruppo vota — chi perde beve 3 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-015",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, fai 10 secondi di una danza del ventre o bevi 3 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-016",
+    "mode": "night_out",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Voto: pizza margherita o carbonara? La minoranza beve 2 sorsi.",
+    "spice": 1,
+    "weight": 1
+  },
+  {
+    "id": "night-it-017",
+    "mode": "night_out",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, se hai mai fatto tardi per colpa dell'Aperol Spritz del pomeriggio, bevi 2 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-018",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, di' il nome di 5 cantanti italiani in 10 secondi o bevi 3 sorsi.",
+    "spice": 1,
+    "weight": 1
+  },
+  {
+    "id": "night-it-019",
+    "mode": "night_out",
+    "kind": "rule_on",
+    "target": { "roles": ["ALL"] },
+    "text": "REGOLA: chiunque usi il telefono deve bere 2 sorsi.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": "r-telefono"
+  },
+  {
+    "id": "night-it-020",
+    "mode": "night_out",
+    "kind": "rule_off",
+    "target": { "roles": ["ALL"] },
+    "text": "Fine regola: potete riprendere il telefono. Chi lo prende per primo beve 1 sorso.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": "r-telefono"
+  },
+  {
+    "id": "night-it-021",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, fai il gesto italiano più espressivo che conosci e spiegane il significato o bevi 2 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-022",
+    "mode": "night_out",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, se hai già litigato con qualcuno per il conto al ristorante, bevi 2 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-023",
+    "mode": "night_out",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} e {B}: gara di brindisi — chi dice il brindisi più creativo? Il gruppo decide — chi perde beve 3 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-024",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, racconta in 30 secondi la tua serata peggiore con i genitori o bevi 3 sorsi.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-025",
+    "mode": "night_out",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Chi ha ancora i capelli in ordine? Chi li ha più in disordine beve 2 sorsi.",
+    "spice": 1,
+    "weight": 1
+  },
+  {
+    "id": "night-it-026",
+    "mode": "night_out",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, se hai mai mandato un messaggio imbarazzante alla persona sbagliata, distribuisci 3 sorsi.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-027",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, canta un ritornello di una canzone di Sanremo o bevi 2 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-028",
+    "mode": "night_out",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "Categoria: regioni italiane. Ognuno ne nomina una — chi si blocca o ripete beve 2 sorsi. Inizia {STARTER}.",
+    "spice": 1,
+    "weight": 1
+  },
+  {
+    "id": "night-it-029",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, mostra la tua galleria fotografica di stanotte. Il gruppo sceglie la foto più imbarazzante — {A} beve 2 sorsi.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-030",
+    "mode": "night_out",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, se hai mai perso le chiavi di casa dopo una serata fuori, bevi 2 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-031",
+    "mode": "night_out",
+    "kind": "rule_on",
+    "target": { "roles": ["ALL"] },
+    "text": "REGOLA: da adesso bisogna finire ogni frase con 'mamma mia'. Chi dimentica beve 2 sorsi.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": "r-mammmia"
+  },
+  {
+    "id": "night-it-032",
+    "mode": "night_out",
+    "kind": "rule_off",
+    "target": { "roles": ["ALL"] },
+    "text": "Fine regola: non serve più il 'mamma mia'. Tutti bevono 1 sorso per salutare la regola.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": "r-mammmia"
+  },
+  {
+    "id": "night-it-033",
+    "mode": "night_out",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} e {B}: chi riesce a fare il brindisi più lungo senza respirare? Chi finisce prima beve 3 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-034",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, esegui la migliore imitazione di un personaggio famoso italiano o bevi 2 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-035",
+    "mode": "night_out",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, se hai mai litigato per il posto in coda al supermercato, bevi 1 sorso.",
+    "spice": 1,
+    "weight": 1
+  },
+  {
+    "id": "night-it-036",
+    "mode": "night_out",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Voto: Nord o Sud Italia? Chi è in minoranza beve 2 sorsi. Chi è del Centro beve 1 sorso.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-037",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, descrivi la tua pizza ideale in modo sensuale o bevi 3 sorsi.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-038",
+    "mode": "night_out",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, se hai mai fatto finta di non capire una lingua per evitare una conversazione, bevi 2 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-039",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, chiedi a qualcuno fuori dal gruppo un selfie come se fossi un turista entusiasta o bevi 3 sorsi.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-040",
+    "mode": "night_out",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "Tutti fanno il gesto del 'che vuoi?' e bevono 1 sorso. Cin cin!",
+    "spice": 1,
+    "weight": 1
+  },
+  {
+    "id": "night-it-041",
+    "mode": "night_out",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, se hai già dormito in un posto sconosciuto dopo una festa, distribuisci 3 sorsi.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-042",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, nomina 3 vini italiani in 5 secondi o bevi 3 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-043",
+    "mode": "night_out",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} e {B}: chi pronuncia meglio 'spaghetti alla carbonara'? Il gruppo vota — chi perde beve 2 sorsi.",
+    "spice": 1,
+    "weight": 1
+  },
+  {
+    "id": "night-it-044",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, racconta il tuo momento più imbarazzante all'università o bevi 3 sorsi.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-045",
+    "mode": "night_out",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Chi ha il telefono con meno batteria? Quella persona distribuisce 3 sorsi come risarcimento.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-046",
+    "mode": "night_out",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, se hai mai fatto il filo a qualcuno usando la pasta o la cucina come scusa, bevi 2 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-047",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, fai una posa da statua greco-romana per 10 secondi mentre il gruppo scatta foto o bevi 3 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-048",
+    "mode": "night_out",
+    "kind": "rule_on",
+    "target": { "roles": ["ALL"] },
+    "text": "REGOLA: nessuno può indicare con il dito. Chi lo fa beve 2 sorsi.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": "r-dito"
+  },
+  {
+    "id": "night-it-049",
+    "mode": "night_out",
+    "kind": "rule_off",
+    "target": { "roles": ["ALL"] },
+    "text": "Fine regola: potete tornare a indicare col dito. Tutti bevono 1 sorso.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": "r-dito"
+  },
+  {
+    "id": "night-it-050",
+    "mode": "night_out",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, se hai mai fatto tardi a un esame per colpa di una serata, bevi 3 sorsi.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-051",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, di' qualcosa di romantico in italiano a {B} o bevi 3 sorsi.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-052",
+    "mode": "night_out",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Voto: Aperol Spritz o Negroni? La minoranza beve 2 sorsi. Chi non sa cosa sono beve 3.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-053",
+    "mode": "night_out",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} e {B}: gara di storie di vita universitaria in 60 secondi. Il gruppo vota la più assurda — il vincitore distribuisce 3 sorsi.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-054",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, scegli il tuo drink preferito di stasera e difendilo con passione per 20 secondi o bevi 2 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-055",
+    "mode": "night_out",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, se hai già dato un bacio della buonanotte a qualcuno di questo gruppo, bevi 3 sorsi.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-056",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, fai un complimento sincero a ogni persona del gruppo o bevi 1 sorso per ogni persona saltata.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-057",
+    "mode": "night_out",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "Tutti dicono una parola italiana particolarmente bella. Chi ripete o si blocca beve 2 sorsi. Inizia {STARTER}.",
+    "spice": 1,
+    "weight": 1
+  },
+  {
+    "id": "night-it-058",
+    "mode": "night_out",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, se stai pensando a qualcuno fuori da questo bar adesso, bevi 2 sorsi.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-059",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, proponi un gioco di bere al gruppo. Se tutti rifiutano, bevi 4 sorsi.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-060",
+    "mode": "night_out",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "Momento ABBA: chi conosce le parole di una canzone degli ABBA le canta — il gruppo beve 1 sorso insieme.",
+    "spice": 1,
+    "weight": 1
+  },
+  {
+    "id": "night-it-061",
+    "mode": "night_out",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, se hai mai fatto finta di avere un fidanzato o una fidanzata per evitare qualcuno, distribuisci 3 sorsi.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-062",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, mostra l'ultimo meme che hai salvato sul telefono o bevi 2 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-063",
+    "mode": "night_out",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} e {B}: chi finisce il proprio bicchiere per primo distribuisce 3 sorsi. Chi finisce per ultimo beve 2 sorsi extra.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-064",
+    "mode": "night_out",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Chi ha la suoneria più imbarazzante? La mette ad alto volume per 5 secondi — il gruppo vota. Il vincitore distribuisce 2 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-065",
+    "mode": "night_out",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, se ti piace qualcuno in questo gruppo, bevi 3 sorsi senza dire chi.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-066",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, improvvisa una pubblicità per il tuo drink di stasera o bevi 3 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-067",
+    "mode": "night_out",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, se hai già chiamato la mamma ubriaco, bevi 2 sorsi e distribuisci 1.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-068",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, fai una mossa di ballo degna di un film anni '80 o bevi 3 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-069",
+    "mode": "night_out",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Tutti mostrano l'ultimo messaggio ricevuto. Chi ha il messaggio più interessante distribuisce 2 sorsi. Chi si rifiuta beve 3.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-070",
+    "mode": "night_out",
+    "kind": "rule_on",
+    "target": { "roles": ["ALL"] },
+    "text": "REGOLA: da adesso bisogna bere sempre con la mano non dominante. Chi dimentica beve 2 sorsi.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": "r-mano"
+  },
+  {
+    "id": "night-it-071",
+    "mode": "night_out",
+    "kind": "rule_off",
+    "target": { "roles": ["ALL"] },
+    "text": "Fine regola: torna la mano normale. Tutti bevono 1 sorso di sollievo.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": "r-mano"
+  },
+  {
+    "id": "night-it-072",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, racconta il flirt più imbarazzante della tua vita in 30 secondi o bevi 4 sorsi.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-073",
+    "mode": "night_out",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, se hai mai perso il treno dell'ultima corsa dopo una serata, bevi 3 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-074",
+    "mode": "night_out",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} e {B}: chi conosce più parole italiane legate al cibo? Il gruppo conta — chi perde beve 3 sorsi.",
+    "spice": 1,
+    "weight": 1
+  },
+  {
+    "id": "night-it-075",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, fai il tuo miglior discorso motivazionale in italiano di 20 secondi o bevi 2 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-076",
+    "mode": "night_out",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, se hai mai detto 'ultima serata' e poi sei uscito la settimana dopo, bevi 2 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-077",
+    "mode": "night_out",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "Tutti fanno il verso di un animale. Chi ride per primo beve 2 sorsi. Chi si rifiuta beve 3. Inizia {STARTER}.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-078",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, manda uno sticker emoji ridicolo al contatto più improbabile del telefono o bevi 3 sorsi.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-079",
+    "mode": "night_out",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, se hai mai confuso una parola spagnola per italiana o viceversa, bevi 1 sorso.",
+    "spice": 1,
+    "weight": 1
+  },
+  {
+    "id": "night-it-080",
+    "mode": "night_out",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "Momento Erasmus: tutti bevono 1 sorso per ogni paese in cui hanno vissuto.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-081",
+    "mode": "night_out",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, se hai già fatto la scarpetta con il pane nel piatto di qualcun altro, distribuisci 2 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-082",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, di' una bugia spudorata su di te. Se il gruppo ci crede, distribuisci 3 sorsi. Se no, bevi tu.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-083",
+    "mode": "night_out",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} e {B}: chi ha la storia di viaggio più assurda? Il gruppo vota — il perdente beve 3 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-084",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, hai 20 secondi per convincere il gruppo che sei la persona più italiana della serata. {A} beve 1 sorso per ogni scettico.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-085",
+    "mode": "night_out",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Voto: gelato o tiramisù? La minoranza beve 2 sorsi. Chi dice 'tutti e due' beve 1 sorso.",
+    "spice": 1,
+    "weight": 1
+  },
+  {
+    "id": "night-it-086",
+    "mode": "night_out",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, se hai già dormito in ostello durante l'Erasmus, bevi 2 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-087",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, scrivi sul palmo della mano il nome della città italiana che ami di più e mostralo al gruppo. Chi indovina la motivazione distribuisce 2 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-088",
+    "mode": "night_out",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, se hai mai litigato con qualcuno per la qualità di una pizza fuori dall'Italia, bevi 2 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-089",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, chiedi a {B} di raccontare la cosa più imbarazzante che sa di te. Se si rifiuta, bevono entrambi 2 sorsi.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-090",
+    "mode": "night_out",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "Tutti in silenzio per 5 secondi. Chi parla beve 2 sorsi. Poi si beve tutti insieme.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-091",
+    "mode": "night_out",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, se hai mai ordinato cibo di nascosto durante una dieta, distribuisci 2 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-092",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, fai una proposta di matrimonio drammatica a {B} in italiano stile telenovela o bevi 3 sorsi.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-093",
+    "mode": "night_out",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Chi ha il nome più comune nel gruppo non beve. Tutti gli altri bevono 1 sorso.",
+    "spice": 1,
+    "weight": 1
+  },
+  {
+    "id": "night-it-094",
+    "mode": "night_out",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} e {B}: chi convince il gruppo che la propria regione italiana è la migliore? Il perdente beve 4 sorsi.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-095",
+    "mode": "night_out",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, se hai già visto l'alba dopo una serata senza dormire, bevi 3 sorsi.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-096",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, pronuncia 'gnocchi', 'bruschetta' e 'limoncello' correttamente. Il gruppo giudica — 1 sorso per ogni errore.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-097",
+    "mode": "night_out",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "Giro di 'mai ho mai' versione nottambula: chi ha fatto la cosa detta beve 1 sorso. Inizia {STARTER}.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-098",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, fai il tuo miglior urlo di guerra italiano silenzioso — solo espressione del viso e gesti — per 10 secondi o bevi 2 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-099",
+    "mode": "night_out",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, se hai mai cucinato la pasta in modo scandaloso (tipo spezzarla o metterla nel microonde), bevi 3 sorsi.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-100",
+    "mode": "night_out",
+    "kind": "rule_on",
+    "target": { "roles": ["ALL"] },
+    "text": "REGOLA: nessuno può dire il proprio nome — solo soprannomi. Chi dice il proprio nome beve 2 sorsi.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": "r-soprannome"
+  },
+  {
+    "id": "night-it-101",
+    "mode": "night_out",
+    "kind": "rule_off",
+    "target": { "roles": ["ALL"] },
+    "text": "Fine regola: i nomi veri tornano. Chi ha avuto il soprannome più divertente distribuisce 2 sorsi.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": "r-soprannome"
+  },
+  {
+    "id": "night-it-102",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, inventa 3 parole italiane che non esistono ma suonano reali. Il gruppo vota quella più convincente — chi indovina che è falsa beve 1 sorso.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-103",
+    "mode": "night_out",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, se questa notte hai già cambiato idea su qualcuno in questo gruppo, bevi 3 sorsi.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-104",
+    "mode": "night_out",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Tutti indicano la persona che sembra più sobria. Quella persona beve 2 sorsi per recuperare il ritardo.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-105",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, inventa sul momento un titolo di film italiano drammatico sulla serata di stasera. Il gruppo applaude o bevi 2 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-106",
+    "mode": "night_out",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} e {B}: gara di baci sulla mano al più puro stile italiano. Il gruppo vota il più elegante — chi perde beve 3 sorsi.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-107",
+    "mode": "night_out",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, se hai mai fatto la serenata a qualcuno (anche per scherzo), distribuisci 3 sorsi.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-108",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, fai una telefonata finta in italiano stile soap opera. Se il gruppo ride, distribuisci 2 sorsi. Se no, bevi 3.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-109",
+    "mode": "night_out",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Tutti mostrano quanti messaggi non letti hanno. Chi ne ha di più distribuisce 2 sorsi. Chi ne ha zero beve 1 sorso per la sua salute mentale.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-110",
+    "mode": "night_out",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "Momento di unione: tutti battono un ritmo sul tavolo insieme per 10 secondi. Se il ritmo regge, il gruppo distribuisce 3 sorsi a piacere. Se si rompe, tutti bevono 1.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-111",
+    "mode": "night_out",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, se hai già perso portafoglio o telefono durante una serata, bevi 2 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-112",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, di' una cosa vera su di te che vuoi che il gruppo sappia. Chi è commosso beve 1 sorso.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-113",
+    "mode": "night_out",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} e {B}: chi riesce a tener ferme le mani sul tavolo più a lungo mentre il gruppo li distrae? Chi cede beve 3 sorsi.",
+    "spice": 2,
+    "weight": 1
+  },
+  {
+    "id": "night-it-114",
+    "mode": "night_out",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, se hai mai usato le parole di una canzone italiana per fare il filo a qualcuno, bevi 2 sorsi.",
+    "spice": 3,
+    "weight": 1
+  },
+  {
+    "id": "night-it-115",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, inventa una superstizione italiana di sana pianta e presentala come vera. Chi ci crede beve 1 sorso. {A} beve 1 per ogni incredulo.",
+    "spice": 2,
+    "weight": 1
+  }
+]

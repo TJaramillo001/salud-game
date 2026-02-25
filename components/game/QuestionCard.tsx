@@ -5,12 +5,33 @@ import type { Card } from '@/features/questions/types';
 import type { Player } from '@/features/players/types';
 import { renderText } from '@/lib/render';
 
+type KindLabels = {
+    rule_on: string;
+    rule_off: string;
+    group: string;
+    wildcard: string;
+    action: string;
+    question: string;
+    versus: string;
+    default: string;
+};
+
+type RenderFallbacks = {
+    playerA?: string;
+    playerB?: string;
+    playerC?: string;
+    starter?: string;
+};
+
 type Props = {
     card: Card;
     subtitle?: string;
     dx?: number; // swipe offset
     players?: Player[];
     actors?: Partial<Record<string, number>>;
+    kindLabels?: KindLabels;
+    altPrefix?: string;
+    renderFallbacks?: RenderFallbacks;
 };
 
 function categoryOf(kind: Card['kind']): 'normal' | 'group' | 'rule' | 'wildcard' {
@@ -27,38 +48,39 @@ const THEMES = {
     wildcard: { bg: '#F0ABFC', border: '#C026D3', label: '#86198F' },
 } as const;
 
-function kindLabel(kind: Card['kind']): string {
-    switch (kind) {
-        case 'rule_on': return 'Nueva regla';
-        case 'rule_off': return 'Fin de regla';
-        case 'group': return 'Ronda';
-        case 'wildcard': return 'Wildcard';
-        case 'action': return 'Acción';
-        case 'question': return 'Pregunta';
-        case 'versus': return 'Duelo';
-        //case 'exclusion': return 'Exclusión';
-        //case 'nudge': return 'Nudge';
-        default: return 'Carta';
-    }
+const DEFAULT_KIND_LABELS: KindLabels = {
+    rule_on: 'Nueva regla',
+    rule_off: 'Fin de regla',
+    group: 'Ronda',
+    wildcard: 'Wildcard',
+    action: 'Acción',
+    question: 'Pregunta',
+    versus: 'Duelo',
+    default: 'Carta',
+};
+
+function kindLabel(kind: Card['kind'], labels: KindLabels): string {
+    return labels[kind as keyof KindLabels] ?? labels.default;
 }
 
 // ...imports unchanged
 
-export const QuestionCard = React.memo(function QuestionCard({ card, subtitle, dx = 0, players = [], actors = {} }: Props) {
+export const QuestionCard = React.memo(function QuestionCard({ card, subtitle, dx = 0, players = [], actors = {}, kindLabels, altPrefix = 'Alt:', renderFallbacks }: Props) {
     const rotation = Math.max(Math.min(dx / 20, 8), -8);
     const translate = Math.max(Math.min(dx, 120), -120);
 
     const renderedText = React.useMemo(
-        () => renderText(card.text, actors, players),
-        [card.text, actors, players]
+        () => renderText(card.text, actors, players, renderFallbacks),
+        [card.text, actors, players, renderFallbacks]
     );
     const renderedAlt = React.useMemo(
-        () => 'altText' in card && card.altText ? renderText(card.altText, actors, players) : null,
-        [card, actors, players]
+        () => 'altText' in card && card.altText ? renderText(card.altText, actors, players, renderFallbacks) : null,
+        [card, actors, players, renderFallbacks]
     );
 
     const cat = categoryOf(card.kind);
     const theme = THEMES[cat];
+    const labels = kindLabels ?? DEFAULT_KIND_LABELS;
 
     return (
         <div
@@ -78,7 +100,7 @@ export const QuestionCard = React.memo(function QuestionCard({ card, subtitle, d
                     style={{ color: theme.label }}
                     title={cat}
                 >
-                    {kindLabel(card.kind)}
+                    {kindLabel(card.kind, labels)}
                 </div>
 
                 {subtitle ? (
@@ -93,7 +115,7 @@ export const QuestionCard = React.memo(function QuestionCard({ card, subtitle, d
 
                 {renderedAlt ? (
                     <div className="mt-auto pt-4 text-sm md:text-base text-neutral-800">
-                        Alt: {renderedAlt}
+                        {altPrefix} {renderedAlt}
                     </div>
                 ) : null}
             </div>

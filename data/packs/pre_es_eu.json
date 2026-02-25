@@ -1,0 +1,2002 @@
+[
+  {
+    "id": "pre-eu-001",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, imita a un famoso español sin decir su nombre. Si el grupo adivina en 10 segundos, {A} reparte 3 tragos. Si no, bebe 3.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-002",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, cuenta tu peor anécdota del Erasmus o del piso compartido. Si el grupo se ríe, repartes 3 tragos. Si no, los bebes tú.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-003",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, di el nombre de 5 comunidades autónomas en 5 segundos o bebe 3 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-004",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, muestra tu última historia de Instagram o bebe 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-005",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, haz un chiste malo. Si el grupo no se ríe, bebes 2 tragos. Si se ríen, repartes 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-006",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, canta los primeros 10 segundos de una canción de Rosalía o bebe 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-007",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, reparte 1 trago por cada asignatura que hayas suspendido este cuatrimestre. Si aprobaste todo, el grupo te debe 1 trago.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-008",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, di el trabalenguas «tres tristes tigres» tres veces seguidas o bebe 3 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-009",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, muestra tu foto de perfil de WhatsApp sin editarla o bebe 4 tragos.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-010",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, haz una peineta artística. El grupo vota si merece 0, 1 o 2 puntos. Bebes tantos tragos como puntos saques.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-011",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, nombra 3 jugadores de la selección española actual en 5 segundos o bebe 3 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-012",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, confiesa lo peor que has hecho en un botellón o bebe 4 tragos.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-013",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, di algo bonito a la persona que tienes a tu izquierda o bebe 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-014",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, imita el acento andaluz durante la próxima ronda o bebe 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-015",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, reparte 1 trago por cada tatuaje que tengas. Si no tienes ninguno, bebe 1 por ser tan soso.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-016",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, muestra tu última búsqueda en Google o bebe 4 tragos.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-017",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, di en 15 segundos todo lo que sabes sobre el TFG. Si te quedas en blanco antes, bebes 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-018",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, haz 5 flexiones o bebe 4 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-019",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, di quién es la persona más atractiva del grupo o bebe 4 tragos.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-020",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, cuenta la última vez que llegaste tarde a clase. Si fue esta semana, bebes 2 tragos extra.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-021",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, haz un brindis en español y otro en inglés. Si el grupo aprueba ambos, repartes 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-022",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, confiesa tu crush secreto del grupo o bebe 5 tragos.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-023",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, nombra 3 tapas típicas en 5 segundos o bebe 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-024",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, di tu opinión sobre el Real Madrid. El grupo decide si es aceptable. Si no les convence, bebes 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-025",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, lee en voz alta el último mensaje que mandaste a tu madre o bebe 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-026",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, di algo que nunca admitirías sobrio en una reunión familiar, o bebe 3 tragos.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-027",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, canta el himno de España. Si recuerdas la letra (no la hay), reparte 3 tragos al grupo.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-028",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, intercambia de sitio con quien tú elijas. Ambos beben 1 trago.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-029",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, explica en 20 segundos qué es el ceceo sin usar las palabras «Andalucía» ni «sur» o bebe 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-030",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, muestra la canción más escuchada en tu Spotify Wrapped o bebe 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-031",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, di tu mayor vergüenza universitaria o bebe 4 tragos.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-032",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, reparte 2 tragos entre las personas que creas que han copiado en un examen.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-033",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, haz una imitación de un profesor o profe de la facultad. Si el grupo adivina quién es, repartes 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-034",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, manda un emoji aleatorio al grupo de WhatsApp de clase o bebe 4 tragos.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-035",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, di tres insultos en castellano que no sean «joder» ni «coño». Si no llegas a tres, bebes 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-036",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, defiende durante 20 segundos que la tortilla de patatas lleva cebolla (o sin cebolla, lo contrario de tu opinión real) o bebe 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-037",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, nombra 4 platos típicos de diferentes regiones de España en 10 segundos o bebe 3 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-038",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, di cuántos días llevas sin lavar los platos del piso. El grupo decide si merece 1, 2 o 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-039",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, haz tu mejor pose para una foto de Instagram. El grupo puntúa del 1 al 5. Bebes los tragos que te falten para llegar al 5.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-040",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, di la peor excusa que hayas usado para no ir a clase. Si el grupo la considera inaceptable, bebes 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-041",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, di el nombre completo del presidente del gobierno actual o bebe 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-042",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, llama a alguien de tu agenda con un nombre de verdura (berenjena, pepino, puerro…) sin que se note o bebe 4 tragos.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-043",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, di cuánto tiempo llevas sin dormir más de 7 horas seguidas. El grupo decide si merece 0, 1, 2 o 3 tragos de compasión.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-044",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, haz una reverencia teatral al tío más mayor del grupo. Si se ríe, repartes 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-045",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, di en qué asignatura has copiado o bebe 4 tragos.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-046",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, convence al grupo de que Sevilla está más guay que Madrid. Tienes 20 segundos. Si el grupo no se convence, bebes 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-047",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, muestra las últimas 5 fotos de tu galería del móvil o bebe 4 tragos.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-048",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, describe en 10 segundos tu piso compartido sin usar las palabras «guarro», «desastre» ni «horrible» o bebe 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-049",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, di cuánto te gasta el alquiler al mes. El grupo decide si merece compasión (1 trago) o envidia (repartes 2).",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-050",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, describe a tu compañero/a de piso más raro sin decir su nombre. Si el grupo adivina de quién hablas, bebes 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-051",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si has llegado tarde a un examen por quedarte dormido después de una noche de fiesta, bebe 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-052",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si alguna vez has copiado en un examen universitario, toma 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-053",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si has usado una VPN para ver algo, toma 1 trago.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-054",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si te has quedado dormido en clase este mes, bebe 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-055",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si te has enamorado de alguien del grupo, bebe 4 tragos.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-056",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si has mentido a tus padres sobre dónde estabas de fiesta, toma 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-057",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si alguna vez has ido de botellón a una plaza y te ha pillado la policía, reparte 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-058",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si tienes Tinder, Bumble o similar instalado ahora mismo, bebe 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-059",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si alguna vez has vomitado por el alcohol, bebe 3 tragos. Si fue esta semana, bebe 4.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-060",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si has visto La Casa de Papel entera, toma 1 trago.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-061",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si te has besado con alguien del grupo en alguna ocasión, bebe 4 tragos.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-062",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si en el último mes has enviado un mensaje a alguien y luego lo has bloqueado, toma 3 tragos.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-063",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si tienes deuda con alguien del grupo, bebe 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-064",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si has llorado viendo Los Bridgerton o una serie de Netflix de amor, toma 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-065",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si has tenido una relación a distancia y sobrevivió más de 6 meses, reparte 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-066",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si alguna vez has hecho el camino de la vergüenza en ropa de fiesta de noche anterior, bebe 3 tragos.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-067",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si prefieres el Barça al Madrid (o viceversa), defiéndelo en 10 segundos o bebe 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-068",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si alguna vez has fallado un penalti en un partido de fútbol (aunque sea de patio del cole), toma 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-069",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si has salido de fiesta antes de las 2 de la mañana en el último mes, bebe 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-070",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si has pedido dinero a tus padres esta semana, bebe 1 trago por cada billete de 20 que hayas pedido.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-071",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si actualmente tienes ropa sin lavar acumulada, toma 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-072",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si alguna vez has perdido las llaves de casa de madrugada, bebe 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-073",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si has comido kebab a las 5 de la mañana en el último mes, reparte 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-074",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si tienes más de 3 asignaturas suspensas acumuladas, bebe 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-075",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si en alguna ocasión has dado un «ghosting» a alguien, toma 3 tragos.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-076",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si te has puesto malo/a de un guarro después de una resaca, bebe 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-077",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si has tenido un lío con alguien del Erasmus, bebe 3 tragos.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-078",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si llevas más de un año sin ir al médico, bebe 1 trago.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-079",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si has subido una foto a redes sociales para dar envidia a alguien en concreto, bebe 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-080",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si en el último botellón has dicho «el próximo lo pago yo» y no has pagado, bebe 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-081",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si has puesto la excusa de «es que tengo el TFG» para no salir, toma 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-082",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si alguna vez has mandado un mensaje al grupo equivocado, bebe 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-083",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si llevas puestos calcetines de diferentes colores ahora mismo, reparte 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-084",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si has enviado un audio de WhatsApp de más de 2 minutos esta semana, bebe 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-085",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si en el último año has tenido que pedir cita en el médico de cabecera más de 3 veces, bebe 2 tragos por la sanidad pública.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-086",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si alguna vez te has hecho pasar por alguien más mayor para entrar a un sitio, toma 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-087",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si has discutido con alguien por la tortilla de patatas con o sin cebolla, bebe 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-088",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si has tenido resaca en una mañana de examen, bebe 3 tragos.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-089",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si sigues en redes a alguien con quien cortaste, toma 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-090",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si has usado el transporte público sin billete en el último mes, bebe 1 trago.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-091",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si alguna vez has mentido sobre cuánto bebes cuando te lo pregunta el médico, toma 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-092",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si tienes deudas pendientes con Hacienda o el banco, bebe 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-093",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si has visto el Clásico de fútbol en directo alguna vez, reparte 3 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-094",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si alguna vez has fallado a un amigo/a por quedarte en el sofá viendo series, toma 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-095",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, si has pedido un Glovo o Uber Eats mientras tenías comida en casa, bebe 1 trago.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-096",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Votad: ¿Real Madrid o Barça? La minoría bebe 3 tragos. Si hay empate, todos beben 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-097",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Votad: ¿Tortilla con cebolla o sin cebolla? La minoría bebe 3 tragos. Si hay empate, todos beben 1 y se insultan cariñosamente.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-098",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Votad: ¿Madrid o Barcelona para vivir? La minoría bebe 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-099",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Votad: ¿Cerveza o vino? La minoría bebe 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-100",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Votad: ¿Salir de tapas o ir de botellón? La minoría bebe 3 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-101",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Votad: ¿Playa o montaña? La minoría bebe 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-102",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Votad: ¿Rosalía o Aitana? La minoría bebe 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-103",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Votad: ¿Churros con chocolate o porras? La minoría bebe 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-104",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Votad: ¿Pedir pizza o hacerse un bocata en casa? La minoría bebe 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-105",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Votad: ¿Zara o Shein? La minoría bebe 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-106",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "Categorías: ciudades de España. {STARTER} empieza. El que repita o no sepa bebe 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-107",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "Categorías: equipos de LaLiga. {STARTER} empieza. El que repita o no sepa bebe 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-108",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "Categorías: tapas y pinchos españoles. {STARTER} empieza. El que repita o no sepa bebe 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-109",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "Categorías: palabras de jerga española (guay, mola, flipar, tío, venga…). {STARTER} empieza. El que repita o no sepa bebe 3 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-110",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "Categorías: comunidades autónomas de España. {STARTER} empieza. El que repita o no sepa bebe 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-111",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "Categorías: artistas españoles de los últimos 10 años. {STARTER} empieza. El que repita o no sepa bebe 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-112",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "Categorías: películas o series españolas. {STARTER} empieza. El que repita o no sepa bebe 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-113",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Todos de pie. Cada uno dice una excusa para no ir a clase. El más creíble reparte 3 tragos. El menos creíble los bebe.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-114",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Votad: ¿España gana el próximo mundial? Los que votan sí beben 1. Los que votan no beben 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-115",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "Categorías: cosas que pasan en todo piso universitario. {STARTER} empieza. El que repita o no sepa bebe 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-116",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Votad: ¿Norte o sur de España? La minoría bebe 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-117",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "Categorías: platos típicos de la cocina española. {STARTER} empieza. El que repita o no sepa bebe 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-118",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Votad: ¿Quién tiene peor horario en el piso? La persona elegida reparte 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-119",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "Categorías: cosas que hacen los erasmus en España que flipan a los locales. {STARTER} empieza. El que repita o no sepa bebe 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-120",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Votad: ¿Desayunar fuerte o saltarse el desayuno? La minoría bebe 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-121",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "Categorías: cosas que no deberías hacer la noche antes de un examen pero haces igualmente. {STARTER} empieza. El que repita o no sepa bebe 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-122",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Votad: ¿Siesta o madrugón? La minoría bebe 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-123",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "Categorías: cosas que solo entenderán los que viven de alquiler. {STARTER} empieza. El que repita o no sepa bebe 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-124",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Votad: ¿Quedarse en Salamanca este fin de semana o escaparse a Madrid? La minoría bebe 3 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-125",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "Categorías: jugadores españoles famosos de fútbol. {STARTER} empieza. El que repita o no sepa bebe 3 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-126",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "Categorías: palabras o expresiones que solo usa tu región y nadie más entiende. {STARTER} empieza. El que repita o no sepa bebe 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-127",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "Categorías: memes españoles que todo el mundo conoce. {STARTER} empieza. El que repita o no sepa bebe 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-128",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "Categorías: cosas que se piden en el bar antes de salir de fiesta. {STARTER} empieza. El que repita o no sepa bebe 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-129",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Votad: ¿Gin-tonic o cubata? La minoría bebe 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-130",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Todos de pie. Cada uno hace su mejor imitación del tío de la paella familiar. El peor bebe 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-131",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} y {B}: duelo de chistes malos. El grupo vota quién es más gracioso. El perdedor bebe 4 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-132",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: el primero en nombrar 5 comunidades autónomas de España gana. El perdedor bebe 3 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-133",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} y {B}: mírense a los ojos sin reírse. El primero en sonreír bebe 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-134",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: competencia de trabalenguas con «tres tristes tigres». El que se equivoque primero bebe 3 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-135",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} y {B}: el que tenga el cumpleaños más cerca reparte 3 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-136",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: el que haya dormido menos horas anoche bebe 3 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-137",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} y {B}: reto de pulsos. El perdedor bebe 4 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-138",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: el que tenga más fotos en el móvil reparte 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-139",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} y {B}: el primero en decir 5 jugadores del Real Madrid gana. El perdedor bebe 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-140",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: el que haya viajado a más países europeos reparte 3 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-141",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} y {B}: cada uno defiende su ciudad o región. El grupo vota quién lo ha hecho mejor. El perdedor bebe 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-142",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: el que tenga más mensajes sin leer en WhatsApp ahora mismo bebe 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-143",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} y {B}: el primero en tocar algo de color rojo en la habitación gana. El perdedor bebe 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-144",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: batalla de freestyle en español. El grupo decide quién gana. El perdedor bebe 4 tragos.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-145",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} y {B}: el que tenga menos batería en el móvil ahora mismo bebe 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-146",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: competencia de flexiones. El que haga menos bebe 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-147",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} y {B}: el primero en adivinar la canción que el otro tararea en silencio gana. El perdedor bebe 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-148",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: el que haya tenido más parejas reparte 2 tragos entre los demás.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-149",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} y {B}: cara o cruz con una moneda. El perdedor elige quién le da 3 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-150",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: el que tenga el nombre de pila más largo en el DNI gana. El perdedor bebe 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-151",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} y {B}: piedra, papel o tijera. El perdedor bebe 3 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-152",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: el que haya mandado más mensajes hoy en el móvil reparte 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-153",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} y {B}: cada uno da su mejor insulto en castellano. El grupo vota. El perdedor bebe 3 tragos.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-154",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: el que haya llegado más tarde a clase este curso bebe 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-155",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} y {B}: el que tenga más seguidores en Instagram reparte 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-156",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "¡El VAR ha revisado la jugada! Todos beben 2 tragos mientras esperan la decisión.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-157",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "¡Llegan los Reyes Magos! El primero en gritar «¡Melchor, Gaspar y Baltasar!» reparte 3 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-158",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "¡Se cae el sistema del banco! Solo los que tengan más de 50€ en la cuenta pueden beber. Los demás esperan. Si no sabéis cuánto tenéis, todos beben 2 tragos.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-159",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "¡Hora de la siesta! Nadie puede moverse durante 20 segundos. El que se mueva bebe 3 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-160",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "¡España ha marcado! Todos beben 3 tragos y celebran.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-161",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "¡La vecina de abajo se queja del ruido! Todos susurran durante la siguiente ronda. El que hable normal bebe 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-162",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "¡Todos de pie a bailar sevillanas! El último en levantarse bebe 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-163",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "¡El casero sube el alquiler! Todos beben 2 tragos de rabia.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-164",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "¡Karaoke exprés! Todos cantan juntos el estribillo de la última canción que suene en el altavoz. El que no cante bebe 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-165",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "¡El grupo de WhatsApp de clase está a punto de explotar! El que mire el móvil primero bebe 3 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-166",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "¡Selfie grupal obligatorio! El que salga peor en la foto bebe 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-167",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "¡La selectividad fue ayer! Beben 2 tragos los que la aprobaron a la primera. Los que repitieron reparten 3.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-168",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "¡Turno de brindis! Todos beben 1 trago y el último en levantar el vaso bebe 1 más.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-169",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "¡Fuga del piso! El más joven del grupo elige quién limpia los platos esta noche. Esa persona bebe 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-170",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "¡Todos a contar en catalán! El primero en equivocarse bebe 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-171",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "¡Toca pagar el botellón! El que tenga menos efectivo encima pone una ronda imaginaria y bebe 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-172",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "¡Llega el kebab a las 4 AM! Todos beben 2 tragos para celebrar la decisión más guay de la noche.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-173",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "¡El TFG no se va a escribir solo! El más estresado del grupo recibe 2 tragos de apoyo moral.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-174",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "¡Todos a hacer el saludo de la selección! El último en unirse bebe 3 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-175",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "¡Hay tormenta! El que tenga el paraguas más cerca reparte 3 tragos. Si nadie tiene paraguas, todos beben 1.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-176",
+    "mode": "pre",
+    "kind": "exclusion",
+    "target": { "roles": ["A"] },
+    "text": "El último en hacerle un cumplido a {A} bebe 3 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-177",
+    "mode": "pre",
+    "kind": "exclusion",
+    "target": { "roles": ["A"] },
+    "text": "El último en nombrar un municipio de Castilla y León bebe 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-178",
+    "mode": "pre",
+    "kind": "exclusion",
+    "target": { "roles": ["A"] },
+    "text": "Todos menos {A} deben hacer una pose ridícula. El último en hacerlo bebe 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-179",
+    "mode": "pre",
+    "kind": "exclusion",
+    "target": { "roles": ["A"] },
+    "text": "El último en tocarle el hombro a {A} bebe 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-180",
+    "mode": "pre",
+    "kind": "exclusion",
+    "target": { "roles": ["A"] },
+    "text": "Todos menos {A} dicen algo que les mola de {A}. El último en hablar bebe 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-181",
+    "mode": "pre",
+    "kind": "exclusion",
+    "target": { "roles": ["A"] },
+    "text": "El último en chocar los cinco con {A} bebe 3 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-182",
+    "mode": "pre",
+    "kind": "exclusion",
+    "target": { "roles": ["A"] },
+    "text": "Todos imitan a {A} durante 10 segundos. El peor imitador bebe 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-183",
+    "mode": "pre",
+    "kind": "exclusion",
+    "target": { "roles": ["A"] },
+    "text": "El último en señalar a {A} bebe 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-184",
+    "mode": "pre",
+    "kind": "exclusion",
+    "target": { "roles": ["A"] },
+    "text": "Todos menos {A} dicen un adjetivo que describe a {A}. El último bebe 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-185",
+    "mode": "pre",
+    "kind": "exclusion",
+    "target": { "roles": ["A"] },
+    "text": "El último en hacerle una reverencia a {A} bebe 3 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-186",
+    "mode": "pre",
+    "kind": "exclusion",
+    "target": { "roles": ["A"] },
+    "text": "Todos menos {A} tocan la nariz al mismo tiempo. El último en hacerlo bebe 3 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-187",
+    "mode": "pre",
+    "kind": "exclusion",
+    "target": { "roles": ["A"] },
+    "text": "El último en aplaudirle a {A} bebe 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-188",
+    "mode": "pre",
+    "kind": "exclusion",
+    "target": { "roles": ["A"] },
+    "text": "Todos menos {A} deben decir un color diferente. El que repita bebe 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-189",
+    "mode": "pre",
+    "kind": "exclusion",
+    "target": { "roles": ["A"] },
+    "text": "Todos menos {A} hacen una pose de superhéroe. El último bebe 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-190",
+    "mode": "pre",
+    "kind": "exclusion",
+    "target": { "roles": ["A"] },
+    "text": "El último en darle un abrazo a {A} bebe 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-eu-191",
+    "mode": "pre",
+    "kind": "rule_on",
+    "target": { "roles": ["ALL"] },
+    "text": "Nueva regla: nadie puede decir «tío» ni «tía». Quien lo diga bebe 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": "r-tio"
+  },
+  {
+    "id": "pre-eu-192",
+    "mode": "pre",
+    "kind": "rule_off",
+    "target": { "roles": ["ALL"] },
+    "text": "Fin de regla: podéis volver a decir «tío» y «tía». Quien más veces falló reparte 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": "r-tio"
+  },
+  {
+    "id": "pre-eu-193",
+    "mode": "pre",
+    "kind": "rule_on",
+    "target": { "roles": ["ALL"] },
+    "text": "Nueva regla: nadie puede decir «vale». Quien lo diga bebe 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": "r-vale"
+  },
+  {
+    "id": "pre-eu-194",
+    "mode": "pre",
+    "kind": "rule_off",
+    "target": { "roles": ["ALL"] },
+    "text": "Fin de regla: podéis volver a decir «vale». Quien más veces falló reparte 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": "r-vale"
+  },
+  {
+    "id": "pre-eu-195",
+    "mode": "pre",
+    "kind": "rule_on",
+    "target": { "roles": ["ALL"] },
+    "text": "Nueva regla: hay que tratar a todos de «usted». Quien olvide bebe 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": "r-usted"
+  },
+  {
+    "id": "pre-eu-196",
+    "mode": "pre",
+    "kind": "rule_off",
+    "target": { "roles": ["ALL"] },
+    "text": "Fin de regla: podéis tutearos de nuevo. Quien más veces olvidó el «usted» reparte 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": "r-usted"
+  },
+  {
+    "id": "pre-eu-197",
+    "mode": "pre",
+    "kind": "rule_on",
+    "target": { "roles": ["ALL"] },
+    "text": "Nueva regla: hay que decir «¡qué guay!» cada vez que alguien haga algo positivo. Quien olvide bebe 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": "r-guay"
+  },
+  {
+    "id": "pre-eu-198",
+    "mode": "pre",
+    "kind": "rule_off",
+    "target": { "roles": ["ALL"] },
+    "text": "Fin de regla: ya no hace falta decir «¡qué guay!». Quien menos veces lo dijo bebe 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": "r-guay"
+  },
+  {
+    "id": "pre-eu-199",
+    "mode": "pre",
+    "kind": "rule_on",
+    "target": { "roles": ["ALL"] },
+    "text": "Nueva regla: hay que aplaudir antes de hablar. Quien olvide bebe 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": "r-aplausos"
+  },
+  {
+    "id": "pre-eu-200",
+    "mode": "pre",
+    "kind": "rule_off",
+    "target": { "roles": ["ALL"] },
+    "text": "Fin de regla: ya no hace falta aplaudir antes de hablar. El que más veces olvidó reparte 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": "r-aplausos"
+  }
+]

@@ -114,7 +114,7 @@
     "kind": "rule_off",
     "target": { "roles": ["ALL"] },
     "text": "Fin regla: Ya pueden volver a decir \"marica\"",
-    "spice": 0,
+    "spice": 1,
     "weight": 1,
     "ruleId": "r-marica"
   },
@@ -547,7 +547,7 @@
         ]
       },
       "text": "Fin regla: Ya pueden volver a decir 'parce'",
-      "spice": 0,
+      "spice": 1,
       "weight": 1,
       "ruleId": "r-parcero"
     },
@@ -575,7 +575,7 @@
         ]
       },
       "text": "Fin regla: Ya no tienen que señalar al hablar",
-      "spice": 0,
+      "spice": 1,
       "weight": 1,
       "ruleId": "r-señalar"
     },
@@ -603,7 +603,7 @@
         ]
       },
       "text": "Fin regla: Ya no tienen que decir 'salud' al tomar",
-      "spice": 0,
+      "spice": 1,
       "weight": 1,
       "ruleId": "r-salud"
     },
@@ -1887,7 +1887,7 @@
         ]
       },
       "text": "Fin regla: Ya pueden usar cualquier mano para beber",
-      "spice": 0,
+      "spice": 1,
       "weight": 1,
       "ruleId": "r-mano-izq"
     },
@@ -1915,7 +1915,7 @@
         ]
       },
       "text": "Fin regla: Ya pueden decir 'yo' libremente",
-      "spice": 0,
+      "spice": 1,
       "weight": 1,
       "ruleId": "r-yo"
     },
@@ -1943,7 +1943,7 @@
         ]
       },
       "text": "Fin regla: Ya no tienen que aplaudir cuando alguien bebe",
-      "spice": 0,
+      "spice": 1,
       "weight": 1,
       "ruleId": "r-aplaudir"
     },
@@ -1971,7 +1971,7 @@
         ]
       },
       "text": "Fin regla: Ya no tienen que decir 'pues'",
-      "spice": 0,
+      "spice": 1,
       "weight": 1,
       "ruleId": "r-pues"
     },
@@ -1999,7 +1999,7 @@
         ]
       },
       "text": "Fin regla: Ya pueden cruzar las piernas libremente",
-      "spice": 0,
+      "spice": 1,
       "weight": 1,
       "ruleId": "r-piernas"
     },
@@ -2477,7 +2477,7 @@
         ]
       },
       "text": "Fin regla: Ya no tienen que hablar en diminutivo",
-      "spice": 0,
+      "spice": 1,
       "weight": 1,
       "ruleId": "r-diminutivo"
     },
@@ -2505,7 +2505,7 @@
         ]
       },
       "text": "Fin regla: Ya pueden usar el celular libremente",
-      "spice": 0,
+      "spice": 1,
       "weight": 1,
       "ruleId": "r-celular"
     },
@@ -2664,6 +2664,606 @@
       "text": "¡Rematemos esto! Todos acaben su bebida.",
       "spice": 2,
       "weight": 1
-    }
-  ]
+    },
+  {
+    "id": "pre-215",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, di «no manches» tres veces seguidas sin reírte. Si te ríes, tómate 3 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-216",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, ¿le has dicho «a huevo» a un(a) profe? Si sí, tómate 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-217",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "Tema: Artistas mexicanos. {STARTER} empieza. El que repita o no sepa toma 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-218",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, imita a un cuate tuyo sin decir quién es. Si el grupo adivina, reparte 3 tragos. Si no, tómate 3.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-219",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "¿Quién ha cotorreado toda la noche y llegó al trabajo/clase hecho bolsa al día siguiente? Esa persona toma 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-220",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} y {B}: ¿quién dice más rápido «chido güey, qué onda» 5 veces? El que falle toma 3 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-221",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, convence al grupo de que sabes hacer algo que no sabes hacer. Tienes 30 segundos. Por cada persona que te crea, reparte 1 trago.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-222",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, ¿cuántas chelas aguantas sin que se te note? Toma 1 trago por cada una que digas, máximo 4.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-223",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Voten: ¿tacos o tortas? La minoría toma 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-224",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, di la neta: ¿a quién del grupo le caerías bien si fuera tu jefe? Dilo o toma 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-225",
+    "mode": "pre",
+    "kind": "exclusion",
+    "target": { "roles": ["A"] },
+    "text": "El último que le diga «órale, dale» a {A} toma 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-226",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "Quien haya dicho «ahorita voy» y tardado más de 30 minutos, toma 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-227",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, explica en modo cuate por qué esta fiesta va a estar padrísima. El grupo vota. Si convence a todos, reparte 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-228",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "Tema: ciudades mexicanas. {STARTER} empieza. Quien repita o no sepa toma 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-229",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} y {B}: batalla de piropos creativos en modo mexicano. El grupo vota. El que pierda toma 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-230",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, ¿has chamoyado algo que no debías? Cuéntalo o toma 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-231",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, canta 10 segundos de una rola de banda sinaloense. Si desafina mucho, toma 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-232",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "Quien le haya mandado un mensaje a alguien en plan «qué onda» sin intención real de hablar, toma 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-233",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "¡Órale! Todos toman 1 trago y el que se quede callado más de 5 segundos toma 1 más.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-234",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, di algo chido de cada persona del grupo en menos de 1 minuto. Si el tiempo se acaba, toma 1 trago por cada persona que no mencionaste.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-235",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, chamuya al grupo con la excusa más posta que se te ocurra para no tomar este turno. El grupo vota. Si convence, se salva.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-236",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, ¿te has mandado al frente en un asado? Si sí, reparte 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-237",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "Tema: provincias argentinas. {STARTER} empieza. Quien repita o no sepa toma 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-238",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, contá en 30 segundos el quilombo más grande en el que te metiste. El grupo vota si fue re copado o una cagada. El que más votes decide cuántos tragos toma {A}.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-239",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "Quien alguna vez se quedó sin guita al final del mes y tuvo que morfar fideos, toma 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-240",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} y {B}: ¿quién conoce más frases de Maradona? Por turnos. El que no sabe más toma 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-241",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, hace posta que estás bebiendo mate con el grupo. El que se ría paga 1 trago.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-242",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, ¿cuántos boliches entraste gratis con cara de posta? Reparte 1 trago por cada uno, máximo 3.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-243",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Voten: ¿Boca Juniors o River Plate? Minoría toma 3 tragos. Si hay empate, todos toman 1.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-244",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, decí algo re copado de cada pibe/piba del grupo. El que no se emocione ni un poco toma 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-245",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "Quien haya fingido estar ocupado para no salir a un plan y después se arrepintió, toma 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-246",
+    "mode": "pre",
+    "kind": "exclusion",
+    "target": { "roles": ["A"] },
+    "text": "El último en decirle «buena onda» a {A} toma 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-247",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, dale un apodo argentino a cada uno del grupo. El más creativo elegido por el grupo reparte 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-248",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, ¿alguna vez le dijiste «boludo» a alguien con cariño y no lo entendió? Si sí, toma 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-249",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "Tema: comidas argentinas. {STARTER} empieza. Quien repita o no sepa toma 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-250",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "¡Joda total! Todos cuentan algo que hicieron con fiaca pero que salió re bien. El más copado reparte 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-251",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} y {B}: duelo de chamuyos. Cada uno trata de convencer al grupo de algo imposible en 20 segundos. El que menos convence toma 3 tragos.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-252",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, describe esta noche como si fuera el guion de una película argentina de los 90. Bebe 1 trago por cada cliché que uses.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-253",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "Quien haya llegado a una joda sin avisar y se quedó igual, toma 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-254",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, actuá como si estuvieras en un asado defendiendo que la mejor carne la hacés vos. El más convincente reparte 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-255",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, cachai cuánta energía tiene el grupo ahora mismo, del 1 al 10. Si tu estimación es correcta por votación, reparte 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-256",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, ¿cuántos carretes has organizado tú? Reparte 1 trago por cada uno, máximo 3.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-257",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "Tema: regiones de Chile. {STARTER} empieza. Quien repita o no sepa toma 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-258",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, dile a alguien del grupo algo que te parece cuático de él/ella. La persona puede responder o tomar 2 tragos.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-259",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "Quien haya dicho «al tiro voy» y tardado más de 20 minutos, toma 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-260",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} y {B}: ¿quién conoce más canciones de cumbia chilena? Por turnos canten un pedazo. El que no sepa más toma 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-261",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, conta cómo fue tu peor carrete, pero haciendo que suene increíble. El grupo vota si lo creyó. Si sí, reparte 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-262",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, ¿tienes un pololo/a en este momento? Responde honestamente o toma 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-263",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Voten: ¿empanadas chilenas o peruanas? La minoría toma 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-264",
+    "mode": "pre",
+    "kind": "exclusion",
+    "target": { "roles": ["A"] },
+    "text": "El último en decirle «buena» a {A} toma 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-265",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, dile al weon/weona del grupo que más te cae bien por qué lo valoras. Si se emociona, {A} reparte 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-266",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "Quien haya dicho que algo era fome y después resultó ser increíble, toma 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-267",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, imita cómo hablan los del grupo de un región o país diferente al tuyo. El más gracioso reparte 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-268",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["STARTER"] },
+    "text": "Categoría: apodos creativos en español latinoamericano. {STARTER} da el primero. Por turnos. Quien repita toma 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-269",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, ¿alguna vez pescaste a alguien de fiesta cuando no debías? Si sí, toma 2 tragos.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-270",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} y {B}: ¿quién sabe más modismos latinoamericanos? Se los dicen uno a uno y el otro adivina el significado. El que falla más toma 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-271",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, cuenta la historia más cuática que hayas vivido de viaje por Latinoamérica. El grupo vota si supera el listón de cero tragos o le pone 1, 2 o 3.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-272",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["ALL"] },
+    "text": "Quien haya intentado hablar en el acento de otro país latinoamericano y haya quedado pésimo, toma 2 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-273",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["ALL"] },
+    "text": "¡Latinos unidos! Cada uno grita el saludo típico de su país o región. El que suene menos auténtico toma 2 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "pre-274",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, escoge el mejor slang latinoamericano del grupo y úsalo en una frase. Si el grupo lo aprueba, reparte 2 tragos. Si no, tómate 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  }
+]
 
