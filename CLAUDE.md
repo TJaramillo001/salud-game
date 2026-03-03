@@ -117,7 +117,7 @@ There is no test runner script in `package.json`. Test files exist under `tests/
 │   ├── pre_en.json                # 200 cards — English Pre
 │   ├── pre_it.json                # 200 cards — Italian Pre
 │   ├── pre_es_eu.json             # 200 cards — Spain Spanish Pre
-│   ├── night_out_es_la.json       # 25 cards — Latin American Spanish Night Out
+│   ├── night_out_es_la.json       # 100 cards — Latin American Spanish Night Out
 │   ├── night_out_en.json          # 110 cards — English Night Out
 │   ├── night_out_it.json          # 115 cards — Italian Night Out
 │   ├── night_out_es_eu.json       # 100 cards — Spain Spanish Night Out
@@ -346,7 +346,7 @@ The i18n infrastructure and card content are complete. The following items from 
 - **`app/layout.tsx` — dynamic `lang` attribute:** The `<html lang>` attribute should update based on `selectedLanguage`. This requires making the root layout language-aware (e.g., reading from a cookie/header or making it a client component).
 - **`app/page.tsx` — marketing copy translation:** The homepage links were updated to `/game/setup/language`, but the marketing copy text (hero, features, etc.) is still hardcoded in Spanish. It should use `useTranslation()` or a similar approach to render in the visitor's language.
 - **`npm run lint` verification:** Lint has not been run since the multilingual changes. Run `npm run lint` and fix any issues.
-- **Night Out deck parity:** The `night_out_es_la.json` pack only has 25 cards while the other languages have 100–115. It should be expanded to match.
+- **Night Out deck parity:** Done — `night_out_es_la.json` expanded to 100 cards with 5 rule pairs (`r-cantado`, `r-bro`, `r-izquierda`, `r-contacto`, `r-acento`).
 
 ---
 
