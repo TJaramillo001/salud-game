@@ -9,7 +9,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="es">
+        <html lang="es" className="dark">
+        <head>
+            <meta name="color-scheme" content="dark" />
+            <meta name="theme-color" content="#0a0a0a" />
+            <meta name="apple-mobile-web-app-capable" content="yes" />
+            <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        </head>
         <body className="min-h-screen bg-neutral-950 text-neutral-100 antialiased">
         <Header />
         <main className="mx-auto max-w-5xl px-6 pb-24">{children}</main>
