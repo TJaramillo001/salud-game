@@ -21,6 +21,8 @@ import {
 } from '@/features/languages/types';
 import type { Player, PlayerId } from '@/features/players/types';
 import { newPlayerId } from '@/features/players/types';
+import type { BarSession } from '@/features/bars/types';
+import { BAR_SESSION_STORAGE_KEY, isBarSessionValid } from '@/features/bars/types';
 
 // ---------- Storage keys ----------
 const PLAYERS_STORAGE_KEY = 'SALUD_PLAYERS_V1';
@@ -43,6 +45,9 @@ export type GameState = {
 
     // Language selection
     selectedLanguage: LanguageKey | null;
+
+    // Bar session (QR-activated premium)
+    barSession: BarSession | null;
 };
 
 export type GameAction =
@@ -55,7 +60,9 @@ export type GameAction =
     | { type: 'START_NEW_SESSION'; sessionId: string; seed: number }
     | { type: 'END_GAME' }
     | { type: 'RESET_RUNTIME' }
-    | { type: 'MARK_SEEN'; cardId: string };
+    | { type: 'MARK_SEEN'; cardId: string }
+    | { type: 'SET_BAR_SESSION'; session: BarSession }
+    | { type: 'CLEAR_BAR_SESSION' };
 
 type GameDispatch = (action: GameAction) => void;
 
@@ -79,6 +86,9 @@ type GameStore = {
     endGame: () => void;
     resetRuntime: () => void;
     markSeen: (cardId: string) => void;
+
+    setBarSession: (session: BarSession) => void;
+    clearBarSession: () => void;
 };
 
 // ---------- Initial state ----------
@@ -90,6 +100,7 @@ const initialState: GameState = {
     seen: [],
     selectedMode: null,
     selectedLanguage: null,
+    barSession: null,
 };
 
 // ---------- Reducer ----------
@@ -148,6 +159,12 @@ function reducer(state: GameState, action: GameAction): GameState {
             if (state.seen.includes(action.cardId)) return state;
             return { ...state, seen: [...state.seen, action.cardId] };
         }
+        case 'SET_BAR_SESSION': {
+            return { ...state, barSession: action.session };
+        }
+        case 'CLEAR_BAR_SESSION': {
+            return { ...state, barSession: null };
+        }
         default:
             return state;
     }
@@ -203,12 +220,13 @@ export function GameStoreProvider({ children }: { children: React.ReactNode }) {
                 if (Array.isArray(parsed)) {
                     // Expect [{id, name}] but be tolerant
                     const asPlayers: Player[] = parsed
-                        .map((p: any): Player | null => {
-                            if (p && typeof p.name === 'string') {
+                        .map((p: unknown): Player | null => {
+                            if (p && typeof p === 'object' && 'name' in p && typeof (p as Record<string, unknown>).name === 'string') {
+                                const rec = p as Record<string, unknown>;
                                 return {
-                                    id: typeof p.id === 'string' ? p.id : newPlayerId(),
-                                    name: p.name,
-                                    gender: p.gender,
+                                    id: typeof rec.id === 'string' ? rec.id : newPlayerId(),
+                                    name: rec.name as string,
+                                    gender: rec.gender as Player['gender'],
                                 };
                             }
                             return null;
@@ -222,6 +240,24 @@ export function GameStoreProvider({ children }: { children: React.ReactNode }) {
             } else {
                 // Legacy migration: if someone previously stored string[] elsewhere, migrate here.
                 // (No legacy key known; if you had one, check and transform to Player[])
+            }
+        } catch {
+            // ignore storage failures
+        }
+    }, []);
+
+    // ---- Hydrate barSession from localStorage (client only)
+    useEffect(() => {
+        try {
+            if (typeof window === 'undefined') return;
+            const raw = window.localStorage.getItem(BAR_SESSION_STORAGE_KEY);
+            if (raw && state.barSession == null) {
+                const parsed = JSON.parse(raw) as BarSession;
+                if (parsed && isBarSessionValid(parsed)) {
+                    dispatch({ type: 'SET_BAR_SESSION', session: parsed });
+                } else {
+                    window.localStorage.removeItem(BAR_SESSION_STORAGE_KEY);
+                }
             }
         } catch {
             // ignore storage failures
@@ -264,6 +300,32 @@ export function GameStoreProvider({ children }: { children: React.ReactNode }) {
         }
     }, [state.players]);
 
+    // ---- Persist barSession
+    useEffect(() => {
+        try {
+            if (state.barSession) {
+                window.localStorage.setItem(BAR_SESSION_STORAGE_KEY, JSON.stringify(state.barSession));
+            } else {
+                window.localStorage.removeItem(BAR_SESSION_STORAGE_KEY);
+            }
+        } catch {
+            // ignore storage failures
+        }
+    }, [state.barSession]);
+
+    // ---- Persist barSession
+    useEffect(() => {
+        try {
+            if (state.barSession) {
+                window.localStorage.setItem(BAR_SESSION_STORAGE_KEY, JSON.stringify(state.barSession));
+            } else {
+                window.localStorage.removeItem(BAR_SESSION_STORAGE_KEY);
+            }
+        } catch {
+            // ignore storage failures
+        }
+    }, [state.barSession]);
+
     // ---------- Stable helpers (dispatch is stable from useReducer) ----------
     const setLanguage = useCallback(
         (language: LanguageKey) => dispatch({ type: 'SET_LANGUAGE', language }),
@@ -302,6 +364,14 @@ export function GameStoreProvider({ children }: { children: React.ReactNode }) {
         (cardId: string) => dispatch({ type: 'MARK_SEEN', cardId }),
         [dispatch],
     );
+    const setBarSession = useCallback(
+        (session: BarSession) => dispatch({ type: 'SET_BAR_SESSION', session }),
+        [dispatch],
+    );
+    const clearBarSession = useCallback(
+        () => dispatch({ type: 'CLEAR_BAR_SESSION' }),
+        [dispatch],
+    );
 
     // ---------- Context value ----------
     const value = useMemo<GameStore>(
@@ -319,8 +389,10 @@ export function GameStoreProvider({ children }: { children: React.ReactNode }) {
             endGame,
             resetRuntime,
             markSeen,
+            setBarSession,
+            clearBarSession,
         }),
-        [state, setLanguage, setMode, setPlayers, addPlayer, removePlayer, clearPlayers, startNewSession, endGame, resetRuntime, markSeen],
+        [state, setLanguage, setMode, setPlayers, addPlayer, removePlayer, clearPlayers, startNewSession, endGame, resetRuntime, markSeen, setBarSession, clearBarSession],
     );
 
     return (

@@ -14,7 +14,7 @@
     "mode": "night_out",
     "kind": "versus",
     "target": { "roles": ["A","B"], "constraints": { "distinct": true } },
-    "text": "{A} vs {B}: mini-batalla de pasos (5s). Grupo vota. Quien pierda toma 2.",
+    "text": "{A} vs {B}: mini-batalla de baile (5s). El grupo vota por el mejor. Quien pierda toma 2.",
     "spice": 2,
     "weight": 1
   },
@@ -41,7 +41,7 @@
     "mode": "night_out",
     "kind": "question",
     "target": { "roles": ["A"] },
-    "text": "{A}, ¿quién es el/la más probable de perderse saliendo? Señálalo. Esa persona toma 2.",
+    "text": "{A}, ¿quién es el/la más probable de perderse al salir? Señálalo. Esa persona toma 2.",
     "spice": 2,
     "weight": 1
   },
@@ -50,7 +50,7 @@
     "mode": "night_out",
     "kind": "action",
     "target": { "roles": ["A"] },
-    "text": "{A}, intercambia asiento con alguien al azar. Ambos toman 1.",
+    "text": "{A}, intercambia asiento con quien escojas. Ambos toman 1.",
     "spice": 1,
     "weight": 1
   },
@@ -59,7 +59,7 @@
     "mode": "night_out",
     "kind": "group",
     "target": { "roles": ["STARTER"] },
-    "text": "Ronda relámpago: canciones que mencionen 'noche'. {STARTER} empieza. Quien trabe toma 2.",
+    "text": "Tema: canciones que mencionen 'noche'. {STARTER} empieza. Quien trabe toma 2.",
     "spice": 2,
     "weight": 1
   },
@@ -77,7 +77,7 @@
     "mode": "night_out",
     "kind": "versus",
     "target": { "roles": ["A","B"], "constraints": { "distinct": true } },
-    "text": "{A} vs {B}: mímicas de 'resaca'. Grupo vota. Pierde: toma 2.",
+    "text": "{A} vs {B}: mímicas de 'resaca'. El grupo vota por el mejor. El que pierde: toma 2.",
     "spice": 2,
     "weight": 1
   },
@@ -87,7 +87,7 @@
     "kind": "question",
     "target": { "roles": ["A"], "constraints": { "genderOfA": "F" } },
     "text": "{A}, ¿te han pasado una lista de invitados? Si sí, reparte 3.",
-    "altText": "Si no hay mujeres, quien tenga más historias archivadas reparte 3.",
+    "altText": "Quien tenga más posts archivados reparte 3.",
     "spice": 2,
     "weight": 1
   },
@@ -96,7 +96,7 @@
     "mode": "night_out",
     "kind": "question",
     "target": { "roles": ["A"], "constraints": { "genderOfA": "M" } },
-    "text": "{A}, si alguna vez te han negado la entrada por dress code, toma 2.",
+    "text": "{A}, si alguna vez te han negado la entrada a un lugar por dress code, toma 2.",
     "altText": "Si no hay hombres, quien use tenis blancos toma 2.",
     "spice": 2,
     "weight": 1
@@ -106,7 +106,7 @@
     "mode": "night_out",
     "kind": "group",
     "target": { "roles": ["A"] },
-    "text": "Todos menos {A}: tomen 1. {A} elige el próximo género musical a poner.",
+    "text": "Todos menos {A}: tomen 1.",
     "spice": 1,
     "weight": 1
   },
@@ -115,7 +115,7 @@
     "mode": "night_out",
     "kind": "action",
     "target": { "roles": ["A","B"], "constraints": { "distinct": true } },
-    "text": "{A} asigna un 'paso prohibido' a {B}. Si {B} lo hace en la noche, toma 1 cada vez.",
+    "text": "{A} asigna un 'paso prohibido' a {B}. Si alguno lo hace en la noche, toma 1 cada vez.",
     "spice": 2,
     "weight": 1
   },
@@ -142,7 +142,7 @@
     "mode": "night_out",
     "kind": "group",
     "target": { "roles": ["STARTER"] },
-    "text": "Tema: tragos de shots. {STARTER} empieza. Repite/fallas: tomas 2.",
+    "text": "Tema: Cócteles. {STARTER} empieza. Repite/fallas: tomas 2.",
     "spice": 2,
     "weight": 1
   },
@@ -150,8 +150,8 @@
     "id": "night-017",
     "mode": "night_out",
     "kind": "rule_on",
-    "target": { "roles": ["A"] },
-    "text": "Regla: hablar cantando. Si {A} o cualquiera habla normal, toma 1 hasta que la regla acabe.",
+    "target": { },
+    "text": "Regla: hablar cantando. Si cualquiera habla normal, toma 1 hasta que la regla acabe.",
     "ruleId": "r-cantado",
     "spice": 3,
     "weight": 1
@@ -170,7 +170,7 @@
     "mode": "night_out",
     "kind": "versus",
     "target": { "roles": ["A","B"], "constraints": { "distinct": true } },
-    "text": "{A} vs {B}: decir 'Medallo papi' sin sonreír. Quien se ría primero toma 2.",
+    "text": "{A} vs {B}: digan un chiste sin sonreír. Quien se ría primero toma 2.",
     "spice": 2,
     "weight": 1
   },
@@ -179,7 +179,7 @@
     "mode": "night_out",
     "kind": "question",
     "target": { "roles": ["A"] },
-    "text": "{A}, señala quién pediría el 'último shot' a las 3 a.m. Esa persona toma 2.",
+    "text": "{A}, señala quién pediría un 'último shot' a las 3 a.m. Esa persona toma 2.",
     "spice": 2,
     "weight": 1
   },
@@ -188,7 +188,7 @@
     "mode": "night_out",
     "kind": "group",
     "target": { "roles": ["A"] },
-    "text": "Todos menos {A}: tomen 1. {A} asigna un brindis obligatorio por el resto de la noche.",
+    "text": "Todos menos {A}: tomen 1. {A} asigna un brindis obligatorio por el resto de la noche. Siempre antes de tomar, debes brindar con esa persona. Si se te olvida, tomas 1.",
     "spice": 2,
     "weight": 1
   },
@@ -205,8 +205,8 @@
     "id": "night-023",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["A"] },
-    "text": "{A}, ¿quién del grupo es DJ de aux cord hoy? Esa persona reparte 2.",
+    "target": {},
+    "text": "¿Quién del grupo es DJ de hoy? Esa persona reparte 2.",
     "spice": 1,
     "weight": 1
   },
@@ -215,7 +215,7 @@
     "mode": "night_out",
     "kind": "rule_off",
     "target": { "roles": ["A"] },
-    "text": "Fin de regla. {A} elige a alguien que tome 1 por 'afinación dudosa'.",
+    "text": "Ya no tienen que cantar. {A} elige a alguien que tome 1 por mal cantante.",
     "ruleId": "r-cantado",
     "spice": 1,
     "weight": 1
@@ -244,7 +244,7 @@
     "mode": "night_out",
     "kind": "action",
     "target": { "roles": ["A"] },
-    "text": "{A}, muéstrale al grupo tu último chat. Si hay algo vergonzoso, tomas 2. Si no, repartes 1.",
+    "text": "{A}, muéstrale al grupo tu último chat. Si hay algo vergonzoso o te miegas, tomas 2. Si no, repartes 1.",
     "spice": 2,
     "weight": 1
   },
@@ -253,7 +253,7 @@
     "mode": "night_out",
     "kind": "question",
     "target": { "roles": ["A"] },
-    "text": "{A}, ¿quién del grupo es más probable que mande un mensaje a su ex esta noche? Esa persona toma 2.",
+    "text": "¿Quién del grupo es más probable que mande un mensaje a su ex esta noche? Esa persona toma 2.",
     "spice": 2,
     "weight": 1
   },
@@ -262,7 +262,7 @@
     "mode": "night_out",
     "kind": "versus",
     "target": { "roles": ["A","B"], "constraints": { "distinct": true } },
-    "text": "{A} vs {B}: duelo de trabalenguas. Quien se trabe primero toma 2.",
+    "text": "{A} vs {B}: batalla de rap. Quien se trabe primero toma 2.",
     "spice": 2,
     "weight": 1
   },
@@ -271,7 +271,7 @@
     "mode": "night_out",
     "kind": "action",
     "target": { "roles": ["A"] },
-    "text": "{A}, brinda con todos uno por uno. Cada brindis = 1 trago para ti.",
+    "text": "{A}, brinda con mitad de los que estén aquí. Cada brindis = 1 trago para la otra persona.",
     "spice": 1,
     "weight": 1
   },
@@ -334,7 +334,7 @@
     "mode": "night_out",
     "kind": "wildcard",
     "target": { "roles": ["A"] },
-    "text": "¡Terremoto de tragos! Todos cambian de lugar y toman 2. {A} queda exento.",
+    "text": "¡Terremoto! Todos cambian de lugar y toman 2. {A} queda exento.",
     "spice": 3,
     "weight": 1
   },
@@ -352,7 +352,7 @@
     "mode": "night_out",
     "kind": "versus",
     "target": { "roles": ["A","B"], "constraints": { "distinct": true } },
-    "text": "{A} vs {B}: mejor piropo inventado en 10 segundos. Grupo vota. El peor toma 2.",
+    "text": "{A} vs {B}: mejor piropo/pickup line inventado en 10 segundos. Grupo vota. El peor toma 2.",
     "spice": 2,
     "weight": 1
   },
@@ -380,7 +380,7 @@
     "mode": "night_out",
     "kind": "action",
     "target": { "roles": ["A"] },
-    "text": "{A}, enseña al grupo una palabra o frase de tu país. Si alguien la usa bien esta noche, se salva de un trago.",
+    "text": "{A}, enseña al grupo una palabra o frase de tu país. Si alguien la usa bien esta noche, se salva de un trago. Si la usa mal, toman doble.",
     "spice": 1,
     "weight": 1
   },
@@ -398,7 +398,7 @@
     "mode": "night_out",
     "kind": "group",
     "target": { "roles": ["STARTER"] },
-    "text": "Ronda: formas de decir 'salud' en distintos idiomas. {STARTER} empieza. Repite/fallas: tomas 2.",
+    "text": "Ronda: formas de decir 'salud'. {STARTER} empieza. Repite/fallas: tomas 2.",
     "spice": 1,
     "weight": 1
   },
@@ -434,7 +434,7 @@
     "mode": "night_out",
     "kind": "versus",
     "target": { "roles": ["A","B"], "constraints": { "distinct": true } },
-    "text": "{A} vs {B}: nombrar 5 canciones de reggaetón en 15 segundos. Quien se trabe primero toma 2.",
+    "text": "{A} vs {B}: nombrar 5 canciones de reggaetón en 15 segundos. Quien se trabe primero toma 2. Si se pasan del tiempo toman 3",
     "spice": 2,
     "weight": 1
   },

@@ -8,6 +8,8 @@ import { useGameStore } from '@/providers/GameStoreProvider';
 import { useActiveRules } from '@/features/rules/useActiveRules';
 import { useTranslation } from '@/lib/i18n';
 import { trackEvent } from '@/lib/analytics';
+import { useBarSession } from '@/features/bars/useBarSession';
+import { trackBarEvent } from '@/lib/barAnalytics';
 
 export default function SummaryPage() {
     const router = useRouter();
@@ -17,15 +19,22 @@ export default function SummaryPage() {
     } = useGameStore();
     const { t } = useTranslation();
     const { clearAll } = useActiveRules();
+    const { barSession, isBarActive } = useBarSession();
     const sent = useRef(false);
 
     // Telemetry once
     useEffect(() => {
         if (!sent.current) {
             trackEvent('session_end', { mode: selectedMode });
+            if (isBarActive && barSession) {
+                trackBarEvent('game_end', barSession.slug, null, {
+                    mode: selectedMode,
+                    bar_name: barSession.name,
+                });
+            }
             sent.current = true;
         }
-    }, [selectedMode]);
+    }, [selectedMode, isBarActive, barSession]);
 
     // Clear any active rules once
     useEffect(() => {
@@ -72,14 +81,18 @@ export default function SummaryPage() {
                         {t.summary.btn.changeSetup}
                     </Button>
 
-                    <div className="flex gap-3">
-                        <Button variant="ghost" className="flex-1" onClick={() => router.replace('/')}>
-                            {t.summary.btn.home}
+                    <div className="flex flex-col items-center gap-1 pt-2">
+                        <Button size="lg" variant="secondary" className="w-full" onClick={rate}>
+                            ⭐ {t.summary.btn.rate}
                         </Button>
-                        <Button variant="ghost" className="flex-1" onClick={rate}>
-                            {t.summary.btn.rate}
-                        </Button>
+                        <p className="text-xs text-neutral-500">
+                            {t.summary.rateHint}
+                        </p>
                     </div>
+
+                    <Button variant="ghost" className="w-full" onClick={() => router.replace('/')}>
+                        {t.summary.btn.home}
+                    </Button>
                 </div>
             </div>
         </main>

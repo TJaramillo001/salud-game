@@ -32,6 +32,7 @@ type Props = {
     kindLabels?: KindLabels;
     altPrefix?: string;
     renderFallbacks?: RenderFallbacks;
+    barBadge?: string; // shown on bar-sourced cards (e.g., "Especial del bar")
 };
 
 function categoryOf(kind: Card['kind']): 'normal' | 'group' | 'rule' | 'wildcard' {
@@ -65,7 +66,7 @@ function kindLabel(kind: Card['kind'], labels: KindLabels): string {
 
 // ...imports unchanged
 
-export const QuestionCard = React.memo(function QuestionCard({ card, subtitle, dx = 0, players = [], actors = {}, kindLabels, altPrefix = 'Alt:', renderFallbacks }: Props) {
+export const QuestionCard = React.memo(function QuestionCard({ card, subtitle, dx = 0, players = [], actors = {}, kindLabels, altPrefix = 'Alt:', renderFallbacks, barBadge }: Props) {
     const rotation = Math.max(Math.min(dx / 20, 8), -8);
     const translate = Math.max(Math.min(dx, 120), -120);
 
@@ -95,26 +96,34 @@ export const QuestionCard = React.memo(function QuestionCard({ card, subtitle, d
         >
             {/* rest identical */}
             <div className="h-full flex flex-col p-6 md:p-8">
-                <div
-                    className="text-xs md:text-sm uppercase tracking-wide mb-3 font-semibold"
-                    style={{ color: theme.label }}
-                    title={cat}
-                >
-                    {kindLabel(card.kind, labels)}
+                <div className="flex items-center justify-between">
+                    <div
+                        className="text-xs md:text-sm uppercase tracking-wide font-semibold"
+                        style={{ color: theme.label }}
+                        title={cat}
+                    >
+                        {kindLabel(card.kind, labels)}
+                    </div>
+                    {card.source === 'bar' && barBadge && (
+                        <span className="rounded-full bg-black/10 px-2 py-0.5 text-[10px] font-semibold text-black/60">
+                            🍻 {barBadge}
+                        </span>
+                    )}
                 </div>
 
-                {subtitle ? (
-                    <div className="mb-3 text-base md:text-lg font-semibold text-neutral-900">
-                        {subtitle}
+                <div className="flex-1 flex flex-col items-center justify-center text-center">
+                    <div className="text-2xl md:text-3xl font-bold leading-tight text-black break-words">
+                        {renderedText}
                     </div>
-                ) : null}
-
-                <div className="text-2xl md:text-3xl font-bold leading-tight text-black break-words">
-                    {renderedText}
+                    {subtitle && (
+                        <div className="mt-2 text-sm text-neutral-600 font-medium">
+                            {subtitle}
+                        </div>
+                    )}
                 </div>
 
                 {renderedAlt ? (
-                    <div className="mt-auto pt-4 text-sm md:text-base text-neutral-800">
+                    <div className="pt-4 text-sm md:text-base text-neutral-800 text-center">
                         {altPrefix} {renderedAlt}
                     </div>
                 ) : null}

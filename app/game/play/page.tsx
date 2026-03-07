@@ -14,6 +14,10 @@ import { weightedPickIndex, applyDecay, resolveTargetName } from '@/features/gam
 import type { Card } from '@/features/questions/types';
 import { saveLastDeck, getLastDeck, isOnline } from '@/lib/offline';
 import { useTranslation } from '@/lib/i18n';
+import { useBarSession } from '@/features/bars/useBarSession';
+import { isModeAccessible } from '@/features/bars/access';
+import { BarExpiredModal } from '@/components/game/BarExpiredModal';
+import { trackBarEvent } from '@/lib/barAnalytics';
 
 function cyrb53(str: string, seed = 0) {
     let h1 = 0xdeadbeef ^ seed, h2 = 0x41c6ce57 ^ seed;
@@ -28,6 +32,24 @@ export default function PlayPage() {
     const { t } = useTranslation();
     const router = useRouter();
     const { addRule, clearRule, clearAll } = useActiveRules();
+    const { barSession, isBarActive } = useBarSession();
+
+    // Bar session expiry tracking
+    const [showBarExpired, setShowBarExpired] = useState(false);
+    const wasBarActive = useRef(false);
+    useEffect(() => {
+        if (isBarActive) wasBarActive.current = true;
+        if (wasBarActive.current && !isBarActive && barSession === null) {
+            setShowBarExpired(true);
+        }
+    }, [isBarActive, barSession]);
+
+    function handleBarExpiredDismiss() {
+        setShowBarExpired(false);
+        if (selectedMode && !isModeAccessible(selectedMode, null)) {
+            router.replace('/game/setup/mode');
+        }
+    }
 
     // Require mode and players
     useEffect(() => { if (!selectedMode) router.replace('/game/setup/mode'); }, [selectedMode, router]);
@@ -110,6 +132,22 @@ export default function PlayPage() {
         const hasCard = usingOffline ? !!offlineCurrent : !!current;
         if (!hasCard) return;
         vibrate(10); // 10ms pulse — just enough tactile feedback without being intrusive
+
+        // Bar analytics: track card swipe + bar card shown
+        if (isBarActive && barSession) {
+            const card = (usingOffline ? offlineCurrent : current) as Card | undefined;
+            trackBarEvent('card_swipe', barSession.slug, null, {
+                card_id: card?.id,
+                card_kind: card?.kind,
+                mode: selectedMode,
+            });
+            if (card?.source === 'bar') {
+                trackBarEvent('bar_card_shown', barSession.slug, null, {
+                    card_id: card.id,
+                    card_text: card.text?.slice(0, 80),
+                });
+            }
+        }
 
         if (usingOffline) {
             setOfflineIndex((i) => (i + 1 < (offlineDeck?.length ?? 0) ? i + 1 : i));
@@ -201,6 +239,7 @@ export default function PlayPage() {
                         kindLabels={t.card.kind}
                         altPrefix={t.card.alt}
                         renderFallbacks={t.render}
+                        barBadge={isBarActive ? t.bar.badge : undefined}
                     />
                 ) : <div />}
             </div>
@@ -222,6 +261,13 @@ export default function PlayPage() {
             </footer>
 
             <p className="text-xs text-neutral-400">{t.play.hint.tap}</p>
+
+            {showBarExpired && (
+                <BarExpiredModal
+                    barName={barSession?.name ?? ''}
+                    onContinueFree={handleBarExpiredDismiss}
+                />
+            )}
         </main>
     );
 }

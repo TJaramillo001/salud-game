@@ -3,7 +3,7 @@
 
 import { createContext, useContext, useState, ReactNode, useCallback, useMemo } from 'react';
 
-type ActiveRule = { ruleId: string; params?: Record<string, any> };
+type ActiveRule = { ruleId: string; params?: Record<string, unknown> };
 
 const RulesCtx = createContext<{
     rules: ActiveRule[];

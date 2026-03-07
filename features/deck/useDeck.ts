@@ -1,15 +1,17 @@
 // features/deck/useDeck.ts
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useGameStore } from '@/providers/GameStoreProvider';
 import { getPackByModeAndLanguage } from '@/features/questions/repository';
+import { getBarCards } from '@/features/bars/repository';
+import { isBarSessionValid } from '@/features/bars/types';
 import type { Card, Pack } from '@/features/questions/types';
 import { scheduleRulePairs, shuffleInPlace } from './shuffler';
 
 export function useDeck(seed: number) {
     const {
-        state: { selectedMode, selectedLanguage, players },
+        state: { selectedMode, selectedLanguage, players, barSession },
     } = useGameStore();
 
     const [deck, setDeck] = useState<Card[]>([]);
@@ -29,9 +31,14 @@ export function useDeck(seed: number) {
             }
 
             const pack: Pack | undefined = await getPackByModeAndLanguage(selectedMode, selectedLanguage);
-            const cards = pack?.cards ?? [];
+            let cards = pack?.cards ?? [];
 
-            // You can inject future constraints/filters here (by players, gender, etc.)
+            // Inject bar-specific cards when a bar session is active
+            if (barSession && isBarSessionValid(barSession)) {
+                const extra = getBarCards(barSession.slug, selectedMode, selectedLanguage);
+                cards = [...cards, ...extra];
+            }
+
             const shuffled = shuffleInPlace(cards.slice(), seed);
 
             // Enforce rule lifecycle & schedule offs deterministically
@@ -48,7 +55,7 @@ export function useDeck(seed: number) {
         return () => {
             alive = false;
         };
-    }, [selectedMode, selectedLanguage, seed, players]);
+    }, [selectedMode, selectedLanguage, seed, players, barSession]);
 
     const current = deck[index] ?? null;
     const remaining = Math.max(deck.length - (index + (current ? 1 : 0)), 0);

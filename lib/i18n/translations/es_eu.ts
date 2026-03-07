@@ -75,6 +75,7 @@ const es_eu: Translations = {
             home: 'Inicio',
             rate: 'Valorar Salud',
         },
+        rateHint: 'Tu opinión nos ayuda a mejorar el juego 🙏',
         mode: {
             unknown: 'desconocido',
             pre: 'Pre',
@@ -103,6 +104,38 @@ const es_eu: Translations = {
     modes: {
         pre: { label: 'Pre', description: 'Calentando motores para una noche que no olvidaréis.' },
         night_out: { label: 'Salida nocturna', description: 'Vibras altas, preguntas interesantes. Esta noche nos reímos.' },
+        couple: { label: 'Pareja', description: 'Retos y preguntas íntimas para parejas.' },
+        afterparty: { label: 'Afterparty', description: 'La fiesta no acaba. Cartas para los que aguantan.' },
+        bar: { label: 'Bar', description: 'Cartas especiales para noches de bar.' },
+    },
+    bar: {
+        notFound: 'Bar no encontrado',
+        notFoundDesc: 'Este código QR no es válido o el bar no está disponible.',
+        goHome: 'Ir al inicio',
+        badge: 'Especial del bar',
+        landing: {
+            welcome: '¡Bienvenido a {barName}!',
+            subtitle: 'Jugad a Salud con todos los modos desbloqueados.',
+            startPlaying: '¡A jugar!',
+            continueSession: 'Seguir jugando',
+            newSession: 'Nueva sesión',
+        },
+        session: {
+            activeBanner: 'Jugando en {barName}',
+            allUnlocked: 'Todos los modos desbloqueados',
+            expiresIn: 'Sesión activa — expira en {time}',
+        },
+        expired: {
+            title: 'Sesión del bar terminada',
+            description: 'Tu acceso premium de {barName} ha expirado.',
+            subscribe: 'Acceso ilimitado',
+            continueFree: 'Seguir con modo gratis',
+        },
+    },
+    mode: {
+        locked: 'Premium',
+        lockedDesc: 'Escanea un QR de bar o suscríbete para desbloquear.',
+        comingSoon: 'Próximamente',
     },
 };
 

@@ -1,0 +1,167 @@
+[
+  {
+    "id": "bar-pilot-la-001",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, pide el shot de la casa y brinda con todos. Si no lo haces, toma 3 tragos.",
+    "spice": 2,
+    "weight": 1.5,
+    "ruleId": null,
+    "source": "bar"
+  },
+  {
+    "id": "bar-pilot-la-002",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Ronda especial: todos pidan algo del menú del bar. El último en decidir toma 2 tragos.",
+    "spice": 1,
+    "weight": 1.5,
+    "ruleId": null,
+    "source": "bar"
+  },
+  {
+    "id": "bar-pilot-la-003",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A", "B"] },
+    "text": "{A} y {B}, vayan a la barra y pidan la bebida favorita del otro sin preguntar. Si aciertan, el grupo toma 2. Si no, toman ustedes.",
+    "spice": 2,
+    "weight": 1.5,
+    "ruleId": null,
+    "source": "bar"
+  },
+  {
+    "id": "bar-pilot-la-004",
+    "mode": "pre",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, ¿cuántas veces has venido a este bar este mes? Si son más de 3, reparte 3 tragos. Si no, toma 2.",
+    "spice": 1,
+    "weight": 1.5,
+    "ruleId": null,
+    "source": "bar"
+  },
+  {
+    "id": "bar-pilot-la-005",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, pregúntale al mesero cuál es su trago favorito del menú. Si lo pides, repartes 3 tragos.",
+    "spice": 1,
+    "weight": 1.5,
+    "ruleId": null,
+    "source": "bar"
+  },
+  {
+    "id": "bar-pilot-la-006",
+    "mode": "pre",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "¡A probar algo nuevo! Cada quien pida una bebida que nunca haya probado de la carta. El que repita algo que ya tomó, toma 3.",
+    "spice": 2,
+    "weight": 1.5,
+    "ruleId": null,
+    "source": "bar"
+  },
+  {
+    "id": "bar-pilot-la-007",
+    "mode": "pre",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"] },
+    "text": "{A} vs {B}: ¿quién puede nombrar más cócteles de la carta en 15 segundos? El perdedor invita una ronda.",
+    "spice": 2,
+    "weight": 1.5,
+    "ruleId": null,
+    "source": "bar"
+  },
+  {
+    "id": "bar-pilot-la-008",
+    "mode": "pre",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, tómate un selfie con el mesero y súbelo a tu historia. Si no lo haces, toma 3 tragos.",
+    "spice": 2,
+    "weight": 1.5,
+    "ruleId": null,
+    "source": "bar"
+  },
+  {
+    "id": "bar-pilot-la-009",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, pide la bebida más cara del menú. Si la compartes con el grupo, repartes 5 tragos. Si no, toma 3.",
+    "spice": 3,
+    "weight": 1.5,
+    "ruleId": null,
+    "source": "bar"
+  },
+  {
+    "id": "bar-pilot-la-010",
+    "mode": "night_out",
+    "kind": "group",
+    "target": { "roles": ["ALL"] },
+    "text": "Desafío del bar: pidan una ronda de shots para todos. El que ponga peor cara al tomar, paga la siguiente ronda.",
+    "spice": 3,
+    "weight": 1.5,
+    "ruleId": null,
+    "source": "bar"
+  },
+  {
+    "id": "bar-pilot-la-011",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, ve a la barra y canta el nombre de tu bebida al pedirla. Si el mesero se ríe, el grupo toma 2.",
+    "spice": 2,
+    "weight": 1.5,
+    "ruleId": null,
+    "source": "bar"
+  },
+  {
+    "id": "bar-pilot-la-012",
+    "mode": "night_out",
+    "kind": "question",
+    "target": { "roles": ["A"] },
+    "text": "{A}, ¿cómo se llama el mesero que los está atendiendo? Si aciertas, repartes 3. Si no, toma 2.",
+    "spice": 1,
+    "weight": 1.5,
+    "ruleId": null,
+    "source": "bar"
+  },
+  {
+    "id": "bar-pilot-la-013",
+    "mode": "night_out",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"] },
+    "text": "{A} vs {B}: compitan a ver quién termina su bebida primero. El perdedor pide la siguiente ronda.",
+    "spice": 3,
+    "weight": 1.5,
+    "ruleId": null,
+    "source": "bar"
+  },
+  {
+    "id": "bar-pilot-la-014",
+    "mode": "night_out",
+    "kind": "action",
+    "target": { "roles": ["A"] },
+    "text": "{A}, deja una reseña de 5 estrellas del bar ahorita. Si lo haces, repartes 3 tragos. Si no, toma 3.",
+    "spice": 2,
+    "weight": 1.5,
+    "ruleId": null,
+    "source": "bar"
+  },
+  {
+    "id": "bar-pilot-la-015",
+    "mode": "pre",
+    "kind": "wildcard",
+    "target": { "roles": ["A"] },
+    "text": "Wildcard del bar: {A} elige una bebida de la carta para alguien del grupo. Esa persona tiene que pedirla y tomársela.",
+    "spice": 2,
+    "weight": 1.5,
+    "ruleId": null,
+    "source": "bar"
+  }
+]

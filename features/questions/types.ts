@@ -29,6 +29,7 @@ export type Card = {
     spice: number;   // 1–3+, your scale
     weight: number;  // deck weighting
     ruleId?: string; // present for rule_on / rule_off
+    source?: string; // 'bar' for bar-injected cards; undefined for standard cards
 };
 
 export type Pack = {

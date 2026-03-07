@@ -1,0 +1,8 @@
+{
+    "slug": "pilot",
+    "name": "Pilot Bar",
+    "city": "Salamanca",
+    "sessionDurationMs": 18000000,
+    "languages": ["es_eu", "es_la"],
+    "active": true
+}

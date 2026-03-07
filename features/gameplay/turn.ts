@@ -1,5 +1,4 @@
 // features/gameplay/turn.ts
-import type { Card } from '@/features/questions/types';
 
 /**
  * Weighted random pick. Higher weight = higher probability.
@@ -32,8 +31,17 @@ export function applyDecay(weights: number[], picked: number, minWeight = 0.1): 
  * - legacy Card { type, target: { kind, strategy } }
  * - new GameCard adapter { type, __actors, __kind }
  */
+type CardLike = {
+    kind?: string;
+    type?: string;
+    target?: Record<string, unknown>;
+    __actors?: Record<string, number>;
+    actors?: Record<string, number>;
+    __kind?: string;
+};
+
 export function resolveTargetName(
-    card: any, // accept both shapes
+    card: CardLike,
     players: string[],
     turnIndex: number
 ): string | null {

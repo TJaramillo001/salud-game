@@ -26,7 +26,8 @@ export function useSwipe({ onSwipeLeft, onSwipeRight, threshold = 80 }: UseSwipe
 
     function onPointerUp() {
         if (Math.abs(dx) >= threshold) {
-            dx < 0 ? onSwipeLeft?.() : onSwipeRight?.();
+            if (dx < 0) onSwipeLeft?.();
+            else onSwipeRight?.();
         }
         setDx(0);
         startX.current = null;

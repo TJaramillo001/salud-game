@@ -1,5 +1,3 @@
-/* eslint-disable no-restricted-globals */
-
 // Derive VERSION from the registration URL's ?build=... param.
 // This lets us bust caches automatically per deploy/commit.
 const href = self.location && self.location.href ? self.location.href : '';

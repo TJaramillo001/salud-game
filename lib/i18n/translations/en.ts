@@ -75,6 +75,7 @@ const en: Translations = {
             home: 'Home',
             rate: 'Rate Salud',
         },
+        rateHint: 'Your feedback helps us improve the game 🙏',
         mode: {
             unknown: 'unknown',
             pre: 'Pre-drinks',
@@ -103,6 +104,38 @@ const en: Translations = {
     modes: {
         pre: { label: 'Pre-drinks', description: 'Warming up the engines for an unforgettable night.' },
         night_out: { label: 'Night Out', description: 'High vibes, interesting questions. Tonight we laugh.' },
+        couple: { label: 'Couples', description: 'Intimate challenges and questions for couples.' },
+        afterparty: { label: 'After-party', description: 'The party never ends. Cards for those who last.' },
+        bar: { label: 'Bar', description: 'Special cards for bar nights.' },
+    },
+    bar: {
+        notFound: 'Bar not found',
+        notFoundDesc: 'This QR code is not valid or the bar is not available.',
+        goHome: 'Go to homepage',
+        badge: 'Bar special',
+        landing: {
+            welcome: 'Welcome to {barName}!',
+            subtitle: 'Play Salud with all game modes unlocked.',
+            startPlaying: "Let's play!",
+            continueSession: 'Keep playing',
+            newSession: 'New session',
+        },
+        session: {
+            activeBanner: 'Playing at {barName}',
+            allUnlocked: 'All modes unlocked',
+            expiresIn: 'Active session — expires in {time}',
+        },
+        expired: {
+            title: 'Bar session ended',
+            description: 'Your premium access from {barName} has expired.',
+            subscribe: 'Get unlimited access',
+            continueFree: 'Continue with free mode',
+        },
+    },
+    mode: {
+        locked: 'Premium',
+        lockedDesc: 'Scan a bar QR code or subscribe to unlock.',
+        comingSoon: 'Coming soon',
     },
 };
 
