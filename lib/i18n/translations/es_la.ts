@@ -135,6 +135,12 @@ const es_la = {
         locked: 'Premium',
         lockedDesc: 'Escanea un QR de bar o suscríbete para desbloquear.',
         comingSoon: 'Próximamente',
+        password: {
+            title: 'Ingresa la contraseña',
+            placeholder: 'Contraseña',
+            submit: 'Desbloquear',
+            error: 'Contraseña incorrecta',
+        },
     },
 };
 

@@ -136,6 +136,12 @@ const es_eu: Translations = {
         locked: 'Premium',
         lockedDesc: 'Escanea un QR de bar o suscríbete para desbloquear.',
         comingSoon: 'Próximamente',
+        password: {
+            title: 'Introduce la contraseña',
+            placeholder: 'Contraseña',
+            submit: 'Desbloquear',
+            error: 'Contraseña incorrecta',
+        },
     },
 };
 

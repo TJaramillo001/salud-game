@@ -136,6 +136,12 @@ const it: Translations = {
         locked: 'Premium',
         lockedDesc: 'Scansiona un QR del bar o abbonati per sbloccare.',
         comingSoon: 'Prossimamente',
+        password: {
+            title: 'Inserisci la password',
+            placeholder: 'Password',
+            submit: 'Sblocca',
+            error: 'Password errata',
+        },
     },
 };
 

@@ -9,19 +9,21 @@ const FREE_MODES: Set<ModeKey> = new Set(['pre']);
 export function isModeAccessible(
     mode: ModeKey,
     barSession: BarSession | null,
-    // Future: premiumStatus?: PremiumStatus
+    passwordUnlocked?: boolean,
 ): boolean {
+    if (passwordUnlocked) return true;
     if (isBarSessionValid(barSession)) return true;
-    // Future: check premium subscription here
     return FREE_MODES.has(mode);
 }
 
-export type AccessReason = 'free' | 'bar' | 'locked';
+export type AccessReason = 'free' | 'bar' | 'password' | 'locked';
 
 export function getModeAccessReason(
     mode: ModeKey,
     barSession: BarSession | null,
+    passwordUnlocked?: boolean,
 ): AccessReason {
+    if (passwordUnlocked) return 'password';
     if (isBarSessionValid(barSession)) return 'bar';
     if (FREE_MODES.has(mode)) return 'free';
     return 'locked';

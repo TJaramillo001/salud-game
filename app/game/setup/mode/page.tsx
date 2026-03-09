@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { getPackByModeAndLanguage } from '@/features/questions/repository';
 import { useGameStore } from '@/providers/GameStoreProvider';
@@ -18,6 +18,8 @@ const COMING_SOON = [
     { key: 'bar', emoji: '🍻' },
 ];
 
+const UNLOCK_PASSWORD = 'YEAH!';
+
 export default function ModePage() {
     const router = useRouter();
     const { t } = useTranslation();
@@ -33,6 +35,13 @@ export default function ModePage() {
     type ModeEntry = { key: ModeKey; pack: Pack };
     const [modeEntries, setModeEntries] = useState<ModeEntry[]>([]);
     const [loading, setLoading] = useState(true);
+
+    // Password unlock state
+    const [passwordUnlocked, setPasswordUnlocked] = useState(false);
+    const [showPasswordModal, setShowPasswordModal] = useState<ModeKey | null>(null);
+    const [passwordInput, setPasswordInput] = useState('');
+    const [passwordError, setPasswordError] = useState(false);
+    const passwordInputRef = useRef<HTMLInputElement>(null);
 
     // Guard: must have players before picking a mode
     useEffect(() => {
@@ -63,7 +72,13 @@ export default function ModePage() {
     }, [selectedLanguage]);
 
     function choose(key: ModeKey) {
-        if (!isModeAccessible(key, barSession)) return;
+        if (!isModeAccessible(key, barSession, passwordUnlocked)) {
+            // Show password modal for locked modes
+            setShowPasswordModal(key);
+            setPasswordInput('');
+            setPasswordError(false);
+            return;
+        }
         if (isBarActive && barSession) {
             trackBarEvent('mode_selected', barSession.slug, null, {
                 mode: key,
@@ -73,6 +88,24 @@ export default function ModePage() {
         setMode(key);
         startNewSession();
         router.push('/game/play');
+    }
+
+    function handlePasswordSubmit() {
+        if (passwordInput === UNLOCK_PASSWORD) {
+            setPasswordUnlocked(true);
+            const modeToSelect = showPasswordModal;
+            setShowPasswordModal(null);
+            setPasswordInput('');
+            setPasswordError(false);
+            if (modeToSelect) {
+                // Directly start the game with the selected mode
+                setMode(modeToSelect);
+                startNewSession();
+                router.push('/game/play');
+            }
+        } else {
+            setPasswordError(true);
+        }
     }
 
     return (
@@ -94,8 +127,8 @@ export default function ModePage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl">
                     {modeEntries.map(({ key, pack }) => {
                         const isSelected = selectedMode === key;
-                        const accessible = isModeAccessible(key, barSession);
-                        const reason = getModeAccessReason(key, barSession);
+                        const accessible = isModeAccessible(key, barSession, passwordUnlocked);
+                        const reason = getModeAccessReason(key, barSession, passwordUnlocked);
                         const modeT = t.modes[key as keyof typeof t.modes];
                         const label = modeT?.label ?? key;
                         const description = modeT?.description;
@@ -103,10 +136,9 @@ export default function ModePage() {
                         return (
                             <button
                                 key={key}
-                                disabled={!accessible}
                                 className={[
                                     'rounded-xl border p-4 text-left transition',
-                                    accessible ? 'hover:shadow' : 'opacity-50 cursor-not-allowed',
+                                    accessible ? 'hover:shadow' : 'opacity-70',
                                     isSelected ? 'border-white/30 ring-2 ring-white/10' : 'border-neutral-700',
                                 ].join(' ')}
                                 onClick={() => choose(key)}
@@ -178,6 +210,58 @@ export default function ModePage() {
                     {t.setup.mode.back}
                 </Button>
             </div>
+
+            {/* Password unlock modal */}
+            {showPasswordModal && (
+                <div
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-6"
+                    onClick={() => setShowPasswordModal(null)}
+                >
+                    <div
+                        className="w-full max-w-sm rounded-2xl border border-neutral-700 bg-neutral-900 p-6"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <h2 className="text-lg font-semibold mb-4">{t.mode.password.title}</h2>
+                        <form
+                            onSubmit={(e) => {
+                                e.preventDefault();
+                                handlePasswordSubmit();
+                            }}
+                        >
+                            <input
+                                ref={passwordInputRef}
+                                type="text"
+                                autoFocus
+                                value={passwordInput}
+                                onChange={(e) => {
+                                    setPasswordInput(e.target.value);
+                                    setPasswordError(false);
+                                }}
+                                placeholder={t.mode.password.placeholder}
+                                className={[
+                                    'w-full rounded-lg border bg-neutral-800 px-4 py-3 text-sm text-white placeholder-neutral-500 outline-none transition',
+                                    passwordError ? 'border-red-500' : 'border-neutral-600 focus:border-neutral-400',
+                                ].join(' ')}
+                            />
+                            {passwordError && (
+                                <p className="mt-2 text-sm text-red-400">{t.mode.password.error}</p>
+                            )}
+                            <div className="mt-4 flex gap-3">
+                                <Button
+                                    type="button"
+                                    variant="ghost"
+                                    onClick={() => setShowPasswordModal(null)}
+                                >
+                                    {t.setup.mode.back}
+                                </Button>
+                                <Button type="submit">
+                                    {t.mode.password.submit}
+                                </Button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            )}
         </main>
     );
 }

@@ -136,6 +136,12 @@ const en: Translations = {
         locked: 'Premium',
         lockedDesc: 'Scan a bar QR code or subscribe to unlock.',
         comingSoon: 'Coming soon',
+        password: {
+            title: 'Enter password',
+            placeholder: 'Password',
+            submit: 'Unlock',
+            error: 'Wrong password',
+        },
     },
 };
 
