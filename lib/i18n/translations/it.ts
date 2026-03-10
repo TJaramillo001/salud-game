@@ -80,6 +80,7 @@ const it: Translations = {
             unknown: 'sconosciuto',
             pre: 'Pre-party',
             night_out: 'Serata fuori',
+            couple: 'Coppia',
         },
     },
     card: {
@@ -136,6 +137,7 @@ const it: Translations = {
         locked: 'Premium',
         lockedDesc: 'Scansiona un QR del bar o abbonati per sbloccare.',
         comingSoon: 'Prossimamente',
+        coupleRequires2: 'La modalità Coppia richiede esattamente 2 giocatori.',
         password: {
             title: 'Inserisci la password',
             placeholder: 'Password',

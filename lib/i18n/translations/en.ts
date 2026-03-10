@@ -80,6 +80,7 @@ const en: Translations = {
             unknown: 'unknown',
             pre: 'Pre-drinks',
             night_out: 'Night Out',
+            couple: 'Couples',
         },
     },
     card: {
@@ -136,6 +137,7 @@ const en: Translations = {
         locked: 'Premium',
         lockedDesc: 'Scan a bar QR code or subscribe to unlock.',
         comingSoon: 'Coming soon',
+        coupleRequires2: 'Couples mode requires exactly 2 players.',
         password: {
             title: 'Enter password',
             placeholder: 'Password',

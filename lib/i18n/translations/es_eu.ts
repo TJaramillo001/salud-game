@@ -80,6 +80,7 @@ const es_eu: Translations = {
             unknown: 'desconocido',
             pre: 'Pre',
             night_out: 'Salida nocturna',
+            couple: 'Pareja',
         },
     },
     card: {
@@ -136,6 +137,7 @@ const es_eu: Translations = {
         locked: 'Premium',
         lockedDesc: 'Escanea un QR de bar o suscríbete para desbloquear.',
         comingSoon: 'Próximamente',
+        coupleRequires2: 'El modo Pareja necesita exactamente 2 jugadores.',
         password: {
             title: 'Introduce la contraseña',
             placeholder: 'Contraseña',

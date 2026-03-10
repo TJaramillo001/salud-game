@@ -79,6 +79,7 @@ const es_la = {
             unknown: 'desconocido',
             pre: 'Pre',
             night_out: 'Rumba',
+            couple: 'Pareja',
         },
     },
     card: {
@@ -135,6 +136,7 @@ const es_la = {
         locked: 'Premium',
         lockedDesc: 'Escanea un QR de bar o suscríbete para desbloquear.',
         comingSoon: 'Próximamente',
+        coupleRequires2: 'El modo Pareja necesita exactamente 2 jugadores.',
         password: {
             title: 'Ingresa la contraseña',
             placeholder: 'Contraseña',

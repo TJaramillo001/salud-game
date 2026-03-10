@@ -1,0 +1,502 @@
+[
+  {
+    "id": "couple-it-001",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, qual è il ricordo più bello che hai con {B}?",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-002",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, cosa ti ha fatto innamorare di {A}?",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-003",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, dai un bacio sulla fronte a {B} e digli/dille qualcosa di dolce.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-004",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Se poteste viaggiare ovunque insieme domani, dove andreste?",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-005",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, guarda {A} negli occhi e digli/dille tre cose che ami di lui/lei.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-006",
+    "mode": "couple",
+    "kind": "wildcard",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Scambiatevi i telefoni per 60 secondi. L'altro può guardare l'ultima foto nella galleria!",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-007",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, qual è la cosa più divertente che {A} ha mai fatto senza rendersene conto?",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-008",
+    "mode": "couple",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Chi riesce a dire più complimenti all'altro in 30 secondi? Chi perde beve!",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-009",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Ballatevi insieme una canzone romantica. Se non ne avete una, cantatevela a vicenda!",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-010",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, se dovessi descrivere {B} con tre parole, quali sarebbero?",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-011",
+    "mode": "couple",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Chi sa imitare meglio l'altro? Fatelo! L'imitazione peggiore beve 2 sorsi.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-012",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, scrivi un messaggio dolce a {A} e leggilo ad alta voce.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-013",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, qual è una cosa che non hai mai detto a {B} ma che vorresti dirgli/dirle adesso?",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-014",
+    "mode": "couple",
+    "kind": "wildcard",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Fate un selfie insieme adesso! Deve essere la foto profilo di uno di voi per 24 ore.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-015",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, qual è il tuo appuntamento ideale con {A}?",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-016",
+    "mode": "couple",
+    "kind": "rule_on",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "NUOVA REGOLA: Da adesso dovete tenervi per mano. Chi si stacca beve!",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": "couple-rule-hold-hands"
+  },
+  {
+    "id": "couple-it-017",
+    "mode": "couple",
+    "kind": "rule_off",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "FINE REGOLA: Potete smettere di tenervi per mano... se volete 😏",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": "couple-rule-hold-hands"
+  },
+  {
+    "id": "couple-it-018",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Raccontate entrambi la vostra versione del primo bacio. Chi mente beve!",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-019",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, sussurra qualcosa di sexy all'orecchio di {B}.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-020",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, qual è la parte del corpo di {A} che preferisci? Sii specifico/a!",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-021",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, fai un massaggio al collo di {A} per 30 secondi.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-022",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, qual è la cosa più audace che hai mai fatto per impressionare {B}?",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-023",
+    "mode": "couple",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Gara di sguardi sensuali: chi ride per primo beve 3 sorsi!",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-024",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, bacia {B} come se fosse il vostro primo bacio.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-025",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, racconta il sogno più strano che hai fatto su {B}.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-026",
+    "mode": "couple",
+    "kind": "wildcard",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Gioco di ruolo! Per i prossimi 2 minuti fingete di essere al vostro primo appuntamento. Flirtate come se non vi conosceste!",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-027",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, cosa ti fa impazzire di {A} senza che lui/lei lo sappia?",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-028",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Bevete dallo stesso bicchiere contemporaneamente, senza staccare lo sguardo.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-029",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Ognuno dica il momento in cui ha pensato: 'Questa persona è speciale'. Se coincide, brindisi!",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-030",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, manda un vocale a un amico dicendo quanto è bello/a {A}. Mettilo in vivavoce!",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-031",
+    "mode": "couple",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Chi riesce a far arrossire l'altro per primo con una frase? Chi perde beve 2 sorsi!",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-032",
+    "mode": "couple",
+    "kind": "rule_on",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "NUOVA REGOLA: Dovete parlare solo sussurrando. Chi alza la voce beve!",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": "couple-rule-whisper"
+  },
+  {
+    "id": "couple-it-033",
+    "mode": "couple",
+    "kind": "rule_off",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "FINE REGOLA: Potete smettere di sussurrare. Siete tornati alla normalità!",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": "couple-rule-whisper"
+  },
+  {
+    "id": "couple-it-034",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, se dovessi descrivere come bacia {A} usando solo una parola, quale sarebbe?",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-035",
+    "mode": "couple",
+    "kind": "wildcard",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, chiudi gli occhi. {B} ti tocca in un punto a scelta. Devi indovinare dove! Se sbagli bevi 3 sorsi.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-036",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, prendi un cubetto di ghiaccio e passalo sulle labbra di {B}.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-037",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, qual è la fantasia più romantica che hai con {B}?",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-038",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, fai un body shot dal collo di {B}. Niente mani!",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-039",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, racconta a {A} la tua fantasia più segreta. Senza filtri!",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-040",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Baciatevi per 30 secondi senza fermarvi. Il primo che si stacca beve tutto il bicchiere!",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-041",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, qual è il posto più strano in cui vorresti farlo con {B}?",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-042",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, fai un lap dance di 20 secondi a {A}. Ci si mette il cuore!",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-043",
+    "mode": "couple",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Chi riesce a togliere un capo di abbigliamento all'altro solo con i denti? Il primo che fallisce beve!",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-044",
+    "mode": "couple",
+    "kind": "wildcard",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Scambiatevi un capo di abbigliamento. Dovete tenerlo addosso per le prossime 5 carte!",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-045",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Qual è la cosa più piccante che avete fatto insieme? Raccontatelo a turno — chi è più dettagliato vince!",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-046",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, benda {B} con qualcosa e bacialo/la in 5 posti diversi. Deve indovinare dove!",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-047",
+    "mode": "couple",
+    "kind": "rule_on",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "NUOVA REGOLA: Ogni volta che uno dei due parla, deve prima baciare l'altro!",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": "couple-rule-kiss-to-talk"
+  },
+  {
+    "id": "couple-it-048",
+    "mode": "couple",
+    "kind": "rule_off",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "FINE REGOLA: Non dovete più baciarvi prima di parlare. Ma nessuno vi vieta di continuare!",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": "couple-rule-kiss-to-talk"
+  },
+  {
+    "id": "couple-it-049",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, qual è il messaggio più provocante che hai mai mandato a {A}? Leggilo ad alta voce!",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-it-050",
+    "mode": "couple",
+    "kind": "wildcard",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Fate a turno: uno dice 'ti sfido a...' e l'altro deve farlo o bere 5 sorsi. Tre round ciascuno!",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  }
+]

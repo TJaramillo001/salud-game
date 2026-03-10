@@ -21,7 +21,7 @@ export type CardKind =
 
 export type Card = {
     id: string;
-    mode: 'pre' | 'night_out'; // add more modes as you introduce them
+    mode: 'pre' | 'night_out' | 'couple';
     kind: CardKind;
     target?: Target;
     text: string;

@@ -20,6 +20,12 @@ import nightOutItRaw from '@/data/packs/night_out_it.json';
 import preEnRaw from '@/data/packs/pre_en.json';
 import nightOutEnRaw from '@/data/packs/night_out_en.json';
 
+// Couple mode
+import coupleEsLaRaw from '@/data/packs/couple_es_la.json';
+import coupleEsEuRaw from '@/data/packs/couple_es_eu.json';
+import coupleItRaw from '@/data/packs/couple_it.json';
+import coupleEnRaw from '@/data/packs/couple_en.json';
+
 type PackRegistryEntry = {
     raw: unknown;
     id: string;
@@ -38,6 +44,10 @@ const PACK_REGISTRY: PackRegistryEntry[] = [
     { raw: nightOutEsEuRaw, id: 'night_out_es_eu', name: 'Rumba (España)',         mode: 'night_out', language: 'es_eu' },
     { raw: nightOutItRaw,   id: 'night_out_it',   name: 'Notte Fuori (Italiano)', mode: 'night_out', language: 'it'    },
     { raw: nightOutEnRaw,   id: 'night_out_en',   name: 'Night Out (English)',    mode: 'night_out', language: 'en'    },
+    { raw: coupleEsLaRaw,   id: 'couple_es_la',   name: 'Pareja (Latino)',        mode: 'couple',    language: 'es_la' },
+    { raw: coupleEsEuRaw,   id: 'couple_es_eu',   name: 'Pareja (España)',        mode: 'couple',    language: 'es_eu' },
+    { raw: coupleItRaw,     id: 'couple_it',      name: 'Coppia (Italiano)',      mode: 'couple',    language: 'it'    },
+    { raw: coupleEnRaw,     id: 'couple_en',      name: 'Couples (English)',      mode: 'couple',    language: 'en'    },
 ];
 
 /**
@@ -55,7 +65,7 @@ function asPack(raw: unknown, fallbackId: string, fallbackName: string): Pack {
     if (Array.isArray(raw)) {
         rawCards = raw;
         const firstMode = (raw[0] as Record<string, unknown>)?.mode;
-        if (firstMode === 'pre' || firstMode === 'night_out') id = firstMode;
+        if (firstMode === 'pre' || firstMode === 'night_out' || firstMode === 'couple') id = firstMode;
     } else {
         const maybe = raw as Partial<Pack>;
         if (

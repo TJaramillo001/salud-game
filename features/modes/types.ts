@@ -1,6 +1,6 @@
 // features/modes/types.ts
 
-export type ModeKey = 'pre' | 'night_out';
+export type ModeKey = 'pre' | 'night_out' | 'couple';
 
 export interface ModeMeta {
     key: ModeKey;
@@ -25,11 +25,18 @@ export const MODES = {
         emoji: '🌃',
         color: 'violet',
     },
+    couple: {
+        key: 'couple',
+        label: 'Pareja',
+        description: 'Retos y preguntas íntimas para parejas.',
+        emoji: '💑',
+        color: 'rose',
+    },
 } satisfies Record<ModeKey, ModeMeta>;
 
 /** Type guard for anything coming from query/localStorage */
 export function isModeKey(v: unknown): v is ModeKey {
-    return v === 'pre' || v === 'night_out';
+    return v === 'pre' || v === 'night_out' || v === 'couple';
 }
 
 export const MODE_STORAGE_KEY = 'salud:selectedMode';

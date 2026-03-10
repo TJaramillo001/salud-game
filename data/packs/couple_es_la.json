@@ -1,0 +1,502 @@
+[
+  {
+    "id": "couple-001",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, ¿cuál fue tu primera impresión de {B}? Sé honesto/a.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-002",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, ¿qué es lo que más te atrajo de {B} la primera vez que se vieron?",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-003",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} y {B}, mírense a los ojos durante 30 segundos sin reírse. El que se ría, toma.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-004",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, ¿cuál es tu recuerdo favorito con {A}?",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-005",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, dile a {B} tres cosas que amas de él/ella. Sin pensarlo mucho.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-006",
+    "mode": "couple",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "¿Quién es más celoso/a? {A} y {B} señalen al mismo tiempo. Si no coinciden, ambos toman.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-007",
+    "mode": "couple",
+    "kind": "wildcard",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} y {B}, intercambien celulares por 1 minuto. Pueden ver lo que quieran. 👀",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-008",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, ¿qué es algo que nunca te has atrevido a pedirle a {B}?",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-009",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, dale un beso a {A} en el lugar que más le gusta... y no vale la boca.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-010",
+    "mode": "couple",
+    "kind": "rule_on",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "¡Nueva regla! {A} y {B} deben hablar susurrándose al oído hasta que se cancele esta regla.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": "couple-whisper"
+  },
+  {
+    "id": "couple-011",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, describe con detalle cómo fue su primer beso con {A}.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-012",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, hazle un masaje de 30 segundos a {B} en los hombros. Con ganas, ¿eh?",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-013",
+    "mode": "couple",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Batalla de piropos: {A} y {B} se turnan diciendo piropos. El que se quede sin ideas, toma 3 tragos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-014",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, si pudieras revivir un momento con {B}, ¿cuál sería y por qué?",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-015",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} y {B}, bailen juntos una canción imaginaria. Bien pegaditos.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-016",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, ¿cuál es la fantasía más loca que tienes con {A}? Mínimo un detalle.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-017",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, hazle un body shot a {B}. Sin excusas.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-018",
+    "mode": "couple",
+    "kind": "wildcard",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} y {B}, escriban en secreto lo que más les prende del otro. Lean en voz alta al mismo tiempo.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-019",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, ¿en qué lugar público les gustaría hacer algo que no deberían? 😏",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-020",
+    "mode": "couple",
+    "kind": "rule_off",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Se acabó la regla de susurrar. Ya pueden hablar normal... por ahora.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": "couple-whisper"
+  },
+  {
+    "id": "couple-021",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, siéntate en las piernas de {A} hasta la próxima carta.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-022",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, ¿qué hace {A} que te vuelve loco/a sin que él/ella lo sepa?",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-023",
+    "mode": "couple",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "¿Quién aguanta más sin reírse? {A} intenta hacer reír a {B} por 20 segundos, luego al revés. El que pierde, toma.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-024",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, susúrrale algo al oído a {B} que lo/la haga sonrojarse.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-025",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, ¿cuál es el lugar más random donde han tenido un momento íntimo?",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-026",
+    "mode": "couple",
+    "kind": "rule_on",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "¡Nueva regla! {A} y {B} deben mantener contacto físico en todo momento hasta que se cancele.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": "couple-touch"
+  },
+  {
+    "id": "couple-027",
+    "mode": "couple",
+    "kind": "wildcard",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, imita cómo crees que {A} te ve cuando duermes. Si {A} se ríe, {B} toma.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-028",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} y {B}, dense un beso de película de 10 segundos. Con todo y soundtrack imaginario.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-029",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, si {A} pudiera mejorar algo en la intimidad, ¿qué le pedirías?",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-030",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, pásale un hielo por el cuello a {B}. Despacio.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-031",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, ¿cuál es la canción que te recuerda a {B} y por qué?",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-032",
+    "mode": "couple",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "¿Quién manda en la relación? {A} y {B}, digan su respuesta al mismo tiempo. Si no coinciden, ambos toman 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-033",
+    "mode": "couple",
+    "kind": "rule_off",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Se acabó la regla de contacto físico. Pero apuesto que no quieren soltarse. 😏",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": "couple-touch"
+  },
+  {
+    "id": "couple-034",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, dale a {A} un beso en donde tú quieras. Sorpréndelo/a.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-035",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, ¿cuál fue el momento en que supiste que {A} era especial?",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-036",
+    "mode": "couple",
+    "kind": "wildcard",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, llama a un amigo y dile lo mucho que quieres a {B}. Con speaker. Si no te atreves, toma 5.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-037",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, actúa la escena de cómo le pedirías matrimonio a {B}. Con toda la emoción.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-038",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, ¿qué parte del cuerpo de {B} te parece irresistible?",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-039",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, baila sensualmente para {A} durante 15 segundos. Sin pena.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-040",
+    "mode": "couple",
+    "kind": "rule_on",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "¡Nueva regla! Cada vez que alguien diga el nombre del otro, tiene que darle un beso. Hasta que se cancele.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": "couple-kiss-name"
+  },
+  {
+    "id": "couple-041",
+    "mode": "couple",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "¿Quién besa mejor? Cada uno demuestra su mejor beso. El otro califica del 1 al 10. El que saque menos, toma.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-042",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, confiesa: ¿alguna vez stalkeaste las redes de {A} antes de que fueran pareja?",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-043",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} y {B}, tómense una selfie besándose ahora mismo. La tienen que publicar en stories.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-044",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, sin filtro: ¿qué es lo más caliente que {B} ha hecho alguna vez?",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-045",
+    "mode": "couple",
+    "kind": "wildcard",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Reto creativo: {A} y {B} tienen 1 minuto para crear un handshake secreto de pareja. Lo tienen que usar el resto de la noche.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-046",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, mordisquéale la oreja a {A}. Con cariño... o no.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-047",
+    "mode": "couple",
+    "kind": "rule_off",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Se acabó la regla de beso al decir el nombre. ¿Cuántos besos se dieron?",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": "couple-kiss-name"
+  },
+  {
+    "id": "couple-048",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, ¿dónde ves a {A} y a ti en 5 años? Sé sincero/a.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-049",
+    "mode": "couple",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "¿Quién dijo 'te quiero' primero? Si no se ponen de acuerdo, ambos toman 3 tragos.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-050",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} y {B}, dense el beso más largo que puedan. Mínimo 20 segundos. Eso sí, tómense un trago antes.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  }
+]

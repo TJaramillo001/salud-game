@@ -13,7 +13,6 @@ import type { Pack } from '@/features/questions/types';
 import { trackBarEvent } from '@/lib/barAnalytics';
 
 const COMING_SOON = [
-    { key: 'couple', emoji: '💑' },
     { key: 'afterparty', emoji: '🌅' },
     { key: 'bar', emoji: '🍻' },
 ];
@@ -72,6 +71,7 @@ export default function ModePage() {
     }, [selectedLanguage]);
 
     function choose(key: ModeKey) {
+        if (key === 'couple' && players.length !== 2) return;
         if (!isModeAccessible(key, barSession, passwordUnlocked)) {
             // Show password modal for locked modes
             setShowPasswordModal(key);
@@ -129,6 +129,7 @@ export default function ModePage() {
                         const isSelected = selectedMode === key;
                         const accessible = isModeAccessible(key, barSession, passwordUnlocked);
                         const reason = getModeAccessReason(key, barSession, passwordUnlocked);
+                        const coupleBlocked = key === 'couple' && players.length !== 2;
                         const modeT = t.modes[key as keyof typeof t.modes];
                         const label = modeT?.label ?? key;
                         const description = modeT?.description;
@@ -138,7 +139,8 @@ export default function ModePage() {
                                 key={key}
                                 className={[
                                     'rounded-xl border p-4 text-left transition',
-                                    accessible ? 'hover:shadow' : 'opacity-70',
+                                    accessible && !coupleBlocked ? 'hover:shadow' : 'opacity-70',
+                                    coupleBlocked ? 'cursor-not-allowed' : '',
                                     isSelected ? 'border-white/30 ring-2 ring-white/10' : 'border-neutral-700',
                                 ].join(' ')}
                                 onClick={() => choose(key)}
@@ -147,12 +149,12 @@ export default function ModePage() {
                                     <div>
                                         <div className="flex items-center gap-2">
                                             <span className="text-lg font-medium">{label}</span>
-                                            {reason === 'locked' && (
+                                            {reason === 'locked' && !coupleBlocked && (
                                                 <span className="rounded-full bg-neutral-700 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-neutral-300">
                                                     {t.mode.locked}
                                                 </span>
                                             )}
-                                            {reason === 'bar' && (
+                                            {reason === 'bar' && !coupleBlocked && (
                                                 <span className="rounded-full bg-amber-500/20 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-amber-300">
                                                     🍻
                                                 </span>
@@ -162,16 +164,19 @@ export default function ModePage() {
                                             {t.setup.mode.cards.replace('{count}', String(pack.cards.length))}
                                         </div>
                                     </div>
-                                    {isSelected && accessible && (
+                                    {isSelected && accessible && !coupleBlocked && (
                                         <span className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-white/20">
                                             ✓
                                         </span>
                                     )}
                                 </div>
-                                {accessible && description && (
+                                {coupleBlocked && (
+                                    <p className="mt-2 text-sm text-neutral-500">{t.mode.coupleRequires2}</p>
+                                )}
+                                {!coupleBlocked && accessible && description && (
                                     <p className="mt-2 text-sm text-neutral-400">{description}</p>
                                 )}
-                                {!accessible && (
+                                {!coupleBlocked && !accessible && (
                                     <p className="mt-2 text-sm text-neutral-500">{t.mode.lockedDesc}</p>
                                 )}
                             </button>

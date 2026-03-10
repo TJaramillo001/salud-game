@@ -1,7 +1,7 @@
 // features/questions/schemas.ts
 import type { Card, CardKind } from './types';
 
-const VALID_MODES = new Set(['pre', 'night_out']);
+const VALID_MODES = new Set(['pre', 'night_out', 'couple']);
 const VALID_KINDS = new Set<CardKind>([
     'action',
     'question',

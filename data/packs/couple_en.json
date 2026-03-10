@@ -1,0 +1,502 @@
+[
+  {
+    "id": "couple-en-001",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, what was the first thing you noticed about {B}?",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-002",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, what's your favorite memory with {A} so far?",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-003",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, give {B} a genuine compliment while looking into their eyes. Take 2 sips if you break eye contact.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-004",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Both of you: say your favorite thing about each other on the count of three. If you say the same category, drink 3 sips each!",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-005",
+    "mode": "couple",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: who can say the most pet names for each other in 15 seconds? Loser drinks 3.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-006",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, slow dance with {A} for 30 seconds — no music allowed, just vibes.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-007",
+    "mode": "couple",
+    "kind": "wildcard",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Both of you: unlock each other's phones and read the last text you sent about the other person. No deleting first!",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-008",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, what song reminds you of {A} and why?",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-009",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, write something sweet about {B} on their arm with your finger. {B} has to guess what you wrote.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-010",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, where do you see yourself with {B} in five years? Be honest.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-011",
+    "mode": "couple",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: who can name more of the other's friends? Loser takes 3 sips.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-012",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, feed {A} a snack or a sip of their drink with your eyes closed.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-013",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Both answer: what's one habit of the other that secretly drives you crazy? Say it at the same time!",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-014",
+    "mode": "couple",
+    "kind": "wildcard",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, send {B} the most embarrassing selfie you can take right now. They have to post it on their story for 5 min — or both drink 5.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-015",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, what's one thing you've never told {A} but always wanted to?",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-016",
+    "mode": "couple",
+    "kind": "rule_on",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "NEW RULE: {A} and {B} must hold hands from now on. Every time you let go, both drink 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": "couple-hold-hands"
+  },
+  {
+    "id": "couple-en-017",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, describe your first kiss with {B}. What were you thinking?",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-018",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, give {A} a 30-second neck massage. {A} rates it 1-10 — if it's under 7, {B} drinks.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-019",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, what's the most attractive thing {A} does without realizing it?",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-020",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, whisper something in {B}'s ear that will make them blush. If {B} doesn't blush, you drink 3.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-021",
+    "mode": "couple",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: staring contest. First to blink takes a body shot off the other.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-022",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, what's a secret fantasy you haven't told {B} about yet? Drink 3 if you chicken out.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-023",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Kiss for 10 seconds. If either of you pulls away early, the quitter finishes their drink.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-024",
+    "mode": "couple",
+    "kind": "wildcard",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, do your best impression of {A} when they're flirting. {A}, rate the accuracy — drink the rating number in sips.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-025",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, what outfit of {A}'s drives you the most crazy? Describe it in detail.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-026",
+    "mode": "couple",
+    "kind": "rule_on",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "NEW RULE: from now on, you must speak only in whispers. Anyone who raises their voice drinks 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": "couple-whispers"
+  },
+  {
+    "id": "couple-en-027",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, trace a word on {B}'s back with your finger. If {B} guesses it within 3 tries, {A} drinks. Otherwise {B} drinks.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-028",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, what's the most jealous you've ever been because of {B}? Spill.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-029",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, send a voice note to your best friend saying how hot {A} is right now. Play it on speaker.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-030",
+    "mode": "couple",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: who said 'I love you' first? The one who didn't say it first drinks 3.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-031",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Both answer at the same time: what's {A}'s biggest turn-on? If you disagree, both drink 4.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-032",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, if you could relive one night with {A}, which one would it be and why?",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-033",
+    "mode": "couple",
+    "kind": "wildcard",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, change {B}'s contact name in your phone to something flirty. It stays for 24 hours.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-034",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, put on {B}'s favorite song and give them a lap dance for 20 seconds. No laughing or both drink 5.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-035",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, on a scale of 1-10, how good of a kisser is {B}? Explain your rating. {B} drinks the difference from 10.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-036",
+    "mode": "couple",
+    "kind": "rule_off",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "RULE OVER: you can let go of each other's hands now. Celebrate with a kiss or drink 2 each.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": "couple-hold-hands"
+  },
+  {
+    "id": "couple-en-037",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, take a body shot off {A}. No hands allowed.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-038",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, what's the wildest place you'd want to hook up with {B}? Drink 2 if you've already done it.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-039",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, blindfold yourself and let {B} feed you something. If you guess what it is, {B} removes one accessory. If not, you drink 3.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-040",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, describe in detail the hottest dream you've ever had about {A}. Skip and drink 5.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-041",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Ice cube challenge: {A} puts an ice cube in their mouth and passes it to {B}. Keep passing until it melts.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-042",
+    "mode": "couple",
+    "kind": "rule_on",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "NEW RULE: every time you answer a question, you must maintain eye contact with the other. Break eye contact = drink 3.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": "couple-eye-contact"
+  },
+  {
+    "id": "couple-en-043",
+    "mode": "couple",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A} vs {B}: sexy face-off. Both make your sexiest face. The loser (by mutual agreement or coin flip) drinks 4.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-044",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, give {A} a hickey somewhere visible. If you refuse, finish your drink.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-045",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Both answer: what's one thing you want to try together that you've been too shy to bring up? Say it at the same time.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-046",
+    "mode": "couple",
+    "kind": "wildcard",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, roleplay: pretend you're meeting {B} for the first time at a bar. You have 30 seconds to get their number. Go.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-047",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A"], "constraints": { "distinct": true } },
+    "text": "{A}, kiss {B} somewhere they don't expect. If {B} flinches, they drink 3. If they don't, you drink 3.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-048",
+    "mode": "couple",
+    "kind": "wildcard",
+    "target": { "roles": ["B"], "constraints": { "distinct": true } },
+    "text": "{B}, text {A}'s mom or best friend: 'We're having an amazing night 😏'. Screenshot as proof or drink 5.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-en-049",
+    "mode": "couple",
+    "kind": "rule_off",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "RULE OVER: you can stop whispering now. Scream something nice about each other instead!",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": "couple-whispers"
+  },
+  {
+    "id": "couple-en-050",
+    "mode": "couple",
+    "kind": "rule_off",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "RULE OVER: the eye contact rule is done. Kiss to celebrate or drink 3 each.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": "couple-eye-contact"
+  }
+]

@@ -1,0 +1,502 @@
+[
+  {
+    "id": "couple-eu-001",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A}, \u00bfcu\u00e1l fue tu primera impresi\u00f3n de {B}? S\u00e9 sincero/a, \u00a1sin filtros!",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-002",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{B}, \u00bfqu\u00e9 es lo que m\u00e1s te mola de {A} que nunca le has dicho?",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-003",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A}, dale un beso a {B} en el sitio que m\u00e1s te guste de su cara",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-004",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A}, \u00bfen qu\u00e9 momento supiste que {B} te flipaba de verdad?",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-005",
+    "mode": "couple",
+    "kind": "wildcard",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Los dos ten\u00e9is 30 segundos para decir cosas que os gustan del otro. El que se quede sin ideas primero bebe 3 tragos",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-006",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{B}, ponle a {A} la canci\u00f3n que te recuerda a vuestra historia y bailad juntos",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-007",
+    "mode": "couple",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "\u00bfQui\u00e9n recuerda mejor la fecha de vuestro primer beso? El que falle bebe 2 tragos",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-008",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{B}, \u00bfcu\u00e1l ha sido el detalle m\u00e1s bonito que {A} ha tenido contigo?",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-009",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A}, escr\u00edbele un mensaje cursi a {B} por WhatsApp ahora mismo. \u00a1Los dos lo le\u00e9is en alto!",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-010",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A}, si pudierais viajar a cualquier sitio juntos ma\u00f1ana, \u00bfad\u00f3nde ir\u00edas y por qu\u00e9?",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-011",
+    "mode": "couple",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Cada uno dice la comida favorita del otro. Si fallas, bebes 2 tragos",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-012",
+    "mode": "couple",
+    "kind": "wildcard",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Desbloqu\u00e9ais un recuerdo: contad el momento m\u00e1s vergonzoso que hab\u00e9is vivido juntos. Si no os pon\u00e9is de acuerdo, beb\u00e9is los dos",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-013",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A}, mira a {B} a los ojos durante 30 segundos sin re\u00edros. El que se r\u00eda bebe 3 tragos",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-014",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{B}, \u00bfqu\u00e9 man\u00eda de {A} te parece adorable aunque sea un poco rara?",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-015",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{B}, dale un abrazo a {A} de al menos 20 segundos. Sin soltaros",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-016",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A}, \u00bfqu\u00e9 es lo que m\u00e1s morbo te da de {B}?",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-017",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{B}, dale un masaje de 30 segundos a {A} en el cuello. Sin prisas",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-018",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A}, describe vuestro primer beso con todo detalle. {B} corrige si falta algo",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-019",
+    "mode": "couple",
+    "kind": "rule_on",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "NUEVA REGLA: A partir de ahora, {A} y {B} solo pod\u00e9is hablar susurr\u00e1ndoos al o\u00eddo",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": "couple-whisper"
+  },
+  {
+    "id": "couple-eu-020",
+    "mode": "couple",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "\u00bfQui\u00e9n es m\u00e1s celoso/a? Se\u00f1al\u00e1os mutuamente. Si no coincid\u00eds, los dos beb\u00e9is 3 tragos",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-021",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A}, besa a {B} en el cuello durante 5 segundos. Si alguno se r\u00ede, beb\u00e9is los dos",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-022",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{B}, \u00bfcu\u00e1l es tu fantas\u00eda con {A} que a\u00fan no hab\u00e9is cumplido?",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-023",
+    "mode": "couple",
+    "kind": "wildcard",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Intercambiad los m\u00f3viles durante 1 minuto. Pod\u00e9is mirar lo que quer\u00e1is. Si alguien se niega, bebe 5 tragos",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-024",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A}, sus\u00farrale algo al o\u00eddo a {B} que le ponga los pelos de punta",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-025",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A}, \u00bfqu\u00e9 prenda de ropa de {B} te vuelve loco/a?",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-026",
+    "mode": "couple",
+    "kind": "rule_on",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "NUEVA REGLA: {A} y {B} ten\u00e9is que mantener contacto f\u00edsico en todo momento (mano, pierna, lo que sea)",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": "couple-touch"
+  },
+  {
+    "id": "couple-eu-027",
+    "mode": "couple",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "\u00bfQui\u00e9n liga m\u00e1s en una noche fuera? Debatid 30 segundos y luego decidid. El perdedor bebe 3 tragos",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-028",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{B}, hazle un baile sexy de 15 segundos a {A}. Sin cortarte, \u00a1que estamos en confianza!",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-029",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{B}, \u00bfen qu\u00e9 sitio inesperado te gustar\u00eda enrollaros?",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-030",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A}, \u00bfqu\u00e9 har\u00edas si {B} te propusiera hacer un tr\u00edo? Responde con total sinceridad",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-031",
+    "mode": "couple",
+    "kind": "wildcard",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Roleplaying expr\u00e9s: {A} es el/la camarero/a y {B} intenta ligar. Ten\u00e9is 30 segundos. Si {A} se r\u00ede, bebe 3 tragos",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-032",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A}, pasa un hielo por los labios de {B}. Si no ten\u00e9is hielo, usad el dedo con agua fr\u00eda",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-033",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A}, confiesa: \u00bfhas stalkeado alguna vez el Instagram de un/a ex de {B}?",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-034",
+    "mode": "couple",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "\u00bfQui\u00e9n tarda m\u00e1s en arreglarse para salir? Discutidlo. El que pierda se termina la copa",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-035",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{B}, mu\u00e9rdele suavemente el labio inferior a {A}. Si os cort\u00e1is, beb\u00e9is 4 tragos cada uno",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-036",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{B}, describe la parte del cuerpo de {A} que m\u00e1s te pone. Con detalles, \u00a1no vale ser vago/a!",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-037",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Body shot: {A} echa un trago en el cuello de {B} y lo bebe de ah\u00ed. O los dos beb\u00e9is 5 tragos",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-038",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A}, cuenta tu sue\u00f1o m\u00e1s subido de tono con {B}. Sin censura",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-039",
+    "mode": "couple",
+    "kind": "rule_on",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "NUEVA REGLA: Cada vez que avanc\u00e9is de carta, os ten\u00e9is que dar un morreo. Sin excusas",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": "couple-kiss"
+  },
+  {
+    "id": "couple-eu-040",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A}, qu\u00edtale una prenda a {B} usando solo los dientes. Si no os atrev\u00e9is, cada uno bebe 5 tragos",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-041",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{B}, \u00bfcu\u00e1l ha sido el mejor polvo que hab\u00e9is echado? Describe el momento",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-042",
+    "mode": "couple",
+    "kind": "wildcard",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{B} elige una canci\u00f3n sexy. {A} tiene que hacerle un lap dance de 20 segundos. Si se niega, bebe 6 tragos",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-043",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{B}, p\u00e1sale un cubito de hielo por el abdomen a {A}. Si no hay hielo, usa los dedos fr\u00edos mojados",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-044",
+    "mode": "couple",
+    "kind": "question",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A}, di tres cosas que te gustar\u00eda probar con {B} en la cama. Sin verg\u00fcenza",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-045",
+    "mode": "couple",
+    "kind": "rule_off",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Se acab\u00f3 la regla: ya pod\u00e9is dejar de susurrar. \u00a1Pero seguro que molaba!",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": "couple-whisper"
+  },
+  {
+    "id": "couple-eu-046",
+    "mode": "couple",
+    "kind": "rule_off",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Se acab\u00f3 la regla: ya no ten\u00e9is que mantener contacto f\u00edsico. \u00bfO prefer\u00eds seguir?",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": "couple-touch"
+  },
+  {
+    "id": "couple-eu-047",
+    "mode": "couple",
+    "kind": "rule_off",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Se acab\u00f3 la regla: ya no hace falta morreo entre carta y carta. Aunque nadie os proh\u00edbe seguir",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": "couple-kiss"
+  },
+  {
+    "id": "couple-eu-048",
+    "mode": "couple",
+    "kind": "versus",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Ronda de piropos subidos de tono: altern\u00e1is uno cada uno. El que se quede sin ideas o se ponga rojo bebe 4 tragos",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-049",
+    "mode": "couple",
+    "kind": "action",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "{A}, v\u00e9ndale los ojos a {B} y b\u00e9sale en 3 sitios diferentes. {B} tiene que adivinar d\u00f3nde",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  },
+  {
+    "id": "couple-eu-050",
+    "mode": "couple",
+    "kind": "wildcard",
+    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "text": "Verdad o atrevimiento extremo: {B} elige. Si {A} no cumple el atrevimiento, se quita una prenda. Si no dice la verdad, bebe 5 tragos",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null
+  }
+]
