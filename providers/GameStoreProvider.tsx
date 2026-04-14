@@ -106,6 +106,8 @@ const initialState: GameState = {
     selectedMode: null,
     selectedLanguage: null,
     barSession: null,
+    cardsSwiped: 0,
+    drinksNudged: 0,
 };
 
 // ---------- Reducer ----------
@@ -169,6 +171,13 @@ function reducer(state: GameState, action: GameAction): GameState {
         }
         case 'CLEAR_BAR_SESSION': {
             return { ...state, barSession: null };
+        }
+        case 'INCREMENT_COUNTERS': {
+            return {
+                ...state,
+                cardsSwiped: state.cardsSwiped + action.cards,
+                drinksNudged: state.drinksNudged + action.drinks,
+            };
         }
         default:
             return state;

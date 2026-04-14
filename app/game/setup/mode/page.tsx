@@ -17,7 +17,7 @@ const COMING_SOON = [
     { key: 'bar', emoji: '🍻' },
 ];
 
-const UNLOCK_PASSWORD = 'YEAH!';
+const UNLOCK_PASSWORDS = new Set(['YEAH!', 'amigo', 'tj', '8664']);
 
 export default function ModePage() {
     const router = useRouter();
@@ -91,7 +91,7 @@ export default function ModePage() {
     }
 
     function handlePasswordSubmit() {
-        if (passwordInput === UNLOCK_PASSWORD) {
+        if (UNLOCK_PASSWORDS.has(passwordInput)) {
             setPasswordUnlocked(true);
             const modeToSelect = showPasswordModal;
             setShowPasswordModal(null);
