@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { getPackByModeAndLanguage } from '@/features/questions/repository';
 import { useGameStore } from '@/providers/GameStoreProvider';
@@ -37,10 +37,7 @@ export default function ModePage() {
 
     // Password unlock state
     const [passwordUnlocked, setPasswordUnlocked] = useState(false);
-    const [showPasswordModal, setShowPasswordModal] = useState<ModeKey | null>(null);
     const [passwordInput, setPasswordInput] = useState('');
-    const [passwordError, setPasswordError] = useState(false);
-    const passwordInputRef = useRef<HTMLInputElement>(null);
 
     // Guard: must have players before picking a mode
     useEffect(() => {
@@ -72,13 +69,7 @@ export default function ModePage() {
 
     function choose(key: ModeKey) {
         if (key === 'couple' && players.length !== 2) return;
-        if (!isModeAccessible(key, barSession, passwordUnlocked)) {
-            // Show password modal for locked modes
-            setShowPasswordModal(key);
-            setPasswordInput('');
-            setPasswordError(false);
-            return;
-        }
+        if (!isModeAccessible(key, barSession, passwordUnlocked)) return;
         if (isBarActive && barSession) {
             trackBarEvent('mode_selected', barSession.slug, null, {
                 mode: key,
@@ -90,21 +81,10 @@ export default function ModePage() {
         router.push('/game/play');
     }
 
-    function handlePasswordSubmit() {
-        if (UNLOCK_PASSWORDS.has(passwordInput)) {
+    function handlePasswordChange(value: string) {
+        setPasswordInput(value);
+        if (UNLOCK_PASSWORDS.has(value)) {
             setPasswordUnlocked(true);
-            const modeToSelect = showPasswordModal;
-            setShowPasswordModal(null);
-            setPasswordInput('');
-            setPasswordError(false);
-            if (modeToSelect) {
-                // Directly start the game with the selected mode
-                setMode(modeToSelect);
-                startNewSession();
-                router.push('/game/play');
-            }
-        } else {
-            setPasswordError(true);
         }
     }
 
@@ -210,63 +190,27 @@ export default function ModePage() {
                 </div>
             )}
 
-            <div className="mt-6">
+            {/* Inline password unlock */}
+            {!passwordUnlocked && !isBarActive && (
+                <div className="mt-6 max-w-xl">
+                    <input
+                        type="text"
+                        value={passwordInput}
+                        onChange={(e) => handlePasswordChange(e.target.value)}
+                        placeholder={t.mode.password.placeholder}
+                        className="w-full rounded-lg border border-neutral-700 bg-neutral-800 px-4 py-3 text-sm text-white placeholder-neutral-500 outline-none transition focus:border-neutral-400"
+                    />
+                </div>
+            )}
+            {passwordUnlocked && !isBarActive && (
+                <p className="mt-6 text-sm text-emerald-400">✓ {t.mode.password.submit}</p>
+            )}
+
+            <div className="mt-4">
                 <Button variant="ghost" onClick={() => router.back()}>
                     {t.setup.mode.back}
                 </Button>
             </div>
-
-            {/* Password unlock modal */}
-            {showPasswordModal && (
-                <div
-                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-6"
-                    onClick={() => setShowPasswordModal(null)}
-                >
-                    <div
-                        className="w-full max-w-sm rounded-2xl border border-neutral-700 bg-neutral-900 p-6"
-                        onClick={(e) => e.stopPropagation()}
-                    >
-                        <h2 className="text-lg font-semibold mb-4">{t.mode.password.title}</h2>
-                        <form
-                            onSubmit={(e) => {
-                                e.preventDefault();
-                                handlePasswordSubmit();
-                            }}
-                        >
-                            <input
-                                ref={passwordInputRef}
-                                type="text"
-                                autoFocus
-                                value={passwordInput}
-                                onChange={(e) => {
-                                    setPasswordInput(e.target.value);
-                                    setPasswordError(false);
-                                }}
-                                placeholder={t.mode.password.placeholder}
-                                className={[
-                                    'w-full rounded-lg border bg-neutral-800 px-4 py-3 text-sm text-white placeholder-neutral-500 outline-none transition',
-                                    passwordError ? 'border-red-500' : 'border-neutral-600 focus:border-neutral-400',
-                                ].join(' ')}
-                            />
-                            {passwordError && (
-                                <p className="mt-2 text-sm text-red-400">{t.mode.password.error}</p>
-                            )}
-                            <div className="mt-4 flex gap-3">
-                                <Button
-                                    type="button"
-                                    variant="ghost"
-                                    onClick={() => setShowPasswordModal(null)}
-                                >
-                                    {t.setup.mode.back}
-                                </Button>
-                                <Button type="submit">
-                                    {t.mode.password.submit}
-                                </Button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            )}
         </main>
     );
 }
