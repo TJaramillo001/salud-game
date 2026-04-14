@@ -48,6 +48,10 @@ export type GameState = {
 
     // Bar session (QR-activated premium)
     barSession: BarSession | null;
+
+    // Session counters
+    cardsSwiped: number;
+    drinksNudged: number;
 };
 
 export type GameAction =
@@ -62,7 +66,8 @@ export type GameAction =
     | { type: 'RESET_RUNTIME' }
     | { type: 'MARK_SEEN'; cardId: string }
     | { type: 'SET_BAR_SESSION'; session: BarSession }
-    | { type: 'CLEAR_BAR_SESSION' };
+    | { type: 'CLEAR_BAR_SESSION' }
+    | { type: 'INCREMENT_COUNTERS'; cards: number; drinks: number };
 
 type GameDispatch = (action: GameAction) => void;
 

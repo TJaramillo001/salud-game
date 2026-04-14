@@ -24,9 +24,9 @@ export type RuleWindow = { min: number; max: number };
 export function scheduleRulePairs(
     deck: Card[],
     seed: number,
-    // Place rule_off 8–15 cards after its rule_on: long enough for the rule to matter,
+    // Place rule_off 3–10 cards after its rule_on: long enough for the rule to matter,
     // short enough that it never dominates an entire game session.
-    window: RuleWindow = { min: 8, max: 15 }
+    window: RuleWindow = { min: 3, max: 10 }
 ): Card[] {
     const rnd = mulberry32(seed);
     const out: Card[] = [];
