@@ -3,1000 +3,1540 @@
     "id": "night-eu-001",
     "mode": "night_out",
     "kind": "rule_on",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Nueva regla: nadie puede decir «tío» ni «tía». Quien falle bebe 2 tragos.",
     "spice": 2,
     "weight": 1,
-    "ruleId": "r-tio"
+    "ruleId": "r-tio",
+    "drink_count": 2
   },
   {
     "id": "night-eu-002",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, llama a alguien del grupo con el apodo más ridículo que se te ocurra. Si se ríen todos, {A} reparte 3 tragos. Si no, bebe 3.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "night-eu-003",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, ¿has ligado en una discoteca de Salamanca? Si es que sí, reparte 2 tragos. Si no, bebe 2.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-004",
     "mode": "night_out",
     "kind": "group",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Votad: ¿Botellón o discoteca? La minoría bebe 3 tragos.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "night-eu-005",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, haz una imitación de alguien famoso. Si el grupo adivina quién es en 10 segundos, {A} reparte 3 tragos. Si no, bebe 3.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "night-eu-006",
     "mode": "night_out",
     "kind": "versus",
-    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} y {B}: ¿Quién aguanta más el aliento? El que aguante menos bebe 3 tragos.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "night-eu-007",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Quien haya vuelto a casa con alguien que conoció esa misma noche, bebe 3 tragos.",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "night-eu-008",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, cuenta el cringe más fuerte que hayas vivido de fiesta. El grupo vota si merece 1, 2 o 3 tragos.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "night-eu-009",
     "mode": "night_out",
     "kind": "group",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Votad: ¿Fútbol o tenis? La minoría bebe 2 tragos.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-010",
     "mode": "night_out",
     "kind": "rule_off",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Fin de regla: podéis volver a decir «tío» y «tía». Quien más veces falló reparte 2 tragos.",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-tio"
+    "ruleId": "r-tio",
+    "drink_count": 2
   },
   {
     "id": "night-eu-011",
     "mode": "night_out",
     "kind": "rule_on",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Nueva regla: hay que tratar a todo el mundo de «usted». Quien olvide bebe 2 tragos.",
     "spice": 2,
     "weight": 1,
-    "ruleId": "r-formal"
+    "ruleId": "r-formal",
+    "drink_count": 2
   },
   {
     "id": "night-eu-012",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, di un trabalenguas en menos de 5 segundos o bebe 3 tragos.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "night-eu-013",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, ¿cuántos erasmus has conocido esta semana? Reparte 1 trago por cada uno, máximo 4.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "night-eu-014",
     "mode": "night_out",
     "kind": "versus",
-    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} y {B}: duelo de chistes. El grupo vota quién es más gracioso. El perdedor bebe 4 tragos.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "night-eu-015",
     "mode": "night_out",
     "kind": "group",
-    "target": { "roles": ["STARTER"] },
+    "target": {
+      "roles": [
+        "STARTER"
+      ]
+    },
     "text": "Categoría: canciones del verano español. Quien no sepa una o repita, bebe 2 tragos. Empieza {STARTER}.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-016",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, llama por teléfono a alguien que no sea del grupo y dile que le echas de menos. Si lo hace, reparte 3 tragos. Si no, bebe 3.",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "night-eu-017",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Quien haya ido a las fiestas de Salamanca y no recuerde cómo llegó a casa, bebe 3 tragos.",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "night-eu-018",
     "mode": "night_out",
     "kind": "wildcard",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "¡Todos hacen un brindis! Cada uno dice algo bueno de la persona a su izquierda. El último en hablar bebe 2 tragos.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-019",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, muestra la última foto de tu galería al grupo. Bebe 1 trago por cada persona que se ría.",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "night-eu-020",
     "mode": "night_out",
     "kind": "rule_off",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Fin de regla: se acabó el «usted». El más formal de todos reparte 3 tragos.",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-formal"
+    "ruleId": "r-formal",
+    "drink_count": 3
   },
   {
     "id": "night-eu-021",
     "mode": "night_out",
     "kind": "rule_on",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Nueva regla: nadie puede decir «venga». Quien lo diga bebe 2 tragos.",
     "spice": 2,
     "weight": 1,
-    "ruleId": "r-venga"
+    "ruleId": "r-venga",
+    "drink_count": 2
   },
   {
     "id": "night-eu-022",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, ¿has ligado con alguien a quien no volviste a ver? Si sí, bebe 2 tragos.",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-023",
     "mode": "night_out",
     "kind": "group",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Todos a la vez: nombrad un equipo de fútbol de la primera división española. Quien repita o se quede en blanco bebe 3 tragos.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "night-eu-024",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, confiesa la mayor tontería que hayas hecho de fiesta. El grupo decide si bebe 2 o 3 tragos.",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "night-eu-025",
     "mode": "night_out",
     "kind": "versus",
-    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} y {B}: ¿Quién conoce más canciones de Rosalía? Cantad uno a uno. El que falle bebe 3 tragos.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "night-eu-026",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, sin mirar el móvil, di el nombre completo de 3 compañeros de clase. Por cada nombre que falle, bebe 1 trago.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "night-eu-027",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Quien haya llegado tarde a un examen por haber salido la noche antes, bebe 3 tragos.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "night-eu-028",
     "mode": "night_out",
     "kind": "group",
-    "target": { "roles": ["STARTER"] },
+    "target": {
+      "roles": [
+        "STARTER"
+      ]
+    },
     "text": "Por turnos: cada uno dice una palabra asociada al verano sin repetir. Quien falle bebe 2. Empieza {STARTER}.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-029",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, haz un discurso de boda improvisado sobre la pareja más improbable del grupo. Bebe 1 trago si alguien se ríe.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "night-eu-030",
     "mode": "night_out",
     "kind": "rule_off",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Fin de regla: se acabó lo de «venga». Quien más veces cayó reparte 2 tragos.",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-venga"
+    "ruleId": "r-venga",
+    "drink_count": 2
   },
   {
     "id": "night-eu-031",
     "mode": "night_out",
     "kind": "rule_on",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Nueva regla: antes de beber, hay que decir «¡Joder!». Quien olvide bebe 1 trago extra.",
     "spice": 2,
     "weight": 1,
-    "ruleId": "r-joder"
+    "ruleId": "r-joder",
+    "drink_count": 1
   },
   {
     "id": "night-eu-032",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, ¿cuántas noches has salido esta semana? Reparte 1 trago por cada noche, máximo 4.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "night-eu-033",
     "mode": "night_out",
     "kind": "versus",
-    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} y {B}: ¿Quién sabe más trabalenguas? Uno a uno. Quien falle primero bebe 4 tragos.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "night-eu-034",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, lee el último mensaje que enviaste en WhatsApp en voz alta. Bebe 1 trago por cada emoji que contenga.",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "night-eu-035",
     "mode": "night_out",
     "kind": "group",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Votad: ¿Cerveza o vino? La minoría bebe 2 tragos.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-036",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Quien haya enviado un mensaje comprometido a la persona equivocada, bebe 3 tragos.",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "night-eu-037",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, imita a un político español sin decir su nombre. El grupo adivina. Si aciertan, {A} reparte 3 tragos. Si no, bebe 3.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "night-eu-038",
     "mode": "night_out",
     "kind": "wildcard",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "¡Turno libre! Todos beben 1 trago y el que quiera puede contar un secreto… o beberse otro.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "night-eu-039",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, escribe un tweet de 280 caracteres sobre esta noche en voz alta. El grupo vota si es digno de publicar. Si no, bebe 2 tragos.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-040",
     "mode": "night_out",
     "kind": "rule_off",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Fin de regla: ya no hace falta el «¡Joder!». Todos beben 1 trago de despedida.",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-joder"
+    "ruleId": "r-joder",
+    "drink_count": 1
   },
   {
     "id": "night-eu-041",
     "mode": "night_out",
     "kind": "rule_on",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Nueva regla: nadie puede decir «vale». Quien lo diga bebe 2 tragos.",
     "spice": 2,
     "weight": 1,
-    "ruleId": "r-vale"
+    "ruleId": "r-vale",
+    "drink_count": 2
   },
   {
     "id": "night-eu-042",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, ¿has tenido un encuentro romántico con alguien que estaba de Erasmus? Si sí, reparte 3 tragos.",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "night-eu-043",
     "mode": "night_out",
     "kind": "group",
-    "target": { "roles": ["STARTER"] },
+    "target": {
+      "roles": [
+        "STARTER"
+      ]
+    },
     "text": "Categoría: series españolas. Por turnos, cada uno nombra una. Quien repita o no sepa bebe 2 tragos. Empieza {STARTER}.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-044",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, inventa una historia de 30 segundos que empiece por «Había una vez en Salamanca…». Si el grupo se aburre antes, bebe 3 tragos.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "night-eu-045",
     "mode": "night_out",
     "kind": "versus",
-    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} vs {B}: duelo de piropos creativos. El grupo vota el mejor. El perdedor bebe 3 tragos.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "night-eu-046",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Quien haya pedido pizza a las 4 de la mañana esta semana, bebe 2 tragos.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-047",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, propón un brindis elaborado de al menos 3 frases. Si el grupo queda impresionado, reparte 2 tragos. Si no, bebe 2.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-048",
     "mode": "night_out",
     "kind": "group",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Votad: ¿Reggaeton o flamenco? La minoría bebe 2 tragos.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-049",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, sin usar las manos, mueve un vaso de un lado a otro de la mesa. Si lo consigue, reparte 2 tragos. Si no, bebe 2.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-050",
     "mode": "night_out",
     "kind": "rule_off",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Fin de regla: podéis volver a decir «vale». Quien más veces falló bebe 2 tragos extra.",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-vale"
+    "ruleId": "r-vale",
+    "drink_count": 2
   },
   {
     "id": "night-eu-051",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, ¿cuántos números de teléfono has pedido de fiesta sin llegar a escribirles? Bebe 1 trago por cada uno, máximo 4.",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "night-eu-052",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, pon una canción que todo el grupo debería conocer. Por cada persona que no la conozca, esa persona bebe 1 trago.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "night-eu-053",
     "mode": "night_out",
     "kind": "group",
-    "target": { "roles": ["STARTER"] },
+    "target": {
+      "roles": [
+        "STARTER"
+      ]
+    },
     "text": "Por turnos: anécdotas del piso compartido. Quien repita tema o se quede callado, bebe 2. Empieza {STARTER}.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-054",
     "mode": "night_out",
     "kind": "versus",
-    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} y {B}: cara o cruz mental. Los dos eligen cara o cruz al mismo tiempo. El que pierde bebe 3 tragos. Mejor de 3.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "night-eu-055",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Quien haya faltado a clase para irse de excursión con Erasmus, bebe 2 tragos.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-056",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, dale un apodo nuevo a cada persona del grupo. El que reciba el mejor apodo, según el grupo, reparte 2 tragos.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-057",
     "mode": "night_out",
     "kind": "group",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Votad: ¿Siesta o madrugada? La minoría bebe 2 tragos.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-058",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, haz una llamada de voz a alguien que no sea del grupo y convéncele de que lleváis un dragón de mascota. Si aguanta 1 minuto, reparte 4 tragos. Si no, bebe 3.",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "night-eu-059",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, ¿cuántos idiomas sabes decir «salud»? Reparte 1 trago por cada uno, máximo 5.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "night-eu-060",
     "mode": "night_out",
     "kind": "wildcard",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "¡Momento karaoke! Todos cantan 5 segundos de la última canción que escucharon. El menos entusiasta bebe 2 tragos.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-061",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Quien haya dormido en casa ajena después de una fiesta en Salamanca, bebe 2 tragos.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-062",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, intenta decir el abecedario al revés en 15 segundos o bebe 3 tragos.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "night-eu-063",
     "mode": "night_out",
     "kind": "group",
-    "target": { "roles": ["STARTER"] },
+    "target": {
+      "roles": [
+        "STARTER"
+      ]
+    },
     "text": "Categoría: marcas de cerveza española. Por turnos. Quien repita o no sepa bebe 3. Empieza {STARTER}.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "night-eu-064",
     "mode": "night_out",
     "kind": "versus",
-    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} vs {B}: battle de baile de 15 segundos cada uno. El grupo vota. El perdedor bebe 3 tragos.",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "night-eu-065",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, ¿has quedado con alguien que conociste en una fiesta en menos de 48 horas? Si sí, reparte 3 tragos.",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "night-eu-066",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, deja que el grupo elija una notificación del móvil para que la leas en voz alta. Bebe 1 trago por cada secreto revelado.",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "night-eu-067",
     "mode": "night_out",
     "kind": "group",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Votad: ¿Playa o montaña? La minoría bebe 2 tragos.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-068",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, inventa un refrán nuevo que tenga sentido y suene auténtico. El grupo vota. Si convence a todos, reparte 2 tragos.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-069",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Quien haya perdido las llaves de casa de fiesta, bebe 3 tragos.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "night-eu-070",
     "mode": "night_out",
     "kind": "wildcard",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "¡Pausa de hidratación! Todos beben agua… o lo que tengan en el vaso. Salud.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-071",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, convence al grupo en 30 segundos de que un alimento cotidiano es en realidad peligroso. Por cada persona convencida, reparte 1 trago.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "night-eu-072",
     "mode": "night_out",
     "kind": "group",
-    "target": { "roles": ["STARTER"] },
+    "target": {
+      "roles": [
+        "STARTER"
+      ]
+    },
     "text": "Por turnos: cada uno nombra una comunidad autónoma de España. Quien repita o se quede sin nombre bebe 2 tragos. Empieza {STARTER}.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-073",
     "mode": "night_out",
     "kind": "versus",
-    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} y {B}: duelo de piropos creativos. El grupo vota el mejor. El perdedor bebe 3 tragos.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "night-eu-074",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, ¿alguna vez has mentido sobre tu edad para entrar a una discoteca? Si sí, bebe 2 tragos.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-075",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, muéstrale al grupo la canción más vergonzosa de tu lista de reproducción. Bebe 1 trago por cada persona que se ría.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "night-eu-076",
     "mode": "night_out",
     "kind": "group",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Votad: ¿Tapas o pinxos? La minoría bebe 2 tragos.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-077",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, explica en 20 segundos la trama de una película de forma tan mala que nadie la reconozca. Si nadie acierta, reparte 3 tragos.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "night-eu-078",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Quien haya empezado a hablar en otro idioma de fiesta por accidente, bebe 2 tragos.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-079",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, describe a cada persona del grupo como un tipo de vino español. El grupo vota el más acertado. El elegido reparte 2 tragos.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-080",
     "mode": "night_out",
     "kind": "wildcard",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "¡Todos de pie! Quien se siente primero bebe 2 tragos.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-081",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, ¿cuál es el momento más embarazoso que recuerdas de una fiesta? Cuéntalo o bebe 3 tragos.",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "night-eu-082",
     "mode": "night_out",
     "kind": "group",
-    "target": { "roles": ["STARTER"] },
+    "target": {
+      "roles": [
+        "STARTER"
+      ]
+    },
     "text": "Categoría: tapas típicas españolas. Por turnos. Quien repita o no sepa bebe 2 tragos. Empieza {STARTER}.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-083",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, haz un anuncio de TV improvisado sobre el grupo de esta noche. Si alguien aplaude, {A} se salva. Si nadie aplaude, bebe 3.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "night-eu-084",
     "mode": "night_out",
     "kind": "versus",
-    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} y {B}: cada uno dice 3 estereotipos del otro (de forma amistosa). El grupo decide quién fue más gracioso. El otro bebe 3 tragos.",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "night-eu-085",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Quien haya terminado una botella entero él solo en una fiesta, bebe 3 tragos.",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "night-eu-086",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, convence al grupo de que dominas un idioma que no hablas. Tienes 30 segundos de improvisación. Por cada persona convencida, reparte 1 trago.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "night-eu-087",
     "mode": "night_out",
     "kind": "group",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Todos piensan en su bar favorito de Salamanca. Quien nombra el mismo que otro, ambos beben 2 tragos.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-088",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, pon una foto tuya de hace 5 años. El grupo comenta. Bebe 1 trago por cada comentario que te haga reír.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "night-eu-089",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, ¿has mandado un audio de voz tarde de noche a alguien que no debías? Si sí, bebe 2 tragos.",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-090",
     "mode": "night_out",
     "kind": "wildcard",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "¡Brindis obligatorio! Todos beben y el que no termina su copa ahora mismo bebe 2 tragos extra.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-091",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, hazle una pregunta al grupo que nadie quiera responder. La persona que responde reparte 2 tragos. Si nadie quiere, {A} reparte 3.",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-092",
     "mode": "night_out",
     "kind": "group",
-    "target": { "roles": ["STARTER"] },
+    "target": {
+      "roles": [
+        "STARTER"
+      ]
+    },
     "text": "Por turnos: cada uno dice una cosa rara que haya hecho en Salamanca. El más raro reparte 3 tragos. Empieza {STARTER}.",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "night-eu-093",
     "mode": "night_out",
     "kind": "versus",
-    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} vs {B}: ¿quién conoce más palabras malsonantes en idiomas extranjeros? Por turnos. El que se quede sin más bebe 3 tragos.",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "night-eu-094",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Quien haya perdido un zapato de fiesta alguna vez en su vida, bebe 2 tragos.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-095",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, elige a alguien del grupo y dile 3 cosas que cambiarías de él/ella (amistosamente). Si la persona está de acuerdo con al menos una, {A} reparte 2 tragos.",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-096",
     "mode": "night_out",
     "kind": "group",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Votad: ¿Erasmus o estudiante local? Si hay empate, todos beben 1 trago. La minoría bebe 2.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "night-eu-097",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, escribe un mensaje de texto a una persona del grupo como si fuera Cervantes. El grupo vota. Si convence, reparte 2 tragos.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-098",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, ¿alguna vez has llorado de fiesta? Si confiesas por qué, reparte 3 tragos. Si no, bebe 3.",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "night-eu-099",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, intenta mantener el equilibrio en un pie durante 10 segundos. Si falla, bebe 2 tragos.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "night-eu-100",
     "mode": "night_out",
     "kind": "wildcard",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "¡Fin de ronda! El que haya bebido menos esta noche invita a un chupito imaginario. Todos beben 1 trago.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   }
 ]

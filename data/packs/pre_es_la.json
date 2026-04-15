@@ -10,7 +10,8 @@
     },
     "text": "{A}, cuenta un chiste malo, quien se ría bebe 1. Si nadie se rié bebe 3 tragos.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-002",
@@ -23,7 +24,8 @@
     },
     "text": "{A}, tómate 1 y pásale 1 a la persona que más te haya hecho reír hoy.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 0
   },
   {
     "id": "pre-003",
@@ -40,7 +42,8 @@
     },
     "text": "{A}, juega piedra papel o tijera con {B}, el que pierda toma 3 tragos.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-004",
@@ -53,7 +56,8 @@
     },
     "text": "Voten: ¿Perros o gatos? Minoría bebe 3 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-005",
@@ -66,7 +70,8 @@
     },
     "text": "¡Vamos a celebrar! Todos toman 1 trago.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "pre-006",
@@ -80,7 +85,8 @@
     "text": "Fin regla: Ya pueden decir nombres propios libremente.",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-nombre"
+    "ruleId": "r-nombre",
+    "drink_count": 0
   },
   {
     "id": "pre-007",
@@ -93,7 +99,8 @@
     },
     "text": "Voten: ¿Shakira o Karol G? Minoría bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-008",
@@ -106,7 +113,8 @@
     },
     "text": "{A}, imita el acento de otro país o bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-009",
@@ -119,7 +127,8 @@
     },
     "text": "{A}, si alguna vez le has dicho un insulto cariñoso a un desconocido, toma 1 trago",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "pre-010",
@@ -132,7 +141,8 @@
     },
     "text": "{A}, si prefieres aguardiente o tequila sobre cualquier otro trago, reparte 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-011",
@@ -145,7 +155,8 @@
     },
     "text": "{A}, si has viajado a una isla, toma 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-012",
@@ -158,7 +169,8 @@
     },
     "text": "{A}, nombra 3 platos típicos latinos en 5 segundos o bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-013",
@@ -171,7 +183,8 @@
     },
     "text": "{A}, di tu palabra favorita en otro idioma y todos beben 1 trago",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "pre-014",
@@ -184,7 +197,8 @@
     },
     "text": "{A}, si eres fanático de algún equipo de fútbol, toma 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-015",
@@ -201,7 +215,8 @@
     },
     "text": "{A} vs {B}: el que tenga más fotos en Instagram bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-016",
@@ -218,7 +233,8 @@
     },
     "text": "{A} vs {B}: el primero en tocar algo de color azul gana. El perdedor bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-017",
@@ -231,7 +247,8 @@
     },
     "text": "Tema: Apodos creativos. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-018",
@@ -244,7 +261,8 @@
     },
     "text": "Voten: ¿Frío o Calor? Minoría bebe 3 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-019",
@@ -257,7 +275,8 @@
     },
     "text": "Voten: ¿Don Omar o Daddy Yankee? Minoría bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-020",
@@ -270,7 +289,8 @@
     },
     "text": "Tema: Países de América. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-021",
@@ -283,7 +303,8 @@
     },
     "text": "Voten: ¿Tacos o empanadas? Minoría bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-022",
@@ -296,7 +317,8 @@
     },
     "text": "Voten: ¿Messi o Ronaldo? Minoría bebe 3 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-023",
@@ -309,7 +331,8 @@
     },
     "text": "El último en chocar los cinco con {A} bebe 3 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-024",
@@ -322,7 +345,8 @@
     },
     "text": "¡Llegó la fiesta! Todos beben 1 trago y bailan 10 segundos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "pre-025",
@@ -335,7 +359,8 @@
     },
     "text": "¡Peaje! Todos pagan 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-026",
@@ -349,7 +374,8 @@
     "text": "Fin regla: Ya pueden volver a decir 'gracias'",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-gracias"
+    "ruleId": "r-gracias",
+    "drink_count": 0
   },
   {
     "id": "pre-027",
@@ -363,7 +389,8 @@
     "text": "Fin regla: Ya no tienen que señalar al hablar",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-señalar"
+    "ruleId": "r-señalar",
+    "drink_count": 0
   },
   {
     "id": "pre-028",
@@ -377,7 +404,8 @@
     "text": "Regla: Cada vez que tomen deben decir 'salud'. Quien olvide bebe 2 tragos extra",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-salud"
+    "ruleId": "r-salud",
+    "drink_count": 2
   },
   {
     "id": "pre-029",
@@ -391,7 +419,8 @@
     "text": "Fin regla: Ya no tienen que decir 'salud' al tomar",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-salud"
+    "ruleId": "r-salud",
+    "drink_count": 2
   },
   {
     "id": "pre-030",
@@ -404,7 +433,8 @@
     },
     "text": "{A}, di el chiste más malo que sepas o bebe 3 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-031",
@@ -417,7 +447,8 @@
     },
     "text": "{A}, si has estado en una casa de campo o playa, reparte 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-032",
@@ -430,7 +461,8 @@
     },
     "text": "{A}, si has llorado viendo una película este año, toma 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-033",
@@ -443,7 +475,8 @@
     },
     "text": "{A}, si le tienes miedo a las alturas, toma 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-034",
@@ -456,7 +489,8 @@
     },
     "text": "{A}, di algo bonito a quien esté a tu derecha o bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-035",
@@ -469,7 +503,8 @@
     },
     "text": "{A}, si has visto una serie completa en un solo fin de semana, reparte 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-036",
@@ -482,7 +517,8 @@
     },
     "text": "{A}, si prefieres Coca-Cola sobre Pepsi, toma 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-037",
@@ -499,7 +535,8 @@
     },
     "text": "{A} y {B}: el primero en decir una canción de un artista latino gana. El perdedor bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-038",
@@ -512,7 +549,8 @@
     },
     "text": "El que tenga el cumpleaños más cerca reparte 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-039",
@@ -525,7 +563,8 @@
     },
     "text": "El que tenga más contactos en el celular reparte 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-040",
@@ -538,7 +577,8 @@
     },
     "text": "El que haya viajado a más países reparte 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-041",
@@ -555,7 +595,8 @@
     },
     "text": "{A} vs {B}: el que sepa más letras de 'Despacito' reparte 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-042",
@@ -572,7 +613,8 @@
     },
     "text": "{A} y {B}: el primero en tocar algo de madera gana. El perdedor bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-043",
@@ -585,7 +627,8 @@
     },
     "text": "El más alto del grupo reparte 2 tragos a quien quiera",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-044",
@@ -598,7 +641,8 @@
     },
     "text": "Voten: ¿Pizza con piña o sin piña? Minoría bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-045",
@@ -611,7 +655,8 @@
     },
     "text": "Tema: Marcas de ropa o zapatillas. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-046",
@@ -624,7 +669,8 @@
     },
     "text": "Voten: ¿Playa o piscina? Minoría bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-047",
@@ -637,7 +683,8 @@
     },
     "text": "Voten: ¿Café con azúcar o sin azúcar? Minoría bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-048",
@@ -650,7 +697,8 @@
     },
     "text": "Tema: Frutas tropicales. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-049",
@@ -663,7 +711,8 @@
     },
     "text": "Voten: ¿Día o noche? Minoría bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-050",
@@ -676,7 +725,8 @@
     },
     "text": "Voten: ¿WhatsApp o Instagram? Minoría bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-051",
@@ -689,7 +739,8 @@
     },
     "text": "Voten: ¿Dulce o salado? Minoría bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-052",
@@ -702,7 +753,8 @@
     },
     "text": "Voten: ¿Salir temprano o llegar tarde? Minoría bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-053",
@@ -715,7 +767,8 @@
     },
     "text": "Voten: ¿Pizza o hamburguesa? Minoría bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-054",
@@ -728,7 +781,8 @@
     },
     "text": "Voten: ¿Madrugar o trasnochar? Minoría bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-055",
@@ -741,7 +795,8 @@
     },
     "text": "El último en señalar a {A} bebe 3 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-056",
@@ -754,7 +809,8 @@
     },
     "text": "El último en tocar el hombro de {A} bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-057",
@@ -767,7 +823,8 @@
     },
     "text": "¡Hora del shot! Todos beben 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-058",
@@ -781,7 +838,8 @@
     "text": "Fin regla: Ya pueden usar cualquier mano para beber",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-mano-izq"
+    "ruleId": "r-mano-izq",
+    "drink_count": 2
   },
   {
     "id": "pre-059",
@@ -795,7 +853,8 @@
     "text": "Fin regla: Ya pueden decir 'yo' libremente",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-yo"
+    "ruleId": "r-yo",
+    "drink_count": 0
   },
   {
     "id": "pre-060",
@@ -809,7 +868,8 @@
     "text": "Fin regla: Ya no tienen que aplaudir cuando alguien bebe",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-aplaudir"
+    "ruleId": "r-aplaudir",
+    "drink_count": 2
   },
   {
     "id": "pre-061",
@@ -823,7 +883,8 @@
     "text": "Fin regla: Ya no tienen que decir 'bueno'",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-bueno"
+    "ruleId": "r-bueno",
+    "drink_count": 0
   },
   {
     "id": "pre-062",
@@ -837,7 +898,8 @@
     "text": "Regla: No pueden cruzar las piernas. Quien lo haga bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-piernas"
+    "ruleId": "r-piernas",
+    "drink_count": 2
   },
   {
     "id": "pre-063",
@@ -851,7 +913,8 @@
     "text": "Fin regla: Ya pueden cruzar las piernas libremente",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-piernas"
+    "ruleId": "r-piernas",
+    "drink_count": 0
   },
   {
     "id": "pre-064",
@@ -864,7 +927,8 @@
     },
     "text": "{A}, reparte 2 tragos por cada herman@ que tengas",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-065",
@@ -877,7 +941,8 @@
     },
     "text": "{A}, di tu canción favorita para una fiesta o bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-066",
@@ -890,7 +955,8 @@
     },
     "text": "{A}, si has comido algo frito hoy, toma 1 trago",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "pre-067",
@@ -903,7 +969,8 @@
     },
     "text": "{A}, si alguna vez te han puesto un apodo vergonzoso, toma 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-068",
@@ -916,7 +983,8 @@
     },
     "text": "{A}, si has ido a la playa en el último año, reparte 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-069",
@@ -929,7 +997,8 @@
     },
     "text": "{A}, si sabes cocinar al menos un plato bien, reparte 2 tragos. Si no, tómate 2.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-070",
@@ -942,7 +1011,8 @@
     },
     "text": "{A}, si prefieres café negro a café con leche, toma 1 trago",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "pre-071",
@@ -955,7 +1025,8 @@
     },
     "text": "El que tenga más aplicaciones en el celular reparte 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-072",
@@ -968,7 +1039,8 @@
     },
     "text": "El que haya dormido menos anoche bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-073",
@@ -981,7 +1053,8 @@
     },
     "text": "El que use más redes sociales bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-074",
@@ -994,7 +1067,8 @@
     },
     "text": "El último en aplaudirle a {A} bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-075",
@@ -1007,7 +1081,8 @@
     },
     "text": "El último en chocar puños con {A} bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-076",
@@ -1020,7 +1095,8 @@
     },
     "text": "Todos menos {A} deben decir un color. El que repita bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-077",
@@ -1033,7 +1109,8 @@
     },
     "text": "¡Fila para el baño! Todos hacen fila y beben 1 trago",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "pre-078",
@@ -1047,7 +1124,8 @@
     "text": "Fin regla: Ya no tienen que hablar en diminutivo",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-diminutivo"
+    "ruleId": "r-diminutivo",
+    "drink_count": 0
   },
   {
     "id": "pre-079",
@@ -1061,7 +1139,8 @@
     "text": "Fin regla: Ya pueden usar el celular libremente",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-celular"
+    "ruleId": "r-celular",
+    "drink_count": 0
   },
   {
     "id": "pre-080",
@@ -1074,7 +1153,8 @@
     },
     "text": "{A}, haz un brindis y todos beben 1 trago",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "pre-081",
@@ -1087,7 +1167,8 @@
     },
     "text": "{A}, di tu meta para este año o bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-082",
@@ -1100,7 +1181,8 @@
     },
     "text": "{A}, si alguna vez has llorado de felicidad, reparte 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-083",
@@ -1113,7 +1195,8 @@
     },
     "text": "Voten: ¿quién del grupo tiene la mejor risa? Esa persona reparte 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-084",
@@ -1126,7 +1209,8 @@
     },
     "text": "Voten: ¿quién del grupo sería el mejor influencer? Esa persona reparte 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-085",
@@ -1139,7 +1223,8 @@
     },
     "text": "¡Latinos unidos! Cada uno grita el saludo típico de su país o región. El que suene menos auténtico toma 2 tragos.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-086",
@@ -1152,7 +1237,8 @@
     },
     "text": "{A}, escoge la mejor expresión latina del grupo y úsala en una frase. Si el grupo lo aprueba, reparte 2 tragos. Si no, tómate 2.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-087",
@@ -1165,7 +1251,8 @@
     },
     "text": "Voten: ¿TikTok o Instagram Reels? Minoría bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-088",
@@ -1178,7 +1265,8 @@
     },
     "text": "Tema: Selecciones de fútbol europeas. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-089",
@@ -1191,7 +1279,8 @@
     },
     "text": "Voten: ¿Fiesta en casa o salir a un bar? Minoría bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-090",
@@ -1204,7 +1293,8 @@
     },
     "text": "Tema: Aplicaciones de citas o redes sociales. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-091",
@@ -1217,7 +1307,8 @@
     },
     "text": "{A}, di el emoji que más usas. El grupo decide si es cringe. Si sí, bebe 2 tragos.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-092",
@@ -1234,7 +1325,8 @@
     },
     "text": "{A} vs {B}: el que tenga la contraseña de WiFi más vieja guardada en su celular reparte 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-093",
@@ -1247,7 +1339,8 @@
     },
     "text": "Si estas bien pedo y no has pagado nada hoy, toma 4 tragos.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 4
   },
   {
     "id": "pre-094",
@@ -1260,7 +1353,8 @@
     },
     "text": "{A}, di algo bonito de cada persona del grupo en menos de 1 minuto. Si el tiempo se acaba, toma 1 trago por cada persona que no mencionaste.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "pre-095",
@@ -1273,7 +1367,8 @@
     },
     "text": "Voten: ¿Playa o montaña? Minoría bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-096",
@@ -1286,7 +1381,8 @@
     },
     "text": "{A}, si has llorado con una canción este año, toma 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-097",
@@ -1300,7 +1396,8 @@
     "text": "Fin regla: Ya pueden usar los nombres reales",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-apodo"
+    "ruleId": "r-apodo",
+    "drink_count": 0
   },
   {
     "id": "pre-098",
@@ -1314,7 +1411,8 @@
     "text": "Regla: Antes de beber deben brindar con alguien. Quien olvide bebe 2 tragos extra",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-brindar"
+    "ruleId": "r-brindar",
+    "drink_count": 2
   },
   {
     "id": "pre-099",
@@ -1328,7 +1426,8 @@
     "text": "Fin regla: Ya no tienen que brindar antes de beber",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-brindar"
+    "ruleId": "r-brindar",
+    "drink_count": 2
   },
   {
     "id": "pre-100",
@@ -1341,7 +1440,8 @@
     },
     "text": "Voten: ¿quién del grupo es más probable que se duerma primero esta noche? Esa persona bebe 3 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-101",
@@ -1354,7 +1454,8 @@
     },
     "text": "Todos menos {A} deben decir su comida favorita. El que repita bebe 3 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-102",
@@ -1367,7 +1468,8 @@
     },
     "text": "Voten: ¿quién del grupo tiene el mejor gusto musical? Esa persona pone la siguiente canción y todos beben 1 trago",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "pre-103",
@@ -1380,7 +1482,8 @@
     },
     "text": "{A}, si has viajado solo alguna vez, reparte 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-104",
@@ -1397,7 +1500,8 @@
     },
     "text": "{A} y {B}: el que tenga la batería más baja en el celular bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-105",
@@ -1410,7 +1514,8 @@
     },
     "text": "{A}, di «no manches» tres veces seguidas sin reírte. Si te ríes, tómate 3 tragos.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-106",
@@ -1423,7 +1528,8 @@
     },
     "text": "Tema: Artistas mexicanos. {STARTER} empieza. El que repita o no sepa toma 2 tragos.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-107",
@@ -1440,7 +1546,8 @@
     },
     "text": "{A} y {B}: ¿quién dice más rápido «chido güey, qué onda» 5 veces? El que falle toma 3 tragos.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-108",
@@ -1453,7 +1560,8 @@
     },
     "text": "Voten: ¿tacos o tortas? La minoría toma 2 tragos.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-109",
@@ -1466,7 +1574,8 @@
     },
     "text": "Quien haya dicho «ahorita voy» y tardado más de 30 minutos, toma 2 tragos.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-110",
@@ -1479,7 +1588,8 @@
     },
     "text": "Tema: Ciudades mexicanas. {STARTER} empieza. Quien repita o no sepa toma 2 tragos.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-111",
@@ -1492,7 +1602,8 @@
     },
     "text": "¡Órale! Todos toman 1 trago y el que se quede callado más de 5 segundos toma 1 más.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "pre-112",
@@ -1505,7 +1616,8 @@
     },
     "text": "{A}, explica en modo cuate por qué esta fiesta va a estar padrísima. El grupo vota. Si convence a todos, reparte 2 tragos.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-113",
@@ -1518,7 +1630,8 @@
     },
     "text": "El último que le diga «órale, dale» a {A} toma 2 tragos.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-114",
@@ -1531,7 +1644,8 @@
     },
     "text": "Tema: Provincias argentinas. {STARTER} empieza. Quien repita o no sepa toma 2 tragos.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-115",
@@ -1544,7 +1658,8 @@
     },
     "text": "{A}, finge que estás tomando mate con el grupo. El que se ría paga 1 trago.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "pre-116",
@@ -1557,7 +1672,8 @@
     },
     "text": "Tema: Comidas argentinas. {STARTER} empieza. Quien repita o no sepa toma 2 tragos.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-117",
@@ -1570,7 +1686,8 @@
     },
     "text": "Tema: Regiones de Chile. {STARTER} empieza. Quien repita o no sepa toma 2 tragos.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-118",
@@ -1583,7 +1700,8 @@
     },
     "text": "{A}, ¿cuántas fiestas has organizado tú? Reparte 1 trago por cada una, máximo 3.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "pre-119",
@@ -1596,7 +1714,8 @@
     },
     "text": "Voten: ¿Piña o mango? La minoría toma 2 tragos.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-120",
@@ -1609,7 +1728,8 @@
     },
     "text": "El último en decirle 'buena onda' a {A} toma 2 tragos.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-121",
@@ -1622,7 +1742,8 @@
     },
     "text": "Quien haya dicho que algo era aburrido y después resultó ser increíble, toma 2 tragos.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-122",
@@ -1635,7 +1756,8 @@
     },
     "text": "Categoría: Apodos creativos en español. {STARTER} da el primero. Por turnos. Quien repita toma 2 tragos.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-123",
@@ -1648,7 +1770,8 @@
     },
     "text": "{A}, adivina cuánta energía tiene el grupo del 1 al 10. Si aciertas por votación, reparte 2 tragos.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-124",
@@ -1661,7 +1784,8 @@
     },
     "text": "Voten: ¿quién del grupo tiene la mejor historia de viaje? Esa persona la cuenta y reparte 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-125",
@@ -1674,7 +1798,8 @@
     },
     "text": "{A}, si has comido algo del piso alguna vez, toma 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-126",
@@ -1687,7 +1812,8 @@
     },
     "text": "Voten: ¿Spotify o Apple Music? Minoría bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-127",
@@ -1700,7 +1826,8 @@
     },
     "text": "{A}, di algo que todos aquí tienen en común o bebe 2 tragos",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-128",
@@ -1717,7 +1844,8 @@
     "text": "{A}, haz tu mejor imitación de un influencer grabando un video o bebe 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-129",
@@ -1734,7 +1862,8 @@
     "text": "{A}, di el nombre de 3 streamers en 5 segundos o bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-130",
@@ -1748,7 +1877,8 @@
     "text": "Voten: ¿Uber Eats o Rappi? Minoría bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-131",
@@ -1766,7 +1896,8 @@
     "text": "{A} vs {B}: el que tenga más apps de delivery instaladas bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-132",
@@ -1783,7 +1914,8 @@
     "text": "{A}, nombra 4 series de anime en 10 segundos o bebe 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-133",
@@ -1797,7 +1929,8 @@
     "text": "Voten: ¿Netflix o Disney+? Minoría bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-134",
@@ -1814,7 +1947,8 @@
     "text": "{A}, si alguna vez pagaste un gimnasio y no fuiste ni un mes, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-135",
@@ -1831,7 +1965,8 @@
     "text": "{A}, canta el coro de la última canción que escuchaste o bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-136",
@@ -1848,7 +1983,8 @@
     "text": "{A}, si tienes más de 3 suscripciones de streaming activas, reparte 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-137",
@@ -1862,7 +1998,8 @@
     "text": "Tema: Canciones que ponen en todo Uber. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-138",
@@ -1879,7 +2016,8 @@
     "text": "{A}, di la contraseña del WiFi de tu casa o bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-139",
@@ -1896,7 +2034,8 @@
     "text": "{A}, reparte 1 trago por cada app de red social que tengas instalada",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-140",
@@ -1913,7 +2052,8 @@
     "text": "{A}, si alguna vez publicaste algo y lo borraste a los 5 minutos porque nadie le dio like, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-141",
@@ -1927,7 +2067,8 @@
     "text": "Voten: ¿Tacos o Pizza? Minoría bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-142",
@@ -1944,7 +2085,8 @@
     "text": "{A}, muestra tu tiempo de pantalla del celular. Si es más de 6 horas, bebe 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-143",
@@ -1962,7 +2104,8 @@
     "text": "{A} y {B}: el primero en nombrar 5 países de Asia gana. El perdedor bebe 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-144",
@@ -1979,7 +2122,8 @@
     "text": "{A}, haz tu mejor acento argentino diciendo 'boludo, vos sos re loco' o bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-145",
@@ -1996,7 +2140,8 @@
     "text": "{A}, si has visto un reality show completo, toma 2 tragos por culpable",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-146",
@@ -2010,7 +2155,8 @@
     "text": "Tema: Comida que pides por delivery a las 2 AM. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-147",
@@ -2028,7 +2174,8 @@
     "text": "{A} vs {B}: díctense un trabalenguas. El que lo diga perfecto primero gana. El perdedor bebe 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-148",
@@ -2045,7 +2192,8 @@
     "text": "{A}, deletrea tu apellido al revés en 10 segundos o bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-149",
@@ -2062,7 +2210,8 @@
     "text": "{A}, si alguna vez te dormiste en un Uber, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-150",
@@ -2076,7 +2225,8 @@
     "text": "Voten: ¿Tacos al pastor o burritos? Minoría bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-151",
@@ -2093,7 +2243,8 @@
     "text": "{A}, actúa como si fueras un vendedor de mercado ofreciendo tu bebida o bebe 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-152",
@@ -2110,7 +2261,8 @@
     "text": "{A}, si has usado filtros de Instagram en videollamadas de trabajo o escuela, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-153",
@@ -2127,7 +2279,8 @@
     "text": "{A}, di 3 memes que sean tendencia ahora o bebe 2 tragos por desconectado",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-154",
@@ -2144,7 +2297,8 @@
     "text": "{A}, si has llorado escuchando una canción de Bad Bunny, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-155",
@@ -2158,7 +2312,8 @@
     "text": "Voten: ¿Vivir en Europa o en Latinoamérica? Minoría bebe 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-156",
@@ -2175,7 +2330,8 @@
     "text": "{A}, si tu tiempo de pantalla diario supera las 5 horas, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-157",
@@ -2192,7 +2348,8 @@
     "text": "{A}, si alguna vez fuiste a una fiesta sin invitación, toma 2 tragos por colado",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-158",
@@ -2206,7 +2363,8 @@
     "text": "Tema: Podcasts populares. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-159",
@@ -2223,7 +2381,8 @@
     "text": "{A}, si has comprado algo por un anuncio de Instagram que te salió, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-160",
@@ -2240,7 +2399,8 @@
     "text": "{A}, escoge un emoji y todos tienen que adivinar qué significa para ti. Si nadie acierta, bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-161",
@@ -2257,7 +2417,8 @@
     "text": "{A}, si alguna vez le pusiste una estrellita a un conductor de Uber por venganza, toma 1 trago",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-162",
@@ -2271,7 +2432,8 @@
     "text": "Voten: ¿Ser famoso en TikTok o tener un millón de dólares? Minoría bebe 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-163",
@@ -2289,7 +2451,8 @@
     "text": "{A} y {B}: competencia de imitaciones de famosos. Los demás votan al mejor. El perdedor bebe 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-164",
@@ -2306,7 +2469,8 @@
     "text": "{A}, di una frase motivacional de Instagram lo más dramático posible o bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-165",
@@ -2323,7 +2487,8 @@
     "text": "{A}, si alguna vez fuiste a un concierto solo, toma 2 tragos de valiente",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-166",
@@ -2337,7 +2502,8 @@
     "text": "Tema: Juegos de celular adictivos. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-167",
@@ -2354,7 +2520,8 @@
     "text": "{A}, si te has tomado más de 5 selfies para elegir una sola para subir, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-168",
@@ -2371,7 +2538,8 @@
     "text": "{A}, si alguna vez te metiste a la alberca con ropa, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-169",
@@ -2388,7 +2556,8 @@
     "text": "{A}, nombra 3 trends de TikTok del último mes o bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-170",
@@ -2402,7 +2571,8 @@
     "text": "Voten: ¿Fútbol o básquetbol? Minoría bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-171",
@@ -2419,7 +2589,8 @@
     "text": "{A}, dibuja con el dedo en la espalda de {B} una palabra. Si adivina, reparte 3 tragos. Si no, los bebes",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-172",
@@ -2436,7 +2607,8 @@
     "text": "{A}, si has contestado mensajes de trabajo en una fiesta, toma 2 tragos por workaholic",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-173",
@@ -2450,7 +2622,8 @@
     "text": "Tema: Frases de mamá latina. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-174",
@@ -2467,7 +2640,8 @@
     "text": "{A}, si alguna vez fingiste que te gustaba una canción para caerle bien a alguien, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-175",
@@ -2484,7 +2658,8 @@
     "text": "{A}, reparte 1 trago por cada idioma en el que puedas decir 'salud'",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-176",
@@ -2501,7 +2676,8 @@
     "text": "{A}, si tienes un playlist llamado 'sad' o similar, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-177",
@@ -2515,7 +2691,8 @@
     "text": "Voten: ¿Arepas o pupusas? Minoría bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-178",
@@ -2532,7 +2709,8 @@
     "text": "{A}, escoge a alguien. Ambos pónganle un apodo al otro. Si el grupo los aprueba, se quedan con ellos toda la noche. Si no, ambos beben 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-179",
@@ -2549,7 +2727,8 @@
     "text": "{A}, cuenta un sueño raro que hayas tenido recientemente o bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-180",
@@ -2566,7 +2745,8 @@
     "text": "{A}, si has cocinado algo del tutorial de TikTok y te quedó horrible, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-181",
@@ -2583,7 +2763,8 @@
     "text": "{A}, di algo que aprendiste en YouTube que nadie te enseñó en la escuela o bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-182",
@@ -2600,7 +2781,8 @@
     "text": "{A}, si tienes notificaciones sin leer de hace más de una semana, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-183",
@@ -2617,7 +2799,8 @@
     "text": "{A}, di cuál es tu guilty pleasure musical. Si alguien más lo comparte, ambos beben 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-184",
@@ -2634,7 +2817,8 @@
     "text": "{A}, di el peor consejo que te han dado y bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-185",
@@ -2651,7 +2835,8 @@
     "text": "{A}, si alguna vez has ido al baño a revisar tu celular cuando te aburrías en una reunión, toma 1 trago",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-186",
@@ -2668,7 +2853,8 @@
     "text": "{A}, si has llorando viendo un video de TikTok, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-187",
@@ -2686,7 +2872,8 @@
     "text": "{A} vs {B}: el que tenga la alarma más temprana mañana bebe 3 tragos por irresponsable",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-188",
@@ -2700,7 +2887,8 @@
     "text": "Voten: ¿Vivir sin WiFi un año o sin café un año? Minoría bebe 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-189",
@@ -2717,7 +2905,8 @@
     "text": "{A}, di qué superpoder le darías a la persona de tu izquierda y por qué. Si no convences al grupo, bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-190",
@@ -2734,7 +2923,8 @@
     "text": "{A}, si alguna vez dijiste 'esta es la última' y no lo fue, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-191",
@@ -2752,7 +2942,8 @@
     "text": "{A} y {B}: guerra de miradas con cara seria. El primero en reír o parpadear bebe 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-192",
@@ -2769,7 +2960,8 @@
     "text": "{A}, si alguna vez te quedaste sin batería en el celular en un momento crítico de una noche, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-193",
@@ -2783,7 +2975,8 @@
     "text": "Voten: ¿Karol G o Rosalía? Minoría bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-194",
@@ -2800,7 +2993,8 @@
     "text": "{A}, si has tenido una fase emo, gótica o punk, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-195",
@@ -2818,7 +3012,8 @@
     "text": "{A} vs {B}: cada uno manda un meme al grupo. Los demás votan el más gracioso. El perdedor bebe 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-196",
@@ -2835,7 +3030,8 @@
     "text": "{A}, tómate 2 tragos con la persona que tenga el mismo signo del zodiaco que tú. Si nadie lo tiene, tómate 3 solo",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-197",
@@ -2852,7 +3048,8 @@
     "text": "{A}, si tienes más de 100 chats sin leer en WhatsApp, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-198",
@@ -2869,7 +3066,8 @@
     "text": "{A}, di el nombre completo de la persona a tu derecha. Si te equivocas, bebe 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-199",
@@ -2886,7 +3084,8 @@
     "text": "{A}, si alguna vez pediste comida de un país sin saber qué era y te arrepentiste, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-200",
@@ -2900,7 +3099,8 @@
     "text": "Voten: ¿Ramen o sushi? Minoría bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-201",
@@ -2917,7 +3117,8 @@
     "text": "{A}, si tu Spotify Wrapped te dio vergüenza, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-202",
@@ -2935,7 +3136,8 @@
     "text": "{A} vs {B}: reto de no reírse. Uno le cuenta un chiste al otro. El primero en reírse bebe 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-203",
@@ -2952,7 +3154,8 @@
     "text": "{A}, canta el himno de tu país con una mano en el pecho o bebe 3 tragos por antipatriota",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-204",
@@ -2969,7 +3172,8 @@
     "text": "{A}, si le has mandado un meme a alguien a las 3 AM, toma 1 trago",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-205",
@@ -2986,7 +3190,8 @@
     "text": "{A}, reparte 2 tragos a la persona con la que más chateas por WhatsApp",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-206",
@@ -3000,7 +3205,8 @@
     "text": "Voten: ¿Sabbath o vacaciones de verano? Minoría bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-207",
@@ -3017,7 +3223,8 @@
     "text": "{A}, di 3 cosas que harías si fueras millonario en 10 segundos o bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-208",
@@ -3034,7 +3241,8 @@
     "text": "{A}, si tienes ropa en tu clóset que no has usado en más de un año, toma 1 trago por acumulador",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-209",
@@ -3052,7 +3260,8 @@
     "text": "{A} y {B}: guerra de pulgares. El perdedor bebe 3 tragos y el ganador reparte 2",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-210",
@@ -3069,7 +3278,8 @@
     "text": "{A}, cierra los ojos y describe la ropa que lleva puesta la persona a tu izquierda. Si fallas, bebe 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-211",
@@ -3086,7 +3296,8 @@
     "text": "{A}, si alguna vez viste un spoiler en redes de algo que ibas a ver, toma 2 tragos de rabia",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-212",
@@ -3103,7 +3314,8 @@
     "text": "{A}, si has grabado una historia de Instagram y la borraste antes de las 24 horas, toma 1 trago",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-213",
@@ -3117,7 +3329,8 @@
     "text": "Tema: Razones para llegar tarde. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-214",
@@ -3131,7 +3344,8 @@
     "text": "Voten: ¿Hacer ejercicio o dormir? Minoría bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-215",
@@ -3148,7 +3362,8 @@
     "text": "{A}, invéntate una conspiración loca y convence al grupo en 15 segundos. Si alguien te cree, esa persona bebe 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-216",
@@ -3165,7 +3380,8 @@
     "text": "{A}, si alguna vez dejaste una serie a medias y luego la retomaste meses después, toma 1 trago",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-217",
@@ -3182,7 +3398,8 @@
     "text": "{A}, si tu mamá te sigue en Instagram, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-218",
@@ -3200,7 +3417,8 @@
     "text": "{A} vs {B}: el primero en abrir su app de fotos y mostrar la foto más vieja bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-219",
@@ -3217,7 +3435,8 @@
     "text": "{A}, si alguna vez hablaste solo cuando creías que nadie te oía, toma 1 trago",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-220",
@@ -3231,7 +3450,8 @@
     "text": "Tema: Canciones para cantar en un karaoke. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-221",
@@ -3248,7 +3468,8 @@
     "text": "{A}, di algo en un idioma que no sea español durante 10 segundos o bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-222",
@@ -3262,7 +3483,8 @@
     "text": "Voten: ¿Erasmus en Italia o en Alemania? Minoría bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-223",
@@ -3279,7 +3501,8 @@
     "text": "{A}, escoge a alguien y díganle un cumplido al otro. El grupo vota cuál fue más sincero. El que pierda bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-224",
@@ -3296,7 +3519,8 @@
     "text": "{A}, si alguna vez tuviste que traducir para alguien que no hablaba el idioma local, reparte 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-225",
@@ -3310,7 +3534,8 @@
     "text": "Voten: ¿Salir de fiesta un viernes o un sábado? Minoría bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-226",
@@ -3327,7 +3552,8 @@
     "text": "{A}, habla como narrador de documental describiendo al grupo durante 10 segundos o bebe 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-227",
@@ -3344,7 +3570,8 @@
     "text": "{A}, di el nombre de tu caricatura favorita de la infancia o bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-228",
@@ -3361,7 +3588,8 @@
     "text": "{A}, si alguna vez te caíste de la bicicleta frente a gente, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-229",
@@ -3375,7 +3603,8 @@
     "text": "Tema: Caricaturas de los 2000. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-230",
@@ -3393,7 +3622,8 @@
     "text": "{A} vs {B}: el que diga más capitales de Sudamérica en 15 segundos gana. El perdedor bebe 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-231",
@@ -3410,7 +3640,8 @@
     "text": "{A}, si alguna vez le mandaste un mensaje a la persona equivocada, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-232",
@@ -3427,7 +3658,8 @@
     "text": "{A}, imita cómo te despierta tu mamá y todos votan si es convincente. Si no, bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-233",
@@ -3439,7 +3671,8 @@
     "text": "Voten: ¿Road trip o vuelo directo? Minoría bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-234",
@@ -3456,7 +3689,8 @@
     "text": "{A}, si alguna vez quemaste comida tan feo que sonó la alarma de humo, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-235",
@@ -3473,7 +3707,8 @@
     "text": "El último en imitar la pose de {A} bebe 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-236",
@@ -3488,7 +3723,8 @@
     "text": "¡Terremoto social! Todos cambian de lugar y beben 1 trago",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-237",
@@ -3505,7 +3741,8 @@
     "text": "{A}, di tu peor compra impulsiva y cuánto gastaste. Bebe 1 trago por cada 100 dólares que costó, máximo 5",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-238",
@@ -3522,7 +3759,8 @@
     "text": "{A}, si alguna vez caminaste sonámbulo, toma 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-239",
@@ -3536,7 +3774,8 @@
     "text": "Tema: Miedos irracionales. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-240",
@@ -3553,7 +3792,8 @@
     "text": "{A}, di tu talento oculto y demuéstralo en 10 segundos. Si el grupo no queda impresionado, bebe 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-241",
@@ -3570,7 +3810,8 @@
     "text": "{A}, si de niño creías en la llorona o el coco, toma 1 trago",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-242",
@@ -3588,7 +3829,8 @@
     "text": "{A} vs {B}: el que diga más platillos mexicanos en 10 segundos gana. El perdedor bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-243",
@@ -3600,7 +3842,8 @@
     "text": "Voten: ¿Tener el poder de cocinar perfecto o nunca tener que dormir? Minoría bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-244",
@@ -3617,7 +3860,8 @@
     "text": "{A}, cuenta tu peor experiencia en un viaje en carro o bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-245",
@@ -3634,7 +3878,8 @@
     "text": "{A}, si alguna vez te quedaste encerrado en un baño público, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-246",
@@ -3648,7 +3893,8 @@
     "text": "Tema: Comidas que tu mamá hacía los domingos. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-247",
@@ -3665,7 +3911,8 @@
     "text": "{A}, di el acento más chistoso que puedas hacer. El grupo vota. Si no convences, bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-248",
@@ -3682,7 +3929,8 @@
     "text": "{A}, si tus vecinos alguna vez se quejaron por el ruido de tu fiesta, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-249",
@@ -3699,7 +3947,8 @@
     "text": "El último en decirle a {A} su deporte favorito bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-250",
@@ -3714,7 +3963,8 @@
     "text": "¡Hora nostálgica! Todos cantan una canción de su infancia y beben 1 trago",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-251",
@@ -3731,7 +3981,8 @@
     "text": "{A}, di una palabra inventada y convence al grupo de que es real. Si alguien te cree, esa persona bebe 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-252",
@@ -3748,7 +3999,8 @@
     "text": "{A}, si alguna vez te tropezaste en público y fingiste que no pasó nada, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-253",
@@ -3760,7 +4012,8 @@
     "text": "Voten: ¿Tener un hermano gemelo idéntico o ser hijo único? Minoría bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-254",
@@ -3777,7 +4030,8 @@
     "text": "{A}, nombra 3 señales del zodiaco y un estereotipo de cada una en 15 segundos o bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-255",
@@ -3795,7 +4049,8 @@
     "text": "{A} vs {B}: competencia de trabalenguas. Digan 'tres tristes tigres' 3 veces rápido. El que se trabe primero bebe 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-256",
@@ -3812,7 +4067,8 @@
     "text": "{A}, si alguna vez tu autocorrector te arruinó un mensaje importante, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-257",
@@ -3826,7 +4082,8 @@
     "text": "Tema: Tradiciones navideñas de tu familia. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-258",
@@ -3843,7 +4100,8 @@
     "text": "{A}, cuenta tu experiencia más vergonzosa con un roommate o bebe 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-259",
@@ -3860,7 +4118,8 @@
     "text": "{A}, si alguna vez le prestaste dinero a alguien y nunca te lo regresó, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-260",
@@ -3872,7 +4131,8 @@
     "text": "Voten: ¿Superpoder de teletransportarte o de hablar con animales? Minoría bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-261",
@@ -3889,7 +4149,8 @@
     "text": "{A}, di tu peor entrevista de trabajo en 15 segundos o bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-262",
@@ -3906,7 +4167,8 @@
     "text": "{A}, si de chiquito coleccionabas algo raro, toma 1 trago y cuéntanos qué era",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-263",
@@ -3924,7 +4186,8 @@
     "text": "{A} vs {B}: el que diga más razas de perros en 10 segundos gana. El perdedor bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-264",
@@ -3938,7 +4201,8 @@
     "text": "Tema: Cosas que hacías de niño y ya no puedes. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-265",
@@ -3955,7 +4219,8 @@
     "text": "El último en hacer un sonido de animal que {A} escoja bebe 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-266",
@@ -3970,7 +4235,8 @@
     "text": "¡Ronda de supersticiosos! Si alguna vez tocaste madera para la suerte, bebe 1 trago",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-267",
@@ -3987,7 +4253,8 @@
     "text": "{A}, di algo de tu bucket list que suene ridículo. Si el grupo se ríe, reparte 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-268",
@@ -4004,7 +4271,8 @@
     "text": "{A}, si alguna vez roncaste tan fuerte que despertaste a alguien, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-269",
@@ -4016,7 +4284,8 @@
     "text": "Voten: ¿Cenar con tus abuelos o ir a un festival? Minoría bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-270",
@@ -4033,7 +4302,8 @@
     "text": "{A}, nombra 3 deportes extremos en 5 segundos o bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-271",
@@ -4050,7 +4320,8 @@
     "text": "{A}, si alguna vez soñaste que estabas cayendo y te despertaste de golpe, toma 1 trago",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-272",
@@ -4064,7 +4335,8 @@
     "text": "Tema: Peores trabajos del mundo. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-273",
@@ -4081,7 +4353,8 @@
     "text": "{A}, haz tu mejor impresión de cómo cocina tu mamá cuando está enojada o bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-274",
@@ -4098,7 +4371,8 @@
     "text": "{A}, si alguna vez tu mascota destruyó algo importante tuyo, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-275",
@@ -4116,7 +4390,8 @@
     "text": "{A} vs {B}: el que diga más supersticiones en 15 segundos gana. El perdedor bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-276",
@@ -4128,7 +4403,8 @@
     "text": "Voten: ¿Saber el futuro o poder cambiar el pasado? Minoría bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-277",
@@ -4145,7 +4421,8 @@
     "text": "{A}, di tu teoría conspirativa favorita y defiéndela en 15 segundos. Si convences a alguien, esa persona bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-278",
@@ -4162,7 +4439,8 @@
     "text": "{A}, si alguna vez te saludaron y no sabías quién era la persona pero fingiste que sí, toma 1 trago",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-279",
@@ -4176,7 +4454,8 @@
     "text": "Tema: Excusas para no ir al gimnasio. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-280",
@@ -4193,7 +4472,8 @@
     "text": "{A}, di la frase más típica de tu papá cuando algo se descompone en la casa o bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-281",
@@ -4210,7 +4490,8 @@
     "text": "{A}, si alguna vez tuviste una mascota que no era ni perro ni gato, toma 2 tragos y di cuál era",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-282",
@@ -4225,7 +4506,8 @@
     "text": "¡Flash mob! Todos se paran y bailan 5 segundos. Todos beben 1 trago",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-283",
@@ -4242,7 +4524,8 @@
     "text": "{A}, cuenta tu peor experiencia cocinando en 15 segundos o bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-284",
@@ -4259,7 +4542,8 @@
     "text": "{A}, si alguna vez hiciste una llamada accidental con las nalgas, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-285",
@@ -4273,7 +4557,8 @@
     "text": "Tema: Cosas que guardas en la mochila sin razón. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-286",
@@ -4291,7 +4576,8 @@
     "text": "{A} vs {B}: el que diga más fobias en 10 segundos gana. El perdedor bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-287",
@@ -4308,7 +4594,8 @@
     "text": "{A}, cuenta la peor anécdota de un viaje en carretera o bebe 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-288",
@@ -4325,7 +4612,8 @@
     "text": "{A}, si alguna vez devolviste algo a una tienda después de usarlo, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-289",
@@ -4337,7 +4625,8 @@
     "text": "Voten: ¿Vivir en el campo o en la ciudad? Minoría bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-290",
@@ -4354,7 +4643,8 @@
     "text": "{A}, di tu peor outfit de la adolescencia y bebe 2 tragos de vergüenza",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-291",
@@ -4371,7 +4661,8 @@
     "text": "{A}, si alguna vez lloraste en la escuela por una mala nota, toma 1 trago",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-292",
@@ -4385,7 +4676,8 @@
     "text": "Tema: Cosas que nunca le dirías a tu jefe. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-293",
@@ -4402,7 +4694,8 @@
     "text": "{A}, imita la voz de tu hermano o hermana. Si no tienes, imita la de tu mejor amigo. Si nadie reconoce, bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-294",
@@ -4419,7 +4712,8 @@
     "text": "{A}, si alguna vez fuiste a la escuela con la ropa al revés sin darte cuenta, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-295",
@@ -4436,7 +4730,8 @@
     "text": "El último en decirle a {A} un dato random bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-296",
@@ -4453,7 +4748,8 @@
     "text": "{A}, si alguna vez te dio miedo un payaso de niño, toma 1 trago",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-297",
@@ -4468,7 +4764,8 @@
     "text": "Regla: Antes de hablar deben chasquear los dedos. Quien olvide bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-chasquido"
+    "ruleId": "r-chasquido",
+    "drink_count": 2
   },
   {
     "id": "pre-298",
@@ -4483,7 +4780,8 @@
     "text": "Se acabó la regla: Ya no tienen que chasquear los dedos antes de hablar",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-chasquido"
+    "ruleId": "r-chasquido",
+    "drink_count": 0
   },
   {
     "id": "pre-299",
@@ -4500,7 +4798,8 @@
     "text": "{A}, di 3 cosas de tu bucket list en 10 segundos o bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-300",
@@ -4517,7 +4816,8 @@
     "text": "{A}, si alguna vez fingiste estar enfermo para no ir a trabajar o estudiar, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-301",
@@ -4529,7 +4829,8 @@
     "text": "El que tenga la mascota con el nombre más chistoso reparte 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-302",
@@ -4546,7 +4847,8 @@
     "text": "{A}, di tu sueño más raro de esta semana. Si nadie te cree, bebe 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-303",
@@ -4564,7 +4866,8 @@
     "text": "{A} vs {B}: cada uno dice su peor experiencia cocinando. Los demás votan la peor. El perdedor bebe 3 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-304",
@@ -4581,7 +4884,8 @@
     "text": "{A}, si alguna vez hablaste dormido, toma 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-305",
@@ -4595,7 +4899,8 @@
     "text": "Tema: Cosas que haces cuando llueve y no hay nada que hacer. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-306",
@@ -4612,7 +4917,8 @@
     "text": "{A}, inventa un nombre para un platillo hecho con lo que hay en la mesa y bebe 1 trago por cada ingrediente",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-307",
@@ -4627,7 +4933,8 @@
     "text": "Regla: Tienen que guiñar un ojo cada vez que digan un número. Quien olvide bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-guiño"
+    "ruleId": "r-guiño",
+    "drink_count": 2
   },
   {
     "id": "pre-308",
@@ -4642,7 +4949,8 @@
     "text": "Se acabó la regla: Ya no tienen que guiñar al decir números",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-guiño"
+    "ruleId": "r-guiño",
+    "drink_count": 0
   },
   {
     "id": "pre-309",
@@ -4657,7 +4965,8 @@
     "text": "Regla: No pueden decir la palabra 'pero'. Quien la diga bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-pero"
+    "ruleId": "r-pero",
+    "drink_count": 2
   },
   {
     "id": "pre-310",
@@ -4672,7 +4981,8 @@
     "text": "Se acabó la regla: Ya pueden decir 'pero' libremente",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-pero"
+    "ruleId": "r-pero",
+    "drink_count": 0
   },
   {
     "id": "pre-311",
@@ -4687,7 +4997,8 @@
     "text": "Regla: Tienen que tocarse la nariz cada vez que alguien dice un nombre. Quien olvide bebe 2 tragos",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-nariz"
+    "ruleId": "r-nariz",
+    "drink_count": 2
   },
   {
     "id": "pre-312",
@@ -4702,7 +5013,8 @@
     "text": "Se acabó la regla: Ya no tienen que tocarse la nariz cuando digan un nombre",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-nariz"
+    "ruleId": "r-nariz",
+    "drink_count": 0
   },
   {
     "id": "pre-313",
@@ -4715,7 +5027,8 @@
     },
     "text": "{A}, tómate 3 tragos con las personas que estén vestidas con el mismo color que tú",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-314",
@@ -4728,7 +5041,8 @@
     },
     "text": "{A}, si te ha gustado alguien de aquí, toma 2 tragos.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-315",
@@ -4741,7 +5055,8 @@
     },
     "text": "Tema: Artistas de reggaetón o urbano. El que no sepa o repita alguno ya dicho, toma 3 tragos. Empieza {STARTER}.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-316",
@@ -4754,7 +5069,8 @@
     },
     "text": "El último en tomarle una foto a {A} toma 2 tragos.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-317",
@@ -4767,7 +5083,8 @@
     },
     "text": "{A}, si te has tomado un shot con un desconocido, toma 1 trago.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "pre-318",
@@ -4781,7 +5098,8 @@
     "text": "Regla: Cada vez que alguien diga un nombre propio, debe tomarse 2 tragos.",
     "spice": 2,
     "weight": 1,
-    "ruleId": "r-nombre"
+    "ruleId": "r-nombre",
+    "drink_count": 2
   },
   {
     "id": "pre-319",
@@ -4794,7 +5112,8 @@
     },
     "text": "{A}, si has ido a un bar o club famoso en otro país, toma 2 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-320",
@@ -4807,7 +5126,8 @@
     },
     "text": "{A}, cuenta tu peor experiencia en transporte público o bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-321",
@@ -4820,7 +5140,8 @@
     },
     "text": "{A}, si has probado comida exótica, reparte 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-322",
@@ -4833,7 +5154,8 @@
     },
     "text": "{A}, di el nombre de 5 capitales de Latinoamérica en 10 segundos o bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-323",
@@ -4846,7 +5168,8 @@
     },
     "text": "{A}, di una canción de reggueton que nadie conozca. Si nadie la sabía, reparte 3 tragos. Si encima es buena, reparte 5.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 5
   },
   {
     "id": "pre-324",
@@ -4859,7 +5182,8 @@
     },
     "text": "{A}, si has bailado salsa en público, reparte 2 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-325",
@@ -4872,7 +5196,8 @@
     },
     "text": "{A}, haz tu mejor paso de baile o bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-326",
@@ -4885,7 +5210,8 @@
     },
     "text": "{A}, si te han robado alguna vez, toma 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-327",
@@ -4902,7 +5228,8 @@
     },
     "text": "{A} y {B}: el primero en nombrar 5 artistas latinos gana. El perdedor bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-328",
@@ -4919,7 +5246,8 @@
     },
     "text": "{A} y {B}: competencia de trabalenguas. El que se equivoque primero bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-329",
@@ -4936,7 +5264,8 @@
     },
     "text": "{A} y {B}: mírense a los ojos sin reír. El primero en reírse bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-330",
@@ -4953,7 +5282,8 @@
     },
     "text": "{A} vs {B}: el que haya tenido más parejas reparte 2 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-331",
@@ -4966,7 +5296,8 @@
     },
     "text": "Tema: Capitales de Latinoamérica. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-332",
@@ -4979,7 +5310,8 @@
     },
     "text": "Tema: Comidas callejeras. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-333",
@@ -4992,7 +5324,8 @@
     },
     "text": "Tema: Expresiones o modismos latinos. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-334",
@@ -5005,7 +5338,8 @@
     },
     "text": "Tema: Cosas que hacen único a Latinoamérica. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-335",
@@ -5018,7 +5352,8 @@
     },
     "text": "Todos deben imitar a {A}. El peor imitador bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-336",
@@ -5031,7 +5366,8 @@
     },
     "text": "Todos menos {A} deben decir algo que les guste de {A}. El último bebe 2 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-337",
@@ -5044,7 +5380,8 @@
     },
     "text": "El último en hacerle un cumplido a {A} bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-338",
@@ -5057,7 +5394,8 @@
     },
     "text": "Todos menos {A} hacen una pose ridícula. El último en hacerlo bebe 2 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-339",
@@ -5070,7 +5408,8 @@
     },
     "text": "¡Bonus! Todos toman 2 tragos para celebrar",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-340",
@@ -5083,7 +5422,8 @@
     },
     "text": "¡Par o impar! Los que nacieron en mes par toman 1 trago. Los demás: 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-341",
@@ -5096,7 +5436,8 @@
     },
     "text": "¡Ronda sorpresa! Todos beben 2 tragos y chocan los vasos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-342",
@@ -5110,7 +5451,8 @@
     "text": "Regla: No pueden decir 'gracias'. Quien falle bebe 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": "r-gracias"
+    "ruleId": "r-gracias",
+    "drink_count": 2
   },
   {
     "id": "pre-343",
@@ -5124,7 +5466,8 @@
     "text": "Regla: Deben señalar con el dedo cada vez que hablen. Quien olvide bebe 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": "r-señalar"
+    "ruleId": "r-señalar",
+    "drink_count": 2
   },
   {
     "id": "pre-344",
@@ -5137,7 +5480,8 @@
     },
     "text": "{A}, perréale a la pared durante 10 segundos o bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-345",
@@ -5150,7 +5494,8 @@
     },
     "text": "{A}, si has mentido sobre tu edad alguna vez, toma 2 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-346",
@@ -5163,7 +5508,8 @@
     },
     "text": "{A}, nombra 5 capitales del mundo en 10 segundos o bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-347",
@@ -5176,7 +5522,8 @@
     },
     "text": "{A}, si sabes bailar salsa o bachata, reparte 3 tragos. Si sabes ambas, reparte 5.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 5
   },
   {
     "id": "pre-348",
@@ -5189,7 +5536,8 @@
     },
     "text": "{A}, reparte 1 trago por cada tatuaje que tengas",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-349",
@@ -5202,7 +5550,8 @@
     },
     "text": "{A}, si has usado una app de citas, toma 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-350",
@@ -5215,7 +5564,8 @@
     },
     "text": "{A}, si has fingido estar enfermo para no ir a algo, toma 2 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-351",
@@ -5228,7 +5578,8 @@
     },
     "text": "{A}, si te has quedado dormido en el trabajo o clase, toma 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-352",
@@ -5241,7 +5592,8 @@
     },
     "text": "{A}, imita a alguien del grupo. Si adivinan quién es, repartes 3 tragos; si no, los tomas",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-353",
@@ -5254,7 +5606,8 @@
     },
     "text": "{A}, di tu mayor miedo o bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-354",
@@ -5267,7 +5620,8 @@
     },
     "text": "{A}, haz 5 lagartijas o bebe 4 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 4
   },
   {
     "id": "pre-355",
@@ -5280,7 +5634,8 @@
     },
     "text": "{A}, si tienes más de 1000 seguidores en Instagram, reparte 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-356",
@@ -5293,7 +5648,8 @@
     },
     "text": "{A}, intercambia de puesto con quien tú decidas y ambos beben 2 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-357",
@@ -5306,7 +5662,8 @@
     },
     "text": "{A}, si has tenido una relación a distancia, toma 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-358",
@@ -5319,7 +5676,8 @@
     },
     "text": "{A}, canta una canción de Shakira o bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-359",
@@ -5332,7 +5690,8 @@
     },
     "text": "{A}, toma un shot con la persona de tu derecha",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "pre-360",
@@ -5345,7 +5704,8 @@
     },
     "text": "{A}, si has ido a una discoteca en el último mes, toma 2 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-361",
@@ -5362,7 +5722,8 @@
     },
     "text": "{A} vs {B}: competencia de flexiones. El que haga menos bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-362",
@@ -5379,7 +5740,8 @@
     },
     "text": "{A} y {B}: jueguen a adivinar un número del 1 al 10. {A} adivina. El que pierda bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-363",
@@ -5396,7 +5758,8 @@
     },
     "text": "{A} y {B}: el primero en hacer reír a alguien del grupo gana. El perdedor bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-364",
@@ -5413,7 +5776,8 @@
     },
     "text": "{A} vs {B}: competencia de quién aguanta más un hielo en la mano. El perdedor bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-365",
@@ -5430,7 +5794,8 @@
     },
     "text": "{A} y {B}: el primero en nombrar 3 presidentes de cualquier país gana. El perdedor bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-366",
@@ -5447,7 +5812,8 @@
     },
     "text": "{A} y {B}: competencia de piropos. El grupo decide. El perdedor bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-367",
@@ -5464,7 +5830,8 @@
     },
     "text": "{A} vs {B}: el primero en decir 5 insultos únicos gana. El perdedor bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-368",
@@ -5477,7 +5844,8 @@
     },
     "text": "Tema: Series de Netflix. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-369",
@@ -5490,7 +5858,8 @@
     },
     "text": "Tema: Equipos de fútbol del mundo. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-370",
@@ -5503,7 +5872,8 @@
     },
     "text": "Tema: Apellidos comunes en Latinoamérica. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-371",
@@ -5516,7 +5886,8 @@
     },
     "text": "Voten: ¿Cerveza o shots? Minoría bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-372",
@@ -5529,7 +5900,8 @@
     },
     "text": "Tema: YouTubers o influencers latinos. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-373",
@@ -5542,7 +5914,8 @@
     },
     "text": "Tema: Postres o dulces. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-374",
@@ -5556,7 +5929,8 @@
     },
     "text": "Tema: Cosas que solo le pasan a {A}. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-375",
@@ -5569,7 +5943,8 @@
     },
     "text": "Tema: Canciones de Bad Bunny. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-376",
@@ -5582,7 +5957,8 @@
     },
     "text": "Tema: Regalos que no puedas dar a tu mamá. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-377",
@@ -5595,7 +5971,8 @@
     },
     "text": "Voten: ¿Quedarse en casa o salir de fiesta? Minoría bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-378",
@@ -5608,7 +5985,8 @@
     },
     "text": "Todos tocan la nariz. El último en hacerlo (además de {A}) bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-379",
@@ -5621,7 +5999,8 @@
     },
     "text": "Todos menos {A} deben decir un número. El que repita bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-380",
@@ -5634,7 +6013,8 @@
     },
     "text": "El último en darle un abrazo a {A} bebe 2 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-381",
@@ -5647,7 +6027,8 @@
     },
     "text": "Todos menos {A} hacen una cara graciosa. El último bebe 2 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-382",
@@ -5660,7 +6041,8 @@
     },
     "text": "Todos menos {A} deben imitar un animal. El último bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-383",
@@ -5673,7 +6055,8 @@
     },
     "text": "Todos menos {A} gritan el nombre de {A}. El último bebe 2 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-384",
@@ -5686,7 +6069,8 @@
     },
     "text": "El último en hacerle una reverencia a {A} bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-385",
@@ -5699,7 +6083,8 @@
     },
     "text": "Todos menos {A} deben tocar algo rojo. El último bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-386",
@@ -5712,7 +6097,8 @@
     },
     "text": "¡Llegan los suegros! Todos fingen sobriedad. El menos convincente bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-387",
@@ -5725,7 +6111,8 @@
     },
     "text": "¡Fiesta latina! Todos cantan y beben 2 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-388",
@@ -5738,7 +6125,8 @@
     },
     "text": "¡Se cayó el sistema! El más joven reparte 5 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 5
   },
   {
     "id": "pre-389",
@@ -5751,7 +6139,8 @@
     },
     "text": "¡Ola de frío! Todos beben 3 tragos para calentarse",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-390",
@@ -5764,7 +6153,8 @@
     },
     "text": "¡Llegó el delivery! El primero en gritar '¡Ya voy!' reparte 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-391",
@@ -5777,7 +6167,8 @@
     },
     "text": "¡Ronda de shots! Todos beben 2 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-392",
@@ -5790,7 +6181,8 @@
     },
     "text": "¡Festival de música! Todos bailan 1 canción. El peor bailarín bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-393",
@@ -5804,7 +6196,8 @@
     "text": "Regla: Deben beber con la mano izquierda. Quien use la derecha bebe 3 tragos extra",
     "spice": 2,
     "weight": 1,
-    "ruleId": "r-mano-izq"
+    "ruleId": "r-mano-izq",
+    "drink_count": 3
   },
   {
     "id": "pre-394",
@@ -5818,7 +6211,8 @@
     "text": "Regla: No pueden decir 'yo'. Quien falle bebe 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": "r-yo"
+    "ruleId": "r-yo",
+    "drink_count": 2
   },
   {
     "id": "pre-395",
@@ -5832,7 +6226,8 @@
     "text": "Regla: Deben aplaudir cada vez que alguien beba. Quien olvide bebe 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": "r-aplaudir"
+    "ruleId": "r-aplaudir",
+    "drink_count": 2
   },
   {
     "id": "pre-396",
@@ -5846,7 +6241,8 @@
     "text": "Regla: Cada vez que hablen deben terminar con 'bueno'. Quien olvide bebe 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": "r-bueno"
+    "ruleId": "r-bueno",
+    "drink_count": 2
   },
   {
     "id": "pre-397",
@@ -5859,7 +6255,8 @@
     },
     "text": "{A}, si has bailado en la lluvia, reparte 2 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-398",
@@ -5872,7 +6269,8 @@
     },
     "text": "{A}, haz un acento de otro país durante 1 minuto o bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-399",
@@ -5885,7 +6283,8 @@
     },
     "text": "{A}, di tu palabra grosera favorita o bebe 2 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-400",
@@ -5898,7 +6297,8 @@
     },
     "text": "{A}, nombra 3 comediantes famosos o bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-401",
@@ -5911,7 +6311,8 @@
     },
     "text": "{A}, muestra tu canción más escuchada del mes o bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-402",
@@ -5924,7 +6325,8 @@
     },
     "text": "{A}, di algo que nunca has hecho pero quieres hacer o bebe 2 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-403",
@@ -5941,7 +6343,8 @@
     },
     "text": "{A} y {B}: competencia de quién puede hacer mejor acento extranjero. El grupo decide. El perdedor bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-404",
@@ -5958,7 +6361,8 @@
     },
     "text": "{A} y {B}: el primero en encontrar una foto de comida en su celular gana. El perdedor bebe 2 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-405",
@@ -5971,7 +6375,8 @@
     },
     "text": "Tema: Géneros musicales. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-406",
@@ -5984,7 +6389,8 @@
     },
     "text": "Tema: Cosas que nunca faltan en una fiesta latina. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-407",
@@ -5997,7 +6403,8 @@
     },
     "text": "Todos menos {A} deben decir algo que admiran de {A}. El último bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-408",
@@ -6010,7 +6417,8 @@
     },
     "text": "Todos menos {A} hacen una pose de superhéroe. El último bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-409",
@@ -6023,7 +6431,8 @@
     },
     "text": "¡Emergencia! El último en sentarse bebe 4 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 4
   },
   {
     "id": "pre-410",
@@ -6036,7 +6445,8 @@
     },
     "text": "¡Carnaval latino! Todos beben 2 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-411",
@@ -6050,7 +6460,8 @@
     "text": "Regla: Deben hablar en diminutivo. Quien olvide bebe 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": "r-diminutivo"
+    "ruleId": "r-diminutivo",
+    "drink_count": 2
   },
   {
     "id": "pre-412",
@@ -6064,7 +6475,8 @@
     "text": "Regla: No pueden usar el celular. Quien lo use bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": "r-celular"
+    "ruleId": "r-celular",
+    "drink_count": 3
   },
   {
     "id": "pre-413",
@@ -6077,7 +6489,8 @@
     },
     "text": "{A}, si has bailado con un desconocido, toma 2 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-414",
@@ -6090,7 +6503,8 @@
     },
     "text": "{A}, si has cantado karaoke borracho, toma 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-415",
@@ -6103,7 +6517,8 @@
     },
     "text": "{A}, reparte 3 tragos a quien tenga el mejor outfit",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-416",
@@ -6116,7 +6531,8 @@
     },
     "text": "Voten: ¿quién tiene el mejor outfit? Esa persona reparte 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-417",
@@ -6129,7 +6545,8 @@
     },
     "text": "{A}, si has tenido una resaca terrible, toma 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-418",
@@ -6142,7 +6559,8 @@
     },
     "text": "{A}, el grupo vota si eres buen bailarín. Si sí, repartes 3 tragos; si no, los tomas",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-419",
@@ -6155,7 +6573,8 @@
     },
     "text": "{A}, si has olvidado el nombre de alguien que te gustaba, toma 2 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-420",
@@ -6168,7 +6587,8 @@
     },
     "text": "{A}, haz tu mejor imitación de un animal. El grupo vota. Si aciertan qué animal es, repartes 3 tragos; si no, los tomas",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-421",
@@ -6181,7 +6601,8 @@
     },
     "text": "¡Rematemos esto! Todos acaben su bebida.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 0
   },
   {
     "id": "pre-422",
@@ -6194,7 +6615,8 @@
     },
     "text": "Voten: ¿quién es el mejor bailarín del grupo? Esa persona reparte 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-423",
@@ -6207,7 +6629,8 @@
     },
     "text": "Voten: ¿quién del grupo sería el peor sobreviviendo en una isla? Esa persona bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-424",
@@ -6220,7 +6643,8 @@
     },
     "text": "{A}, convence al grupo de que sabes hacer algo que no sabes hacer. Tienes 30 segundos. Por cada persona que te crea, reparte 1 trago.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-425",
@@ -6233,7 +6657,8 @@
     },
     "text": "Quien haya ido a una fiesta y llegó al trabajo/clase destruido al día siguiente, toma 3 tragos.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-426",
@@ -6246,7 +6671,8 @@
     },
     "text": "Quien le haya mandado un mensaje a alguien sin intención real de hablar, toma 2 tragos.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-427",
@@ -6259,7 +6685,8 @@
     },
     "text": "Quien haya fingido estar ocupado para no salir a un plan y después se arrepintió, toma 2 tragos.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-428",
@@ -6272,7 +6699,8 @@
     },
     "text": "Quien haya llegado a una fiesta sin avisar y se quedó igual, toma 2 tragos.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-429",
@@ -6285,7 +6713,8 @@
     },
     "text": "Quien haya intentado hablar en el acento de otro país y haya quedado pésimo, toma 2 tragos.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-430",
@@ -6302,7 +6731,8 @@
     },
     "text": "{A} y {B}: ¿quién sabe más modismos latinoamericanos? Se los dicen uno a uno y el otro adivina el significado. El que falla más toma 3 tragos.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-431",
@@ -6315,7 +6745,8 @@
     },
     "text": "{A}, imita cómo hablan en un país diferente al tuyo. El que no le salga, toma 1 trago.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "pre-432",
@@ -6328,7 +6759,8 @@
     },
     "text": "{A}, cuenta la historia más loca que hayas vivido de viaje. El grupo vota: 0, 1, 2 o 3 tragos.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-433",
@@ -6341,7 +6773,8 @@
     },
     "text": "Tema: Canciones de reggaetón viejo. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-434",
@@ -6354,7 +6787,8 @@
     },
     "text": "{A}, si has salido de fiesta un día esta semana, toma 2 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-435",
@@ -6367,7 +6801,8 @@
     },
     "text": "{A}, si has mandado un mensaje borracho del que te arrepentiste, toma 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-436",
@@ -6380,7 +6815,8 @@
     },
     "text": "{A}, si has stalkeado a tu ex en redes sociales esta semana, toma 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-437",
@@ -6393,7 +6829,8 @@
     },
     "text": "{A}, si has hecho match en una app de citas y nunca escribiste, toma 2 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-438",
@@ -6406,7 +6843,8 @@
     },
     "text": "{A}, describe esta tu día de hoy como si fuera el tráiler de una película. El grupo vota: si convence, reparte 3 tragos.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-439",
@@ -6419,7 +6857,8 @@
     },
     "text": "{A}, dale un apodo creativo a cada uno del grupo. El más creativo elegido por el grupo reparte 2 tragos.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-440",
@@ -6432,7 +6871,8 @@
     },
     "text": "{A}, si alguna vez te han ghosteado, toma 2 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-441",
@@ -6445,7 +6885,8 @@
     },
     "text": "{A}, haz tu mejor cara de 'no fui yo' y el grupo vota si es convincente. Si no, bebe 3 tragos.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-442",
@@ -6462,7 +6903,8 @@
     },
     "text": "{A} vs {B}: el que pueda mantener el equilibrio en un pie por más tiempo gana. El perdedor bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-443",
@@ -6475,7 +6917,8 @@
     },
     "text": "{A}, cuenta tu peor experiencia en un viaje o bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-444",
@@ -6488,7 +6931,8 @@
     },
     "text": "Voten: ¿quién del grupo llegaría más tarde a su propia boda? Esa persona bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-445",
@@ -6501,7 +6945,8 @@
     },
     "text": "{A}, inventa una excusa creativa para no tomar este turno. El grupo vota. Si convence, se salva. Si no, bebe doble.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-446",
@@ -6515,7 +6960,8 @@
     "text": "Regla: Deben llamar a todos por un apodo inventado. Quien use el nombre real bebe 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": "r-apodo"
+    "ruleId": "r-apodo",
+    "drink_count": 2
   },
   {
     "id": "pre-447",
@@ -6528,7 +6974,8 @@
     },
     "text": "{A}, si has dormido en el piso de la casa de alguien, toma 2 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-448",
@@ -6541,7 +6988,8 @@
     },
     "text": "{A}, canta 10 segundos de la canción que más te guste sin pensar. Si desafinas, toma 2 tragos.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-449",
@@ -6558,7 +7006,8 @@
     },
     "text": "{A} y {B}: el que diga más nombres de canciones de Shakira en 20 segundos gana. El perdedor bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-450",
@@ -6571,7 +7020,8 @@
     },
     "text": "{A}, si has tenido una crush con alguien del trabajo o clase, toma 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-451",
@@ -6584,7 +7034,8 @@
     },
     "text": "{A}, di la frase más cursi que se te ocurra mirando a alguien del grupo. Si el grupo se ríe, repartes 3 tragos.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-452",
@@ -6597,7 +7048,8 @@
     },
     "text": "Tema: Artistas latinos que han dado un concierto en tu ciudad. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-453",
@@ -6614,7 +7066,8 @@
     },
     "text": "{A} vs {B}: quién puede decir el alfabeto más rápido al revés. El que se equivoque primero bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-454",
@@ -6627,7 +7080,8 @@
     },
     "text": "Si has dicho algo que no sentías solo para quedar bien, toma 2 tragos.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-455",
@@ -6640,7 +7094,8 @@
     },
     "text": "{A}, haz 10 sentadillas en 15 segundos o bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-456",
@@ -6653,7 +7108,8 @@
     },
     "text": "{A}, cuenta tu secreto más inocente o bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-457",
@@ -6666,7 +7122,8 @@
     },
     "text": "El último en hacerle un saludo creativo a {A} bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-458",
@@ -6679,7 +7136,8 @@
     },
     "text": "{A}, ¿le has dicho «a huevo» a un(a) profe? Si sí, tómate 2 tragos.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-459",
@@ -6692,7 +7150,8 @@
     },
     "text": "{A}, imita a un cuate tuyo sin decir quién es. Si el grupo adivina, reparte 3 tragos. Si no, tómate 3.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-460",
@@ -6705,7 +7164,8 @@
     },
     "text": "{A}, ¿cuántas cervezas aguantas sin que se te note? Toma 1 trago por cada una que digas, máximo 4.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "pre-461",
@@ -6722,7 +7182,8 @@
     },
     "text": "{A} y {B}: batalla de piropos. El grupo vota por el mejor. El que pierda toma 3 tragos.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-462",
@@ -6735,7 +7196,8 @@
     },
     "text": "{A}, canta 10 segundos de una rola de banda de tu país. Si desafina mucho, toma 2 tragos.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-463",
@@ -6748,7 +7210,8 @@
     },
     "text": "{A}, dile al grupo con la excusa más creativa para no tomar este turno. El grupo vota. Si convence, se salva. Si no, toma 2",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-464",
@@ -6761,7 +7224,8 @@
     },
     "text": "{A}, ¿te has mandado al frente en un asado o parrillada? Si sí, reparte 2 tragos.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-465",
@@ -6779,7 +7243,8 @@
     },
     "text": "{A} y {B}: ¿quién conoce más frases de {C}? Por turnos. El que no sabe o diga una mal más toma 3 tragos.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-466",
@@ -6792,7 +7257,8 @@
     },
     "text": "Voten: ¿Boca Juniors o River Plate? Minoría toma 3 tragos. Si hay empate, todos toman 1.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-467",
@@ -6805,7 +7271,8 @@
     },
     "text": "{A}, actuá como si estuvieras en un asado defendiendo que la mejor carne la hacés vos. El grupo vota. Si convence, reparte 2 tragos.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-468",
@@ -6818,7 +7285,8 @@
     },
     "text": "{A}, ¿alguna vez le dijiste 'boludo' a alguien con cariño y no lo entendió? Si sí, toma 2 tragos.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-469",
@@ -6831,7 +7299,8 @@
     },
     "text": "¡Joda total! Todos cuentan algo que hicieron con fiaca pero que salió re bien. El más copado reparte 2 tragos.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-470",
@@ -6848,7 +7317,8 @@
     },
     "text": "{A} y {B}: ¿quién conoce más canciones de perreo? El que no sepa o repita toma 3 tragos.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-471",
@@ -6861,7 +7331,8 @@
     },
     "text": "{A}, contá tu peor historia de fiesta, pero haciendo que suene increíble. El grupo vota si lo creyó. Si sí, reparte 3 tragos.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-472",
@@ -6874,7 +7345,8 @@
     },
     "text": "{A}, haz que todos se rían en 15 segundos. Si no lo logras, bebe 3 tragos.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-473",
@@ -6887,7 +7359,8 @@
     },
     "text": "{A}, si has perdido el celular en una fiesta, toma 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-474",
@@ -6900,7 +7373,8 @@
     },
     "text": "{A}, di la peor mentira que has dicho para salir de una situación o bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-475",
@@ -6917,7 +7391,8 @@
     },
     "text": "{A} vs {B}: el que pueda hacer más abdominales en 15 segundos gana. El perdedor bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-476",
@@ -6930,7 +7405,8 @@
     },
     "text": "Tema: Canciones para cantar borracho. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-477",
@@ -6943,7 +7419,8 @@
     },
     "text": "Todos menos {A} deben decir una canción. El que repita una ya dicha bebe 3 tragos",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-478",
@@ -6960,7 +7437,8 @@
     "text": "{A}, si alguna vez cancelaste planes para quedarte viendo series, toma 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-479",
@@ -6977,7 +7455,8 @@
     "text": "{A}, si alguna vez hiciste match en Tinder y nunca le escribiste, toma 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-480",
@@ -6994,7 +7473,8 @@
     "text": "{A}, muestra la última foto que tomaste con tu celular o bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-481",
@@ -7011,7 +7491,8 @@
     "text": "{A}, haz 10 sentadillas ahora mismo o bebe 4 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-482",
@@ -7029,7 +7510,8 @@
     "text": "{A} y {B}: el que aguante más tiempo haciendo plancha gana. El perdedor bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-483",
@@ -7046,7 +7528,8 @@
     "text": "{A}, describe tu tipo ideal en 3 palabras o bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-484",
@@ -7064,7 +7547,8 @@
     "text": "{A} vs {B}: busquen la canción más rara en su Spotify. Los demás votan la peor. El perdedor bebe 4 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-485",
@@ -7081,7 +7565,8 @@
     "text": "{A}, di tu peor cita de Tinder en 15 segundos o bebe 4 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-486",
@@ -7098,7 +7583,8 @@
     "text": "{A}, si has gastado más de 500 pesos en una noche de fiesta, toma 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-487",
@@ -7116,7 +7602,8 @@
     "text": "{A} y {B}: cada uno dice su peor hábito. Los demás votan el más asqueroso. El perdedor bebe 4 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-488",
@@ -7133,7 +7620,8 @@
     "text": "{A}, tómate 1 trago por cada viaje internacional que hayas hecho",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-489",
@@ -7150,7 +7638,8 @@
     "text": "{A}, si alguna vez hiciste una videollamada borracho, toma 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-490",
@@ -7167,7 +7656,8 @@
     "text": "{A}, pon tu playlist de Spotify en aleatorio y baila lo que salga 15 segundos o bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-491",
@@ -7184,7 +7674,8 @@
     "text": "{A}, si alguna vez te pasó algo vergonzoso en el gym, cuéntalo y bebe 2 tragos. Si no cuentas, bebe 4",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-492",
@@ -7201,7 +7692,8 @@
     "text": "{A}, si alguna vez te quedaste atrapado en otro país por perder un vuelo, toma 3 tragos y cuenta",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-493",
@@ -7218,7 +7710,8 @@
     "text": "{A}, inventa un cocktail con lo que hay en la mesa y ponle nombre. Si alguien lo prueba y le gusta, ese bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-494",
@@ -7235,7 +7728,8 @@
     "text": "{A}, rapea durante 15 segundos sobre la persona a tu derecha o bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-495",
@@ -7253,7 +7747,8 @@
     "text": "{A} y {B}: cada uno dice la línea de ligue más mala que hayan usado. Los demás votan la peor. El perdedor bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-496",
@@ -7270,7 +7765,8 @@
     "text": "{A}, si has hecho ghosting a alguien, toma 3 tragos. Si te lo han hecho a ti, reparte 3",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-497",
@@ -7287,7 +7783,8 @@
     "text": "{A}, haz una reseña de tu vida amorosa como si fuera una reseña de Google Maps o bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-498",
@@ -7304,7 +7801,8 @@
     "text": "{A}, si has compartido la contraseña de Netflix con alguien que ya no es tu pareja, toma 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-499",
@@ -7321,7 +7819,8 @@
     "text": "{A}, muestra la última foto que tomaste con la cámara frontal o bebe 4 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-500",
@@ -7338,7 +7837,8 @@
     "text": "{A}, cuenta tu anécdota más loca de un viaje en 20 segundos o bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-501",
@@ -7356,7 +7856,8 @@
     "text": "{A} vs {B}: el que diga más capitales de Europa en 15 segundos gana. El perdedor bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-502",
@@ -7373,7 +7874,8 @@
     "text": "{A}, si has viajado en avión más de 10 horas seguidas, reparte 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-503",
@@ -7390,7 +7892,8 @@
     "text": "{A}, si has visto un amanecer después de una peda sin dormir, toma 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-504",
@@ -7407,7 +7910,8 @@
     "text": "{A}, mantén un hielo en la mano mientras dices el abecedario. Si lo sueltas antes de terminar, bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-505",
@@ -7425,7 +7929,8 @@
     "text": "{A} vs {B}: cara o cruz. El que pierda bebe 4 tragos. El que gane decide si reparte 2 o se los toma",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-506",
@@ -7442,7 +7947,8 @@
     "text": "{A}, di tu bio de Tinder actual (o la que pondrías) o bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-507",
@@ -7459,7 +7965,8 @@
     "text": "{A}, si has perdido la maleta en un aeropuerto, toma 3 tragos de estrés",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-508",
@@ -7477,7 +7984,8 @@
     "text": "{A} y {B}: concurso de baile de 10 segundos. Los demás votan al ganador. El perdedor bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-509",
@@ -7494,7 +8002,8 @@
     "text": "{A}, di tu contraseña de Netflix sin la última letra o bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-510",
@@ -7511,7 +8020,8 @@
     "text": "{A}, si has subido una historia llorando o desahogándote, toma 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-511",
@@ -7525,7 +8035,8 @@
     "text": "Tema: Cosas que dices cuando estás borracho. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-512",
@@ -7542,7 +8053,8 @@
     "text": "{A}, si alguna vez comiste en un restaurante caro solo para la foto de Instagram, toma 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-513",
@@ -7556,7 +8068,8 @@
     "text": "Voten: ¿Tequila o mezcal? Minoría bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-514",
@@ -7573,7 +8086,8 @@
     "text": "{A}, inventa una coreografía de 5 segundos y enséñasela a todos. El que no la haga bien bebe 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-515",
@@ -7590,7 +8104,8 @@
     "text": "{A}, si tienes una cuenta finsta o cuenta alterna de Instagram, toma 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-516",
@@ -7604,7 +8119,8 @@
     "text": "Tema: Cosas que haces cuando estás solo en casa. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-517",
@@ -7621,7 +8137,8 @@
     "text": "{A}, con los ojos cerrados, señala a alguien. Esa persona y tú beben 3 tragos juntos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-518",
@@ -7638,7 +8155,8 @@
     "text": "{A}, imita a tu profesor o jefe favorito y que adivinen a quién imitas. Si nadie acierta, bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-519",
@@ -7655,7 +8173,8 @@
     "text": "{A}, si alguna vez le diste unfollow a alguien por despecho, toma 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-520",
@@ -7672,7 +8191,8 @@
     "text": "{A}, si has ligado en los DMs de Instagram, toma 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-521",
@@ -7689,7 +8209,8 @@
     "text": "{A}, todos cierren los ojos. Señala a alguien. Esa persona bebe 4 tragos sin saber quién la señaló",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-522",
@@ -7706,7 +8227,8 @@
     "text": "{A}, canta el primer verso de la canción que pongan sin saber cuál es o bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-523",
@@ -7723,7 +8245,8 @@
     "text": "{A}, reparte 1 trago por cada piercing o tatuaje que tengas. Si no tienes ninguno, bebe 3",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-524",
@@ -7740,7 +8263,8 @@
     "text": "{A}, si alguna vez te metiste a una fiesta de extraños y te quedaste, toma 3 tragos por intrépido",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-525",
@@ -7757,7 +8281,8 @@
     "text": "{A}, di una mentira sobre ti. Si alguien la detecta, reparte 3 tragos. Si nadie la descubre, bébetelos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-526",
@@ -7774,7 +8299,8 @@
     "text": "{A}, haz tu mejor imitación de cómo coqueteas y bebe 2 tragos de vergüenza",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-527",
@@ -7791,7 +8317,8 @@
     "text": "{A}, si alguna vez te hicieron catfish en una app de citas, toma 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-528",
@@ -7805,7 +8332,8 @@
     "text": "Tema: Cosas que haces en vez de dormir. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-529",
@@ -7822,7 +8350,8 @@
     "text": "{A}, cuenta algo vergonzoso que le pasó a un amigo (sin decir quién) o bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-530",
@@ -7839,7 +8368,8 @@
     "text": "{A}, si alguna vez le diste superlike a alguien en Tinder sin querer, toma 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-531",
@@ -7856,7 +8386,8 @@
     "text": "{A}, menciona un recuerdo vergonzoso de la primaria o bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-532",
@@ -7870,7 +8401,8 @@
     "text": "Tema: Señales de que alguien te ghosteó. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-533",
@@ -7887,7 +8419,8 @@
     "text": "{A}, camina como modelo en una pasarela de un lado al otro del cuarto o bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-534",
@@ -7904,7 +8437,8 @@
     "text": "{A}, si alguna vez te quedaste a dormir en casa de alguien sin planificarlo, toma 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-535",
@@ -7921,7 +8455,8 @@
     "text": "{A}, si alguna vez te cambiaste de look drásticamente y te arrepentiste, toma 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-536",
@@ -7938,7 +8473,8 @@
     "text": "{A}, tómate 1 trago por cada país que hayas visitado este año. Si no viajaste, bebe 3 por sedentario",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-537",
@@ -7955,7 +8491,8 @@
     "text": "{A}, si has hecho match con alguien y después lo viste en persona sin decir nada, toma 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-538",
@@ -7972,7 +8509,8 @@
     "text": "{A}, di la cosa más random que hayas comprado en línea a las 2 AM o bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-539",
@@ -7989,7 +8527,8 @@
     "text": "{A}, di una frase cursi mirando a los ojos a la persona de tu derecha o bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-540",
@@ -8006,7 +8545,8 @@
     "text": "{A}, actúa tu peor borrachera de la historia en 15 segundos o bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-541",
@@ -8023,7 +8563,8 @@
     "text": "{A}, si alguna vez lloraste viendo una película romántica, toma 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-542",
@@ -8040,7 +8581,8 @@
     "text": "{A}, si alguna vez tomaste un vuelo de madrugada después de una peda, toma 3 tragos, crack",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-543",
@@ -8057,7 +8599,8 @@
     "text": "{A}, pon la canción de moda y todos tienen que bailarla. El que se quede quieto bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-544",
@@ -8071,7 +8614,8 @@
     "text": "Tema: Palabras que solo se entienden en tu país. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-545",
@@ -8088,7 +8632,8 @@
     "text": "{A}, di qué jugador sería el peor roommate y por qué. Esa persona bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-546",
@@ -8105,7 +8650,8 @@
     "text": "{A}, haz una promesa que vayas a cumplir esta noche. Si no la cumples, fondeas tu vaso al final",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-547",
@@ -8122,7 +8668,8 @@
     "text": "{A}, si le has escrito a alguien que no te contestó y le volviste a escribir, toma 3 tragos por insistente",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-548",
@@ -8139,7 +8686,8 @@
     "text": "{A}, si tu playlist más escuchada se llama algo vergonzoso, dilo y bebe 2 tragos. Si no lo dices, bebe 4",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-549",
@@ -8156,7 +8704,8 @@
     "text": "{A}, si alguna vez tu hermano te echó la culpa de algo que no hiciste, toma 2 tragos por la injusticia",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-550",
@@ -8173,7 +8722,8 @@
     "text": "{A}, cuenta el peor consejo financiero que has seguido o bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-551",
@@ -8185,7 +8735,8 @@
     "text": "Voten: ¿Gastar todo tu sueldo en una noche épica o ahorrarlo todo un mes? Minoría bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-552",
@@ -8202,7 +8753,8 @@
     "text": "{A}, si alguna vez compraste algo caro para impresionar a alguien, toma 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-553",
@@ -8219,7 +8771,8 @@
     "text": "{A}, di la mentira más grande que le has dicho a tus papás o bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-554",
@@ -8237,7 +8790,8 @@
     "text": "{A} vs {B}: el que cuente la peor experiencia en una entrevista de trabajo. Los demás votan. El perdedor bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-555",
@@ -8254,7 +8808,8 @@
     "text": "{A}, si alguna vez le revisaste el celular a tu pareja sin que supiera, toma 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-556",
@@ -8268,7 +8823,8 @@
     "text": "Tema: Cosas que haces para impresionar en una primera cita. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-557",
@@ -8285,7 +8841,8 @@
     "text": "{A}, di el peor regalo que le has dado a alguien. Si la persona está aquí, ambos beben 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-558",
@@ -8302,7 +8859,8 @@
     "text": "{A}, si alguna vez te mudaste de ciudad por amor o por huir de alguien, toma 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-559",
@@ -8319,7 +8877,8 @@
     "text": "El último en contarle a {A} su peor fobia bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-560",
@@ -8336,7 +8895,8 @@
     "text": "{A}, cuenta la historia más loca de un road trip tuyo o bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-561",
@@ -8353,7 +8913,8 @@
     "text": "{A}, si alguna vez lloraste de risa tan fuerte que te dolió el estómago, toma 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-562",
@@ -8365,7 +8926,8 @@
     "text": "Voten: ¿Pedir perdón o pedir permiso? Minoría bebe 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-563",
@@ -8382,7 +8944,8 @@
     "text": "{A}, di el apodo más vergonzoso que te han puesto y cómo te lo ganaste o bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-564",
@@ -8400,7 +8963,8 @@
     "text": "{A} vs {B}: cada uno dice la cosa más rara que ha comido. El grupo vota la más asquerosa. El perdedor bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-565",
@@ -8417,7 +8981,8 @@
     "text": "{A}, si alguna vez tu mamá te cachó en una mentira épica, toma 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-566",
@@ -8431,7 +8996,8 @@
     "text": "Tema: Cosas por las que te regañaban de niño. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-567",
@@ -8448,7 +9014,8 @@
     "text": "{A}, muestra la última foto de tu galería. Si es vergonzosa, reparte 3 tragos. Si es normal, te los tomas",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-568",
@@ -8465,7 +9032,8 @@
     "text": "{A}, si alguna vez te enamoraste de alguien que vivía en otra ciudad o país, toma 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-569",
@@ -8482,7 +9050,8 @@
     "text": "{A}, cuenta tu peor accidente deportivo. Si no practicas ningún deporte, bebe 3 tragos por sedentario",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-570",
@@ -8499,7 +9068,8 @@
     "text": "{A}, si alguna vez te cayó un pájaro encima o te cagó, toma 2 tragos de suerte",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-571",
@@ -8511,7 +9081,8 @@
     "text": "Voten: ¿Creer en fantasmas o creer en aliens? Minoría bebe 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-572",
@@ -8528,7 +9099,8 @@
     "text": "{A}, imita cómo habla tu abuelo o abuela y bebe 2 tragos en su honor",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-573",
@@ -8545,7 +9117,8 @@
     "text": "{A}, si alguna vez te desvelaste toda la noche jugando videojuegos y al día siguiente tenías algo importante, toma 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-574",
@@ -8563,7 +9136,8 @@
     "text": "{A} vs {B}: cada uno cuenta su peor historia con un roommate. Los demás votan la peor. El perdedor bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-575",
@@ -8577,7 +9151,8 @@
     "text": "Tema: Excusas para cancelar planes. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-576",
@@ -8594,7 +9169,8 @@
     "text": "{A}, di el nombre de 3 maestros de tu escuela en 10 segundos o bebe 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-577",
@@ -8611,7 +9187,8 @@
     "text": "{A}, si alguna vez gastaste todo tu dinero del mes en la primera semana, toma 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-578",
@@ -8623,7 +9200,8 @@
     "text": "Voten: ¿Tener la capacidad de no dormir nunca o no comer nunca? Minoría bebe 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-579",
@@ -8640,7 +9218,8 @@
     "text": "{A}, haz la imitación de un familiar famoso en tu familia. Si alguien lo reconoce, reparte 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-580",
@@ -8657,7 +9236,8 @@
     "text": "{A}, si alguna vez te comiste la comida de alguien del refrigerador sin permiso, toma 2 tragos de rata",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-581",
@@ -8672,7 +9252,8 @@
     "text": "¡Reunión familiar! Todos imitan a un familiar y beben 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-582",
@@ -8689,7 +9270,8 @@
     "text": "{A}, di la cosa más estúpida que compraste borracho por internet o bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-583",
@@ -8706,7 +9288,8 @@
     "text": "{A}, si alguna vez tuviste un sueño con alguien del grupo y no se lo has dicho, toma 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-584",
@@ -8724,7 +9307,8 @@
     "text": "{A} vs {B}: el que diga más nombres de profesores de la escuela en 10 segundos gana. El perdedor bebe 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-585",
@@ -8738,7 +9322,8 @@
     "text": "Tema: Cosas que harías si fueras invisible por un día. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-586",
@@ -8755,7 +9340,8 @@
     "text": "{A}, di algo que te da pena admitir que te gusta. El grupo decide si es cringe. Si sí, bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-587",
@@ -8772,7 +9358,8 @@
     "text": "{A}, si alguna vez usaste ropa de tu hermano sin permiso y la arruinaste, toma 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-588",
@@ -8789,7 +9376,8 @@
     "text": "El último en contarle a {A} su sueño más raro bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-589",
@@ -8801,7 +9389,8 @@
     "text": "Voten: ¿Tener que usar el mismo outfit toda la vida o nunca repetir outfit? Minoría bebe 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-590",
@@ -8818,7 +9407,8 @@
     "text": "{A}, cuenta tu momento más vergonzoso en transporte público o bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-591",
@@ -8835,7 +9425,8 @@
     "text": "{A}, si alguna vez se te olvidó el cumpleaños de alguien importante, toma 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-592",
@@ -8852,7 +9443,8 @@
     "text": "{A}, di un dato que nadie del grupo sepa de ti. Si alguien ya lo sabía, bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-593",
@@ -8869,7 +9461,8 @@
     "text": "{A}, si alguna vez hiciste trampa en un juego de mesa familiar, toma 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-594",
@@ -8883,7 +9476,8 @@
     "text": "Tema: Cosas que guardas por nostalgia y no sirven. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-595",
@@ -8900,7 +9494,8 @@
     "text": "{A}, canta la canción de cuna que te cantaban de niño o bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-596",
@@ -8918,7 +9513,8 @@
     "text": "{A} vs {B}: el que sepa más chistes de papá. Cada uno dice uno y el grupo vota el mejor. El perdedor bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-597",
@@ -8935,7 +9531,8 @@
     "text": "{A}, si alguna vez le pediste dinero prestado a un amigo y tardaste meses en pagarlo, toma 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-598",
@@ -8947,7 +9544,8 @@
     "text": "Voten: ¿Ser el hermano mayor o el menor? Minoría bebe 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-599",
@@ -8964,7 +9562,8 @@
     "text": "{A}, di el peor chiste de papá que sepas. Si alguien se ríe, esa persona bebe 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-600",
@@ -8981,7 +9580,8 @@
     "text": "{A}, si alguna vez te caíste frente a alguien que te gustaba, toma 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-601",
@@ -8995,7 +9595,8 @@
     "text": "Tema: Cosas que tu roommate hace que te vuelven loco. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-602",
@@ -9012,7 +9613,8 @@
     "text": "{A}, cuenta la experiencia paranormal más rara que has tenido o bebe 3 tragos por escéptico",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-603",
@@ -9029,7 +9631,8 @@
     "text": "{A}, si alguna vez te pusiste la camiseta de otro equipo solo por conveniencia social, toma 2 tragos de vendido",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-604",
@@ -9044,7 +9647,8 @@
     "text": "¡Intercambio cultural! Todos dicen un dicho de su región. El mejor reparte 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-605",
@@ -9061,7 +9665,8 @@
     "text": "{A}, di la cosa más absurda que has hecho para evitar hablar con alguien o bebe 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-606",
@@ -9078,7 +9683,8 @@
     "text": "{A}, si alguna vez se te cayó el celular al inodoro, toma 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-607",
@@ -9096,7 +9702,8 @@
     "text": "{A} vs {B}: cada uno dice la cosa más random que tiene en su cuarto. El grupo vota la más rara. El ganador reparte 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-608",
@@ -9108,7 +9715,8 @@
     "text": "El que tenga la historia más ridícula de un encuentro con un animal la cuenta y reparte 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-609",
@@ -9125,7 +9733,8 @@
     "text": "{A}, di tu hot take más polémico. Si alguien está de acuerdo, ambos beben 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-610",
@@ -9142,7 +9751,8 @@
     "text": "{A}, si alguna vez inventaste una historia para salirte de un compromiso familiar, toma 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-611",
@@ -9156,7 +9766,8 @@
     "text": "Tema: Mentiras que les decían tus papás de chiquito. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-612",
@@ -9173,7 +9784,8 @@
     "text": "El último en hacerle una cara chistosa a {A} bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-613",
@@ -9190,7 +9802,8 @@
     "text": "{A}, di la frase que más repite tu mamá cuando te habla por teléfono o bebe 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-614",
@@ -9207,7 +9820,8 @@
     "text": "{A}, si alguna vez le mandaste un screenshot a la persona equivocada y era de su propia conversación, toma 4 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-615",
@@ -9219,7 +9833,8 @@
     "text": "Voten: ¿Saber todos los idiomas del mundo o tocar todos los instrumentos? Minoría bebe 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-616",
@@ -9236,7 +9851,8 @@
     "text": "{A}, di algo bonito de tu infancia que extrañes. Todos beben 1 trago de nostalgia",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-617",
@@ -9254,7 +9870,8 @@
     "text": "{A} vs {B}: el que aguante más tiempo sin parpadear. El perdedor bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-618",
@@ -9271,7 +9888,8 @@
     "text": "{A}, si alguna vez te quedaste dormido en el Uber y el chofer tuvo que despertarte, toma 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-619",
@@ -9288,7 +9906,8 @@
     "text": "{A}, cuenta tu peor metida de pata en redes sociales o bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-620",
@@ -9302,7 +9921,8 @@
     "text": "Tema: Cosas inútiles que sabes hacer. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-621",
@@ -9319,7 +9939,8 @@
     "text": "{A}, si alguna vez fuiste a un lugar turístico y compraste un souvenir horrible, toma 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-622",
@@ -9336,7 +9957,8 @@
     "text": "{A}, di la cosa más rara que has buscado en Google a las 3 AM. Si te niegas, bebe 4 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-623",
@@ -9353,7 +9975,8 @@
     "text": "El último en decirle a {A} su recuerdo favorito de la infancia bebe 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-624",
@@ -9368,7 +9991,8 @@
     "text": "¡Brindis obligatorio! Cada uno dice por qué brinda. Todos beben 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-625",
@@ -9385,7 +10009,8 @@
     "text": "{A}, di tu peor experiencia en un aeropuerto o estación de autobuses. Si no tienes, bebe 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-626",
@@ -9402,7 +10027,8 @@
     "text": "{A}, si alguna vez te perdiste en una ciudad que no conocías, toma 2 tragos de aventurero",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-627",
@@ -9414,7 +10040,8 @@
     "text": "Voten: ¿Llegar siempre 10 minutos tarde o 1 hora temprano? Minoría bebe 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-628",
@@ -9431,7 +10058,8 @@
     "text": "{A}, di la cosa más cara que has roto sin querer y bebe 2 tragos de culpa",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-629",
@@ -9448,7 +10076,8 @@
     "text": "{A}, si alguna vez te pusiste celoso de una mascota, toma 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-630",
@@ -9466,7 +10095,8 @@
     "text": "{A} vs {B}: el que diga más cosas que cuestan menos de un dólar en 10 segundos gana. El perdedor bebe 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-631",
@@ -9480,7 +10110,8 @@
     "text": "Tema: Señales de que alguien es de tu ciudad. {STARTER} empieza. El que repita o no sepa bebe 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-632",
@@ -9495,7 +10126,8 @@
     "text": "¡Abrazo grupal! Todos se abrazan y beben 2 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-633",
@@ -9510,7 +10142,8 @@
     "text": "Regla: Cada vez que alguien diga una groserÍa tiene que hacer una sentadilla. Quien olvide bebe 3 tragos",
     "spice": 2,
     "weight": 1,
-    "ruleId": "r-sentadilla"
+    "ruleId": "r-sentadilla",
+    "drink_count": 3
   },
   {
     "id": "pre-634",
@@ -9525,7 +10158,8 @@
     "text": "Se acabó la regla: Ya no tienen que hacer sentadillas por decir groserías",
     "spice": 2,
     "weight": 1,
-    "ruleId": "r-sentadilla"
+    "ruleId": "r-sentadilla",
+    "drink_count": 0
   },
   {
     "id": "pre-635",
@@ -9538,7 +10172,8 @@
     },
     "text": "Si se han besado con algún hermano(a) de su amigo, tomen 4 tragos.",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 4
   },
   {
     "id": "pre-636",
@@ -9551,7 +10186,8 @@
     },
     "text": "{A}, reparte 1 trago a quien quieras por cada 2 personas que te has besado",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "pre-637",
@@ -9564,7 +10200,8 @@
     },
     "text": "{A}, reparte 1 trago por cada relación que has tenido.",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "pre-638",
@@ -9577,7 +10214,8 @@
     },
     "text": "{A}, si has besado a alguien del grupo, toma 4 tragos",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 4
   },
   {
     "id": "pre-639",
@@ -9590,7 +10228,8 @@
     },
     "text": "{A}, confiesa tu crush secreto o bebe 4 tragos",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 4
   },
   {
     "id": "pre-640",
@@ -9603,7 +10242,8 @@
     },
     "text": "{A}, si has tenido un lío amoroso con alguien conocido aquí, toma 5 tragos",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 5
   },
   {
     "id": "pre-641",
@@ -9616,7 +10256,8 @@
     },
     "text": "{A}, envía un mensaje coqueto a quien te digan o bebe 5 tragos",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 5
   },
   {
     "id": "pre-642",
@@ -9629,7 +10270,8 @@
     },
     "text": "{A}, di tu experiencia más vergonzosa en 10 segundos o bebe 4 tragos",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 4
   },
   {
     "id": "pre-643",
@@ -9642,7 +10284,8 @@
     },
     "text": "{A}, muestra tu última foto en el celular o bebe 4 tragos",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 4
   },
   {
     "id": "pre-644",
@@ -9655,7 +10298,8 @@
     },
     "text": "{A}, si has tenido una pelea física de adulto, toma 4 tragos",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 4
   },
   {
     "id": "pre-645",
@@ -9668,7 +10312,8 @@
     },
     "text": "{A}, si has robado algo de una tienda, toma 4 tragos",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 4
   },
   {
     "id": "pre-646",
@@ -9681,7 +10326,8 @@
     },
     "text": "{A}, cuéntanos de la peor cita que has tenido o bebe 4 tragos",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 4
   },
   {
     "id": "pre-647",
@@ -9694,7 +10340,8 @@
     },
     "text": "{A}, di quién es la persona más atractiva del grupo o bebe 4 tragos",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 4
   },
   {
     "id": "pre-648",
@@ -9707,7 +10354,8 @@
     },
     "text": "Voten por la persona más atractiva. Quien gane reparte 4 tragos",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 4
   },
   {
     "id": "pre-649",
@@ -9724,7 +10372,8 @@
     },
     "text": "{A} vs {B}: batalla de freestyle. El grupo decide quién gana. El perdedor bebe 4 tragos",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 4
   },
   {
     "id": "pre-650",
@@ -9737,7 +10386,8 @@
     },
     "text": "¡Silencio total! Nadie puede hablar por 30 segundos. El que hable bebe 5 tragos",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 5
   },
   {
     "id": "pre-651",
@@ -9750,7 +10400,8 @@
     },
     "text": "¡Congelados! Nadie puede moverse por 20 segundos. El que se mueva bebe 4 tragos",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 4
   },
   {
     "id": "pre-652",
@@ -9763,7 +10414,8 @@
     },
     "text": "{A}, cuenta una anécdota de una fiesta loca o bebe 4 tragos",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 4
   },
   {
     "id": "pre-653",
@@ -9776,7 +10428,8 @@
     },
     "text": "{A}, intercambia ropa con alguien o bebe 5 tragos",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 5
   },
   {
     "id": "pre-654",
@@ -9789,7 +10442,8 @@
     },
     "text": "{A}, graba un TikTok de 10 segundos ahora mismo o bebe 4 tragos",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 4
   },
   {
     "id": "pre-655",
@@ -9802,7 +10456,8 @@
     },
     "text": "{A}, muestra tu última conversación de WhatsApp o bebe 4 tragos",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 4
   },
   {
     "id": "pre-656",
@@ -9819,7 +10474,8 @@
     },
     "text": "{A} y {B}: Cada uno trata de convencer al grupo de algo imposible en 20 segundos. El que menos convence toma 3 tragos.",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-657",
@@ -9832,7 +10488,8 @@
     },
     "text": "{A}, si has dicho 'te quiero' sin sentirlo, toma 3 tragos",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-658",
@@ -9845,7 +10502,8 @@
     },
     "text": "{A}, si has besado a alguien en la primera cita, toma 3 tragos",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-659",
@@ -9858,7 +10516,8 @@
     },
     "text": "{A}, llama a la última persona que te escribió por WhatsApp y dile algo bonito. Si no te atreves, bebe 4 tragos.",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 4
   },
   {
     "id": "pre-660",
@@ -9871,7 +10530,8 @@
     },
     "text": "{A}, ¿alguna vez dejaste a alguien tirado en una fiesta? Si sí, toma 2 tragos.",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "pre-661",
@@ -9884,7 +10544,8 @@
     },
     "text": "{A}, si has dormido en la calle o un lugar random después de una fiesta, toma 3 tragos",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "pre-662",
@@ -9897,7 +10558,8 @@
     },
     "text": "{A}, cambia tu foto de perfil de WhatsApp a lo que el grupo decida o bebe 5 tragos",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 5
   },
   {
     "id": "pre-663",
@@ -9914,7 +10576,8 @@
     "text": "{A}, manda un audio de WhatsApp diciendo 'te extraño' al último contacto que te escribió o bebe 4 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-664",
@@ -9931,7 +10594,8 @@
     "text": "{A}, si has stalkeado a tu ex hasta la foto del 2018, toma 3 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-665",
@@ -9948,7 +10612,8 @@
     "text": "{A}, si has mandado un mensaje borracho que te arrepentiste al despertar, toma 3 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-666",
@@ -9965,7 +10630,8 @@
     "text": "{A}, pon la canción que te recuerde a tu ex. Si no la pones, bebe 5 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 5
   },
   {
     "id": "pre-667",
@@ -9982,7 +10648,8 @@
     "text": "{A}, si le has dado like a una foto vieja de tu crush por accidente, toma 3 tragos de vergüenza",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-668",
@@ -9999,7 +10666,8 @@
     "text": "{A}, di el nombre de la última persona a la que le diste like en Hinge o Bumble, o bebe 4 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-669",
@@ -10016,7 +10684,8 @@
     "text": "{A}, di algo que nadie sepa de ti o bebe 5 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 5
   },
   {
     "id": "pre-670",
@@ -10030,7 +10699,8 @@
     "text": "Tema: Excusas para no ir al gym. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-671",
@@ -10048,7 +10718,8 @@
     "text": "{A} vs {B}: el que tenga más fotos guardadas en el celular bebe 3 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-672",
@@ -10065,7 +10736,8 @@
     "text": "{A}, llama al último contacto de tu historial y pon el altavoz 10 segundos o bebe 5 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 5
   },
   {
     "id": "pre-673",
@@ -10082,7 +10754,8 @@
     "text": "{A}, dale tu celular desbloqueado al de tu izquierda por 15 segundos o bebe 5 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 5
   },
   {
     "id": "pre-674",
@@ -10099,7 +10772,8 @@
     "text": "{A}, haz tu mejor cara de foto de perfil de LinkedIn y que todos la juzguen. Si se ríen, bebe 2 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-675",
@@ -10116,7 +10790,8 @@
     "text": "{A}, di la red flag más grande que has ignorado en alguien o bebe 4 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-676",
@@ -10133,7 +10808,8 @@
     "text": "{A}, si alguna vez te confundiste de persona y le mandaste un mensaje íntimo, toma 4 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-677",
@@ -10150,7 +10826,8 @@
     "text": "{A}, di 'yo nunca nunca' algo picante. Los que sí lo hayan hecho beben 3 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-678",
@@ -10167,7 +10844,8 @@
     "text": "{A}, si alguna vez usaste la excusa 'no vi tu mensaje' cuando sí lo leíste, toma 2 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-679",
@@ -10184,7 +10862,8 @@
     "text": "{A}, haz tu mejor cara de foto de pasaporte y que todos la califiquen del 1 al 10. Si sacas menos de 5, bebe 3 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-680",
@@ -10201,7 +10880,8 @@
     "text": "{A}, si alguna vez te sacaron de un bar o antro, toma 4 tragos y cuenta por qué",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-681",
@@ -10219,7 +10899,8 @@
     "text": "{A} y {B}: cada uno dice la app que más usa. Los demás votan cuál es más vergonzosa. El perdedor bebe 3 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-682",
@@ -10236,7 +10917,8 @@
     "text": "{A}, si tu crush actual está en esta sala, bebe 5 tragos discretamente",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 5
   },
   {
     "id": "pre-683",
@@ -10250,7 +10932,8 @@
     "text": "Tema: Apps que tenías en 2015 y ya no existen. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-684",
@@ -10267,7 +10950,8 @@
     "text": "{A}, dile algo a {B} que siempre hayas querido decirle o bebe 5 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 5
   },
   {
     "id": "pre-685",
@@ -10284,7 +10968,8 @@
     "text": "{A}, si alguna vez te inventaste una excusa elaborada para no salir, toma 2 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-686",
@@ -10301,7 +10986,8 @@
     "text": "{A}, lee en voz alta el último mensaje que te mandaron por WhatsApp o bebe 4 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-687",
@@ -10318,7 +11004,8 @@
     "text": "{A}, si has ido a un festival de música y no recuerdas a quién viste tocar, toma 4 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-688",
@@ -10335,7 +11022,8 @@
     "text": "{A}, describe a tu ex con una canción. Si el grupo la conoce, ellos reparten 3 tragos. Si no, bebes 3",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-689",
@@ -10352,7 +11040,8 @@
     "text": "{A}, hazle una pregunta incómoda a {B}. Si no la contesta, {B} bebe 4 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-690",
@@ -10369,7 +11058,8 @@
     "text": "{A}, si alguna vez te despertaste sin saber dónde estabas después de una fiesta, toma 4 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-691",
@@ -10387,7 +11077,8 @@
     "text": "{A} y {B}: cada uno dice su peor fecha de Tinder. Los demás votan la peor. El perdedor bebe 4 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-692",
@@ -10404,7 +11095,8 @@
     "text": "{A}, si te han descubierto revisando el celular de alguien, toma 4 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-693",
@@ -10421,7 +11113,8 @@
     "text": "{A}, di tu momento más incómodo en una cena familiar y bebe 3 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-694",
@@ -10438,7 +11131,8 @@
     "text": "{A}, si alguna vez tu ex te mandó mensaje y le contestaste de borracho, toma 4 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-695",
@@ -10450,7 +11144,8 @@
     "text": "Voten: ¿Que todos se enteren de tu historial de búsqueda o de tus DMs? Minoría bebe 4 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-696",
@@ -10467,7 +11162,8 @@
     "text": "{A}, di la mentira más grande que has dicho en una relación o bebe 4 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-697",
@@ -10484,7 +11180,8 @@
     "text": "{A}, si alguna vez stalkeaste tanto a alguien en Instagram que le diste like a una foto vieja, toma 4 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-698",
@@ -10502,7 +11199,8 @@
     "text": "{A} vs {B}: cada uno dice la peor mentira que le ha dicho a sus papás. El grupo vota la peor. El perdedor bebe 4 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-699",
@@ -10519,7 +11217,8 @@
     "text": "{A}, confiesa algo que nunca le has dicho a nadie del grupo o bebe 5 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 5
   },
   {
     "id": "pre-700",
@@ -10536,7 +11235,8 @@
     "text": "{A}, si alguna vez te cacharon hablando solo, toma 3 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-701",
@@ -10550,7 +11250,8 @@
     "text": "Tema: Cosas vergonzosas que haces cuando estás solo en casa. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-702",
@@ -10567,7 +11268,8 @@
     "text": "{A}, lee en voz alta el último audio de WhatsApp que mandaste o bebe 4 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-703",
@@ -10584,7 +11286,8 @@
     "text": "{A}, si alguna vez hiciste algo vergonzoso frente a la familia de tu pareja, toma 4 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-704",
@@ -10601,7 +11304,8 @@
     "text": "El último en confesar algo que nunca ha dicho en público a {A} bebe 4 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-705",
@@ -10618,7 +11322,8 @@
     "text": "{A}, di tu peor experiencia con un vecino o bebe 3 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-706",
@@ -10635,7 +11340,8 @@
     "text": "{A}, si alguna vez te inventaste una historia para salirte de una fiesta aburrida, toma 3 tragos de doble cara",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-707",
@@ -10653,7 +11359,8 @@
     "text": "{A} vs {B}: cada uno dice el peor apodo que le han puesto. El grupo vota el más humillante. El perdedor bebe 4 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-708",
@@ -10665,7 +11372,8 @@
     "text": "Voten: ¿Que tu mamá lea todos tus DMs o que tu jefe vea tu historial de navegación? Minoría bebe 4 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-709",
@@ -10682,7 +11390,8 @@
     "text": "{A}, di la cosa más estúpida que has hecho estando enamorado o bebe 4 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-710",
@@ -10699,7 +11408,8 @@
     "text": "{A}, si alguna vez fingiste ser alguien que no eras para impresionar a alguien, toma 4 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-711",
@@ -10713,7 +11423,8 @@
     "text": "Tema: Cosas que nunca admitirías que te gustan. {STARTER} empieza. El que repita o no sepa bebe 3 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-712",
@@ -10730,7 +11441,8 @@
     "text": "{A}, cuenta la historia más ridícula de tu primer trabajo o bebe 3 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-713",
@@ -10747,7 +11459,8 @@
     "text": "{A}, si alguna vez te quedaste hablando solo en una videollamada sin saber que estabas en mute, toma 3 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-714",
@@ -10762,7 +11475,8 @@
     "text": "¡Confesionario! Todos dicen algo que les da pena y beben 3 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-715",
@@ -10779,7 +11493,8 @@
     "text": "{A}, di la cosa más rara que hiciste para ahorrar dinero o bebe 3 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-716",
@@ -10796,7 +11511,8 @@
     "text": "{A}, si alguna vez publicaste algo borracho en redes y lo borraste al día siguiente, toma 4 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-717",
@@ -10808,7 +11524,8 @@
     "text": "Voten: ¿Que tus papás lean todos tus mensajes de texto o que vean tu historial de Netflix? Minoría bebe 3 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-718",
@@ -10825,7 +11542,8 @@
     "text": "El último en contarle a {A} su peor experiencia con dinero bebe 4 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-719",
@@ -10843,7 +11561,8 @@
     "text": "{A} vs {B}: cada uno dice su sueño más perturbador. Los demás votan el más raro. El perdedor bebe 4 tragos",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-720",
@@ -10860,6 +11579,7 @@
     "text": "{A}, si alguna vez lloraste por un comercial de televisión, toma 3 tragos de sensible",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   }
 ]

@@ -3,2000 +3,3100 @@
     "id": "pre-it-001",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, imita un personaggio famoso italiano senza dire il suo nome. Se il gruppo indovina in 10 secondi, {A} distribuisce 3 sorsi. Altrimenti beve 3.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-002",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, fai un esame orale improvvisato: dicci le capitali di 5 Paesi europei in 15 secondi. Per ogni errore bevi 1 sorso.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-it-003",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, chiama la nonna adesso e dille che stai studiando. Se risponde e ci credi, distribuisci 4 sorsi. Se non riesci, bevi 3.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-it-004",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, dì cinque cose positive su un calciatore della squadra che odi di più. Il gruppo decide se sono sincere — se non ci crede, bevi 3 sorsi.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-005",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, mostra lo schermo del telefono al gruppo per 5 secondi. Se c'è qualcosa di imbarazzante, bevi 2 sorsi. Il gruppo decide.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-006",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, fai tre flessioni adesso o bevi 3 sorsi. Nessuna scusa — o fai, o bevi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-007",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, parla con accento napoletano per il prossimo giro di carte. Se ti dimentichi, bevi 1 sorso ogni volta che il gruppo te lo segnala.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-it-008",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, dicci il tuo ultimo messaggio inviato ad alta voce. Se è imbarazzante, il gruppo decide quanti sorsi bevi (1-4).",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-009",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, canta il ritornello di una canzone di Vasco Rossi. Se sbagli le parole, bevi 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-010",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, devi fare un apprezzamento sincero a ogni persona del gruppo in 30 secondi. Chi non viene menzionato decide la penitenza.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 0
   },
   {
     "id": "pre-it-011",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, dicci qual è la cosa più stupida che hai fatto all'università. Il gruppo vota: se meno della metà ci crede, bevi 3 sorsi.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-012",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, esegui il gesto tipico italiano per \"non me ne frega niente\" e spiegane l'uso al gruppo. Se qualcuno straniero è presente, insegnagliene tre.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 0
   },
   {
     "id": "pre-it-013",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, scegli qualcuno nel gruppo e descrivi il suo stile come se fossi un critico di moda. Il gruppo vota 1-4 sorsi in base alla crudeltà.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-it-014",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, fai una foto al tuo piatto o al tuo bicchiere e mettila nelle storie adesso. Se non lo fai, bevi 3 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-015",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, inventa un soprannome per ogni persona del gruppo adesso. Per ogni soprannome rifiutato, bevi 1 sorso.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-it-016",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, prova a spiegare ai presenti cos'è uno spritz senza usare le parole \"prosecco\", \"aperol\" o \"campari\". Hai 20 secondi — se non riesci, bevi 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-017",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, devi mandare un voice message alla persona del gruppo con cui parli di meno, dicendo solo: \"Ciao, pensavo a te.\" Hai 60 secondi o bevi 4 sorsi.",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-it-018",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, recita la pubblicità di un prodotto italiano famoso a memoria. Se il gruppo la riconosce, distribuisci 2 sorsi. Altrimenti bevi 2.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-019",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, chiedi al gruppo un favore imbarazzante con la voce più persuasiva possibile. Se qualcuno cede, entrambi distribuiscono 2 sorsi.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-020",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, devi tenere un minuto di silenzio assoluto. Se parli o ridi, bevi 3 sorsi e la prova ricomincia da capo.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-021",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, dai al gruppo un consiglio di vita come se fossi la nonna italiana più tradizionale del mondo. Il più convinto si aggiudica 2 sorsi da distribuire.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-022",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, descrivi il tuo ultimo sogno nel modo più drammatico possibile. Se il gruppo sbadiglio o si annoia, bevi 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-023",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, prova a convincere il gruppo che un piatto italiano regionale poco conosciuto è il migliore in assoluto. Hai 45 secondi. Il gruppo vota — se perdi, bevi 3 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-024",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, nomina 10 giocatori della Nazionale italiana di calcio in 20 secondi. Per ogni errore o pausa, bevi 1 sorso.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-it-025",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, mostra al gruppo la tua playlist più ascoltata. Per ogni canzone che il gruppo giudica \"imbarazzante\", bevi 1 sorso.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-it-026",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, fai un discorso motivazionale stile TED di 30 secondi su perché l'aperitivo è superiore alla cena. Il gruppo applaude o fischia — se fischia, bevi 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-027",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, devi imitare il suono e le mosse di un barista napoletano che prepara un caffè. Se il gruppo ride, distribuisci 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-028",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, rivela una crush del passato senza dire il nome. Il gruppo ha 3 tentativi per indovinare — se ci riescono, bevi 3 sorsi.",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-029",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, per i prossimi 3 turni devi rispondere a qualsiasi domanda solo con citazioni di canzoni italiane. Se non riesci, bevi 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-030",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, devi scegliere tra: chiamare la mamma adesso oppure postare una storia imbarazzante. Il gruppo sceglie quale storia postare se scegli l'opzione 2.",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 0
   },
   {
     "id": "pre-it-031",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, conta fino a 20 in dialetto del tuo paese d'origine (o prova a inventarlo). Per ogni numero sbagliato, bevi 1 sorso.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-it-032",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, confessa la cosa più strana che hai mai cercato su Google. Il gruppo vota da 1 a 4 sorsi in base alla stranezza.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-it-033",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, porta avanti una discussione passionale su quale sia la migliore pizza italiana per 30 secondi, senza nominare la margherita. Se il gruppo non è convinto, bevi 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-034",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, leggi le ultime 3 emoji che hai mandato in chat e racconta il contesto. Se è imbarazzante, bevi 2 sorsi.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-035",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, devi fare il toast più creativo e poetico in italiano per il gruppo. Il meno entusiasta distribuisce 3 sorsi agli altri.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-036",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, dicci chi nel gruppo potrebbe vincere un reality show italiano e perché. La persona nominata decide se è un complimento o un'offesa — e assegna i sorsi di conseguenza.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-037",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, per il prossimo minuto devi aggiungere \"capito?\" alla fine di ogni frase. Per ogni volta che dimentichi, bevi 1 sorso.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-it-038",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, fai vedere la tua galleria foto agli altri per 10 secondi. Il gruppo decide quanti sorsi bevi in base a cosa trovano.",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-039",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, devi descrivere come ti immagini la vita di ogni altra persona in questa stanza tra 10 anni. Chi non è soddisfatto della propria descrizione, {A} beve 1 sorso per ogni protesta.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-it-040",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, lancia una sfida: scegli qualcuno e dì una verità scomoda su di lui o su te stesso. Chi si tira indietro dalla verità, beve 3 sorsi.",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-041",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, devi creare uno scioglilingua in italiano adesso, su un argomento scelto dal gruppo. Il gruppo lo ripete — chi sbaglia beve 1 sorso.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-it-042",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, proponi una regola assurda per il resto della serata. Il gruppo vota — se viene accettata, tu distribuisci 3 sorsi.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-043",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, fai una domanda filosofica seria. Il gruppo ha 2 minuti per discuterne. Chi non partecipa, beve 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-044",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, imita il modo in cui parla o gesticola qualcuno nel gruppo per 30 secondi, senza dire di chi si tratta. Il gruppo indovina — se indovinano subito, {A} beve 2 sorsi.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-045",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, devi pronunciare correttamente 5 parole italiane difficili: \"precipitevolissimevolmente\", \"psicologico\", \"sbranare\", \"sgabuzzino\", \"quintessenza\". Per ogni errore, bevi 1 sorso.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-it-046",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, racconta una leggenda metropolitana italiana come se fosse vera. Chi non ci crede beve 1 sorso; chi ci crede distribuisce 1 sorso.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-it-047",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, hai 30 secondi per convincere il gruppo che il Nord Italia è meglio del Sud (o viceversa). Il gruppo decide — se non sei convincente, bevi 3 sorsi.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-048",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, devi bere il tuo bicchiere tenendolo con entrambe le mani come se fosse un calice sacro, pronunciando \"cin cin\" prima e dopo ogni sorso per il prossimo giro.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-049",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, fai una dichiarazione d'amore (falsa o vera) a qualcuno nel gruppo, in stile telenovela italiana. Il gruppo applaude o fischia.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 0
   },
   {
     "id": "pre-it-050",
     "mode": "pre",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, inventa un insulto italiano che suoni autentico ma che non esiste. Se qualcuno ci crede e annuisce, distribuisci 3 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-051",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha mai mangiato la pizza fredda a colazione? Beve 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-052",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha mentito ai genitori dicendo che stava studiando quando invece guardava Netflix? Beve 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-053",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha mai mandato un messaggio alla persona sbagliata e si è quasi sentito male? Beve 2 sorsi.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-054",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha mai litigato seriamente per la squadra di calcio? Beve 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-055",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha mai fatto bella figura cucinando qualcosa che in realtà ha comprato già pronto? Beve 3 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-056",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha passato più di un'ora a scegliere cosa guardare su Netflix senza guardare niente alla fine? Beve 1 sorso.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-it-057",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha mai detto \"arrivo subito\" sapendo perfettamente che avrebbe fatto almeno altri 20 minuti? Beve 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-058",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha mai saltato un esame e ha detto a casa di averlo passato? Beve 3 sorsi.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-059",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha mai fatto la spesa e comprato solo schifezze? Beve 1 sorso.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-it-060",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha mai guardato le storie di un ex senza volerlo fare davvero, o così diceva? Beve 2 sorsi.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-061",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi sa fare il caffè alla napoletana con la macchinetta e lo fa spesso? Chi non sa farlo beve 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-062",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha mai finito un esame e pensato di aver passato per poi scoprire il contrario? Beve 3 sorsi e racconta.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-063",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha già mangiato Nutella direttamente dal barattolo con il cucchiaio, senza niente? Beve 1 sorso.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-it-064",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha mai pianto guardando un film di animazione da adulto? Beve 1 sorso.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-it-065",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha mai risposto \"arrivo\" quando in realtà stava ancora a casa in pigiama? Beve 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-066",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha partecipato a un karaoke e ha cantato con tutto il cuore una canzone italiana? Chi non l'ha mai fatto beve 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-067",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha mai scritto una lista di cose da fare e poi ignorato ogni singola voce? Beve 1 sorso.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-it-068",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha mai fermato qualcuno per strada pensando di conoscerlo e poi si è accorto che era uno sconosciuto? Beve 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-069",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha già dormito fino alle 14 senza sentirsi minimamente in colpa? Beve 1 sorso.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-it-070",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha un accento regionale marcato e non ha nessuna intenzione di cambiarlo? Distribuisce 2 sorsi agli altri.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-071",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha mai condiviso un appartamento con qualcuno che non lavava mai i piatti? Beve 1 sorso e sfoga il rancore.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-it-072",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha mai detto \"non bevo tanto stasera\" ed è finita male? Beve 3 sorsi.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-073",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi conosce almeno cinque parole in dialetto del proprio nonno o nonna? Chi non le conosce beve 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-074",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha mai cercato di fare una ricetta italiana della nonna e ha prodotto un disastro culinario? Beve 2 sorsi e racconta.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-075",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha già vissuto all'estero per più di un mese? Distribuisce 2 sorsi — gli altri li bevono per invidia.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-076",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha messo mi piace a una foto di qualcuno che gli piace e poi si è pentito subito? Beve 2 sorsi.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-077",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha fatto una scenata di gelosia e poi si è vergognato? Beve 3 sorsi.",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-078",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha mai ordinato qualcosa al ristorante solo perché suonava bene in italiano? Beve 1 sorso.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-it-079",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha mai detto \"questo è l'ultimo drink\" e ne ha bevuto almeno altri tre? Beve 2 sorsi.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-080",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha mai cucinato la pasta e l'ha scolata troppo presto o troppo tardi? Beve 2 sorsi. Vergogna.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-081",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha mai fatto un viaggio in treno in Italia e il treno era puntuale? Chi lo nega beve 3 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-082",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha un parente che pensa di saper cucinare meglio di tutti ma in realtà no? Beve 1 sorso.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-it-083",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha mai smesso di seguire qualcuno sui social perché pubblicava troppe foto di cibo? Beve 1 sorso.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-it-084",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha messo la sveglia 10 volte di mattina senza alzarsi alla prima? Tutti bevono 1 sorso — siete tutti colpevoli.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-it-085",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha mai fatto una vacanza al mare senza proteggersi dal sole e si è bruciato come un gambero? Beve 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-086",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha già battuto il record personale di ore consecutive davanti a uno schermo? Beve 1 sorso e non si vergogna.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-it-087",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha mai acquistato qualcosa online di notte e se ne è pentito il giorno dopo? Beve 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-088",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha mai litigato seriamente per la carbonara (si fa con la panna o no)? Beve 1 sorso e difende la propria posizione.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-it-089",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha un messaggio non letto da più di una settimana di cui conosce il mittente ma preferisce ignorarlo? Beve 2 sorsi.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-090",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha mai comprato un biglietto per un evento e non ci è andato, buttando soldi? Beve 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-091",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha già passato un'intera giornata a casa senza uscire e stava benissimo? Beve 1 sorso — un punto per te.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-it-092",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha mai mangiato qualcosa trovato in frigo di cui non sapeva la data di scadenza? Beve 1 sorso. Il coraggio.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-it-093",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha mai fatto finta di non aver visto un messaggio per non dover rispondere? Beve 2 sorsi.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-094",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi si è mai perso in una città italiana senza segnale e ha dovuto chiedere indicazioni? Beve 1 sorso e racconta.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-it-095",
     "mode": "pre",
     "kind": "question",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Chi ha mai cantato da solo in casa come se fosse in uno stadio? Beve 1 sorso — grande artista.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-it-096",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Votate: pizzeria del cuore o ristorante preferito? Ognuno nomina il suo posto. Chi finisce a quota zero voti beve 3 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-097",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Tutti insieme: ogni persona dice il nome di una squadra di Serie A senza ripetere. Chi non ne trova una in 5 secondi beve 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-098",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Tutti fanno il brindisi nel modo più teatrale possibile. Il meno entusiasta — deciso dal gruppo — beve 3 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-099",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "A turno, ognuno dice una cosa che farebbe se fosse invisible per un giorno. Il gruppo vota la più interessante — quella persona distribuisce 3 sorsi.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-100",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Tutti insieme cantano il primo verso dell'inno nazionale italiano. Chi sbaglia le parole beve 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-101",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Votate a mano alzata: mare o montagna? La minoranza beve 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-102",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Tutti devono nominare un cantante italiano in ordine alfabetico. Chi non trova uno per la sua lettera in 10 secondi beve 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-103",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Votate: aperitivo in casa o al bar? Minoranza beve 2 sorsi e deve portare gli stuzzichini la prossima volta.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-104",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Ognuno dice la parola dialettale più strana che conosce. Il gruppo vota la migliore — quella persona distribuisce 3 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-105",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Tutti insieme provano a fare un gesto che rappresenti l'Italia all'estero. Il più stereotipato — scelto dal gruppo — distribuisce 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-106",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Votate: Juventus o Inter? Chi tifa per altro beve 1 sorso. La minoranza principale beve 2 sorsi.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-107",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Tutti insieme recitano una scena di un film italiano famoso a scelta del gruppo. Chi si blocca beve 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-108",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Ognuno nomina la cosa più italiana che ha in casa. Il gruppo vota — il più \"italiano\" distribuisce 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-109",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Tutti insieme contano in dialetto fino a 5. Chi non conosce un dialetto inventa le parole — il gruppo decide se è credibile.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 0
   },
   {
     "id": "pre-it-110",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Ogni persona descrive la cena della nonna con una parola. Chi usa \"lasagna\" beve 1 sorso — troppo ovvio.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-it-111",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Tutti votano: chi nel gruppo sembra più un personaggio da telenovela italiana? Quella persona distribuisce 3 sorsi.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-112",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Votate il \"tipo\" più italiano del gruppo: il timido, il logorroico, il melodrammatico o il cuoco. Ogni categoria beve 1 sorso.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-it-113",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Tutti devono dire \"non si fa\" in dialetto. Chi non ne conosce uno deve impararla dalla persona accanto prima del prossimo turno.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 0
   },
   {
     "id": "pre-it-114",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Ognuno dice qual è stata la sua peggiore esperienza culinaria. Il gruppo vota — il vincitore (o perdente) distribuisce 3 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-115",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Tutti insieme gridano \"Forza Italia!\" più forte possibile. Il più silenzioso beve 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-116",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Ogni persona nomina un pregio e un difetto di un'altra persona del gruppo in modo gentile. Se diventa imbarazzante, tutti bevono 1 sorso.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-it-117",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Tutti votano: chi sarebbe il miglior concorrente di MasterChef del gruppo? Quella persona deve cucinare qualcosa entro il fine settimana.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 0
   },
   {
     "id": "pre-it-118",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["STARTER"] },
+    "target": {
+      "roles": [
+        "STARTER"
+      ]
+    },
     "text": "{STARTER} inizia: nomina una regione italiana. In ordine, tutti nominano un piatto tipico di quella regione. Chi non sa risponde in 5 secondi beve 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-119",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["STARTER"] },
+    "target": {
+      "roles": [
+        "STARTER"
+      ]
+    },
     "text": "{STARTER} comincia: \"Ho mangiato al ristorante e ho ordinato...\" Ogni persona aggiunge un piatto. Chi non ricorda l'ordine o si sbaglia beve 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-120",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["STARTER"] },
+    "target": {
+      "roles": [
+        "STARTER"
+      ]
+    },
     "text": "{STARTER} sceglie: Nord Italia o Sud Italia? Ogni persona spiega perché la scelta di {STARTER} è giusta o sbagliata. Il gruppo vota — {STARTER} distribuisce o beve 3 sorsi.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-121",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["STARTER"] },
+    "target": {
+      "roles": [
+        "STARTER"
+      ]
+    },
     "text": "{STARTER} inizia un karaoke a cappella con una canzone italiana. Tutti devono cantare almeno 5 secondi. Chi rifiuta beve 3 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-122",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["STARTER"] },
+    "target": {
+      "roles": [
+        "STARTER"
+      ]
+    },
     "text": "{STARTER} sceglie un tema (es. \"cose italiane che mancano all'estero\"). Tutti hanno 10 secondi per dire una risposta. Chi si ripete o si blocca beve 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-123",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["STARTER"] },
+    "target": {
+      "roles": [
+        "STARTER"
+      ]
+    },
     "text": "{STARTER} pone una domanda imbarazzante al gruppo. Tutti devono rispondere con massimo 5 parole. Il più evasivo beve 3 sorsi.",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-124",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["STARTER"] },
+    "target": {
+      "roles": [
+        "STARTER"
+      ]
+    },
     "text": "{STARTER} dice un numero. Il gruppo conta a turno da quel numero; chi dice un multiplo di 3 deve dire \"Mamma mia!\" invece del numero. Chi sbaglia beve 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-125",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["STARTER"] },
+    "target": {
+      "roles": [
+        "STARTER"
+      ]
+    },
     "text": "{STARTER} inizia una storia ambientata in Italia con una frase. Ogni persona continua con una frase. Chi non continua in 5 secondi beve 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-126",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["STARTER"] },
+    "target": {
+      "roles": [
+        "STARTER"
+      ]
+    },
     "text": "{STARTER} dà un soprannome italiano a ogni persona del gruppo. Chi accetta il suo soprannome distribuisce 1 sorso. Chi protesta beve 2.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-it-127",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["STARTER"] },
+    "target": {
+      "roles": [
+        "STARTER"
+      ]
+    },
     "text": "{STARTER} dichiara una \"legge\" assurda per il gruppo per il prossimo minuto. Il gruppo vota — se la maggioranza accetta, tutti la seguono o bevono 2 sorsi.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-128",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["STARTER"] },
+    "target": {
+      "roles": [
+        "STARTER"
+      ]
+    },
     "text": "{STARTER} lancia una gara: chi riesce a dire correttamente il nome completo di \"Fratelli d'Italia\" senza errori vince e distribuisce 3 sorsi agli altri.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-129",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["STARTER"] },
+    "target": {
+      "roles": [
+        "STARTER"
+      ]
+    },
     "text": "{STARTER} sfida il gruppo: chi conosce più parole italiane che derivano dal dialetto napoletano? {STARTER} tiene il punteggio — chi fa zero beve 3 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-130",
     "mode": "pre",
     "kind": "group",
-    "target": { "roles": ["STARTER"] },
+    "target": {
+      "roles": [
+        "STARTER"
+      ]
+    },
     "text": "{STARTER} deve mettere qualcuno alla berlina raccontando un episodio imbarazzante di quella persona. L'interessato decide se è vero o falso. Il gruppo vota — se sbaglia, {STARTER} beve 3 sorsi.",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-131",
     "mode": "pre",
     "kind": "versus",
-    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} e {B}: duello di scioglilingua italiani. Il classico: \"Trentatré trentini entrarono a Trento...\" Chi sbaglia per primo beve 4 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-it-132",
     "mode": "pre",
     "kind": "versus",
-    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} e {B}: chi riesce a nominare più calciatori italiani in 30 secondi? Il perdente beve 4 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-it-133",
     "mode": "pre",
     "kind": "versus",
-    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} e {B}: gara di dialetti. Ognuno dice la stessa frase nel proprio dialetto regionale o accento. Il gruppo vota il più autentico — il perdente beve 3 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-134",
     "mode": "pre",
     "kind": "versus",
-    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} e {B}: chi convince il gruppo che il cibo del proprio paese d'origine è migliore della pizza? Il gruppo vota — il perdente beve 4 sorsi.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-it-135",
     "mode": "pre",
     "kind": "versus",
-    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} e {B}: chi imita meglio un turista straniero in Italia? Il gruppo vota — il perdente beve 3 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-136",
     "mode": "pre",
     "kind": "versus",
-    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} e {B}: quiz di cultura italiana — chi risponde per primo a 3 domande del gruppo vince e fa bere l'altro 4 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-it-137",
     "mode": "pre",
     "kind": "versus",
-    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} e {B}: chi resiste più a lungo senza ridere mentre l'altro fa smorfie italiane esagerate? Chi ride prima beve 4 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-it-138",
     "mode": "pre",
     "kind": "versus",
-    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} e {B}: discussione su tifo calcistico. Ognuno difende la propria squadra per 30 secondi. Il gruppo vota — il perdente beve 3 sorsi.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-139",
     "mode": "pre",
     "kind": "versus",
-    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} e {B}: chi fa il gesto italiano più espressivo per \"non lo so\" senza parlare? Il gruppo giudica — il perdente beve 3 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-140",
     "mode": "pre",
     "kind": "versus",
-    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} e {B}: chi canta meglio un pezzo di opera italiana? Anche una parodia va bene. Il gruppo vota — il perdente beve 4 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-it-141",
     "mode": "pre",
     "kind": "versus",
-    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} e {B}: gara di creatività — chi inventa il nome del piatto italiano più ridicolo in 10 secondi? Il gruppo vota — il perdente beve 3 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-142",
     "mode": "pre",
     "kind": "versus",
-    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} e {B}: chi si ricorda più tappe del Giro d'Italia? Il gruppo pone domande — chi risponde meglio distribuisce 3 sorsi all'altro.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-143",
     "mode": "pre",
     "kind": "versus",
-    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} e {B}: chi riesce a ordinare un caffè corretto, macchiato, e ristretto con il giusto accento romano senza ridere? Il perdente beve 3 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-144",
     "mode": "pre",
     "kind": "versus",
-    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} e {B}: sfida di memoria. Ognuno deve ricordare cosa indossava l'altra persona quando si sono incontrati per la prima volta. Chi sbaglia beve 3 sorsi.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-145",
     "mode": "pre",
     "kind": "versus",
-    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} e {B}: chi convince meglio il gruppo di aver visitato un posto in Italia che non ha mai visto? Il gruppo vota — chi è smascherato beve 4 sorsi.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-it-146",
     "mode": "pre",
     "kind": "versus",
-    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} e {B}: battaglia di proverbi italiani. A turno, ognuno ne cita uno — chi non ne conosce uno in 10 secondi beve 3 sorsi e perde.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-147",
     "mode": "pre",
     "kind": "versus",
-    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} e {B}: chi imita meglio il suono di un vespino o motorino romano nel traffico? Il gruppo vota — il perdente beve 3 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-148",
     "mode": "pre",
     "kind": "versus",
-    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} e {B}: gara di insulti bonari in italiano colloquiale. Il gruppo vota — chi è più creativo distribuisce 3 sorsi.",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-149",
     "mode": "pre",
     "kind": "versus",
-    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} e {B}: chi ricorda più capitali europee in 20 secondi? Il perdente beve 4 sorsi. Gli studenti Erasmus non hanno scuse.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-it-150",
     "mode": "pre",
     "kind": "versus",
-    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} e {B}: chi spiega meglio agli altri come si fa il tiramisù senza usare una ricetta? Il gruppo vota — chi perde beve 4 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-it-151",
     "mode": "pre",
     "kind": "versus",
-    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} e {B}: sfida di eleganza — chi riesce a fare la cosa più \"bella figura\" in 30 secondi? Il gruppo vota — il perdente beve 3 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-152",
     "mode": "pre",
     "kind": "versus",
-    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} e {B}: dibattito acceso — espresso o caffè americano? Ognuno difende una posizione per 30 secondi. Il gruppo decide — il perdente beve 3 sorsi.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-153",
     "mode": "pre",
     "kind": "versus",
-    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} e {B}: chi riesce ad attraversare la stanza con il passo più sicuro e disinvolto, come un vero romano sul Lungotevere? Il gruppo vota — il perdente beve 3 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-154",
     "mode": "pre",
     "kind": "versus",
-    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} e {B}: chi disegna meglio lo stivale italiano senza guardare? Il gruppo vota — il perdente beve 3 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-155",
     "mode": "pre",
     "kind": "versus",
-    "target": { "roles": ["A", "B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} e {B}: chi convince meglio il gruppo di essere innamorato usando solo citazioni di canzoni italiane? Il perdente beve 4 sorsi.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 4
   },
   {
     "id": "pre-it-156",
     "mode": "pre",
     "kind": "wildcard",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Tutti fanno un brindisi e dicono qualcosa di vero sul vicino di sinistra. L'ultimo a parlare beve 2 sorsi.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-157",
     "mode": "pre",
     "kind": "wildcard",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Momento Nonna: tutti telefonano mentalmente alla propria nonna e la ringraziano per una cosa. Chi piange per l'emozione non beve — tutti gli altri bevono 1 sorso per invidia.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-it-158",
     "mode": "pre",
     "kind": "wildcard",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Aperitivo improvviso! Tutti devono alzarsi, fare un giro attorno alla stanza e tornare al proprio posto prima che il prossimo beva. L'ultimo paga un sorso per tutti.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-it-159",
     "mode": "pre",
     "kind": "wildcard",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Tutti cambiano posto contemporaneamente. Ognuno deve portare con sé il proprio bicchiere senza versare niente. Chi versa beve 2 sorsi extra.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-160",
     "mode": "pre",
     "kind": "wildcard",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Giro di confessioni: tutti devono dire una cosa imbarazzante che hanno fatto nell'ultimo mese. Chi non riesce a pensarne una, beve 3 sorsi.",
     "spice": 3,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-161",
     "mode": "pre",
     "kind": "wildcard",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Tutti giocano a \"ho fatto\" o \"non ho fatto\": il moderatore legge 5 azioni ad alta voce. Chi ha fatto più cose di tutti beve per ogni punto di vantaggio.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-162",
     "mode": "pre",
     "kind": "wildcard",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Tutti devono cantare \"O Sole Mio\" in coro per 10 secondi. Se qualcuno non canta, quello paga 3 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-163",
     "mode": "pre",
     "kind": "wildcard",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Tutti insieme: chi riesce a non ridere mentre ognuno dice il proprio piatto preferito con voce seria e solenne? Chi ride beve 1 sorso.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 1
   },
   {
     "id": "pre-it-164",
     "mode": "pre",
     "kind": "wildcard",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Giro di superpotere: ogni persona dice quale superpotere sceglierebbe se vivesse in Italia. Il più originale distribuisce 3 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-165",
     "mode": "pre",
     "kind": "wildcard",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Tutti cercano sul telefono: chi ha nel nome del contatto \"Mamma\" il numero salvato con più cuori o emoji? Quella persona distribuisce 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-166",
     "mode": "pre",
     "kind": "wildcard",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Tutti tirano fuori il portafoglio. Chi ha meno soldi in contanti beve 2 sorsi — siamo tutti squattrinati insieme.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-167",
     "mode": "pre",
     "kind": "wildcard",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Controllo notifiche: tutti mettono il telefono in silenzioso sul tavolo. Il primo a controllarlo beve 3 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-168",
     "mode": "pre",
     "kind": "wildcard",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Tutti devono fare finta di essere in uno spot pubblicitario italiano degli anni '90 per 20 secondi. Il più convincente distribuisce 3 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-169",
     "mode": "pre",
     "kind": "wildcard",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Giro di gratitudine italiana: ogni persona dice \"grazie\" a un altro nel modo più drammatico e sincero possibile. Il meno convincente beve 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-170",
     "mode": "pre",
     "kind": "wildcard",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Tutti devono concordare su un piatto italiano che nessuno di voi ha mai cucinato ma vorreste imparare. Se non trovate accordo in 2 minuti, tutti bevono 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-171",
     "mode": "pre",
     "kind": "wildcard",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Tutti fanno partire la canzone italiana più nostalgica che hanno sul telefono. Chi la fa partire per primo distribuisce 2 sorsi. Tutti devono cantarla.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-172",
     "mode": "pre",
     "kind": "wildcard",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Tutti devono fare la posa di statua italiana più iconica — il Davide di Michelangelo, la Venere di Botticelli, o chi volete. Il gruppo vota il migliore — distribuisce 3 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-173",
     "mode": "pre",
     "kind": "wildcard",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Tutti insieme decidono: qual è la peggior cosa che si possa fare in Italia? Chi non è d'accordo con la risposta finale beve 2 sorsi.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-174",
     "mode": "pre",
     "kind": "wildcard",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Giro di confessioni culinarie: tutti rivelano la cosa più scandalosa che hanno mai mangiato. Il gruppo vota il peggiore — quella persona beve 3 sorsi.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-175",
     "mode": "pre",
     "kind": "wildcard",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Tutti insieme imitano il traffico di Roma: clacson, urla, gesti, commenti. Chi rimane in silenzio beve 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-176",
     "mode": "pre",
     "kind": "exclusion",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "L'ultimo che riesce a nominare una squadra di Serie A beve 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-177",
     "mode": "pre",
     "kind": "exclusion",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "L'ultimo che tocca il naso beve 2 sorsi. Via!",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-178",
     "mode": "pre",
     "kind": "exclusion",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "L'ultimo che alza il bicchiere al cielo beve 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-179",
     "mode": "pre",
     "kind": "exclusion",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "L'ultimo che fa il gesto del \"ma che vuoi\" all'italiana beve 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-180",
     "mode": "pre",
     "kind": "exclusion",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "L'ultimo a mettere la mano sul cuore e dire \"ti voglio bene\" a qualcuno nel gruppo beve 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-181",
     "mode": "pre",
     "kind": "exclusion",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "L'ultimo che nomina un cantante italiano morto prima del 2000 beve 3 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-182",
     "mode": "pre",
     "kind": "exclusion",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "L'ultimo che cambia posizione o si alza dalla sedia beve 2 sorsi. Tutti gli altri rimangono fermi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-183",
     "mode": "pre",
     "kind": "exclusion",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "L'ultimo che indovina il regista di un film italiano famoso nominato dal gruppo beve 3 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-184",
     "mode": "pre",
     "kind": "exclusion",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "L'ultimo che dice \"mamma mia\" beve 2 sorsi — ma deve dire anche perché.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-185",
     "mode": "pre",
     "kind": "exclusion",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "L'ultimo che riesce a dire il nome di tre regioni italiane geograficamente vicine tra loro beve 3 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-186",
     "mode": "pre",
     "kind": "exclusion",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "L'ultimo che trova nel telefono una foto in cui si vede chiaramente un piatto di pasta beve 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-187",
     "mode": "pre",
     "kind": "exclusion",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "L'ultimo che dice qualcosa in dialetto (qualsiasi dialetto italiano) beve 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-188",
     "mode": "pre",
     "kind": "exclusion",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "L'ultimo che imita la mossa del \"dito puntato\" di un allenatore di calcio beve 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-189",
     "mode": "pre",
     "kind": "exclusion",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "L'ultimo che chiama qualcuno nel gruppo con un soprannome affettuoso italiano (tipo \"bello\", \"tesoro\", \"amore\") beve 2 sorsi.",
     "spice": 2,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 2
   },
   {
     "id": "pre-it-190",
     "mode": "pre",
     "kind": "exclusion",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "L'ultimo che riesce a citare una frase di un film di Totò beve 3 sorsi — e tutti gli altri bevono 1 per la cultura.",
     "spice": 1,
     "weight": 1,
-    "ruleId": null
+    "ruleId": null,
+    "drink_count": 3
   },
   {
     "id": "pre-it-191",
     "mode": "pre",
     "kind": "rule_on",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Nuova regola: d'ora in poi dovete chiamare tutti \"bella\" o \"bello\" invece del loro nome. Chi dice il nome vero beve 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-bella"
+    "ruleId": "r-bella",
+    "drink_count": 2
   },
   {
     "id": "pre-it-192",
     "mode": "pre",
     "kind": "rule_off",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Fine regola: potete tornare a usare i nomi veri. Chi ha usato più volte \"bella/bello\" durante la regola distribuisce 2 sorsi.",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-bella"
+    "ruleId": "r-bella",
+    "drink_count": 2
   },
   {
     "id": "pre-it-193",
     "mode": "pre",
     "kind": "rule_on",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Nuova regola: è vietato dire \"pizza\" o \"pasta\". Chi pronuncia una di queste parole beve 2 sorsi immediatamente.",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-no-pizza"
+    "ruleId": "r-no-pizza",
+    "drink_count": 2
   },
   {
     "id": "pre-it-194",
     "mode": "pre",
     "kind": "rule_off",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Fine regola: pizza e pasta sono di nuovo parole legali. Chi ha sbagliato di più durante la regola beve 3 sorsi finali.",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-no-pizza"
+    "ruleId": "r-no-pizza",
+    "drink_count": 3
   },
   {
     "id": "pre-it-195",
     "mode": "pre",
     "kind": "rule_on",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Nuova regola: non potete usare le mani mentre parlate. Chi gesticola beve 2 sorsi. Gli italiani troveranno questa la sfida più difficile della loro vita.",
     "spice": 2,
     "weight": 1,
-    "ruleId": "r-mani"
+    "ruleId": "r-mani",
+    "drink_count": 2
   },
   {
     "id": "pre-it-196",
     "mode": "pre",
     "kind": "rule_off",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Fine regola: le mani sono libere! Chi ha gesticolato di più durante la regola — deciso dal gruppo — distribuisce 3 sorsi agli altri.",
     "spice": 2,
     "weight": 1,
-    "ruleId": "r-mani"
+    "ruleId": "r-mani",
+    "drink_count": 3
   },
   {
     "id": "pre-it-197",
     "mode": "pre",
     "kind": "rule_on",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Nuova regola: dovete usare il \"Lei\" formale con tutti. Chi dà del \"tu\" beve 2 sorsi. Si prega di mantenere la compostezza.",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-formale"
+    "ruleId": "r-formale",
+    "drink_count": 2
   },
   {
     "id": "pre-it-198",
     "mode": "pre",
     "kind": "rule_off",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Fine regola: si può tornare al tu. Chi ha mantenuto il Lei per tutto il tempo distribuisce 2 sorsi con stile e si prende un applauso.",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-formale"
+    "ruleId": "r-formale",
+    "drink_count": 2
   },
   {
     "id": "pre-it-199",
     "mode": "pre",
     "kind": "rule_on",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Nuova regola: prima di ogni sorso, devi fingere di fare una spruzzata di espresso — rumore incluso. Chi dimentica beve un sorso extra.",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-espresso"
+    "ruleId": "r-espresso",
+    "drink_count": 1
   },
   {
     "id": "pre-it-200",
     "mode": "pre",
     "kind": "rule_off",
-    "target": { "roles": ["ALL"] },
+    "target": {
+      "roles": [
+        "ALL"
+      ]
+    },
     "text": "Fine regola: il rituale dell'espresso è terminato. Chi ha fatto la spruzzata più convincente durante la regola distribuisce 2 sorsi come ricompensa.",
     "spice": 1,
     "weight": 1,
-    "ruleId": "r-espresso"
+    "ruleId": "r-espresso",
+    "drink_count": 2
   }
 ]

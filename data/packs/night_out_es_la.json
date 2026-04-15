@@ -1,205 +1,336 @@
-
 [
   {
     "id": "night-001",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, toma 1 y grita el primer coro que se te venga a la cabeza.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "night-002",
     "mode": "night_out",
     "kind": "versus",
-    "target": { "roles": ["A","B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} vs {B}: mini-batalla de baile (5s). El grupo vota por el mejor. Quien pierda toma 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-003",
     "mode": "night_out",
     "kind": "group",
-    "target": { "roles": ["STARTER"] },
+    "target": {
+      "roles": [
+        "STARTER"
+      ]
+    },
     "text": "Tema: discotecas o bares famosos. {STARTER} empieza. Repite/fallas: tomas 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-004",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A","B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} elige una 'pose de foto' para {B}. Si {B} se niega, toma 2; si posa, {A} toma 1.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-005",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, ¿quién es el/la más probable de perderse al salir? Señálalo. Esa persona toma 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-006",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, intercambia asiento con quien escojas. Ambos toman 1.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "night-007",
     "mode": "night_out",
     "kind": "group",
-    "target": { "roles": ["STARTER"] },
+    "target": {
+      "roles": [
+        "STARTER"
+      ]
+    },
     "text": "Tema: canciones que mencionen 'noche'. {STARTER} empieza. Quien trabe toma 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-008",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, brinda con la persona que tenga más brillo en la pinta. Ambos toman 1.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "night-009",
     "mode": "night_out",
     "kind": "versus",
-    "target": { "roles": ["A","B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} vs {B}: mímicas de 'resaca'. El grupo vota por el mejor. El que pierde: toma 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-010",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["A"], "constraints": { "genderOfA": "F" } },
+    "target": {
+      "roles": [
+        "A"
+      ],
+      "constraints": {
+        "genderOfA": "F"
+      }
+    },
     "text": "{A}, ¿te han pasado una lista de invitados? Si sí, reparte 3.",
     "altText": "Quien tenga más posts archivados reparte 3.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "night-011",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["A"], "constraints": { "genderOfA": "M" } },
+    "target": {
+      "roles": [
+        "A"
+      ],
+      "constraints": {
+        "genderOfA": "M"
+      }
+    },
     "text": "{A}, si alguna vez te han negado la entrada a un lugar por dress code, toma 2.",
     "altText": "Si no hay hombres, quien use tenis blancos toma 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-012",
     "mode": "night_out",
     "kind": "group",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "Todos menos {A}: tomen 1.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 0
   },
   {
     "id": "night-013",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A","B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} asigna un 'paso prohibido' a {B}. Si alguno lo hace en la noche, toma 1 cada vez.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "night-014",
     "mode": "night_out",
     "kind": "wildcard",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "¡El Mago del Trago invoca la 'barra libre'! Todos toman 1. {A} elige a alguien que tome +1.",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "night-015",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, cuenta la anécdota más random de un taxi/Uber. Si nadie se ríe, tomas 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-016",
     "mode": "night_out",
     "kind": "group",
-    "target": { "roles": ["STARTER"] },
+    "target": {
+      "roles": [
+        "STARTER"
+      ]
+    },
     "text": "Tema: Cócteles. {STARTER} empieza. Repite/fallas: tomas 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-017",
     "mode": "night_out",
     "kind": "rule_on",
-    "target": { },
+    "target": {},
     "text": "Regla: hablar cantando. Si cualquiera habla normal, toma 1 hasta que la regla acabe.",
     "ruleId": "r-cantado",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "night-018",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, toma 1 si hoy dijiste '¡hoy sí salgo tranqui!'. Si no, reparte 1.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "night-019",
     "mode": "night_out",
     "kind": "versus",
-    "target": { "roles": ["A","B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} vs {B}: digan un chiste sin sonreír. Quien se ría primero toma 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-020",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, señala quién pediría un 'último shot' a las 3 a.m. Esa persona toma 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-021",
     "mode": "night_out",
     "kind": "group",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "Todos menos {A}: tomen 1. {A} asigna un brindis obligatorio por el resto de la noche. Siempre antes de tomar, debes brindar con esa persona. Si se te olvida, tomas 1.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "night-022",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, si has perdido algo saliendo (llaves, cel, etc.) este año, toma 2; si no, reparte 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-023",
@@ -208,708 +339,1143 @@
     "target": {},
     "text": "¿Quién del grupo es DJ de hoy? Esa persona reparte 2.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-024",
     "mode": "night_out",
     "kind": "rule_off",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "Ya no tienen que cantar. {A} elige a alguien que tome 1 por mal cantante.",
     "ruleId": "r-cantado",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 0
   },
   {
     "id": "night-025",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A","B","C"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B",
+        "C"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A}, {B} y {C}: foto boomerang. Último en posar toma 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-026",
     "mode": "night_out",
     "kind": "rule_on",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "Regla: prohibido decir 'parcero', 'pana', 'güey', 'weón', 'bro' o cualquier sinónimo de 'amigo'. Quien lo diga, toma 1.",
     "ruleId": "r-bro",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "night-027",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, muéstrale al grupo tu último chat. Si hay algo vergonzoso o te miegas, tomas 2. Si no, repartes 1.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-028",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "¿Quién del grupo es más probable que mande un mensaje a su ex esta noche? Esa persona toma 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-029",
     "mode": "night_out",
     "kind": "versus",
-    "target": { "roles": ["A","B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} vs {B}: batalla de rap. Quien se trabe primero toma 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-030",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, brinda con mitad de los que estén aquí. Cada brindis = 1 trago para la otra persona.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "night-031",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, haz tu mejor imitación de alguien del grupo. Si adivinan en 5 segundos, esa persona toma 2. Si no, tú tomas 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-032",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, señala a la persona que siempre desaparece en las fiestas. Esa persona toma 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-033",
     "mode": "night_out",
     "kind": "group",
-    "target": { "roles": ["STARTER"] },
+    "target": {
+      "roles": [
+        "STARTER"
+      ]
+    },
     "text": "Ronda: excusas para llegar tarde a la previa. {STARTER} empieza. Repite/fallas: tomas 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-034",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, si hoy te echaste siesta antes de salir, toma 1. Si duró más de 2 horas, toma 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-035",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, manda un audio a alguien fuera del grupo diciendo 'te extraño'. Si te niegas, toma 3.",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "night-036",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, ¿quién terminaría bailando en una mesa esta noche? Señálalo. Esa persona toma 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-037",
     "mode": "night_out",
     "kind": "wildcard",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "¡Terremoto! Todos cambian de lugar y toman 2. {A} queda exento.",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-038",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, inventa un brindis dramático ahora mismo. Si el grupo aplaude, repartes 2. Si no, tomas 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-039",
     "mode": "night_out",
     "kind": "versus",
-    "target": { "roles": ["A","B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} vs {B}: mejor piropo/pickup line inventado en 10 segundos. Grupo vota. El peor toma 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-040",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, confiesa: ¿alguna vez coqueteaste con alguien solo para que te invitara un trago? Si sí, toma 2. Si no, el grupo decide si te cree.",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-041",
     "mode": "night_out",
     "kind": "rule_on",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "Regla: todos deben tomar con la mano izquierda. Si te pillan con la derecha, toma 1.",
     "ruleId": "r-izquierda",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "night-042",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, enseña al grupo una palabra o frase de tu país. Si alguien la usa bien esta noche, se salva de un trago. Si la usa mal, toman doble.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "night-043",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, confiesa tu comida preferida después de una noche de fiesta. Todos los que coincidan toman 1.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "night-044",
     "mode": "night_out",
     "kind": "group",
-    "target": { "roles": ["STARTER"] },
+    "target": {
+      "roles": [
+        "STARTER"
+      ]
+    },
     "text": "Ronda: formas de decir 'salud'. {STARTER} empieza. Repite/fallas: tomas 2.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-045",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, si esta noche ya dijiste 'esta es la última', toma 2. Si no, reparte 1.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-046",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, ¿quién del grupo tiene el perreo más peligroso? Esa persona lo demuestra o toma 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-047",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, haz tu mejor paso de perreo ahora. El grupo califica del 1 al 10. Menos de 6: tomas 2.",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-048",
     "mode": "night_out",
     "kind": "versus",
-    "target": { "roles": ["A","B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} vs {B}: nombrar 5 canciones de reggaetón en 15 segundos. Quien se trabe primero toma 2. Si se pasan del tiempo toman 3",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "night-049",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, cuenta en 15 segundos tu peor anécdota de taxi o Uber. Si nadie se ríe, tomas 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-050",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, ¿quién es el/la más responsable del grupo? Esa persona reparte 3.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "night-051",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, si alguna vez te quedaste dormido/a en un Uber o taxi, toma 2. Si no, reparte 1.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-052",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A","B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A}, intercambia algo que lleves puesto con {B}. Devuélvanlo en 3 rondas o ambos toman 2.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-053",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, si tienes más de 5 llamadas perdidas ahora mismo, toma 2. Muestra la pantalla para comprobarlo.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-054",
     "mode": "night_out",
     "kind": "rule_off",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "Fin de regla. Vuelvan a decirse como quieran. {A} reparte 2 al que más cayó.",
     "ruleId": "r-bro",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 0
   },
   {
     "id": "night-055",
     "mode": "night_out",
     "kind": "group",
-    "target": { "roles": ["STARTER"] },
+    "target": {
+      "roles": [
+        "STARTER"
+      ]
+    },
     "text": "Ronda: canciones de reggaetón o perreo. {STARTER} empieza. Repite/fallas: tomas 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-056",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, ¿quién del grupo aguanta menos el alcohol? Esa persona toma 1.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "night-057",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, canta el coro de la última canción que escuchaste. Si nadie la reconoce, tomas 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-058",
     "mode": "night_out",
     "kind": "rule_on",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "Regla: antes de tomar, tienes que hacer contacto visual con alguien y brindar. Si tomas sin brindar, toma 1 extra.",
     "ruleId": "r-contacto",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "night-059",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A","B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A}, dale un piropo ridículo a {B}. Si {B} se ríe, {B} toma 1. Si no se ríe, {A} toma 2.",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-060",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, ¿cuál es la cosa más vergonzosa que has hecho en una fiesta? Si el grupo dice 'no cuenta', toma 2.",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-061",
     "mode": "night_out",
     "kind": "versus",
-    "target": { "roles": ["A","B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} vs {B}: confesión rápida — algo vergonzoso de una salida. Grupo vota la peor. Pierde: toma 2.",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-062",
     "mode": "night_out",
     "kind": "wildcard",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "¡Amnistía total! {A} perdona todos los tragos pendientes del grupo. Pero primero, {A} toma 3.",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "night-063",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, si hoy viniste en Uber o taxi, toma 1. Si viniste caminando, reparte 2 por valiente.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-064",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, ¿quién del grupo crees que se duerme primero hoy? Esa persona toma 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-065",
     "mode": "night_out",
     "kind": "group",
-    "target": { "roles": ["STARTER"] },
+    "target": {
+      "roles": [
+        "STARTER"
+      ]
+    },
     "text": "Ronda: cosas que has hecho estando borracho/a y no repetirías. {STARTER} empieza. Quien no diga nada: toma 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-066",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, imita cómo pide tragos la persona a tu derecha. Si el grupo se ríe, esa persona toma 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-067",
     "mode": "night_out",
     "kind": "rule_off",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "Fin de regla. Vuelvan a la mano que quieran. {A} reparte 1 al más infractor.",
     "ruleId": "r-izquierda",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 0
   },
   {
     "id": "night-068",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, di algo bonito sobre la persona a tu izquierda. Si suena falso, el grupo te hace tomar 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-069",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, señala a la persona que más se queja del frío en la fila. Esa persona toma 1.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "night-070",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A","B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} y {B}: inventen un saludo secreto en 20 segundos. Si no les sale, ambos toman 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-071",
     "mode": "night_out",
     "kind": "versus",
-    "target": { "roles": ["A","B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} vs {B}: imitación de cómo pide el otro un trago en un bar. Grupo vota. Pierde: toma 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-072",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, muestra la última foto que tomaste hoy. Si el grupo la considera cringe, tomas 2.",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-073",
     "mode": "night_out",
     "kind": "rule_on",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "Regla: todos deben hablar con acento de otro país latino. Si se te olvida o vuelves al tuyo, toma 1.",
     "ruleId": "r-acento",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "night-074",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, ¿quién aquí ha besado a alguien que no debía? Si confiesa, reparte 2. Si nadie confiesa, todos toman 1.",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-075",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, si alguna vez te colaste a un lugar sin pagar, toma 1. Si fue este año, toma 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-076",
     "mode": "night_out",
     "kind": "group",
-    "target": { "roles": ["STARTER"] },
+    "target": {
+      "roles": [
+        "STARTER"
+      ]
+    },
     "text": "Ronda: marcas de alcohol o nombres de tragos. {STARTER} empieza. Repite/fallas: tomas 2.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-077",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, di el nombre de quien peor baila del grupo. Esa persona toma 1 y debe demostrar lo contrario.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "night-078",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, ¿quién del grupo tiene mejor gusto musical? Esa persona elige la siguiente canción y reparte 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-079",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, elige a alguien para que te sirva los tragos esta ronda. Si se niega, ambos toman 1.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "night-080",
     "mode": "night_out",
     "kind": "rule_off",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "Fin de regla. Ya no hay que brindar. {A} elige quién fue el más antisocial — toma 2.",
     "ruleId": "r-contacto",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-081",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, cuenta una mentira sobre tu noche. Si alguien te cree, esa persona toma 2. Si nadie te cree, tú tomas 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-082",
     "mode": "night_out",
     "kind": "wildcard",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "¡La Hora Loca! {A} inventa un paso de baile. Todos lo hacen. Quien no lo haga, toma 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-083",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, llama a alguien de tus contactos y ponlo en altavoz 10 segundos. Si no lo haces, toma 3.",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "night-084",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, señala a la persona que más fotos toma en las fiestas. Esa persona toma 1 y muestra la última foto.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "night-085",
     "mode": "night_out",
     "kind": "versus",
-    "target": { "roles": ["A","B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} vs {B}: quién cuenta el mejor chiste corto. Grupo vota. Pierde: toma 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-086",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, si te sabes la coreografía de algún reggaetón, demuéstralo. Si el grupo aprueba, repartes 2. Si no, tomas 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-087",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, toma 1 por cada red social que tengas abierta en tu celular ahora mismo.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "night-088",
     "mode": "night_out",
     "kind": "group",
-    "target": { "roles": ["STARTER"] },
+    "target": {
+      "roles": [
+        "STARTER"
+      ]
+    },
     "text": "Ronda: frases clásicas de una noche de fiesta. {STARTER} empieza. Repite/fallas: tomas 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-089",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, di la frase más típica que dices cuando estás borracho/a. El grupo confirma. Si es cierto, tomas 1.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "night-090",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, ¿quién aquí ha fingido estar sobrio para que no le quiten el trago? Si confiesa, reparte 2. Si no, toma 1.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-091",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, escoge a alguien. Ambos deben tomarse un trago mirándose a los ojos. Quien se ría primero toma 1 extra.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "night-092",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, confiesa algo que nunca has hecho en una fiesta. Si alguien del grupo sí lo ha hecho, esa persona toma 2.",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-093",
     "mode": "night_out",
     "kind": "rule_off",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "Fin de regla. Vuelvan a su acento. {A} elige al peor imitador — toma 2.",
     "ruleId": "r-acento",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-094",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, ¿quién del grupo es el/la más cariñoso/a cuando toma? Esa persona abraza a alguien o toma 2.",
     "spice": 1,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-095",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A","B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A}, di el nombre de alguien famoso que se parece a {B}. Si {B} se ofende, tú tomas 2. Si le gusta, {B} toma 1.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-096",
     "mode": "night_out",
     "kind": "wildcard",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "¡Shot de la verdad! {A} hace una pregunta incómoda a quien quiera. Si no responde, toma 3.",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 3
   },
   {
     "id": "night-097",
     "mode": "night_out",
     "kind": "versus",
-    "target": { "roles": ["A","B"], "constraints": { "distinct": true } },
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
     "text": "{A} vs {B}: contacto visual sin reírse por 15 segundos. Quien se ría primero toma 2.",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-098",
     "mode": "night_out",
     "kind": "question",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, ¿quién tiene la historia más loca de un after? Que la cuente. Si el grupo queda en shock, todos toman 1.",
     "spice": 3,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   },
   {
     "id": "night-099",
     "mode": "night_out",
     "kind": "group",
-    "target": { "roles": ["STARTER"] },
+    "target": {
+      "roles": [
+        "STARTER"
+      ]
+    },
     "text": "Ronda: artistas de música latina. {STARTER} empieza. Repite/fallas: tomas 2.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 2
   },
   {
     "id": "night-100",
     "mode": "night_out",
     "kind": "action",
-    "target": { "roles": ["A"] },
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
     "text": "{A}, si sobreviviste toda la baraja, brinda por el grupo. Todos toman 1 en tu honor.",
     "spice": 2,
-    "weight": 1
+    "weight": 1,
+    "drink_count": 1
   }
 ]

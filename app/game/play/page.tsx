@@ -18,6 +18,7 @@ import { useBarSession } from '@/features/bars/useBarSession';
 import { isModeAccessible } from '@/features/bars/access';
 import { BarExpiredModal } from '@/components/game/BarExpiredModal';
 import { trackBarEvent } from '@/lib/barAnalytics';
+import { getSupabaseClient } from '@/lib/supabase';
 
 function cyrb53(str: string, seed = 0) {
     let h1 = 0xdeadbeef ^ seed, h2 = 0x41c6ce57 ^ seed;
@@ -28,7 +29,7 @@ function cyrb53(str: string, seed = 0) {
 }
 
 export default function PlayPage() {
-    const { state: { selectedMode, players } } = useGameStore();
+    const { state: { selectedMode, players, sessionId, selectedLanguage } } = useGameStore();
     const { t } = useTranslation();
     const router = useRouter();
     const { addRule, clearRule, clearAll } = useActiveRules();
@@ -50,6 +51,22 @@ export default function PlayPage() {
             router.replace('/game/setup/mode');
         }
     }
+
+    // Track session start in Supabase
+    const sessionTracked = useRef(false);
+    useEffect(() => {
+        if (sessionTracked.current || !sessionId || !selectedMode || !selectedLanguage) return;
+        sessionTracked.current = true;
+        const supabase = getSupabaseClient();
+        if (!supabase) return;
+        supabase.from('game_sessions').insert({
+            session_id: sessionId,
+            mode: selectedMode,
+            language: selectedLanguage,
+            player_count: players.length,
+            bar_slug: barSession?.slug ?? null,
+        });
+    }, [sessionId, selectedMode, selectedLanguage, players.length, barSession]);
 
     // Require mode and players
     useEffect(() => { if (!selectedMode) router.replace('/game/setup/mode'); }, [selectedMode, router]);
@@ -96,6 +113,10 @@ export default function PlayPage() {
     const usingOffline = isEmptyDeck && offlineDeck && offlineDeck.length > 0;
     const offlineCurrent = usingOffline ? offlineDeck![offlineIndex] : null;
 
+    // Analytics counters
+    const [cardsSwiped, setCardsSwiped] = useState(0);
+    const [drinksNudged, setDrinksNudged] = useState(0);
+
     // Weighted-decay player distribution
     const [weights, setWeights] = useState<number[]>(() => players.map(() => 1));
     const [currentPlayerIdx, setCurrentPlayerIdx] = useState(0);
@@ -122,9 +143,28 @@ export default function PlayPage() {
         else clearRule(active.ruleId);
     }, [current, offlineCurrent, usingOffline, addRule, clearRule]);
 
+    // Flush analytics counters to Supabase
+    const flushedSession = useRef(false);
+    const flushSessionStats = () => {
+        if (flushedSession.current || !sessionId) return;
+        flushedSession.current = true;
+        const supabase = getSupabaseClient();
+        if (!supabase) return;
+        supabase.from('game_sessions')
+            .update({
+                cards_swiped: cardsSwiped,
+                drinks_nudged: drinksNudged,
+                ended_at: new Date().toISOString(),
+            })
+            .eq('session_id', sessionId);
+    };
+
     // End of deck (only for the normal deck)
     useEffect(() => {
-        if (selectedMode && !isEmptyDeck && remaining <= 0 && !current) router.replace('/game/summary');
+        if (selectedMode && !isEmptyDeck && remaining <= 0 && !current) {
+            flushSessionStats();
+            router.replace('/game/summary');
+        }
     }, [remaining, current, selectedMode, router, isEmptyDeck]);
 
     // Advance (handles either flow)
@@ -132,6 +172,13 @@ export default function PlayPage() {
         const hasCard = usingOffline ? !!offlineCurrent : !!current;
         if (!hasCard) return;
         vibrate(10); // 10ms pulse — just enough tactile feedback without being intrusive
+
+        // Analytics counters
+        const card = (usingOffline ? offlineCurrent : current) as Card | undefined;
+        setCardsSwiped(prev => prev + 1);
+        if (card?.drink_count) {
+            setDrinksNudged(prev => prev + card.drink_count!);
+        }
 
         // Bar analytics: track card swipe + bar card shown
         if (isBarActive && barSession) {
@@ -250,7 +297,7 @@ export default function PlayPage() {
                     <Button
                         className="flex-1"
                         variant="ghost"
-                        onClick={() => router.replace('/game/summary')}
+                        onClick={() => { flushSessionStats(); router.replace('/game/summary'); }}
                     >
                         {t.play.btn.end}
                     </Button>

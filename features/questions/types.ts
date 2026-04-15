@@ -30,6 +30,7 @@ export type Card = {
     weight: number;  // deck weighting
     ruleId?: string; // present for rule_on / rule_off
     source?: string; // 'bar' for bar-injected cards; undefined for standard cards
+    drink_count?: number; // number of drinks this card nudges (from pack JSON)
 };
 
 export type Pack = {

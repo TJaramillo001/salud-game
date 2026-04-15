@@ -1,112 +1,1600 @@
 [
-  {"id":"night-en-001","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, shout your country's most embarrassing stereotype. Everyone cheers — drink 1.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-002","mode":"night_out","kind":"versus","target":{"roles":["A","B"],"constraints":{"distinct":true}},"text":"{A} vs {B}: 5-second dance battle. Group votes. Loser drinks 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-003","mode":"night_out","kind":"group","text":"Name a club or bar you've been to this Erasmus. {STARTER} starts. Repeat or fail: drink 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-004","mode":"night_out","kind":"question","target":{"roles":["A"]},"text":"{A}, point to the person most likely to text their ex tonight. That person drinks 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-005","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, if you said 'just one drink tonight' before leaving — drink 2. If not, hand out 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-006","mode":"night_out","kind":"action","target":{"roles":["A","B"],"constraints":{"distinct":true}},"text":"{A} picks a ridiculous pose for {B} to hold for 10 seconds. {B} refuses: drinks 2. Nails it: {A} drinks 1.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-007","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, go compliment a stranger at the bar. Come back with proof (their name). If you bottle it, drink 3.","spice":3,"weight":1,"ruleId":null},
-  {"id":"night-en-008","mode":"night_out","kind":"group","text":"Songs with 'night' in the title. {STARTER} goes first. Blank or repeat: drink 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-009","mode":"night_out","kind":"question","target":{"roles":["A"]},"text":"{A}, who in this group is most likely to end up lost tonight? They drink 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-010","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, if you've lost your phone, keys, or wallet on a night out this year — drink 2. Otherwise hand out 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-011","mode":"night_out","kind":"versus","target":{"roles":["A","B"],"constraints":{"distinct":true}},"text":"{A} vs {B}: staring contest. First to look away drinks 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-012","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, do your best impression of someone else in the group. Group decides if it's good — they drink 1. If it's bad, you drink 1.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-013","mode":"night_out","kind":"wildcard","target":{"roles":["A"]},"text":"The Night Witch casts a spell! Everyone switches seats. {A} chooses who drinks 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-014","mode":"night_out","kind":"rule_on","text":"New rule: no one can say 'drink' or 'shot'. Anyone who does takes 1. Rule lasts until cancelled.","spice":2,"weight":1,"ruleId":"r-no-drink-word"},
-  {"id":"night-en-015","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, tell us your most embarrassing drunk story in under 30 seconds. Group decides: drink 1 if they've been there too.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-016","mode":"night_out","kind":"question","target":{"roles":["A"]},"text":"{A}, who here has the best chance of getting in for free tonight? That person hands out 3.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-017","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, swap something you're wearing with the person on your left. Give it back after 3 rounds or drink 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-018","mode":"night_out","kind":"group","text":"Types of shots you've done. {STARTER} starts. Repeat or blank: drink 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-019","mode":"night_out","kind":"question","target":{"roles":["A"]},"text":"{A}, confess: have you ever flirted with someone just to get a free drink? If yes, drink 2. If no, the group decides if they believe you.","spice":3,"weight":1,"ruleId":null},
-  {"id":"night-en-020","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, talk to the group in your worst Spanish accent for 1 minute. Every mistake: drink 1.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-021","mode":"night_out","kind":"versus","target":{"roles":["A","B"],"constraints":{"distinct":true}},"text":"{A} vs {B}: who can say the longest word in any language? Group judges. Loser drinks 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-022","mode":"night_out","kind":"rule_off","text":"Rule over. {A} picks the person who slipped up the most — they drink 2 as a parting gift.","spice":1,"weight":1,"ruleId":"r-no-drink-word"},
-  {"id":"night-en-023","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, recreate your go-to move on the dance floor right now. Group rates it. Under 6 out of 10: drink 2.","spice":3,"weight":1,"ruleId":null},
-  {"id":"night-en-024","mode":"night_out","kind":"question","target":{"roles":["A"]},"text":"{A}, rate everyone's dancing tonight 1–10, out loud. Anyone scoring under 5 drinks 1.","spice":3,"weight":1,"ruleId":null},
-  {"id":"night-en-025","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, whisper something nice in someone's ear — but in a language they don't speak. If they smile: hand out 2. If they look confused: drink 1.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-026","mode":"night_out","kind":"group","text":"Name a country you'd do Erasmus in again. {STARTER} goes first. Blank or repeat: drink 2.","spice":1,"weight":1,"ruleId":null},
-  {"id":"night-en-027","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, if you've kissed someone you met on Erasmus — drink 1. If it happened tonight — drink 2.","spice":3,"weight":1,"ruleId":null},
-  {"id":"night-en-028","mode":"night_out","kind":"versus","target":{"roles":["A","B"],"constraints":{"distinct":true}},"text":"{A} vs {B}: speed round — name 5 cocktails. Slowest one drinks 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-029","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, show everyone the last photo you took tonight. If the group rates it cringe: drink 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-030","mode":"night_out","kind":"rule_on","text":"New rule: everyone must point at the ceiling before taking any sip. Forget to point: drink 1 extra.","spice":2,"weight":1,"ruleId":"r-point-ceiling"},
-  {"id":"night-en-031","mode":"night_out","kind":"question","target":{"roles":["A"]},"text":"{A}, who here is most likely to sleep through class tomorrow? They drink 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-032","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, make up a fake Erasmus story right now. If anyone believes it: they drink 1. If no one does: you drink 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-033","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, give a toast in a language other than English. If it's coherent: everyone drinks 1. If it's gibberish: you drink 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-034","mode":"night_out","kind":"group","text":"Erasmus cities. {STARTER} goes first. Repeat or blank: drink 2.","spice":1,"weight":1,"ruleId":null},
-  {"id":"night-en-035","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, if you've ever done karaoke abroad — drink 1. If you've done it in Spanish — drink 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-036","mode":"night_out","kind":"versus","target":{"roles":["A","B"],"constraints":{"distinct":true}},"text":"{A} vs {B}: say a tongue-twister in any language. Mess up first: drink 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-037","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, call over someone from outside the group and get their name. If you succeed: hand out 3. If you bail: drink 3.","spice":3,"weight":1,"ruleId":null},
-  {"id":"night-en-038","mode":"night_out","kind":"question","target":{"roles":["A"]},"text":"{A}, who would you trust with your passport tonight? That person hands out 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-039","mode":"night_out","kind":"rule_off","text":"Rule over — no more pointing. {A} chooses someone who forgot the most to drink 2.","spice":1,"weight":1,"ruleId":"r-point-ceiling"},
-  {"id":"night-en-040","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, if you've drunk-dialed or texted someone this Erasmus — drink 2. If it happened tonight — drink 3.","spice":3,"weight":1,"ruleId":null},
-  {"id":"night-en-041","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, explain why your country parties better than anyone else's. Group decides — if they agree: hand out 2. If they disagree: drink 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-042","mode":"night_out","kind":"group","text":"Things you've promised yourself you wouldn't do on Erasmus but did anyway. {STARTER} starts. No answer: drink 2.","spice":3,"weight":1,"ruleId":null},
-  {"id":"night-en-043","mode":"night_out","kind":"question","target":{"roles":["A"]},"text":"{A}, who in this group do you think is secretly the messiest? Point at them. They drink 2.","spice":3,"weight":1,"ruleId":null},
-  {"id":"night-en-044","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, ask the group for your 'Erasmus nickname'. You must accept it for the rest of the night. Complain: drink 1.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-045","mode":"night_out","kind":"versus","target":{"roles":["A","B"],"constraints":{"distinct":true}},"text":"{A} vs {B}: who can order a drink in Spanish fastest and correctly? Loser drinks 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-046","mode":"night_out","kind":"wildcard","target":{"roles":["A"]},"text":"The Chaos Card! {A} picks any rule from earlier in the night and brings it back for 2 more rounds.","spice":3,"weight":1,"ruleId":null},
-  {"id":"night-en-047","mode":"night_out","kind":"rule_on","text":"New rule: everyone must answer every question with a question. Break the rule: drink 1.","spice":3,"weight":1,"ruleId":"r-question-answer"},
-  {"id":"night-en-048","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, if you've made a friend from a completely different continent this Erasmus — hand out 2. If not — drink 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-049","mode":"night_out","kind":"question","target":{"roles":["A"]},"text":"{A}, who here is most likely to end up dancing on a table tonight? They drink 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-050","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, do your sexiest walk across the room and back. Group rates it. Under 6 out of 10: drink 2.","spice":3,"weight":1,"ruleId":null},
-  {"id":"night-en-051","mode":"night_out","kind":"group","text":"Names of streets or squares in Salamanca. {STARTER} starts. Blank or repeat: drink 2.","spice":1,"weight":1,"ruleId":null},
-  {"id":"night-en-052","mode":"night_out","kind":"action","target":{"roles":["A","B"],"constraints":{"distinct":true}},"text":"{A} and {B}: take a shot together — but only after making eye contact for 5 full seconds. Look away early: drink another.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-053","mode":"night_out","kind":"question","target":{"roles":["A"]},"text":"{A}, honestly: what's the most regrettable Erasmus decision you've made so far? If the group gasps: drink 1 each.","spice":3,"weight":1,"ruleId":null},
-  {"id":"night-en-054","mode":"night_out","kind":"rule_off","text":"Rule over. {A} awards 'Best Question Deflector' — that person hands out 2.","spice":1,"weight":1,"ruleId":"r-question-answer"},
-  {"id":"night-en-055","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, if you've stayed out past 5 a.m. this Erasmus — hand out 2. If it happened multiple times — hand out 3.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-056","mode":"night_out","kind":"versus","target":{"roles":["A","B"],"constraints":{"distinct":true}},"text":"{A} vs {B}: each describes the other in exactly 3 words. Group votes whose description was harsher. Winner hands out 2.","spice":3,"weight":1,"ruleId":null},
-  {"id":"night-en-057","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, teach everyone one phrase in your native language. If anyone uses it correctly later tonight: they skip their next drink.","spice":1,"weight":1,"ruleId":null},
-  {"id":"night-en-058","mode":"night_out","kind":"group","text":"Drunk food spots you've been to in Salamanca. {STARTER} starts. Blank or repeat: drink 2.","spice":1,"weight":1,"ruleId":null},
-  {"id":"night-en-059","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, send a voice note to someone outside this group saying 'I miss you'. Show the group. Refuse: drink 3.","spice":3,"weight":1,"ruleId":null},
-  {"id":"night-en-060","mode":"night_out","kind":"question","target":{"roles":["A"]},"text":"{A}, who in this group would survive a night out solo in a foreign city? That person hands out 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-061","mode":"night_out","kind":"rule_on","text":"New rule: everyone must refer to themselves in the third person. Break it: drink 1.","spice":3,"weight":1,"ruleId":"r-third-person"},
-  {"id":"night-en-062","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, rate your Erasmus experience so far out of 10, out loud. If you say 10: drink 1 (overachiever tax).","spice":1,"weight":1,"ruleId":null},
-  {"id":"night-en-063","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, give a dramatic retelling of how your night started. If anyone laughs: they drink 1.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-064","mode":"night_out","kind":"versus","target":{"roles":["A","B"],"constraints":{"distinct":true}},"text":"{A} vs {B}: who can down their drink faster? Loser hands out 2.","spice":3,"weight":1,"ruleId":null},
-  {"id":"night-en-065","mode":"night_out","kind":"group","text":"Countries you've visited since starting Erasmus. {STARTER} starts. Blank or repeat: drink 2.","spice":1,"weight":1,"ruleId":null},
-  {"id":"night-en-066","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, if you've taken a nap before coming out tonight — drink 1. If that nap lasted over 2 hours — drink 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-067","mode":"night_out","kind":"question","target":{"roles":["A"]},"text":"{A}, who here is the best storyteller when drunk? That person tells a one-sentence story right now — group decides if it's good.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-068","mode":"night_out","kind":"rule_off","text":"Third-person rule ends. {A} gives a third-person farewell speech — or drink 2.","spice":2,"weight":1,"ruleId":"r-third-person"},
-  {"id":"night-en-069","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, if you've flirted in a language you don't speak well — drink 1. If it actually worked — hand out 3.","spice":3,"weight":1,"ruleId":null},
-  {"id":"night-en-070","mode":"night_out","kind":"wildcard","target":{"roles":["A"]},"text":"Wild Card: {A} becomes the Drink Dealer for the next 3 cards. They decide who drinks on every card.","spice":3,"weight":1,"ruleId":null},
-  {"id":"night-en-071","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, sing the first line of the song that was playing when you arrived tonight. No memory: drink 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-072","mode":"night_out","kind":"question","target":{"roles":["A"]},"text":"{A}, confess: have you ever given someone a fake name on a night out? If yes — hand out 2. If no — drink 1.","spice":3,"weight":1,"ruleId":null},
-  {"id":"night-en-073","mode":"night_out","kind":"action","target":{"roles":["A","B"],"constraints":{"distinct":true}},"text":"{A} and {B}: invent a secret handshake right now. You have 30 seconds. Fail to demo it: both drink 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-074","mode":"night_out","kind":"group","text":"Ways to say 'cheers' in different languages. {STARTER} starts. Blank or repeat: drink 2.","spice":1,"weight":1,"ruleId":null},
-  {"id":"night-en-075","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, if you have more than 50 unread messages right now — drink 2. Show screen to prove otherwise.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-076","mode":"night_out","kind":"versus","target":{"roles":["A","B"],"constraints":{"distinct":true}},"text":"{A} vs {B}: mime being drunk. Everyone else votes. Worst performer drinks 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-077","mode":"night_out","kind":"rule_on","text":"New rule: no pointing with your finger — use your elbow. Point with a finger: drink 1.","spice":2,"weight":1,"ruleId":"r-elbow-point"},
-  {"id":"night-en-078","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, describe your Erasmus experience as a movie genre in 5 words. Group rates it. Boring: drink 1.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-079","mode":"night_out","kind":"question","target":{"roles":["A"]},"text":"{A}, who is the group's unofficial photographer tonight? They hand out 2.","spice":1,"weight":1,"ruleId":null},
-  {"id":"night-en-080","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, stand up and propose a toast for the rest of the group to memorise and repeat. Anyone who blanks: drinks 1.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-081","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, if you've eaten at the kebab place after a night out this semester — drink 1. If it was last night — drink 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-082","mode":"night_out","kind":"group","text":"Reasons you nearly didn't come out tonight. {STARTER} starts. Silence or repeat: drink 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-083","mode":"night_out","kind":"question","target":{"roles":["A"]},"text":"{A}, who here do you think has a crush on someone in this group? Point at them. They drink 2.","spice":3,"weight":1,"ruleId":null},
-  {"id":"night-en-084","mode":"night_out","kind":"rule_off","text":"Elbow rule ends. {A} names the worst offender — they drink 2 as a send-off.","spice":1,"weight":1,"ruleId":"r-elbow-point"},
-  {"id":"night-en-085","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, if you've had a full conversation with someone tonight whose name you've already forgotten — drink 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-086","mode":"night_out","kind":"versus","target":{"roles":["A","B"],"constraints":{"distinct":true}},"text":"{A} vs {B}: air guitar solo — 10 seconds each. Group votes. Loser drinks 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-087","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, reveal the last person you texted. Don't show the message — just say their relationship to you. Group asks one follow-up question. Refuse: drink 2.","spice":3,"weight":1,"ruleId":null},
-  {"id":"night-en-088","mode":"night_out","kind":"group","text":"Things that only happen on a night out. {STARTER} goes first. Blank or repeat: drink 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-089","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, pick one person in the group to be your 'buddy' for the rest of the night. If either of you gets separated, both drink 3.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-090","mode":"night_out","kind":"question","target":{"roles":["A"]},"text":"{A}, who in this group would you call in an emergency at 3 a.m.? That person hands out 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-091","mode":"night_out","kind":"wildcard","target":{"roles":["A"]},"text":"Reverse round! {A} hands out drinks for the next 2 cards — but must drink 1 themselves right now.","spice":3,"weight":1,"ruleId":null},
-  {"id":"night-en-092","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, share the most unhinged WhatsApp message you've sent this week. Refuse: drink 3.","spice":3,"weight":1,"ruleId":null},
-  {"id":"night-en-093","mode":"night_out","kind":"versus","target":{"roles":["A","B"],"constraints":{"distinct":true}},"text":"{A} vs {B}: who can keep a straight face while the other pulls the funniest expression? Smile first: drink 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-094","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, if you've cried on Erasmus (happy or sad tears count) — drink 1. If it happened this week — drink 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-095","mode":"night_out","kind":"group","text":"Things you never thought you'd eat while abroad but did. {STARTER} starts. Pass or repeat: drink 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-096","mode":"night_out","kind":"question","target":{"roles":["A"]},"text":"{A}, who in this group posts too many stories on nights out? They drink 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-097","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, if you've ever missed a flight or bus because of a night out — drink 2. If you nearly missed it — drink 1.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-098","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, tell everyone one thing you've genuinely learned from a person in this group. Wholesome: everyone drinks 1 in celebration.","spice":1,"weight":1,"ruleId":null},
-  {"id":"night-en-099","mode":"night_out","kind":"versus","target":{"roles":["A","B"],"constraints":{"distinct":true}},"text":"{A} vs {B}: debate for 30 seconds — is Erasmus overrated or underrated? Group votes. Loser drinks 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-100","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, if you've gone out three or more nights this week — drink 2. No shame.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-101","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, if you've pretended to speak more Spanish than you actually do — drink 2. If you're still doing it — drink 3.","spice":3,"weight":1,"ruleId":null},
-  {"id":"night-en-102","mode":"night_out","kind":"action","target":{"roles":["A","B"],"constraints":{"distinct":true}},"text":"{A} and {B}: together, convince the group that you're long-lost siblings. If anyone believes it: both hand out 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-103","mode":"night_out","kind":"wildcard","target":{"roles":["A"]},"text":"The Diplomat Card: {A} can exempt one person from their next drink — but must drink double themselves.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-104","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, if you've woken up somewhere unexpected this Erasmus — drink 2. If you had to check your location to figure out where you were — drink 3.","spice":3,"weight":1,"ruleId":null},
-  {"id":"night-en-105","mode":"night_out","kind":"question","target":{"roles":["A"]},"text":"{A}, who here would you trust to make the night's playlist? They hand out 2.","spice":1,"weight":1,"ruleId":null},
-  {"id":"night-en-106","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, shout 'Salud!' as loud as you can right now. If the group can hear it clearly: everyone drinks 1. If it's timid: you drink 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-107","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, tell the group one honest thing about how tonight is going. If it makes someone smile: they drink 1 in solidarity.","spice":1,"weight":1,"ruleId":null},
-  {"id":"night-en-108","mode":"night_out","kind":"group","text":"Things you've said tonight that you'll regret tomorrow. {STARTER} starts. Pass or repeat: drink 2.","spice":3,"weight":1,"ruleId":null},
-  {"id":"night-en-109","mode":"night_out","kind":"action","target":{"roles":["A"]},"text":"{A}, text a friend who's not here right now a random compliment. Show the group. Refuse: drink 2.","spice":2,"weight":1,"ruleId":null},
-  {"id":"night-en-110","mode":"night_out","kind":"versus","target":{"roles":["A","B"],"constraints":{"distinct":true}},"text":"{A} vs {B}: who can name the most Erasmus countries in 10 seconds? Loser drinks 2.","spice":1,"weight":1,"ruleId":null}
+  {
+    "id": "night-en-001",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, shout your country's most embarrassing stereotype. Everyone cheers — drink 1.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 1
+  },
+  {
+    "id": "night-en-002",
+    "mode": "night_out",
+    "kind": "versus",
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
+    "text": "{A} vs {B}: 5-second dance battle. Group votes. Loser drinks 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-003",
+    "mode": "night_out",
+    "kind": "group",
+    "text": "Name a club or bar you've been to this Erasmus. {STARTER} starts. Repeat or fail: drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-004",
+    "mode": "night_out",
+    "kind": "question",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, point to the person most likely to text their ex tonight. That person drinks 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-005",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, if you said 'just one drink tonight' before leaving — drink 2. If not, hand out 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-006",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
+    "text": "{A} picks a ridiculous pose for {B} to hold for 10 seconds. {B} refuses: drinks 2. Nails it: {A} drinks 1.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-007",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, go compliment a stranger at the bar. Come back with proof (their name). If you bottle it, drink 3.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 3
+  },
+  {
+    "id": "night-en-008",
+    "mode": "night_out",
+    "kind": "group",
+    "text": "Songs with 'night' in the title. {STARTER} goes first. Blank or repeat: drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-009",
+    "mode": "night_out",
+    "kind": "question",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, who in this group is most likely to end up lost tonight? They drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-010",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, if you've lost your phone, keys, or wallet on a night out this year — drink 2. Otherwise hand out 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-011",
+    "mode": "night_out",
+    "kind": "versus",
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
+    "text": "{A} vs {B}: staring contest. First to look away drinks 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-012",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, do your best impression of someone else in the group. Group decides if it's good — they drink 1. If it's bad, you drink 1.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 1
+  },
+  {
+    "id": "night-en-013",
+    "mode": "night_out",
+    "kind": "wildcard",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "The Night Witch casts a spell! Everyone switches seats. {A} chooses who drinks 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-014",
+    "mode": "night_out",
+    "kind": "rule_on",
+    "text": "New rule: no one can say 'drink' or 'shot'. Anyone who does takes 1. Rule lasts until cancelled.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": "r-no-drink-word",
+    "drink_count": 1
+  },
+  {
+    "id": "night-en-015",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, tell us your most embarrassing drunk story in under 30 seconds. Group decides: drink 1 if they've been there too.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 1
+  },
+  {
+    "id": "night-en-016",
+    "mode": "night_out",
+    "kind": "question",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, who here has the best chance of getting in for free tonight? That person hands out 3.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 3
+  },
+  {
+    "id": "night-en-017",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, swap something you're wearing with the person on your left. Give it back after 3 rounds or drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-018",
+    "mode": "night_out",
+    "kind": "group",
+    "text": "Types of shots you've done. {STARTER} starts. Repeat or blank: drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-019",
+    "mode": "night_out",
+    "kind": "question",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, confess: have you ever flirted with someone just to get a free drink? If yes, drink 2. If no, the group decides if they believe you.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-020",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, talk to the group in your worst Spanish accent for 1 minute. Every mistake: drink 1.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 1
+  },
+  {
+    "id": "night-en-021",
+    "mode": "night_out",
+    "kind": "versus",
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
+    "text": "{A} vs {B}: who can say the longest word in any language? Group judges. Loser drinks 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-022",
+    "mode": "night_out",
+    "kind": "rule_off",
+    "text": "Rule over. {A} picks the person who slipped up the most — they drink 2 as a parting gift.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": "r-no-drink-word",
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-023",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, recreate your go-to move on the dance floor right now. Group rates it. Under 6 out of 10: drink 2.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-024",
+    "mode": "night_out",
+    "kind": "question",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, rate everyone's dancing tonight 1–10, out loud. Anyone scoring under 5 drinks 1.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 1
+  },
+  {
+    "id": "night-en-025",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, whisper something nice in someone's ear — but in a language they don't speak. If they smile: hand out 2. If they look confused: drink 1.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-026",
+    "mode": "night_out",
+    "kind": "group",
+    "text": "Name a country you'd do Erasmus in again. {STARTER} goes first. Blank or repeat: drink 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-027",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, if you've kissed someone you met on Erasmus — drink 1. If it happened tonight — drink 2.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-028",
+    "mode": "night_out",
+    "kind": "versus",
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
+    "text": "{A} vs {B}: speed round — name 5 cocktails. Slowest one drinks 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-029",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, show everyone the last photo you took tonight. If the group rates it cringe: drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-030",
+    "mode": "night_out",
+    "kind": "rule_on",
+    "text": "New rule: everyone must point at the ceiling before taking any sip. Forget to point: drink 1 extra.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": "r-point-ceiling",
+    "drink_count": 1
+  },
+  {
+    "id": "night-en-031",
+    "mode": "night_out",
+    "kind": "question",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, who here is most likely to sleep through class tomorrow? They drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-032",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, make up a fake Erasmus story right now. If anyone believes it: they drink 1. If no one does: you drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-033",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, give a toast in a language other than English. If it's coherent: everyone drinks 1. If it's gibberish: you drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-034",
+    "mode": "night_out",
+    "kind": "group",
+    "text": "Erasmus cities. {STARTER} goes first. Repeat or blank: drink 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-035",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, if you've ever done karaoke abroad — drink 1. If you've done it in Spanish — drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-036",
+    "mode": "night_out",
+    "kind": "versus",
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
+    "text": "{A} vs {B}: say a tongue-twister in any language. Mess up first: drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-037",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, call over someone from outside the group and get their name. If you succeed: hand out 3. If you bail: drink 3.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 3
+  },
+  {
+    "id": "night-en-038",
+    "mode": "night_out",
+    "kind": "question",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, who would you trust with your passport tonight? That person hands out 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-039",
+    "mode": "night_out",
+    "kind": "rule_off",
+    "text": "Rule over — no more pointing. {A} chooses someone who forgot the most to drink 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": "r-point-ceiling",
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-040",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, if you've drunk-dialed or texted someone this Erasmus — drink 2. If it happened tonight — drink 3.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 3
+  },
+  {
+    "id": "night-en-041",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, explain why your country parties better than anyone else's. Group decides — if they agree: hand out 2. If they disagree: drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-042",
+    "mode": "night_out",
+    "kind": "group",
+    "text": "Things you've promised yourself you wouldn't do on Erasmus but did anyway. {STARTER} starts. No answer: drink 2.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-043",
+    "mode": "night_out",
+    "kind": "question",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, who in this group do you think is secretly the messiest? Point at them. They drink 2.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-044",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, ask the group for your 'Erasmus nickname'. You must accept it for the rest of the night. Complain: drink 1.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 1
+  },
+  {
+    "id": "night-en-045",
+    "mode": "night_out",
+    "kind": "versus",
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
+    "text": "{A} vs {B}: who can order a drink in Spanish fastest and correctly? Loser drinks 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-046",
+    "mode": "night_out",
+    "kind": "wildcard",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "The Chaos Card! {A} picks any rule from earlier in the night and brings it back for 2 more rounds.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 0
+  },
+  {
+    "id": "night-en-047",
+    "mode": "night_out",
+    "kind": "rule_on",
+    "text": "New rule: everyone must answer every question with a question. Break the rule: drink 1.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": "r-question-answer",
+    "drink_count": 1
+  },
+  {
+    "id": "night-en-048",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, if you've made a friend from a completely different continent this Erasmus — hand out 2. If not — drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-049",
+    "mode": "night_out",
+    "kind": "question",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, who here is most likely to end up dancing on a table tonight? They drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-050",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, do your sexiest walk across the room and back. Group rates it. Under 6 out of 10: drink 2.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-051",
+    "mode": "night_out",
+    "kind": "group",
+    "text": "Names of streets or squares in Salamanca. {STARTER} starts. Blank or repeat: drink 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-052",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
+    "text": "{A} and {B}: take a shot together — but only after making eye contact for 5 full seconds. Look away early: drink another.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-053",
+    "mode": "night_out",
+    "kind": "question",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, honestly: what's the most regrettable Erasmus decision you've made so far? If the group gasps: drink 1 each.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 1
+  },
+  {
+    "id": "night-en-054",
+    "mode": "night_out",
+    "kind": "rule_off",
+    "text": "Rule over. {A} awards 'Best Question Deflector' — that person hands out 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": "r-question-answer",
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-055",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, if you've stayed out past 5 a.m. this Erasmus — hand out 2. If it happened multiple times — hand out 3.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 3
+  },
+  {
+    "id": "night-en-056",
+    "mode": "night_out",
+    "kind": "versus",
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
+    "text": "{A} vs {B}: each describes the other in exactly 3 words. Group votes whose description was harsher. Winner hands out 2.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-057",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, teach everyone one phrase in your native language. If anyone uses it correctly later tonight: they skip their next drink.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 0
+  },
+  {
+    "id": "night-en-058",
+    "mode": "night_out",
+    "kind": "group",
+    "text": "Drunk food spots you've been to in Salamanca. {STARTER} starts. Blank or repeat: drink 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-059",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, send a voice note to someone outside this group saying 'I miss you'. Show the group. Refuse: drink 3.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 3
+  },
+  {
+    "id": "night-en-060",
+    "mode": "night_out",
+    "kind": "question",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, who in this group would survive a night out solo in a foreign city? That person hands out 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-061",
+    "mode": "night_out",
+    "kind": "rule_on",
+    "text": "New rule: everyone must refer to themselves in the third person. Break it: drink 1.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": "r-third-person",
+    "drink_count": 1
+  },
+  {
+    "id": "night-en-062",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, rate your Erasmus experience so far out of 10, out loud. If you say 10: drink 1 (overachiever tax).",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 1
+  },
+  {
+    "id": "night-en-063",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, give a dramatic retelling of how your night started. If anyone laughs: they drink 1.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 1
+  },
+  {
+    "id": "night-en-064",
+    "mode": "night_out",
+    "kind": "versus",
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
+    "text": "{A} vs {B}: who can down their drink faster? Loser hands out 2.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 4
+  },
+  {
+    "id": "night-en-065",
+    "mode": "night_out",
+    "kind": "group",
+    "text": "Countries you've visited since starting Erasmus. {STARTER} starts. Blank or repeat: drink 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-066",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, if you've taken a nap before coming out tonight — drink 1. If that nap lasted over 2 hours — drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-067",
+    "mode": "night_out",
+    "kind": "question",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, who here is the best storyteller when drunk? That person tells a one-sentence story right now — group decides if it's good.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 0
+  },
+  {
+    "id": "night-en-068",
+    "mode": "night_out",
+    "kind": "rule_off",
+    "text": "Third-person rule ends. {A} gives a third-person farewell speech — or drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": "r-third-person",
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-069",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, if you've flirted in a language you don't speak well — drink 1. If it actually worked — hand out 3.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 3
+  },
+  {
+    "id": "night-en-070",
+    "mode": "night_out",
+    "kind": "wildcard",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "Wild Card: {A} becomes the Drink Dealer for the next 3 cards. They decide who drinks on every card.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 0
+  },
+  {
+    "id": "night-en-071",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, sing the first line of the song that was playing when you arrived tonight. No memory: drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-072",
+    "mode": "night_out",
+    "kind": "question",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, confess: have you ever given someone a fake name on a night out? If yes — hand out 2. If no — drink 1.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-073",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
+    "text": "{A} and {B}: invent a secret handshake right now. You have 30 seconds. Fail to demo it: both drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-074",
+    "mode": "night_out",
+    "kind": "group",
+    "text": "Ways to say 'cheers' in different languages. {STARTER} starts. Blank or repeat: drink 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-075",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, if you have more than 50 unread messages right now — drink 2. Show screen to prove otherwise.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-076",
+    "mode": "night_out",
+    "kind": "versus",
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
+    "text": "{A} vs {B}: mime being drunk. Everyone else votes. Worst performer drinks 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-077",
+    "mode": "night_out",
+    "kind": "rule_on",
+    "text": "New rule: no pointing with your finger — use your elbow. Point with a finger: drink 1.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": "r-elbow-point",
+    "drink_count": 1
+  },
+  {
+    "id": "night-en-078",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, describe your Erasmus experience as a movie genre in 5 words. Group rates it. Boring: drink 1.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 1
+  },
+  {
+    "id": "night-en-079",
+    "mode": "night_out",
+    "kind": "question",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, who is the group's unofficial photographer tonight? They hand out 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-080",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, stand up and propose a toast for the rest of the group to memorise and repeat. Anyone who blanks: drinks 1.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 1
+  },
+  {
+    "id": "night-en-081",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, if you've eaten at the kebab place after a night out this semester — drink 1. If it was last night — drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-082",
+    "mode": "night_out",
+    "kind": "group",
+    "text": "Reasons you nearly didn't come out tonight. {STARTER} starts. Silence or repeat: drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-083",
+    "mode": "night_out",
+    "kind": "question",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, who here do you think has a crush on someone in this group? Point at them. They drink 2.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-084",
+    "mode": "night_out",
+    "kind": "rule_off",
+    "text": "Elbow rule ends. {A} names the worst offender — they drink 2 as a send-off.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": "r-elbow-point",
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-085",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, if you've had a full conversation with someone tonight whose name you've already forgotten — drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-086",
+    "mode": "night_out",
+    "kind": "versus",
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
+    "text": "{A} vs {B}: air guitar solo — 10 seconds each. Group votes. Loser drinks 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-087",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, reveal the last person you texted. Don't show the message — just say their relationship to you. Group asks one follow-up question. Refuse: drink 2.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-088",
+    "mode": "night_out",
+    "kind": "group",
+    "text": "Things that only happen on a night out. {STARTER} goes first. Blank or repeat: drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-089",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, pick one person in the group to be your 'buddy' for the rest of the night. If either of you gets separated, both drink 3.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 3
+  },
+  {
+    "id": "night-en-090",
+    "mode": "night_out",
+    "kind": "question",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, who in this group would you call in an emergency at 3 a.m.? That person hands out 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-091",
+    "mode": "night_out",
+    "kind": "wildcard",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "Reverse round! {A} hands out drinks for the next 2 cards — but must drink 1 themselves right now.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 1
+  },
+  {
+    "id": "night-en-092",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, share the most unhinged WhatsApp message you've sent this week. Refuse: drink 3.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 3
+  },
+  {
+    "id": "night-en-093",
+    "mode": "night_out",
+    "kind": "versus",
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
+    "text": "{A} vs {B}: who can keep a straight face while the other pulls the funniest expression? Smile first: drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-094",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, if you've cried on Erasmus (happy or sad tears count) — drink 1. If it happened this week — drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-095",
+    "mode": "night_out",
+    "kind": "group",
+    "text": "Things you never thought you'd eat while abroad but did. {STARTER} starts. Pass or repeat: drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-096",
+    "mode": "night_out",
+    "kind": "question",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, who in this group posts too many stories on nights out? They drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-097",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, if you've ever missed a flight or bus because of a night out — drink 2. If you nearly missed it — drink 1.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-098",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, tell everyone one thing you've genuinely learned from a person in this group. Wholesome: everyone drinks 1 in celebration.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 1
+  },
+  {
+    "id": "night-en-099",
+    "mode": "night_out",
+    "kind": "versus",
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
+    "text": "{A} vs {B}: debate for 30 seconds — is Erasmus overrated or underrated? Group votes. Loser drinks 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-100",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, if you've gone out three or more nights this week — drink 2. No shame.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-101",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, if you've pretended to speak more Spanish than you actually do — drink 2. If you're still doing it — drink 3.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 3
+  },
+  {
+    "id": "night-en-102",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
+    "text": "{A} and {B}: together, convince the group that you're long-lost siblings. If anyone believes it: both hand out 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-103",
+    "mode": "night_out",
+    "kind": "wildcard",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "The Diplomat Card: {A} can exempt one person from their next drink — but must drink double themselves.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-104",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, if you've woken up somewhere unexpected this Erasmus — drink 2. If you had to check your location to figure out where you were — drink 3.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 3
+  },
+  {
+    "id": "night-en-105",
+    "mode": "night_out",
+    "kind": "question",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, who here would you trust to make the night's playlist? They hand out 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-106",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, shout 'Salud!' as loud as you can right now. If the group can hear it clearly: everyone drinks 1. If it's timid: you drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-107",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, tell the group one honest thing about how tonight is going. If it makes someone smile: they drink 1 in solidarity.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 1
+  },
+  {
+    "id": "night-en-108",
+    "mode": "night_out",
+    "kind": "group",
+    "text": "Things you've said tonight that you'll regret tomorrow. {STARTER} starts. Pass or repeat: drink 2.",
+    "spice": 3,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-109",
+    "mode": "night_out",
+    "kind": "action",
+    "target": {
+      "roles": [
+        "A"
+      ]
+    },
+    "text": "{A}, text a friend who's not here right now a random compliment. Show the group. Refuse: drink 2.",
+    "spice": 2,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  },
+  {
+    "id": "night-en-110",
+    "mode": "night_out",
+    "kind": "versus",
+    "target": {
+      "roles": [
+        "A",
+        "B"
+      ],
+      "constraints": {
+        "distinct": true
+      }
+    },
+    "text": "{A} vs {B}: who can name the most Erasmus countries in 10 seconds? Loser drinks 2.",
+    "spice": 1,
+    "weight": 1,
+    "ruleId": null,
+    "drink_count": 2
+  }
 ]
