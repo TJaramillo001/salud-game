@@ -65,6 +65,8 @@ export default function PlayPage() {
             language: selectedLanguage,
             player_count: players.length,
             bar_slug: barSession?.slug ?? null,
+        }).then(({ error }) => {
+            if (error) console.warn('game_sessions insert failed:', error.message);
         });
     }, [sessionId, selectedMode, selectedLanguage, players.length, barSession]);
 
@@ -156,7 +158,10 @@ export default function PlayPage() {
                 drinks_nudged: drinksNudged,
                 ended_at: new Date().toISOString(),
             })
-            .eq('session_id', sessionId);
+            .eq('session_id', sessionId)
+            .then(({ error }) => {
+                if (error) console.warn('game_sessions update failed:', error.message);
+            });
     };
 
     // End of deck (only for the normal deck)

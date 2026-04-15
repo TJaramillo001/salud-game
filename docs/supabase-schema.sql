@@ -19,7 +19,27 @@ create index if not exists idx_bar_events_slug_created
 create index if not exists idx_bar_events_type
   on bar_events (event_type);
 
--- 2. Bar owners table — stores owner contact info for weekly emails
+-- 2. Game sessions table — one summary row per game session
+create table if not exists game_sessions (
+  id bigint generated always as identity primary key,
+  session_id text not null,
+  mode text,
+  language text,
+  player_count int,
+  bar_slug text,
+  cards_swiped int default 0,
+  drinks_nudged int default 0,
+  created_at timestamptz default now(),
+  ended_at timestamptz
+);
+
+create index if not exists idx_game_sessions_session_id
+  on game_sessions (session_id);
+
+create index if not exists idx_game_sessions_bar_slug
+  on game_sessions (bar_slug, created_at desc);
+
+-- 3. Bar owners table — stores owner contact info for weekly emails
 create table if not exists bar_owners (
   id bigint generated always as identity primary key,
   bar_slug text not null unique,
@@ -38,6 +58,19 @@ create policy "Allow anon insert" on bar_events
   for insert
   to anon
   with check (true);
+
+-- Enable RLS on game_sessions: anon can insert and update their own rows
+alter table game_sessions enable row level security;
+
+create policy "Allow anon insert" on game_sessions
+  for insert
+  to anon
+  with check (true);
+
+create policy "Allow anon update" on game_sessions
+  for update
+  to anon
+  using (true);
 
 -- bar_owners should only be accessible by the service role (cron job)
 alter table bar_owners enable row level security;
