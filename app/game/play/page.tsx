@@ -115,9 +115,9 @@ export default function PlayPage() {
     const usingOffline = isEmptyDeck && offlineDeck && offlineDeck.length > 0;
     const offlineCurrent = usingOffline ? offlineDeck![offlineIndex] : null;
 
-    // Analytics counters
-    const [cardsSwiped, setCardsSwiped] = useState(0);
-    const [drinksNudged, setDrinksNudged] = useState(0);
+    // Analytics counters (refs to avoid stale closures in flushSessionStats)
+    const cardsSwiped = useRef(0);
+    const drinksNudged = useRef(0);
 
     // Weighted-decay player distribution
     const [weights, setWeights] = useState<number[]>(() => players.map(() => 1));
@@ -125,6 +125,9 @@ export default function PlayPage() {
     useEffect(() => {
         setWeights(Array(players.length).fill(1));
         setCurrentPlayerIdx(0);
+        cardsSwiped.current = 0;
+        drinksNudged.current = 0;
+        flushedSession.current = false;
     }, [runId, players.length]);
 
     // Rule lifecycle once per card (applies to both online/offline flows)
@@ -154,8 +157,8 @@ export default function PlayPage() {
         if (!supabase) return;
         supabase.from('game_sessions')
             .update({
-                cards_swiped: cardsSwiped,
-                drinks_nudged: drinksNudged,
+                cards_swiped: cardsSwiped.current,
+                drinks_nudged: drinksNudged.current,
                 ended_at: new Date().toISOString(),
             })
             .eq('session_id', sessionId)
@@ -180,9 +183,9 @@ export default function PlayPage() {
 
         // Analytics counters
         const card = (usingOffline ? offlineCurrent : current) as Card | undefined;
-        setCardsSwiped(prev => prev + 1);
+        cardsSwiped.current += 1;
         if (card?.drink_count) {
-            setDrinksNudged(prev => prev + card.drink_count!);
+            drinksNudged.current += card.drink_count!;
         }
 
         // Bar analytics: track card swipe + bar card shown
