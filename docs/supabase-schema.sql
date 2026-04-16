@@ -70,7 +70,8 @@ create policy "Allow anon insert" on game_sessions
 create policy "Allow anon update" on game_sessions
   for update
   to anon
-  using (true);
+  using (true)
+  with check (true);
 
 -- bar_owners should only be accessible by the service role (cron job)
 alter table bar_owners enable row level security;
