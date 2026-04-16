@@ -150,28 +150,25 @@ export default function PlayPage() {
 
     // Flush analytics counters to Supabase
     const flushedSession = useRef(false);
-    const flushSessionStats = () => {
+    const flushSessionStats = async () => {
         if (flushedSession.current || !sessionId) return;
         flushedSession.current = true;
         const supabase = getSupabaseClient();
         if (!supabase) return;
-        supabase.from('game_sessions')
+        const { error } = await supabase.from('game_sessions')
             .update({
                 cards_swiped: cardsSwiped.current,
                 drinks_nudged: drinksNudged.current,
                 ended_at: new Date().toISOString(),
             })
-            .eq('session_id', sessionId)
-            .then(({ error }) => {
-                if (error) console.warn('game_sessions update failed:', error.message);
-            });
+            .eq('session_id', sessionId);
+        if (error) console.warn('game_sessions update failed:', error.message);
     };
 
     // End of deck (only for the normal deck)
     useEffect(() => {
         if (selectedMode && !isEmptyDeck && remaining <= 0 && !current) {
-            flushSessionStats();
-            router.replace('/game/summary');
+            flushSessionStats().then(() => router.replace('/game/summary'));
         }
     }, [remaining, current, selectedMode, router, isEmptyDeck]);
 
@@ -305,7 +302,7 @@ export default function PlayPage() {
                     <Button
                         className="flex-1"
                         variant="ghost"
-                        onClick={() => { flushSessionStats(); router.replace('/game/summary'); }}
+                        onClick={async () => { await flushSessionStats(); router.replace('/game/summary'); }}
                     >
                         {t.play.btn.end}
                     </Button>
