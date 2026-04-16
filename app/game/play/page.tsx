@@ -119,6 +119,10 @@ export default function PlayPage() {
     const cardsSwiped = useRef(0);
     const drinksNudged = useRef(0);
 
+    // Keep sessionId in a ref so cleanup/beacon functions always have the latest value
+    const sessionIdRef = useRef(sessionId);
+    useEffect(() => { sessionIdRef.current = sessionId; }, [sessionId]);
+
     // Weighted-decay player distribution
     const [weights, setWeights] = useState<number[]>(() => players.map(() => 1));
     const [currentPlayerIdx, setCurrentPlayerIdx] = useState(0);
@@ -150,20 +154,68 @@ export default function PlayPage() {
 
     // Flush analytics counters to Supabase
     const flushedSession = useRef(false);
+
+    // Async flush via Supabase client (used by End button + end-of-deck)
     const flushSessionStats = async () => {
-        if (flushedSession.current || !sessionId) return;
+        const sid = sessionIdRef.current;
+        if (flushedSession.current || !sid) return;
         flushedSession.current = true;
         const supabase = getSupabaseClient();
         if (!supabase) return;
+        const payload = {
+            cards_swiped: cardsSwiped.current,
+            drinks_nudged: drinksNudged.current,
+            ended_at: new Date().toISOString(),
+        };
         const { error } = await supabase.from('game_sessions')
-            .update({
-                cards_swiped: cardsSwiped.current,
-                drinks_nudged: drinksNudged.current,
-                ended_at: new Date().toISOString(),
-            })
-            .eq('session_id', sessionId);
+            .update(payload)
+            .eq('session_id', sid);
         if (error) console.warn('game_sessions update failed:', error.message);
     };
+
+    // Fire-and-forget flush using fetch+keepalive (survives page navigation/unload)
+    const flushSessionStatsBeacon = () => {
+        const sid = sessionIdRef.current;
+        if (flushedSession.current || !sid || cardsSwiped.current === 0) return;
+        flushedSession.current = true;
+        const sbUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+        const sbKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+        if (!sbUrl || !sbKey) return;
+        const payload = {
+            cards_swiped: cardsSwiped.current,
+            drinks_nudged: drinksNudged.current,
+            ended_at: new Date().toISOString(),
+        };
+        try {
+            fetch(`${sbUrl}/rest/v1/game_sessions?session_id=eq.${sid}`, {
+                method: 'PATCH',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'apikey': sbKey,
+                    'Authorization': `Bearer ${sbKey}`,
+                    'Prefer': 'return=minimal',
+                },
+                body: JSON.stringify(payload),
+                keepalive: true,
+            });
+        } catch { /* analytics should never break gameplay */ }
+    };
+
+    // Flush on unmount, visibility change, or tab close
+    useEffect(() => {
+        const onVisChange = () => {
+            if (document.visibilityState === 'hidden') flushSessionStatsBeacon();
+        };
+        const onUnload = () => flushSessionStatsBeacon();
+        document.addEventListener('visibilitychange', onVisChange);
+        window.addEventListener('beforeunload', onUnload);
+        return () => {
+            document.removeEventListener('visibilitychange', onVisChange);
+            window.removeEventListener('beforeunload', onUnload);
+            flushSessionStatsBeacon(); // React unmount (navigation, redirect guards)
+        };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     // End of deck (only for the normal deck)
     useEffect(() => {
