@@ -65,8 +65,14 @@ export default function PlayPage() {
             language: selectedLanguage,
             player_count: players.length,
             bar_slug: barSession?.slug ?? null,
-        }).then(({ error }) => {
-            if (error) console.warn('game_sessions insert failed:', error.message);
+        }).then(async ({ error }) => {
+            if (error) { console.warn('game_sessions insert failed:', error.message); return; }
+            // Diagnostic: test if anon role can update via Supabase client
+            const { data, error: e2 } = await supabase.from('game_sessions')
+                .update({ cards_swiped: 1 })
+                .eq('session_id', sessionId)
+                .select();
+            console.warn('[DIAG] update test:', e2 ? `FAILED: ${e2.message}` : `OK rows=${data?.length}`);
         });
     }, [sessionId, selectedMode, selectedLanguage, players.length, barSession]);
 
