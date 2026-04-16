@@ -67,6 +67,11 @@ create policy "Allow anon insert" on game_sessions
   to anon
   with check (true);
 
+create policy "Allow anon select" on game_sessions
+  for select
+  to anon
+  using (true);
+
 create policy "Allow anon update" on game_sessions
   for update
   to anon
