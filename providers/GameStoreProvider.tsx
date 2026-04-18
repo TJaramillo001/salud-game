@@ -26,6 +26,7 @@ import { BAR_SESSION_STORAGE_KEY, isBarSessionValid } from '@/features/bars/type
 
 // ---------- Storage keys ----------
 const PLAYERS_STORAGE_KEY = 'SALUD_PLAYERS_V1';
+const PLAY_PROGRESS_KEY = 'salud:playProgress';
 
 // ---------- Domain state ----------
 export type GameState = {
@@ -34,11 +35,12 @@ export type GameState = {
     seed: number | null;
     gameOver: boolean;
 
-    // Roster (future-proof: full Player objects)
+    // Roster
     players: Player[];
 
-    // Seen cards (by stable card id)
-    seen: string[];
+    // Seen cards -- stored as a Set internally for O(1) lookup.
+    // The Set is serialized to/from arrays at persistence boundaries only.
+    seen: Set<string>;
 
     // Mode selection
     selectedMode: ModeKey | null;
@@ -52,6 +54,9 @@ export type GameState = {
     // Session counters
     cardsSwiped: number;
     drinksNudged: number;
+
+    // Hydration flag -- true once localStorage values have been loaded
+    hydrated: boolean;
 };
 
 export type GameAction =
@@ -67,31 +72,32 @@ export type GameAction =
     | { type: 'MARK_SEEN'; cardId: string }
     | { type: 'SET_BAR_SESSION'; session: BarSession }
     | { type: 'CLEAR_BAR_SESSION' }
-    | { type: 'INCREMENT_COUNTERS'; cards: number; drinks: number };
+    | { type: 'INCREMENT_COUNTERS'; cards: number; drinks: number }
+    | { type: 'HYDRATE'; payload: Partial<Pick<GameState, 'selectedMode' | 'selectedLanguage' | 'players' | 'barSession'>> }
+    | { type: 'RESTORE_PROGRESS'; seen: Set<string>; cardsSwiped: number; drinksNudged: number; sessionId: string; seed: number };
 
 type GameDispatch = (action: GameAction) => void;
 
-type GameStore = {
-    // State and dispatcher
-    state: GameState;
+// ---------- Store shape ----------
+// PATCH (CoderB): Reverted from split Dispatch/State contexts to a single
+// context. Rationale: audited all 9 consumers of useGameStore() -- exactly
+// ONE (app/bar/[slug]/page.tsx) is dispatch-only, and it also reads state
+// via useBarSession(). The split added two contexts, three hooks, and a
+// useMemo merge in useGameStore() for zero measurable re-render savings.
+export type GameStore = {
     dispatch: GameDispatch;
-
-    // Convenience mirrors so components can destructure directly
+    state: GameState;
     players: Player[];
-
-    // Helpers (stable API for components)
     setLanguage: (language: LanguageKey) => void;
     setMode: (mode: ModeKey) => void;
     setPlayers: (players: Player[]) => void;
     addPlayer: (name: string) => void;
     removePlayer: (id: PlayerId) => void;
     clearPlayers: () => void;
-
     startNewSession: (opts?: { forceMode?: ModeKey }) => void;
     endGame: () => void;
     resetRuntime: () => void;
     markSeen: (cardId: string) => void;
-
     setBarSession: (session: BarSession) => void;
     clearBarSession: () => void;
 };
@@ -102,21 +108,24 @@ const initialState: GameState = {
     seed: null,
     gameOver: false,
     players: [],
-    seen: [],
+    seen: new Set(),
     selectedMode: null,
     selectedLanguage: null,
     barSession: null,
     cardsSwiped: 0,
     drinksNudged: 0,
+    hydrated: false,
 };
 
 // ---------- Reducer ----------
 function reducer(state: GameState, action: GameAction): GameState {
     switch (action.type) {
         case 'SET_MODE': {
+            if (state.selectedMode === action.mode) return state;
             return { ...state, selectedMode: action.mode };
         }
         case 'SET_LANGUAGE': {
+            if (state.selectedLanguage === action.language) return state;
             return { ...state, selectedLanguage: action.language };
         }
         case 'SET_PLAYERS': {
@@ -141,30 +150,34 @@ function reducer(state: GameState, action: GameAction): GameState {
             return { ...state, players: [] };
         }
         case 'START_NEW_SESSION': {
-            // Fresh run: clear runtime state
             return {
                 ...state,
                 sessionId: action.sessionId,
                 seed: action.seed,
                 gameOver: false,
-                seen: [],
-                // Keep selectedMode as chosen prior to play
+                seen: new Set(),
+                cardsSwiped: 0,
+                drinksNudged: 0,
             };
         }
         case 'END_GAME': {
             return { ...state, gameOver: true };
         }
         case 'RESET_RUNTIME': {
-            // For "Replay" from end screen
             return {
                 ...state,
                 gameOver: false,
-                seen: [],
+                seen: new Set(),
+                cardsSwiped: 0,
+                drinksNudged: 0,
             };
         }
         case 'MARK_SEEN': {
-            if (state.seen.includes(action.cardId)) return state;
-            return { ...state, seen: [...state.seen, action.cardId] };
+            // O(1) Set check instead of O(n) Array.includes
+            if (state.seen.has(action.cardId)) return state;
+            const nextSeen = new Set(state.seen);
+            nextSeen.add(action.cardId);
+            return { ...state, seen: nextSeen };
         }
         case 'SET_BAR_SESSION': {
             return { ...state, barSession: action.session };
@@ -179,6 +192,31 @@ function reducer(state: GameState, action: GameAction): GameState {
                 drinksNudged: state.drinksNudged + action.drinks,
             };
         }
+        case 'HYDRATE': {
+            // Single atomic hydration from localStorage.
+            // Only apply values for fields that are still null/empty (don't overwrite
+            // in-flight state if a user action raced the hydration).
+            const p = action.payload;
+            return {
+                ...state,
+                selectedMode: state.selectedMode ?? (p.selectedMode ?? null),
+                selectedLanguage: state.selectedLanguage ?? (p.selectedLanguage ?? null),
+                players: state.players.length > 0 ? state.players : (p.players ?? []),
+                barSession: state.barSession ?? (p.barSession ?? null),
+                hydrated: true,
+            };
+        }
+        case 'RESTORE_PROGRESS': {
+            return {
+                ...state,
+                seen: action.seen,
+                cardsSwiped: action.cardsSwiped,
+                drinksNudged: action.drinksNudged,
+                sessionId: action.sessionId,
+                seed: action.seed,
+                gameOver: false,
+            };
+        }
         default:
             return state;
     }
@@ -191,48 +229,33 @@ const GameStoreContext = createContext<GameStore | null>(null);
 export function GameStoreProvider({ children }: { children: React.ReactNode }) {
     const [state, dispatch] = useReducer(reducer, initialState);
 
-    // ---- Hydrate selectedLanguage from localStorage (client only)
-    useEffect(() => {
-        try {
-            const raw =
-                typeof window !== 'undefined'
-                    ? window.localStorage.getItem(LANGUAGE_STORAGE_KEY)
-                    : null;
-            if (raw && isLanguageKey(raw) && state.selectedLanguage == null) {
-                dispatch({ type: 'SET_LANGUAGE', language: raw });
-            }
-        } catch {
-            // ignore storage failures
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
-
-    // ---- Hydrate selectedMode from localStorage (client only)
-    useEffect(() => {
-        try {
-            const raw =
-                typeof window !== 'undefined'
-                    ? window.localStorage.getItem(MODE_STORAGE_KEY)
-                    : null;
-            if (raw && isModeKey(raw) && state.selectedMode == null) {
-                dispatch({ type: 'SET_MODE', mode: raw });
-            }
-        } catch {
-            // ignore storage failures
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
-
-    // ---- Hydrate players from localStorage with migration (strings[] -> Player[])
+    // ---- Single atomic hydration from localStorage on mount ----
     useEffect(() => {
         try {
             if (typeof window === 'undefined') return;
-            const raw = window.localStorage.getItem(PLAYERS_STORAGE_KEY);
 
-            if (raw) {
-                const parsed = JSON.parse(raw);
+            // Language
+            let selectedMode: ModeKey | undefined;
+            let selectedLanguage: LanguageKey | undefined;
+            let players: Player[] | undefined;
+            let barSession: BarSession | undefined;
+
+            const rawLang = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
+            if (rawLang && isLanguageKey(rawLang)) {
+                selectedLanguage = rawLang;
+            }
+
+            // Mode
+            const rawMode = window.localStorage.getItem(MODE_STORAGE_KEY);
+            if (rawMode && isModeKey(rawMode)) {
+                selectedMode = rawMode;
+            }
+
+            // Players
+            const rawPlayers = window.localStorage.getItem(PLAYERS_STORAGE_KEY);
+            if (rawPlayers) {
+                const parsed = JSON.parse(rawPlayers);
                 if (Array.isArray(parsed)) {
-                    // Expect [{id, name}] but be tolerant
                     const asPlayers: Player[] = parsed
                         .map((p: unknown): Player | null => {
                             if (p && typeof p === 'object' && 'name' in p && typeof (p as Record<string, unknown>).name === 'string') {
@@ -246,99 +269,95 @@ export function GameStoreProvider({ children }: { children: React.ReactNode }) {
                             return null;
                         })
                         .filter(Boolean) as Player[];
-
                     if (asPlayers.length > 0) {
-                        dispatch({ type: 'SET_PLAYERS', players: asPlayers });
+                        players = asPlayers;
                     }
                 }
-            } else {
-                // Legacy migration: if someone previously stored string[] elsewhere, migrate here.
-                // (No legacy key known; if you had one, check and transform to Player[])
             }
-        } catch {
-            // ignore storage failures
-        }
-    }, []);
 
-    // ---- Hydrate barSession from localStorage (client only)
-    useEffect(() => {
-        try {
-            if (typeof window === 'undefined') return;
-            const raw = window.localStorage.getItem(BAR_SESSION_STORAGE_KEY);
-            if (raw && state.barSession == null) {
-                const parsed = JSON.parse(raw) as BarSession;
+            // Bar session
+            const rawBar = window.localStorage.getItem(BAR_SESSION_STORAGE_KEY);
+            if (rawBar) {
+                const parsed = JSON.parse(rawBar) as BarSession;
                 if (parsed && isBarSessionValid(parsed)) {
-                    dispatch({ type: 'SET_BAR_SESSION', session: parsed });
+                    barSession = parsed;
                 } else {
                     window.localStorage.removeItem(BAR_SESSION_STORAGE_KEY);
                 }
             }
+
+            dispatch({
+                type: 'HYDRATE',
+                payload: { selectedMode, selectedLanguage, players, barSession },
+            });
         } catch {
-            // ignore storage failures
+            // If localStorage is unavailable, still mark hydrated so the app renders
+            dispatch({
+                type: 'HYDRATE',
+                payload: {},
+            });
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    // ---- Persist selectedLanguage
+    // ---- Persist selectedLanguage ----
     useEffect(() => {
+        if (!state.hydrated) return;
         try {
             if (state.selectedLanguage) {
                 window.localStorage.setItem(LANGUAGE_STORAGE_KEY, state.selectedLanguage);
             } else {
                 window.localStorage.removeItem(LANGUAGE_STORAGE_KEY);
             }
-        } catch {
-            // ignore storage failures
-        }
-    }, [state.selectedLanguage]);
+        } catch { /* ignore */ }
+    }, [state.selectedLanguage, state.hydrated]);
 
-    // ---- Persist selectedMode
+    // ---- Persist selectedMode ----
     useEffect(() => {
+        if (!state.hydrated) return;
         try {
             if (state.selectedMode) {
                 window.localStorage.setItem(MODE_STORAGE_KEY, state.selectedMode);
             } else {
                 window.localStorage.removeItem(MODE_STORAGE_KEY);
             }
-        } catch {
-            // ignore storage failures
-        }
-    }, [state.selectedMode]);
+        } catch { /* ignore */ }
+    }, [state.selectedMode, state.hydrated]);
 
-    // ---- Persist players whenever they change
+    // ---- Persist players whenever they change ----
     useEffect(() => {
+        if (!state.hydrated) return;
         try {
             window.localStorage.setItem(PLAYERS_STORAGE_KEY, JSON.stringify(state.players));
-        } catch {
-            // ignore storage failures
-        }
-    }, [state.players]);
+        } catch { /* ignore */ }
+    }, [state.players, state.hydrated]);
 
-    // ---- Persist barSession
+    // ---- Persist barSession (single effect -- duplicate removed) ----
     useEffect(() => {
+        if (!state.hydrated) return;
         try {
             if (state.barSession) {
                 window.localStorage.setItem(BAR_SESSION_STORAGE_KEY, JSON.stringify(state.barSession));
             } else {
                 window.localStorage.removeItem(BAR_SESSION_STORAGE_KEY);
             }
-        } catch {
-            // ignore storage failures
-        }
-    }, [state.barSession]);
+        } catch { /* ignore */ }
+    }, [state.barSession, state.hydrated]);
 
-    // ---- Persist barSession
+    // ---- Persist play progress (seen cards, counters) for refresh survival ----
     useEffect(() => {
+        if (!state.hydrated || !state.sessionId) return;
         try {
-            if (state.barSession) {
-                window.localStorage.setItem(BAR_SESSION_STORAGE_KEY, JSON.stringify(state.barSession));
-            } else {
-                window.localStorage.removeItem(BAR_SESSION_STORAGE_KEY);
-            }
-        } catch {
-            // ignore storage failures
-        }
-    }, [state.barSession]);
+            const payload = {
+                sessionId: state.sessionId,
+                seed: state.seed,
+                seen: Array.from(state.seen),
+                cardsSwiped: state.cardsSwiped,
+                drinksNudged: state.drinksNudged,
+                savedAt: Date.now(),
+            };
+            window.localStorage.setItem(PLAY_PROGRESS_KEY, JSON.stringify(payload));
+        } catch { /* ignore */ }
+    }, [state.seen, state.cardsSwiped, state.drinksNudged, state.sessionId, state.seed, state.hydrated]);
 
     // ---------- Stable helpers (dispatch is stable from useReducer) ----------
     const setLanguage = useCallback(
@@ -387,11 +406,11 @@ export function GameStoreProvider({ children }: { children: React.ReactNode }) {
         [dispatch],
     );
 
-    // ---------- Context value ----------
-    const value = useMemo<GameStore>(
+    // ---------- Single context value ----------
+    const storeValue = useMemo<GameStore>(
         () => ({
-            state,
             dispatch,
+            state,
             players: state.players,
             setLanguage,
             setMode,
@@ -406,31 +425,39 @@ export function GameStoreProvider({ children }: { children: React.ReactNode }) {
             setBarSession,
             clearBarSession,
         }),
-        [state, setLanguage, setMode, setPlayers, addPlayer, removePlayer, clearPlayers, startNewSession, endGame, resetRuntime, markSeen, setBarSession, clearBarSession],
+        // state changes trigger a new value (this is the intended behavior --
+        // consumers that read state need to re-render). Dispatch callbacks are
+        // stable (useCallback with [dispatch]) so they don't contribute churn.
+        [state, dispatch, setLanguage, setMode, setPlayers, addPlayer, removePlayer, clearPlayers, startNewSession, endGame, resetRuntime, markSeen, setBarSession, clearBarSession],
     );
 
     return (
-        <GameStoreContext.Provider value={value}>
+        <GameStoreContext.Provider value={storeValue}>
             {children}
         </GameStoreContext.Provider>
     );
 }
 
-// ---------- Hook ----------
-export function useGameStore() {
+// ---------- Hooks ----------
+
+/** Primary store hook used by all consumers. */
+export function useGameStore(): GameStore {
     const ctx = useContext(GameStoreContext);
-    if (!ctx) throw new Error('useGameStore must be used within GameStoreProvider');
+    if (!ctx) {
+        throw new Error('useGameStore must be used within GameStoreProvider');
+    }
     return ctx;
 }
 
+/** Expose the play progress storage key for the play page to restore from. */
+export const PLAY_PROGRESS_STORAGE_KEY = PLAY_PROGRESS_KEY;
+
 // ---------- Utilities ----------
 function cryptoRandomId(): string {
-    // 16-byte random hex id (safe for client only)
     const arr = new Uint8Array(16);
     if (typeof crypto !== 'undefined' && crypto.getRandomValues) {
         crypto.getRandomValues(arr);
     } else {
-        // Fallback: Math.random (non-crypto). Acceptable for game sessions.
         for (let i = 0; i < arr.length; i++) arr[i] = Math.floor(Math.random() * 256);
     }
     return Array.from(arr)

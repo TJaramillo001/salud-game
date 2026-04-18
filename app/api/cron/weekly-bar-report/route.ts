@@ -42,20 +42,32 @@ export async function GET(req: Request) {
             return NextResponse.json({ message: 'No active bar owners' });
         }
 
+        // 2. Fetch ALL events for the past week in a single query (fixes N+1).
+        // PATCH (CoderB): Previously this was one query per bar owner inside the
+        // loop below. With 10 bars that is 11 round-trips; with 100 bars, 101.
+        // Now it is always exactly 2 queries regardless of bar count.
+        const { data: allEvents, error: eventsErr } = await supabase
+            .from('bar_events')
+            .select('bar_slug, event_type')
+            .gte('created_at', weekAgo);
+
+        if (eventsErr) {
+            console.error('Error fetching weekly events:', eventsErr);
+            // Fall through with empty events rather than failing all reports
+        }
+
+        // Group events by bar_slug for O(1) lookup per owner
+        const eventsByBar = new Map<string, Array<{ bar_slug: string; event_type: string }>>();
+        for (const event of allEvents ?? []) {
+            const list = eventsByBar.get(event.bar_slug) ?? [];
+            list.push(event);
+            eventsByBar.set(event.bar_slug, list);
+        }
+
         let emailsSent = 0;
 
         for (const owner of owners) {
-            // 2. Aggregate events for this bar in the past week
-            const { data: events, error: eventsErr } = await supabase
-                .from('bar_events')
-                .select('event_type')
-                .eq('bar_slug', owner.bar_slug)
-                .gte('created_at', weekAgo);
-
-            if (eventsErr) {
-                console.error(`Error fetching events for ${owner.bar_slug}:`, eventsErr);
-                continue;
-            }
+            const events = eventsByBar.get(owner.bar_slug) ?? [];
 
             const counts = {
                 sessions: 0,
@@ -65,7 +77,7 @@ export async function GET(req: Request) {
                 games_ended: 0,
             };
 
-            for (const e of events ?? []) {
+            for (const e of events) {
                 switch (e.event_type) {
                     case 'session_start': counts.sessions++; break;
                     case 'card_swipe': counts.card_swipes++; break;

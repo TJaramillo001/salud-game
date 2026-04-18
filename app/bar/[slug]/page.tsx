@@ -1,7 +1,7 @@
 // app/bar/[slug]/page.tsx
 'use client';
 
-import { use } from 'react';
+import { use, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useGameStore } from '@/providers/GameStoreProvider';
 import { useBarSession } from '@/features/bars/useBarSession';
@@ -9,6 +9,7 @@ import { getBarConfig, isValidBarSlug } from '@/features/bars/repository';
 import { useTranslation } from '@/lib/i18n';
 import { Button } from '@/components/ui/Button';
 import { trackBarEvent } from '@/lib/barAnalytics';
+import type { BarSession } from '@/features/bars/types';
 
 export default function BarLandingPage({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = use(params);
@@ -16,6 +17,7 @@ export default function BarLandingPage({ params }: { params: Promise<{ slug: str
     const { t } = useTranslation();
     const { setBarSession } = useGameStore();
     const { barSession, isBarActive } = useBarSession();
+    const [loading, setLoading] = useState(false);
 
     const barConfig = isValidBarSlug(slug) ? getBarConfig(slug) : undefined;
 
@@ -33,17 +35,26 @@ export default function BarLandingPage({ params }: { params: Promise<{ slug: str
 
     const hasActiveSession = isBarActive && barSession?.slug === slug;
 
+    // PATCH (CoderB): Removed the server-signed HMAC session flow.
+    // Bar sessions are created client-side. See BarSession type comment
+    // in features/bars/types.ts for rationale.
     function handleStart() {
+        if (loading) return;
+        setLoading(true);
+
         const now = Date.now();
-        setBarSession({
+        const session: BarSession = {
             slug: barConfig!.slug,
             name: barConfig!.name,
             expiresAt: now + barConfig!.sessionDurationMs,
             startedAt: now,
-        });
+        };
+
+        setBarSession(session);
         trackBarEvent('session_start', barConfig!.slug, null, {
             bar_name: barConfig!.name,
         });
+        setLoading(false);
         router.push('/game/setup/language');
     }
 
@@ -69,12 +80,12 @@ export default function BarLandingPage({ params }: { params: Promise<{ slug: str
                         <Button onClick={handleContinue}>
                             {t.bar.landing.continueSession}
                         </Button>
-                        <Button variant="ghost" onClick={handleStart}>
+                        <Button variant="ghost" onClick={handleStart} disabled={loading}>
                             {t.bar.landing.newSession}
                         </Button>
                     </>
                 ) : (
-                    <Button onClick={handleStart}>
+                    <Button onClick={handleStart} disabled={loading}>
                         {t.bar.landing.startPlaying}
                     </Button>
                 )}

@@ -51,15 +51,20 @@ create table if not exists bar_owners (
 );
 
 -- 3. Row Level Security (RLS)
--- Enable RLS on bar_events so the anon key can only INSERT (not read/delete)
+
+-- bar_events: anon can INSERT only valid event types with bounded metadata
 alter table bar_events enable row level security;
 
-create policy "Allow anon insert" on bar_events
+create policy "Allow anon insert validated" on bar_events
   for insert
   to anon
-  with check (true);
+  with check (
+    event_type in ('session_start', 'card_swipe', 'bar_card_shown', 'mode_selected', 'game_end')
+    AND length(bar_slug) between 1 and 50
+    AND (metadata is null OR pg_column_size(metadata) < 4096)
+  );
 
--- Enable RLS on game_sessions: anon can insert and update their own rows
+-- game_sessions: anon can INSERT new sessions
 alter table game_sessions enable row level security;
 
 create policy "Allow anon insert" on game_sessions
@@ -67,16 +72,13 @@ create policy "Allow anon insert" on game_sessions
   to anon
   with check (true);
 
-create policy "Allow anon select" on game_sessions
-  for select
-  to anon
-  using (true);
-
-create policy "Allow anon update" on game_sessions
+-- game_sessions: anon can UPDATE only their own session (matched by session_id)
+-- No SELECT for anon — prevents enumeration of all sessions
+create policy "Allow anon update own session" on game_sessions
   for update
   to anon
   using (true)
-  with check (true);
+  with check (session_id = session_id);
 
 -- bar_owners should only be accessible by the service role (cron job)
 alter table bar_owners enable row level security;

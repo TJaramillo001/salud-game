@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Link from "next/link";
+import { GameStoreProvider } from '@/providers/GameStoreProvider';
+import { ActiveRulesProvider } from '@/features/rules/useActiveRules';
 
 export const metadata: Metadata = {
     title: "Salud — Juego de fiesta",
@@ -17,9 +19,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         </head>
         <body className="min-h-screen bg-neutral-950 text-neutral-100 antialiased">
+        <GameStoreProvider>
+        <ActiveRulesProvider>
         <Header />
         <main className="mx-auto max-w-5xl px-6 pb-24">{children}</main>
         <Footer />
+        </ActiveRulesProvider>
+        </GameStoreProvider>
         </body>
         </html>
     );

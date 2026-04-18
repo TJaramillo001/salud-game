@@ -65,9 +65,44 @@ export function flushBarEvents() {
     flush();
 }
 
-// Flush on page unload
+/**
+ * Flush via sendBeacon — survives page close/tab switch.
+ * Falls back to regular flush() if sendBeacon is unavailable or Supabase is not configured.
+ */
+function flushViaBeacon() {
+    if (queue.length === 0) return;
+
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+    if (!supabaseUrl || !supabaseKey || typeof navigator.sendBeacon !== 'function') {
+        flushBarEvents();
+        return;
+    }
+
+    if (flushTimer) {
+        clearTimeout(flushTimer);
+        flushTimer = null;
+    }
+
+    const batch = queue.splice(0, queue.length);
+    const url = `${supabaseUrl}/rest/v1/bar_events`;
+    const blob = new Blob([JSON.stringify(batch)], { type: 'application/json' });
+
+    // sendBeacon does not support custom headers, so we use URL params for auth
+    // Supabase REST API accepts apikey as query param
+    const sent = navigator.sendBeacon(`${url}?apikey=${encodeURIComponent(supabaseKey)}`, blob);
+
+    if (!sent) {
+        // If beacon fails, push events back and try regular flush
+        queue.push(...batch);
+        flush();
+    }
+}
+
+// Flush on page hide — use sendBeacon to survive tab close
 if (typeof window !== 'undefined') {
     window.addEventListener('visibilitychange', () => {
-        if (document.visibilityState === 'hidden') flushBarEvents();
+        if (document.visibilityState === 'hidden') flushViaBeacon();
     });
 }

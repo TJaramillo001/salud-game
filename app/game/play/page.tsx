@@ -1,24 +1,24 @@
 // app/game/play/page.tsx
 'use client';
 
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { useGameStore } from '@/providers/GameStoreProvider';
+import { useGameStore, PLAY_PROGRESS_STORAGE_KEY } from '@/providers/GameStoreProvider';
 import { useDeck } from '@/features/deck/useDeck';
-import { useActiveRules } from '@/features/rules/useActiveRules';
+import { usePlayerRotation } from '@/features/gameplay/usePlayerRotation';
+import { useSessionAnalytics } from '@/features/gameplay/useSessionAnalytics';
+import { useBarExpiry } from '@/features/gameplay/useBarExpiry';
+import { useRuleLifecycle } from '@/features/gameplay/useRuleLifecycle';
+import { useOfflineDeck } from '@/features/gameplay/useOfflineDeck';
 import { QuestionCard } from '@/components/game/QuestionCard';
 import { Button } from '@/components/ui/Button';
 import { DeckHUD } from './components/DeckHUD';
 import { vibrate } from '@/lib/haptics';
-import { weightedPickIndex, applyDecay, resolveTargetName } from '@/features/gameplay/turn';
+import { resolveTargetName } from '@/features/gameplay/turn';
 import type { Card } from '@/features/questions/types';
-import { saveLastDeck, getLastDeck, isOnline } from '@/lib/offline';
+import { isOnline } from '@/lib/offline';
 import { useTranslation } from '@/lib/i18n';
-import { useBarSession } from '@/features/bars/useBarSession';
-import { isModeAccessible } from '@/features/bars/access';
 import { BarExpiredModal } from '@/components/game/BarExpiredModal';
-import { trackBarEvent } from '@/lib/barAnalytics';
-import { getSupabaseClient } from '@/lib/supabase';
 
 function cyrb53(str: string, seed = 0) {
     let h1 = 0xdeadbeef ^ seed, h2 = 0x41c6ce57 ^ seed;
@@ -29,256 +29,128 @@ function cyrb53(str: string, seed = 0) {
 }
 
 export default function PlayPage() {
-    const { state: { selectedMode, players, sessionId, selectedLanguage } } = useGameStore();
+    const {
+        state: { selectedMode, players, sessionId, selectedLanguage, hydrated },
+        dispatch,
+    } = useGameStore();
     const { t } = useTranslation();
     const router = useRouter();
-    const { addRule, clearRule, clearAll } = useActiveRules();
-    const { barSession, isBarActive } = useBarSession();
 
-    // Bar session expiry tracking
-    const [showBarExpired, setShowBarExpired] = useState(false);
-    const wasBarActive = useRef(false);
+    // --- Bar session expiry ---
+    const { barSession, isBarActive, showBarExpired, handleBarExpiredDismiss } = useBarExpiry(selectedMode);
+
+    // --- Navigation guards ---
     useEffect(() => {
-        if (isBarActive) wasBarActive.current = true;
-        if (wasBarActive.current && !isBarActive && barSession === null) {
-            setShowBarExpired(true);
-        }
-    }, [isBarActive, barSession]);
-
-    function handleBarExpiredDismiss() {
-        setShowBarExpired(false);
-        if (selectedMode && !isModeAccessible(selectedMode, null)) {
-            router.replace('/game/setup/mode');
-        }
-    }
-
-    // Track session start in Supabase
-    const sessionTracked = useRef(false);
+        if (!hydrated) return;
+        if (!selectedMode) router.replace('/game/setup/mode');
+    }, [selectedMode, router, hydrated]);
     useEffect(() => {
-        if (sessionTracked.current || !sessionId || !selectedMode || !selectedLanguage) return;
-        sessionTracked.current = true;
-        const supabase = getSupabaseClient();
-        if (!supabase) return;
-        supabase.from('game_sessions').insert({
-            session_id: sessionId,
-            mode: selectedMode,
-            language: selectedLanguage,
-            player_count: players.length,
-            bar_slug: barSession?.slug ?? null,
-        }).then(({ error }) => {
-            if (error) console.warn('game_sessions insert failed:', error.message);
-        });
-    }, [sessionId, selectedMode, selectedLanguage, players.length, barSession]);
+        if (!hydrated) return;
+        if (!players || players.length === 0) router.replace('/game/setup/players');
+    }, [players, router, hydrated]);
 
-    // Require mode and players
-    useEffect(() => { if (!selectedMode) router.replace('/game/setup/mode'); }, [selectedMode, router]);
-    useEffect(() => { if (!players || players.length === 0) router.replace('/game/setup/players'); }, [players, router]);
-
-    // Stable seed
+    // --- Stable seed ---
     const [runId, setRunId] = useState(0);
     const seed = useMemo(() => {
         const names = players.map(p => p.name).join('|');
         return cyrb53(`${selectedMode ?? 'unknown'}|${names}|run:${runId}`);
     }, [selectedMode, players, runId]);
 
-    // Primary deck (normal flow)
+    // --- Restore progress from localStorage on refresh ---
+    const [progressRestored, setProgressRestored] = useState(false);
+    useEffect(() => {
+        if (!hydrated || progressRestored) return;
+        try {
+            const raw = window.localStorage.getItem(PLAY_PROGRESS_STORAGE_KEY);
+            if (raw) {
+                const saved = JSON.parse(raw);
+                // Only restore if the saved progress matches the current session context
+                // (same mode+players hash would produce the same seed, so we check sessionId)
+                if (saved.sessionId && saved.seen && Array.isArray(saved.seen)) {
+                    dispatch({
+                        type: 'RESTORE_PROGRESS',
+                        seen: new Set(saved.seen as string[]),
+                        cardsSwiped: saved.cardsSwiped ?? 0,
+                        drinksNudged: saved.drinksNudged ?? 0,
+                        sessionId: saved.sessionId,
+                        seed: saved.seed ?? seed,
+                    });
+                }
+            }
+        } catch { /* ignore parse errors */ }
+        setProgressRestored(true);
+    }, [hydrated, progressRestored, dispatch, seed]);
+
+    // --- Primary deck ---
     const { current, remaining, next, deck } = useDeck(seed);
     const isEmptyDeck = !deck || deck.length === 0;
 
-    // --- Persist the latest playable deck for offline fallback ---
+    // --- Offline fallback ---
+    const { usingOffline, offlineCurrent, advanceOffline } = useOfflineDeck(
+        deck as Card[] | undefined,
+        isEmptyDeck,
+        runId,
+    );
+
+    // --- Player rotation (seeded for determinism) ---
+    const { currentPlayerIdx, actors, advance: advancePlayer, resetRotation } = usePlayerRotation(
+        players.length,
+        seed,
+    );
+
+    // Reset rotation on reshuffle
     useEffect(() => {
-        try {
-            if (deck && deck.length > 0) {
-                saveLastDeck(deck as Card[]);
-            }
-        } catch { /* ignore */ }
-    }, [deck]);
+        resetRotation(players.length);
+    }, [runId, players.length, resetRotation]);
 
-    // Offline fallback deck (when generation fails or offline)
-    const [offlineDeck, setOfflineDeck] = useState<Card[] | null>(null);
-    const [offlineIndex, setOfflineIndex] = useState(0);
+    // --- Analytics ---
+    const analytics = useSessionAnalytics({
+        sessionId,
+        selectedMode,
+        selectedLanguage,
+        playerCount: players.length,
+        barSession,
+        isBarActive,
+    });
 
+    // Reset analytics counters on reshuffle
     useEffect(() => {
-        if (!isEmptyDeck) {
-            // Online deck loaded — discard any stale offline fallback
-            setOfflineDeck(null);
-            setOfflineIndex(0);
-            return;
-        }
-        const cached = getLastDeck();
-        if (cached && cached.length > 0) {
-            setOfflineDeck(cached);
-            setOfflineIndex(0);
-        }
-    }, [isEmptyDeck, runId]);
+        analytics.resetCounters();
+    }, [runId, analytics]);
 
-    const usingOffline = isEmptyDeck && offlineDeck && offlineDeck.length > 0;
-    const offlineCurrent = usingOffline ? offlineDeck![offlineIndex] : null;
+    // --- Rule lifecycle ---
+    const activeCard = (usingOffline ? offlineCurrent : current) as Card | undefined;
+    useRuleLifecycle(activeCard ?? null, runId);
 
-    // Analytics counters (refs to avoid stale closures in flushSessionStats)
-    const cardsSwiped = useRef(0);
-    const drinksNudged = useRef(0);
-
-    // Keep sessionId in a ref so cleanup/beacon functions always have the latest value
-    const sessionIdRef = useRef(sessionId);
-    useEffect(() => { sessionIdRef.current = sessionId; }, [sessionId]);
-
-    // Weighted-decay player distribution
-    const [weights, setWeights] = useState<number[]>(() => players.map(() => 1));
-    const [currentPlayerIdx, setCurrentPlayerIdx] = useState(0);
-    useEffect(() => {
-        setWeights(Array(players.length).fill(1));
-        setCurrentPlayerIdx(0);
-        cardsSwiped.current = 0;
-        drinksNudged.current = 0;
-        flushedSession.current = false;
-    }, [runId, players.length]);
-
-    // Rule lifecycle once per card (applies to both online/offline flows)
-    const processed = useRef<Set<string>>(new Set());
-    useEffect(() => {
-        processed.current.clear();
-        clearAll();
-    }, [runId, clearAll]);
-    useEffect(() => {
-        const active = (usingOffline ? offlineCurrent : current) as Card | undefined;
-        if (!active || !active.ruleId) return;
-        const isOn = active.kind === 'rule_on';
-        const isOff = active.kind === 'rule_off';
-        if (!isOn && !isOff) return;
-        if (processed.current.has(active.id)) return;
-        processed.current.add(active.id);
-        if (isOn) addRule({ ruleId: active.ruleId, params: { phase: 'on' } });
-        else clearRule(active.ruleId);
-    }, [current, offlineCurrent, usingOffline, addRule, clearRule]);
-
-    // Flush analytics counters to Supabase
-    const flushedSession = useRef(false);
-
-    // Async flush via Supabase client (used by End button + end-of-deck)
-    const flushSessionStats = async () => {
-        const sid = sessionIdRef.current;
-        if (flushedSession.current || !sid) return;
-        flushedSession.current = true;
-        const supabase = getSupabaseClient();
-        if (!supabase) return;
-        const payload = {
-            cards_swiped: cardsSwiped.current,
-            drinks_nudged: drinksNudged.current,
-            ended_at: new Date().toISOString(),
-        };
-        const { error } = await supabase.from('game_sessions')
-            .update(payload)
-            .eq('session_id', sid);
-        if (error) console.warn('game_sessions update failed:', error.message);
-    };
-
-    // Fire-and-forget flush using fetch+keepalive (survives page navigation/unload)
-    const flushSessionStatsBeacon = () => {
-        const sid = sessionIdRef.current;
-        if (flushedSession.current || !sid || cardsSwiped.current === 0) return;
-        flushedSession.current = true;
-        const sbUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-        const sbKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-        if (!sbUrl || !sbKey) return;
-        const payload = {
-            cards_swiped: cardsSwiped.current,
-            drinks_nudged: drinksNudged.current,
-            ended_at: new Date().toISOString(),
-        };
-        try {
-            fetch(`${sbUrl}/rest/v1/game_sessions?session_id=eq.${sid}`, {
-                method: 'PATCH',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'apikey': sbKey,
-                    'Authorization': `Bearer ${sbKey}`,
-                    'Prefer': 'return=minimal',
-                },
-                body: JSON.stringify(payload),
-                keepalive: true,
-            });
-        } catch { /* analytics should never break gameplay */ }
-    };
-
-    // Flush on unmount, visibility change, or tab close
-    useEffect(() => {
-        const onVisChange = () => {
-            if (document.visibilityState === 'hidden') flushSessionStatsBeacon();
-        };
-        const onUnload = () => flushSessionStatsBeacon();
-        document.addEventListener('visibilitychange', onVisChange);
-        window.addEventListener('beforeunload', onUnload);
-        return () => {
-            document.removeEventListener('visibilitychange', onVisChange);
-            window.removeEventListener('beforeunload', onUnload);
-            flushSessionStatsBeacon(); // React unmount (navigation, redirect guards)
-        };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
-
-    // End of deck (only for the normal deck)
+    // --- End of deck ---
     useEffect(() => {
         if (selectedMode && !isEmptyDeck && remaining <= 0 && !current) {
-            flushSessionStats().then(() => router.replace('/game/summary'));
+            analytics.flushSessionStats().then(() => router.replace('/game/summary'));
         }
-    }, [remaining, current, selectedMode, router, isEmptyDeck]);
+    }, [remaining, current, selectedMode, router, isEmptyDeck, analytics]);
 
-    // Advance (handles either flow)
+    // --- Advance handler ---
     const onAdvance = () => {
-        const hasCard = usingOffline ? !!offlineCurrent : !!current;
-        if (!hasCard) return;
-        vibrate(10); // 10ms pulse — just enough tactile feedback without being intrusive
+        const card = activeCard;
+        if (!card) return;
+        vibrate(10);
 
-        // Analytics counters
-        const card = (usingOffline ? offlineCurrent : current) as Card | undefined;
-        cardsSwiped.current += 1;
-        if (card?.drink_count) {
-            drinksNudged.current += card.drink_count!;
-        }
-
-        // Bar analytics: track card swipe + bar card shown
-        if (isBarActive && barSession) {
-            const card = (usingOffline ? offlineCurrent : current) as Card | undefined;
-            trackBarEvent('card_swipe', barSession.slug, null, {
-                card_id: card?.id,
-                card_kind: card?.kind,
-                mode: selectedMode,
-            });
-            if (card?.source === 'bar') {
-                trackBarEvent('bar_card_shown', barSession.slug, null, {
-                    card_id: card.id,
-                    card_text: card.text?.slice(0, 80),
-                });
-            }
-        }
+        analytics.trackCardAdvance(card);
 
         if (usingOffline) {
-            setOfflineIndex((i) => (i + 1 < (offlineDeck?.length ?? 0) ? i + 1 : i));
+            advanceOffline();
         } else {
             next();
         }
-        const nextWeights = applyDecay(weights, currentPlayerIdx);
-        const nextIdx = weightedPickIndex(nextWeights);
-        setWeights(nextWeights);
-        setCurrentPlayerIdx(nextIdx);
+        advancePlayer();
     };
 
-    // Actors (for {A}/{B}/{STARTER})
-    const actors = useMemo(() => {
-        if (players.length === 0) return {};
-        const A = currentPlayerIdx, B = (currentPlayerIdx + 1) % players.length, STARTER = A;
-        return { A, B, STARTER };
-    }, [currentPlayerIdx, players.length]);
-
-    // Subtitle
-    const activeCard = (usingOffline ? offlineCurrent : current) as Card | undefined;
+    // --- Subtitle ---
     const isRuleCard = activeCard?.kind === 'rule_on' || activeCard?.kind === 'rule_off';
     const rawSubtitle =
         activeCard && !isRuleCard
             ? resolveTargetName?.(activeCard as Card, players.map(p => p.name), currentPlayerIdx) ?? null
             : null;
-
     const subtitle = typeof rawSubtitle === 'string' ? rawSubtitle : null;
 
     // --- Offline banner ---
@@ -289,7 +161,7 @@ export default function PlayPage() {
         </div>
     ) : null;
 
-    // --- Empty & no offline fallback ---
+    // --- Empty deck, no offline fallback ---
     if (isEmptyDeck && !usingOffline) {
         return (
             <main className="min-h-dvh p-6 pb-28 flex flex-col items-center gap-6">
@@ -337,7 +209,7 @@ export default function PlayPage() {
                     <QuestionCard
                         card={activeCard as Card}
                         subtitle={subtitle ?? undefined}
-                        dx={0}                 // no swipe: no tilt/translate
+                        dx={0}
                         players={players}
                         actors={actors}
                         kindLabels={t.card.kind}
@@ -348,13 +220,13 @@ export default function PlayPage() {
                 ) : <div />}
             </div>
 
-            {/* Footer — Siguiente is now on the right */}
+            {/* Footer */}
             <footer className="fixed bottom-4 inset-x-0 px-6">
                 <div className="mx-auto max-w-md flex gap-3">
                     <Button
                         className="flex-1"
                         variant="ghost"
-                        onClick={async () => { await flushSessionStats(); router.replace('/game/summary'); }}
+                        onClick={async () => { await analytics.flushSessionStats(); router.replace('/game/summary'); }}
                     >
                         {t.play.btn.end}
                     </Button>

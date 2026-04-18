@@ -17,8 +17,6 @@ const COMING_SOON = [
     { key: 'bar', emoji: '🍻' },
 ];
 
-const UNLOCK_PASSWORDS = new Set(['YEAH!', 'amigo', 'tj', '8664']);
-
 export default function ModePage() {
     const router = useRouter();
     const { t } = useTranslation();
@@ -34,10 +32,6 @@ export default function ModePage() {
     type ModeEntry = { key: ModeKey; pack: Pack };
     const [modeEntries, setModeEntries] = useState<ModeEntry[]>([]);
     const [loading, setLoading] = useState(true);
-
-    // Password unlock state
-    const [passwordUnlocked, setPasswordUnlocked] = useState(false);
-    const [passwordInput, setPasswordInput] = useState('');
 
     // Guard: must have players before picking a mode
     useEffect(() => {
@@ -69,7 +63,7 @@ export default function ModePage() {
 
     function choose(key: ModeKey) {
         if (key === 'couple' && players.length !== 2) return;
-        if (!isModeAccessible(key, barSession, passwordUnlocked)) return;
+        if (!isModeAccessible(key, barSession)) return;
         if (isBarActive && barSession) {
             trackBarEvent('mode_selected', barSession.slug, null, {
                 mode: key,
@@ -79,13 +73,6 @@ export default function ModePage() {
         setMode(key);
         startNewSession();
         router.push('/game/play');
-    }
-
-    function handlePasswordChange(value: string) {
-        setPasswordInput(value);
-        if (UNLOCK_PASSWORDS.has(value)) {
-            setPasswordUnlocked(true);
-        }
     }
 
     return (
@@ -107,8 +94,8 @@ export default function ModePage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl">
                     {modeEntries.map(({ key, pack }) => {
                         const isSelected = selectedMode === key;
-                        const accessible = isModeAccessible(key, barSession, passwordUnlocked);
-                        const reason = getModeAccessReason(key, barSession, passwordUnlocked);
+                        const accessible = isModeAccessible(key, barSession);
+                        const reason = getModeAccessReason(key, barSession);
                         const coupleBlocked = key === 'couple' && players.length !== 2;
                         const modeT = t.modes[key as keyof typeof t.modes];
                         const label = modeT?.label ?? key;
@@ -188,22 +175,6 @@ export default function ModePage() {
                         );
                     })}
                 </div>
-            )}
-
-            {/* Inline password unlock */}
-            {!passwordUnlocked && !isBarActive && (
-                <div className="mt-6 max-w-xl">
-                    <input
-                        type="text"
-                        value={passwordInput}
-                        onChange={(e) => handlePasswordChange(e.target.value)}
-                        placeholder={t.mode.password.placeholder}
-                        className="w-full rounded-lg border border-neutral-700 bg-neutral-800 px-4 py-3 text-sm text-white placeholder-neutral-500 outline-none transition focus:border-neutral-400"
-                    />
-                </div>
-            )}
-            {passwordUnlocked && !isBarActive && (
-                <p className="mt-6 text-sm text-emerald-400">✓ {t.mode.password.submit}</p>
             )}
 
             <div className="mt-4">

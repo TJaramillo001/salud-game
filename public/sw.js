@@ -10,6 +10,7 @@ const RUNTIME_CACHE = `salud-runtime-${VERSION}`;
 
 const SHELL_URLS = [
     '/',
+    '/game/setup/language',
     '/game/play',
     '/game/setup/players',
     '/game/setup/mode',

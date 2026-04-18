@@ -1,8 +1,6 @@
-// app/layout.tsx
-export const dynamic = 'force-dynamic';
-
-import { GameStoreProvider } from '@/providers/GameStoreProvider';
-import { ActiveRulesProvider } from '@/features/rules/useActiveRules';
+// app/game/layout.tsx
+// Providers (GameStoreProvider + ActiveRulesProvider) are in the root layout.
+// This layout adds game-specific metadata and the service worker registration script.
 
 export const metadata = {
     title: 'Salud',
@@ -23,16 +21,14 @@ export const metadata = {
 };
 
 export default function GameLayout({ children }: { children: React.ReactNode }) {
-    // Inject the build id at render-time so the client script can use it.
     const buildId = process.env.NEXT_PUBLIC_BUILD_ID;
 
     return (
-        <GameStoreProvider>
-            <ActiveRulesProvider>
-                {children}
-                <script
-                    dangerouslySetInnerHTML={{
-                        __html: `
+        <>
+            {children}
+            <script
+                dangerouslySetInnerHTML={{
+                    __html: `
             (function(){
               if ('serviceWorker' in navigator) {
                 var buildId = ${JSON.stringify(buildId)};
@@ -42,9 +38,8 @@ export default function GameLayout({ children }: { children: React.ReactNode }) 
                 });
               }
             })();`,
-                    }}
-                />
-            </ActiveRulesProvider>
-        </GameStoreProvider>
+                }}
+            />
+        </>
     );
 }

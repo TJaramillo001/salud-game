@@ -1,59 +1,60 @@
 // features/questions/repository.ts
+//
+// PATCH (CoderB): Converted from static imports to dynamic import() for pack
+// JSON files. This is the single largest bundle optimization in the codebase.
+//
+// Previous state: All 12 pack JSONs were statically imported at module load,
+// adding ~622KB (uncompressed) to the client JS bundle. A user who picks
+// English + Pre mode downloads 232KB of Spanish cards they never see.
+//
+// New state: Each pack is loaded lazily via dynamic import() only when the
+// user selects that mode+language pair. Webpack/Turbopack splits each JSON
+// into its own chunk. Typical payload drops from ~622KB to ~30-70KB (1 pack).
+//
+// Also removed dead code: listPacks(), getPackById(), listPackIds() had zero
+// callers in the codebase.
+
 import type { Pack } from './types';
 import type { ModeKey } from '@/features/modes/types';
 import type { LanguageKey } from '@/features/languages/types';
 import { validateCard } from './schemas';
 
-// Latin American Spanish
-import preEsLaRaw from '@/data/packs/pre_es_la.json';
-import nightOutEsLaRaw from '@/data/packs/night_out_es_la.json';
+// ---------- Lazy pack loaders ----------
+// Each entry maps a `${mode}_${language}` key to a dynamic import thunk.
+// The import() calls are split by bundler into separate chunks.
 
-// Spain Spanish (Erasmus)
-import preEsEuRaw from '@/data/packs/pre_es_eu.json';
-import nightOutEsEuRaw from '@/data/packs/night_out_es_eu.json';
-
-// Italian
-import preItRaw from '@/data/packs/pre_it.json';
-import nightOutItRaw from '@/data/packs/night_out_it.json';
-
-// English
-import preEnRaw from '@/data/packs/pre_en.json';
-import nightOutEnRaw from '@/data/packs/night_out_en.json';
-
-// Couple mode
-import coupleEsLaRaw from '@/data/packs/couple_es_la.json';
-import coupleEsEuRaw from '@/data/packs/couple_es_eu.json';
-import coupleItRaw from '@/data/packs/couple_it.json';
-import coupleEnRaw from '@/data/packs/couple_en.json';
-
-type PackRegistryEntry = {
-    raw: unknown;
+type PackMeta = {
     id: string;
     name: string;
-    mode: ModeKey;
-    language: LanguageKey;
+    loader: () => Promise<{ default: unknown }>;
 };
 
-/** All packs indexed by mode + language. */
-const PACK_REGISTRY: PackRegistryEntry[] = [
-    { raw: preEsLaRaw,      id: 'pre_es_la',      name: 'Pre (Latino)',          mode: 'pre',      language: 'es_la' },
-    { raw: preEsEuRaw,      id: 'pre_es_eu',      name: 'Pre (España)',           mode: 'pre',      language: 'es_eu' },
-    { raw: preItRaw,        id: 'pre_it',         name: 'Pre (Italiano)',         mode: 'pre',      language: 'it'    },
-    { raw: preEnRaw,        id: 'pre_en',         name: 'Pre (English)',          mode: 'pre',      language: 'en'    },
-    { raw: nightOutEsLaRaw, id: 'night_out_es_la', name: 'Rumba (Latino)',        mode: 'night_out', language: 'es_la' },
-    { raw: nightOutEsEuRaw, id: 'night_out_es_eu', name: 'Rumba (España)',         mode: 'night_out', language: 'es_eu' },
-    { raw: nightOutItRaw,   id: 'night_out_it',   name: 'Notte Fuori (Italiano)', mode: 'night_out', language: 'it'    },
-    { raw: nightOutEnRaw,   id: 'night_out_en',   name: 'Night Out (English)',    mode: 'night_out', language: 'en'    },
-    { raw: coupleEsLaRaw,   id: 'couple_es_la',   name: 'Pareja (Latino)',        mode: 'couple',    language: 'es_la' },
-    { raw: coupleEsEuRaw,   id: 'couple_es_eu',   name: 'Pareja (España)',        mode: 'couple',    language: 'es_eu' },
-    { raw: coupleItRaw,     id: 'couple_it',      name: 'Coppia (Italiano)',      mode: 'couple',    language: 'it'    },
-    { raw: coupleEnRaw,     id: 'couple_en',      name: 'Couples (English)',      mode: 'couple',    language: 'en'    },
-];
+const PACK_LOADERS: Record<string, PackMeta> = {
+    'pre_es_la':       { id: 'pre_es_la',       name: 'Pre (Latino)',           loader: () => import('@/data/packs/pre_es_la.json') },
+    'pre_es_eu':       { id: 'pre_es_eu',       name: 'Pre (Espana)',           loader: () => import('@/data/packs/pre_es_eu.json') },
+    'pre_it':          { id: 'pre_it',          name: 'Pre (Italiano)',         loader: () => import('@/data/packs/pre_it.json') },
+    'pre_en':          { id: 'pre_en',          name: 'Pre (English)',          loader: () => import('@/data/packs/pre_en.json') },
+    'night_out_es_la': { id: 'night_out_es_la', name: 'Rumba (Latino)',         loader: () => import('@/data/packs/night_out_es_la.json') },
+    'night_out_es_eu': { id: 'night_out_es_eu', name: 'Rumba (Espana)',         loader: () => import('@/data/packs/night_out_es_eu.json') },
+    'night_out_it':    { id: 'night_out_it',    name: 'Notte Fuori (Italiano)', loader: () => import('@/data/packs/night_out_it.json') },
+    'night_out_en':    { id: 'night_out_en',    name: 'Night Out (English)',    loader: () => import('@/data/packs/night_out_en.json') },
+    'couple_es_la':    { id: 'couple_es_la',    name: 'Pareja (Latino)',        loader: () => import('@/data/packs/couple_es_la.json') },
+    'couple_es_eu':    { id: 'couple_es_eu',    name: 'Pareja (Espana)',        loader: () => import('@/data/packs/couple_es_eu.json') },
+    'couple_it':       { id: 'couple_it',       name: 'Coppia (Italiano)',      loader: () => import('@/data/packs/couple_it.json') },
+    'couple_en':       { id: 'couple_en',       name: 'Couples (English)',      loader: () => import('@/data/packs/couple_en.json') },
+};
+
+// ---------- Pack cache ----------
+// Once loaded, a pack is cached in memory for the rest of the session.
+// This avoids re-importing on reshuffle (same mode+language, different seed).
+const packCache = new Map<string, Pack>();
+
+// ---------- Pack normalization ----------
 
 /**
  * Normalize arbitrary JSON into a Pack.
- * - If raw is already a Pack, return it.
- * - If raw is an array of Card, wrap it into a Pack using inferred defaults.
+ * - If raw is already a Pack shape, extract fields.
+ * - If raw is an array of Card, wrap it into a Pack.
  */
 function asPack(raw: unknown, fallbackId: string, fallbackName: string): Pack {
     let id = fallbackId;
@@ -80,7 +81,6 @@ function asPack(raw: unknown, fallbackId: string, fallbackName: string): Pack {
             description = maybe.description;
             rawCards = maybe.cards;
         } else {
-            // Last resort: return an empty pack so the app doesn't crash
             return { id: fallbackId, name: fallbackName, version: 1, cards: [] };
         }
     }
@@ -90,49 +90,48 @@ function asPack(raw: unknown, fallbackId: string, fallbackName: string): Pack {
     return { id, name, version, description, cards };
 }
 
-const PACKS: (Pack & { mode: ModeKey; language: LanguageKey })[] = PACK_REGISTRY.map(
-    ({ raw, id, name, mode, language }) => ({
-        ...asPack(raw, id, name),
-        id,   // always use the registry id (e.g. 'pre_es_la'), not the inferred mode
-        mode,
-        language,
-    })
-);
+// ---------- Public API ----------
 
-export async function listPacks(): Promise<Pack[]> {
-    return PACKS.map((p) => ({
-        ...p,
-        id: String(p.id),
-        name: p.name ?? String(p.id),
-        version: p.version ?? 1,
-        cards: Array.isArray(p.cards) ? p.cards : [],
-        description: p.description,
-    }));
-}
-
-export async function getPackById(id: Pack['id']): Promise<Pack | undefined> {
-    const packs = await listPacks();
-    const needle = String(id).toLowerCase();
-    return packs.find((p) => String(p.id).toLowerCase() === needle);
-}
-
-/** Primary lookup for gameplay: resolves the correct pack for a mode + language pair. */
+/** Primary lookup for gameplay: resolves the correct pack for a mode + language pair.
+ *  Loads the pack JSON lazily on first access, then caches in memory. */
 export async function getPackByModeAndLanguage(
     mode: ModeKey,
     language: LanguageKey
 ): Promise<Pack | undefined> {
-    const entry = PACKS.find((p) => p.mode === mode && p.language === language);
-    if (!entry) return undefined;
-    return {
-        id: entry.id,
-        name: entry.name,
-        version: entry.version,
-        description: entry.description,
-        cards: Array.isArray(entry.cards) ? entry.cards : [],
-    };
+    const key = `${mode}_${language}`;
+
+    // Check in-memory cache
+    const cached = packCache.get(key);
+    if (cached) return cached;
+
+    // Look up the loader
+    const meta = PACK_LOADERS[key];
+    if (!meta) return undefined;
+
+    // Dynamic import -- bundler splits this into a separate chunk
+    const imported = await meta.loader();
+    const raw = imported.default;
+    const pack = asPack(raw, meta.id, meta.name);
+
+    packCache.set(key, pack);
+    return pack;
 }
 
-export async function listPackIds(): Promise<string[]> {
-    const packs = await listPacks();
-    return packs.map((p) => String(p.id));
+/** Get metadata for all known packs (used by mode selection page to show
+ *  card counts). This loads all packs for the given language eagerly, which
+ *  is acceptable because the mode page needs counts for all modes. */
+export async function getPacksForLanguage(
+    language: LanguageKey
+): Promise<Array<{ mode: ModeKey; pack: Pack }>> {
+    const modes: ModeKey[] = ['pre', 'night_out', 'couple'];
+    const results: Array<{ mode: ModeKey; pack: Pack }> = [];
+
+    for (const mode of modes) {
+        const pack = await getPackByModeAndLanguage(mode, language);
+        if (pack && pack.cards.length > 0) {
+            results.push({ mode, pack });
+        }
+    }
+
+    return results;
 }

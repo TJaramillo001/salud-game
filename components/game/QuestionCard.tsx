@@ -104,8 +104,9 @@ export const QuestionCard = React.memo(function QuestionCard({ card, subtitle, d
                     >
                         {kindLabel(card.kind, labels)}
                     </div>
-                    {/* DEBUG: card ID overlay */}
-                    <span className="text-[9px] font-mono text-black/40">{card.id}</span>
+                    {process.env.NODE_ENV === 'development' && (
+                        <span className="text-[9px] font-mono text-black/40">{card.id}</span>
+                    )}
                     {card.source === 'bar' && barBadge && (
                         <span className="rounded-full bg-black/10 px-2 py-0.5 text-[10px] font-semibold text-black/60">
                             🍻 {barBadge}

@@ -13,6 +13,12 @@ export interface BarConfig {
     active: boolean;
 }
 
+// PATCH (CoderB): Removed `signature` field. HMAC-signing bar sessions
+// defends a zero-value target (free access to party card modes with no
+// payment gate). The fallback-on-failure design meant unsigned sessions
+// were always accepted anyway. If real security is needed, it should come
+// from the payment integration (Lemon Squeezy), not from signing
+// ephemeral localStorage tokens.
 export interface BarSession {
     slug: BarSlug;
     name: string;

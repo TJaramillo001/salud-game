@@ -1,13 +1,8 @@
 // app/bar/layout.tsx
-import { GameStoreProvider } from '@/providers/GameStoreProvider';
-import { ActiveRulesProvider } from '@/features/rules/useActiveRules';
+// Providers (GameStoreProvider + ActiveRulesProvider) are in the root layout,
+// so bar routes and game routes share the same store instance.
+// This ensures barSession set on /bar/[slug] is visible in /game/setup/*.
 
 export default function BarLayout({ children }: { children: React.ReactNode }) {
-    return (
-        <GameStoreProvider>
-            <ActiveRulesProvider>
-                {children}
-            </ActiveRulesProvider>
-        </GameStoreProvider>
-    );
+    return <>{children}</>;
 }
