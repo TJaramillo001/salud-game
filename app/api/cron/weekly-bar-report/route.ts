@@ -42,18 +42,38 @@ export async function GET(req: Request) {
             return NextResponse.json({ message: 'No active bar owners' });
         }
 
-        // 2. Fetch ALL events for the past week in a single query (fixes N+1).
-        // PATCH (CoderB): Previously this was one query per bar owner inside the
-        // loop below. With 10 bars that is 11 round-trips; with 100 bars, 101.
-        // Now it is always exactly 2 queries regardless of bar count.
-        const { data: allEvents, error: eventsErr } = await supabase
-            .from('bar_events')
-            .select('bar_slug, event_type')
-            .gte('created_at', weekAgo);
+        // 2. Fetch events for the past week with pagination.
+        // Supabase JS defaults to 1000 rows. We paginate to handle high-volume bars.
+        const PAGE_SIZE = 5000;
+        const MAX_PAGES = 10; // safety cap: 50,000 events max
+        let allEvents: Array<{ bar_slug: string; event_type: string }> = [];
+        let page = 0;
+        let hasMore = true;
 
-        if (eventsErr) {
-            console.error('Error fetching weekly events:', eventsErr);
-            // Fall through with empty events rather than failing all reports
+        while (hasMore && page < MAX_PAGES) {
+            const from = page * PAGE_SIZE;
+            const to = from + PAGE_SIZE - 1;
+            const { data, error: eventsErr } = await supabase
+                .from('bar_events')
+                .select('bar_slug, event_type')
+                .gte('created_at', weekAgo)
+                .range(from, to);
+
+            if (eventsErr) {
+                console.error('Error fetching weekly events (page ' + page + '):', eventsErr);
+                break;
+            }
+
+            if (data && data.length > 0) {
+                allEvents = allEvents.concat(data);
+            }
+
+            hasMore = (data?.length ?? 0) === PAGE_SIZE;
+            page++;
+        }
+
+        if (page >= MAX_PAGES) {
+            console.warn(`Weekly report: hit ${MAX_PAGES}-page limit (${allEvents.length} events). Some events may be excluded.`);
         }
 
         // Group events by bar_slug for O(1) lookup per owner

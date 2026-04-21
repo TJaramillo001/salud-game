@@ -1,7 +1,7 @@
 // app/game/play/page.tsx
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useGameStore, PLAY_PROGRESS_STORAGE_KEY } from '@/providers/GameStoreProvider';
 import { useDeck } from '@/features/deck/useDeck';
@@ -19,6 +19,7 @@ import type { Card } from '@/features/questions/types';
 import { isOnline } from '@/lib/offline';
 import { useTranslation } from '@/lib/i18n';
 import { BarExpiredModal } from '@/components/game/BarExpiredModal';
+import { useSwipe } from '@/hooks/useSwipe';
 
 function cyrb53(str: string, seed = 0) {
     let h1 = 0xdeadbeef ^ seed, h2 = 0x41c6ce57 ^ seed;
@@ -130,7 +131,7 @@ export default function PlayPage() {
     }, [remaining, current, selectedMode, router, isEmptyDeck, analytics]);
 
     // --- Advance handler ---
-    const onAdvance = () => {
+    const onAdvance = useCallback(() => {
         const card = activeCard;
         if (!card) return;
         vibrate(10);
@@ -143,7 +144,14 @@ export default function PlayPage() {
             next();
         }
         advancePlayer();
-    };
+    }, [activeCard, analytics, usingOffline, advanceOffline, next, advancePlayer]);
+
+    // --- Swipe gesture ---
+    const { dx, bind: swipeBind } = useSwipe({
+        onSwipeLeft: onAdvance,
+        onSwipeRight: onAdvance,
+        threshold: 80,
+    });
 
     // --- Subtitle ---
     const isRuleCard = activeCard?.kind === 'rule_on' || activeCard?.kind === 'rule_off';
@@ -198,18 +206,20 @@ export default function PlayPage() {
 
             {/* Tap anywhere on the card area to advance */}
             <div
-                className="w-full flex justify-center py-2 sm:py-4 cursor-pointer"
+                className="w-full flex justify-center py-2 sm:py-4 cursor-pointer touch-none"
                 role="button"
                 aria-label={t.play.aria.advance}
                 tabIndex={0}
                 onClick={onAdvance}
                 onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && onAdvance()}
+                {...swipeBind}
             >
                 {showCard ? (
                     <QuestionCard
+                        key={activeCard?.id}
                         card={activeCard as Card}
                         subtitle={subtitle ?? undefined}
-                        dx={0}
+                        dx={dx}
                         players={players}
                         actors={actors}
                         kindLabels={t.card.kind}

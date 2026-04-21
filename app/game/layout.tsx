@@ -1,6 +1,8 @@
 // app/game/layout.tsx
 // Providers (GameStoreProvider + ActiveRulesProvider) are in the root layout.
-// This layout adds game-specific metadata and the service worker registration script.
+// This layout adds game-specific metadata, error boundary, and the SW registration script.
+
+import { GameErrorBoundary } from '@/components/ErrorBoundary';
 
 export const metadata = {
     title: 'Salud',
@@ -24,7 +26,7 @@ export default function GameLayout({ children }: { children: React.ReactNode }) 
     const buildId = process.env.NEXT_PUBLIC_BUILD_ID;
 
     return (
-        <>
+        <GameErrorBoundary>
             {children}
             <script
                 dangerouslySetInnerHTML={{
@@ -40,6 +42,6 @@ export default function GameLayout({ children }: { children: React.ReactNode }) 
             })();`,
                 }}
             />
-        </>
+        </GameErrorBoundary>
     );
 }

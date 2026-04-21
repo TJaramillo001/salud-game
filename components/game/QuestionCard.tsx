@@ -85,7 +85,7 @@ export const QuestionCard = React.memo(function QuestionCard({ card, subtitle, d
 
     return (
         <div
-            className="rounded-3xl border-2 shadow-md transition-transform overflow-hidden select-none"
+            className="rounded-3xl border-2 shadow-md transition-transform overflow-hidden select-none animate-card-enter"
             style={{
                 transform: `translateX(${translate}px) rotate(${rotation}deg)`,
                 backgroundColor: theme.bg,

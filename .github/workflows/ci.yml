@@ -1,0 +1,111 @@
+name: CI
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    name: Lint + Typecheck
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: ESLint
+        run: npm run lint
+
+      - name: TypeScript type check
+        run: npx tsc --noEmit
+
+  build:
+    name: Production build
+    needs: quality
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: Build
+        run: npm run build
+        env:
+          NEXT_PUBLIC_BUILD_ID: ${{ github.sha }}
+
+  card-validation:
+    name: Validate card packs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate JSON packs
+        run: |
+          node -e "
+            const fs = require('fs');
+            const path = require('path');
+            const dir = 'data/packs';
+            const packs = fs.readdirSync(dir).filter(f => f.endsWith('.json'));
+            let errors = 0;
+            for (const pack of packs) {
+              try {
+                const raw = fs.readFileSync(path.join(dir, pack), 'utf8').trim();
+                if (!raw || raw === '') { continue; }
+                const data = JSON.parse(raw);
+                if (!Array.isArray(data)) { console.error(pack + ': not an array'); errors++; continue; }
+                const ids = new Set();
+                for (const card of data) {
+                  if (!card.id) { console.error(pack + ': card missing id'); errors++; }
+                  if (ids.has(card.id)) { console.error(pack + ': duplicate id ' + card.id); errors++; }
+                  ids.add(card.id);
+                  if (card.spice === 0) { console.error(pack + ': card ' + card.id + ' has spice 0'); errors++; }
+                  if (!card.kind) { console.error(pack + ': card ' + card.id + ' missing kind'); errors++; }
+                  if (!card.text || !card.text.trim()) { console.error(pack + ': card ' + card.id + ' missing text'); errors++; }
+                }
+                const ruleOns = data.filter(c => c.kind === 'rule_on').map(c => c.ruleId).sort();
+                const ruleOffs = data.filter(c => c.kind === 'rule_off').map(c => c.ruleId).sort();
+                if (JSON.stringify(ruleOns) !== JSON.stringify(ruleOffs)) {
+                  console.error(pack + ': unmatched rule pairs');
+                  errors++;
+                }
+              } catch(e) { console.error(pack + ': invalid JSON - ' + e.message); errors++; }
+            }
+            if (errors > 0) { console.error(errors + ' card validation errors'); process.exit(1); }
+            console.log('All ' + packs.length + ' packs valid');
+          "
+
+  security:
+    name: Dependency audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: npm audit
+        run: npm audit --audit-level=high
+        continue-on-error: true
